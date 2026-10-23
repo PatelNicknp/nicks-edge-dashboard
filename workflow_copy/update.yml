@@ -23,6 +23,7 @@ jobs:
       - run: pip install -r requirements.txt
       - name: Run the hourly job
         env:
+          PYTHONUNBUFFERED: "1"   # show each step's log line as it happens
           MYFXBOOK_EMAIL: ${{ secrets.MYFXBOOK_EMAIL }}
           MYFXBOOK_PASSWORD: ${{ secrets.MYFXBOOK_PASSWORD }}
         run: python edge_job.py

@@ -30,6 +30,13 @@ def log(source, status, latest="", note=""):
     LOG.append(dict(source=source, status=status, latest=str(latest), note=note, checked_pt=NOW.strftime("%Y-%m-%d %H:%M")))
     print("[%s] %s %s %s" % (status, source, latest, note))
 
+# FRED (rates, yields, spreads): stop asking after a few failures in one run and use the cache folder instead
+FRED_TIMEOUT, FRED_MAX_FAILS = 20, 2
+FRED_STATE = {"ok": 0, "cached": 0, "fails": 0, "err": ""}
+def _fred_fail(e):
+    FRED_STATE["cached"] += 1
+    if not OFFLINE and "not answering" not in str(e): FRED_STATE["fails"] += 1; FRED_STATE["err"] = str(e)[:80]
+
 def get(url, timeout=40, **kw):
     if OFFLINE: raise RuntimeError("offline mode")
     r = requests.get(url, headers=UA, timeout=timeout, **kw); r.raise_for_status(); return r
@@ -374,10 +381,11 @@ def latest_releases(cal):
 
 def two_year_trend():
     try:
-        s = pd.read_csv(io.StringIO(get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2").text))
-        s.columns = ["date", "v"]; s.to_csv(os.path.join(CACHE, "dgs2.csv"), index=False)
-    except Exception:
-        s = pd.read_csv(os.path.join(CACHE, "dgs2.csv"))
+        if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
+        s = pd.read_csv(io.StringIO(get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2", timeout=FRED_TIMEOUT).text))
+        s.columns = ["date", "v"]; s.to_csv(os.path.join(CACHE, "dgs2.csv"), index=False); FRED_STATE["ok"] += 1
+    except Exception as e:
+        _fred_fail(e); s = pd.read_csv(os.path.join(CACHE, "dgs2.csv"))
     v = pd.to_numeric(s.v, errors="coerce").dropna(); sma = v.rolling(21).mean()
     return sgn(sma.iloc[-1] - sma.iloc[-6]), v.iloc[-1]
 
@@ -465,8 +473,12 @@ FRED_RATES = {"USD": "DFF", "EUR": "ECBDFR", "GBP": "IUDSOIA", "JPY": "IRSTCI01J
 FRED_EXTRA = ["DFII10", "T10YIE", "BAMLH0A0HYM2", "BAMLC0A0CM", "DGS10"]
 def fred(sid):
     f = os.path.join(CACHE, "fred_%s.csv" % sid)
-    try: t = get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid).text; open(f, "w").write(t)
-    except Exception: t = open(f).read()
+    try:
+        if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
+        t = get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid, timeout=FRED_TIMEOUT).text
+        pd.read_csv(io.StringIO(t)).iloc[:, 1]  # check it is a real data file before saving it
+        open(f, "w").write(t); FRED_STATE["ok"] += 1
+    except Exception as e: _fred_fail(e); t = open(f).read()
     d = pd.read_csv(io.StringIO(t)); d.columns = ["date", "v"]
     s = pd.to_numeric(d.v, errors="coerce"); s.index = pd.to_datetime(d.date); return s.dropna()
 
@@ -540,6 +552,9 @@ def page_tables(close, high, low, cot, ev, cal):
     # rates, carry, real yields, spreads
     rates = {c: fred(i) for c, i in FRED_RATES.items()}
     ex = {i: fred(i) for i in FRED_EXTRA}
+    n = FRED_STATE["ok"] + FRED_STATE["cached"]
+    log("Rates, yields and spreads (FRED)", "OK" if not FRED_STATE["cached"] else "CACHED", rates["USD"].index[-1].date(),
+        "%d of %d series refreshed%s" % (FRED_STATE["ok"], n, ("; " + FRED_STATE["err"]) if FRED_STATE["err"] else ""))
     car = []
     for s in PAIRS:
         rb, rq = rates[s[:3]].iloc[-1], rates[s[3:]].iloc[-1]; p = close[s].dropna()
