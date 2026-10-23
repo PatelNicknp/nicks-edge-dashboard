@@ -1,0 +1,31 @@
+{
+ "updated_pt": "2026-10-23 12:39 PT",
+ "prices_as_of": "2026-10-23",
+ "label": "Research screen, not a trade signal.",
+ "tabs": [
+  "backtest",
+  "calendar",
+  "carry",
+  "cot_history",
+  "cot_report",
+  "econ_data",
+  "econ_strength",
+  "help",
+  "market_heatmap",
+  "momentum",
+  "news",
+  "news_risk",
+  "put_call",
+  "rates",
+  "retail_sentiment",
+  "score_history",
+  "scorecard_details",
+  "seasonality",
+  "settings",
+  "spreads",
+  "top_setups",
+  "upcoming_events",
+  "updates_log",
+  "volatility"
+ ]
+}

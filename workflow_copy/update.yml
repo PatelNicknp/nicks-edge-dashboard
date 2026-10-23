@@ -1,0 +1,35 @@
+name: Update Nick's Edge Dashboard
+# Research screen, not a trade signal.
+on:
+  schedule:
+    - cron: "7 * * * *"      # every hour, 7 minutes past (UTC)
+    - cron: "45 20 * * 5"    # Friday after the weekly COT report (about 1:45 PM PT)
+  workflow_dispatch: {}      # lets you press "Run workflow" by hand
+permissions:
+  contents: write
+concurrency:
+  group: edge-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Run the hourly job
+        env:
+          MYFXBOOK_EMAIL: ${{ secrets.MYFXBOOK_EMAIL }}
+          MYFXBOOK_PASSWORD: ${{ secrets.MYFXBOOK_PASSWORD }}
+        run: python edge_job.py
+      - name: Save the new numbers
+        run: |
+          git config user.name "edge-dashboard-bot"
+          git config user.email "edge-dashboard-bot@users.noreply.github.com"
+          git add output cache data
+          git diff --cached --quiet || git commit -m "Update data $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push

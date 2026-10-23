@@ -1,0 +1,6 @@
+bucket,weeks,avg_next_week,median,pct_up,pct_right,note
+-4 to -5,957,0.0796,0.0859,54.6499,45.3501,"Technicals + COT only (the parts with 10 years of free history). No costs. Research screen, not a trade signal."
+-2 to -3,2864,0.0537,0.0442,53.0377,46.9623,"Technicals + COT only (the parts with 10 years of free history). No costs. Research screen, not a trade signal."
+-1 to +1,7124,0.0353,0.031,51.909,,"Technicals + COT only (the parts with 10 years of free history). No costs. Research screen, not a trade signal."
++2 to +3,2963,-0.0059,0.006,50.3544,50.3544,"Technicals + COT only (the parts with 10 years of free history). No costs. Research screen, not a trade signal."
++4 to +5,1016,-0.0182,-0.0049,49.7047,49.7047,"Technicals + COT only (the parts with 10 years of free history). No costs. Research screen, not a trade signal."

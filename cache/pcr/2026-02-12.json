@@ -1,0 +1,346 @@
+{
+  "ratios": [
+    {
+      "name": "TOTAL PUT/CALL RATIO",
+      "value": "0.94"
+    },
+    {
+      "name": "INDEX PUT/CALL RATIO",
+      "value": "1.13"
+    },
+    {
+      "name": "EXCHANGE TRADED PRODUCTS PUT/CALL RATIO",
+      "value": "0.90"
+    },
+    {
+      "name": "EQUITY PUT/CALL RATIO",
+      "value": "0.67"
+    },
+    {
+      "name": "CBOE VOLATILITY INDEX (VIX) PUT/CALL RATIO",
+      "value": "0.68"
+    },
+    {
+      "name": "SPX + SPXW PUT/CALL RATIO",
+      "value": "1.28"
+    },
+    {
+      "name": "OEX PUT/CALL RATIO",
+      "value": "1.67"
+    },
+    {
+      "name": "MRUT PUT/CALL RATIO",
+      "value": "1.00"
+    },
+    {
+      "name": "MXEA PUT/CALL RATIO",
+      "value": "0.00"
+    },
+    {
+      "name": "MXEF PUT/CALL RATIO",
+      "value": "45.61"
+    },
+    {
+      "name": "MXACW PUT/CALL RATIO",
+      "value": "0.00"
+    },
+    {
+      "name": "MXWLD PUT/CALL RATIO",
+      "value": "0.00"
+    },
+    {
+      "name": "MXUSA PUT/CALL RATIO",
+      "value": "0.00"
+    },
+    {
+      "name": "CBTX PUT/CALL RATIO",
+      "value": "13.38"
+    },
+    {
+      "name": "MBTX PUT/CALL RATIO",
+      "value": "5.37"
+    },
+    {
+      "name": "SPEQX PUT/CALL RATIO",
+      "value": "0.00"
+    },
+    {
+      "name": "SPEQW PUT/CALL RATIO",
+      "value": "5.00"
+    },
+    {
+      "name": "MGTN PUT/CALL RATIO",
+      "value": "1.00"
+    },
+    {
+      "name": "MGTNW PUT/CALL RATIO",
+      "value": "0.23"
+    }
+  ],
+  "SUM OF ALL PRODUCTS": [
+    {
+      "name": "VOLUME",
+      "call": 7236639,
+      "put": 6781834,
+      "total": 14018473
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 338676007,
+      "put": 260150758,
+      "total": 598826765
+    }
+  ],
+  "INDEX OPTIONS": [
+    {
+      "name": "VOLUME",
+      "call": 3427797,
+      "put": 3865423,
+      "total": 7293220
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 19870903,
+      "put": 19291663,
+      "total": 39162566
+    }
+  ],
+  "EXCHANGE TRADED PRODUCTS": [
+    {
+      "name": "VOLUME",
+      "call": 1540996,
+      "put": 1386408,
+      "total": 2927404
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 79929635,
+      "put": 90868915,
+      "total": 170798550
+    }
+  ],
+  "EQUITY OPTIONS": [
+    {
+      "name": "VOLUME",
+      "call": 2267846,
+      "put": 1530003,
+      "total": 3797849
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 238875469,
+      "put": 149990180,
+      "total": 388865649
+    }
+  ],
+  "CBOE VOLATILITY INDEX (VIX)": [
+    {
+      "name": "VOLUME",
+      "call": 816001,
+      "put": 554257,
+      "total": 1370258
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 9564703,
+      "put": 3629331,
+      "total": 13194034
+    }
+  ],
+  "SPX + SPXW": [
+    {
+      "name": "VOLUME",
+      "call": 2483553,
+      "put": 3166593,
+      "total": 5650146
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 7667671,
+      "put": 12596760,
+      "total": 20264431
+    }
+  ],
+  "OEX": [
+    {
+      "name": "VOLUME",
+      "call": 3,
+      "put": 5,
+      "total": 8
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 52,
+      "put": 41,
+      "total": 93
+    }
+  ],
+  "MRUT": [
+    {
+      "name": "VOLUME",
+      "call": 24,
+      "put": 24,
+      "total": 48
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 140,
+      "put": 244,
+      "total": 384
+    }
+  ],
+  "MXEA": [
+    {
+      "name": "VOLUME",
+      "call": 38,
+      "put": 0,
+      "total": 38
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 2335,
+      "put": 4848,
+      "total": 7183
+    }
+  ],
+  "MXEF": [
+    {
+      "name": "VOLUME",
+      "call": 36,
+      "put": 1642,
+      "total": 1678
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 4310,
+      "put": 23185,
+      "total": 27495
+    }
+  ],
+  "MXACW": [
+    {
+      "name": "VOLUME",
+      "call": 0,
+      "put": 0,
+      "total": 0
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 4,
+      "put": 11,
+      "total": 15
+    }
+  ],
+  "MXWLD": [
+    {
+      "name": "VOLUME",
+      "call": 0,
+      "put": 0,
+      "total": 0
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 0,
+      "put": 0,
+      "total": 0
+    }
+  ],
+  "MXUSA": [
+    {
+      "name": "VOLUME",
+      "call": 0,
+      "put": 0,
+      "total": 0
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 0,
+      "put": 0,
+      "total": 0
+    }
+  ],
+  "CBTX": [
+    {
+      "name": "VOLUME",
+      "call": 8,
+      "put": 107,
+      "total": 115
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 7406,
+      "put": 4937,
+      "total": 12343
+    }
+  ],
+  "MBTX": [
+    {
+      "name": "VOLUME",
+      "call": 180,
+      "put": 967,
+      "total": 1147
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 1639,
+      "put": 8759,
+      "total": 10398
+    }
+  ],
+  "SPEQX": [
+    {
+      "name": "VOLUME",
+      "call": 9,
+      "put": 0,
+      "total": 9
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 22,
+      "put": 0,
+      "total": 22
+    }
+  ],
+  "SPEQW": [
+    {
+      "name": "VOLUME",
+      "call": 1,
+      "put": 5,
+      "total": 6
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 9,
+      "put": 8,
+      "total": 17
+    }
+  ],
+  "MGTN": [
+    {
+      "name": "VOLUME",
+      "call": 2,
+      "put": 2,
+      "total": 4
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 91,
+      "put": 317,
+      "total": 408
+    }
+  ],
+  "MGTNW": [
+    {
+      "name": "VOLUME",
+      "call": 66,
+      "put": 15,
+      "total": 81
+    },
+    {
+      "name": "OPEN INTEREST",
+      "call": 101,
+      "put": 2553,
+      "total": 2654
+    }
+  ]
+}

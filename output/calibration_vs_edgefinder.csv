@@ -1,0 +1,24 @@
+symbol,theirs,ours,bias_theirs,bias_ours,technicals,technicals_ok,cot,cot_ok,crowd,crowd_ok,growth,growth_ok,inflation,inflation_ok,jobs,jobs_ok
+GBPJPY,8,8,Very Bullish,Very Bullish,+3/+3,True,+0/+0,True,-1/-1,True,+2/+1,False,+2/+3,False,+2/+2,True
+GBPCHF,7,6,Very Bullish,Bullish,+3/+3,True,-2/-2,True,+1/+0,False,+2/+1,False,+2/+3,False,+1/+1,True
+CADCHF,6,-1,Bullish,Neutral,+3/+3,True,-2/-2,True,+1/+0,False,+4/-2,False,+0/+1,False,+0/-1,False
+CHFJPY,5,4,Bullish,Bullish,+3/+2,False,+2/+2,True,-1/-1,True,+0/+0,True,+0/+0,True,+1/+1,True
+CADJPY,5,1,Bullish,Neutral,+3/+3,True,+0/+0,True,-1/-1,True,+2/-2,False,+0/+1,False,+1/+0,False
+GB-POUND,5,4,Bullish,Bullish,+1/+1,True,-2/-2,True,+0/+1,False,+2/+1,False,+3/+2,False,+1/+1,True
+AUDJPY,5,4,Bullish,Bullish,+3/+3,True,+0/+0,True,-1/+0,False,+3/+1,False,+0/+1,False,+0/-1,False
+AUDCHF,4,2,Bullish,Neutral,+3/+3,True,-2/-2,True,+1/+1,True,+3/+1,False,+0/+1,False,-1/-2,False
+NZDJPY,4,4,Bullish,Bullish,+3/+3,True,+0/+0,True,-1/-1,True,+2/+1,False,+0/+0,True,+0/+1,False
+GBPAUD,4,4,Bullish,Bullish,+2/-1,False,+0/+0,True,-1/+0,False,-1/+0,False,+2/+2,True,+2/+3,False
+GBPUSD,4,5,Bullish,Bullish,+1/+1,True,-2/-2,True,+0/+1,False,+2/+2,True,+1/+1,True,+2/+2,True
+CH-FRANC,3,0,Neutral,Neutral,+1/+1,True,+0/+0,True,+1/+0,False,+0/+0,True,+1/-1,False,+0/+0,True
+GBPNZD,3,4,Neutral,Bullish,-1/-1,True,+0/+0,True,+0/+1,False,+0/+0,True,+2/+3,False,+2/+1,False
+CA-DOLLAR,2,-4,Neutral,Bearish,+1/+1,True,-2/-2,True,+0/+0,True,+2/-2,False,+1/+0,False,+0/-1,False
+DOW,2,1,Neutral,Neutral,+3/+3,True,+2/+2,True,+1/+0,False,-1/-1,True,-2/-2,True,-1/-1,True
+US-DOLLAR,1,0,Neutral,Neutral,-1/-1,True,+2/+2,True,+0/+0,True,-1/-1,True,+2/+1,False,-1/-1,True
+GBPCAD,1,5,Neutral,Bullish,-1/-1,True,+0/+0,True,-1/-1,True,+0/+3,False,+2/+2,True,+1/+2,False
+CHINA50,1,1,Neutral,Neutral,-3/-3,True,+0/+0,True,+0/+0,True,+3/+3,True,+0/+0,True,+1/+1,True
+AUDNZD,1,-1,Neutral,Neutral,-1/-1,True,+0/+0,True,+1/+1,True,+1/+0,False,+0/+1,False,+0/-2,False
+AUDUSD,1,-1,Neutral,Neutral,+1/+1,True,-2/-2,True,+0/+0,True,+3/+2,False,-1/-1,True,+0/-1,False
+AU-DOLLAR,0,-2,Neutral,Neutral,+1/+1,True,-2/-2,True,+0/+0,True,+1/+1,True,+1/+0,False,-1/-2,False
+EURUSD,-4,-4,Bearish,Bearish,+0/+0,True,-2/-2,True,-1/-1,True,-2/-2,True,+0/+0,True,+1/+1,True
+SPX500,-4,-4,Bearish,Bearish,-1/-1,True,/+0,True,+1/+1,True,-1/-1,True,-2/-2,True,-1/-1,True

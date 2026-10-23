@@ -1,0 +1,102 @@
+"""End to end test of Nick's Edge Dashboard job. Runs offline from the cached data, in a temporary copy.
+Run with:  python tests/test_job.py     (or: pytest tests)"""
+import os, sys, json, shutil, subprocess, tempfile, importlib
+import pandas as pd
+
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+TABS = ["top_setups", "scorecard_details", "econ_data", "econ_strength", "cot_report", "cot_history", "retail_sentiment",
+        "put_call", "seasonality", "momentum", "volatility", "market_heatmap", "carry", "rates", "spreads", "calendar",
+        "upcoming_events", "news", "news_risk", "score_history", "backtest", "help", "settings", "updates_log"]
+PARTS = ["technicals", "cot", "crowd", "growth", "inflation", "jobs"]
+
+def run_copy(news_now="2026-10-20 12:00", config_changes=None):
+    tmp = tempfile.mkdtemp(prefix="edge_test_")
+    for item in ("edge_job.py", "config.json", "cache", "data"):
+        src = os.path.join(REPO, item)
+        (shutil.copytree if os.path.isdir(src) else shutil.copy)(src, os.path.join(tmp, item))
+    env = dict(os.environ, EDGE_NEWS_NOW=news_now)
+    if config_changes:
+        cfg = json.load(open(os.path.join(tmp, "config.json")))
+        for k, v in config_changes.items(): cfg["features"][k] = v
+        json.dump(cfg, open(os.path.join(tmp, "config.json"), "w"))
+    r = subprocess.run([sys.executable, "edge_job.py", "--offline", "--backtest"], cwd=tmp, env=env,
+                       capture_output=True, text=True, timeout=900)
+    assert r.returncode == 0, r.stdout[-2000:] + r.stderr[-3000:]
+    return tmp, r.stdout
+
+def read(tmp, tab): return pd.read_csv(os.path.join(tmp, "output", tab + ".csv"))
+
+def test_full_run_fills_every_tab():
+    tmp, out = run_copy()
+    for t in TABS:
+        assert len(read(tmp, t)) > 0, "tab %s is empty" % t
+    top = read(tmp, "top_setups")
+    assert len(top) >= 45, "expected 28 pairs + 8 currency indices + other markets"
+    assert (top[PARTS].sum(axis=1) == top.score).all(), "score must be the plain sum of the six parts"
+    assert top.label.str.contains("Research screen, not a trade signal").all()
+    for _, r in top.iterrows():
+        exp = ("Very Bullish" if r.score >= 7 else "Bullish" if r.score >= 4 else "Very Bearish" if r.score <= -7
+               else "Bearish" if r.score <= -4 else "Neutral")
+        assert r.bias == exp
+    assert top.technicals.abs().max() <= 3 and top.cot.abs().max() <= 2 and top.crowd.abs().max() <= 2
+    det = read(tmp, "scorecard_details")
+    assert set(top.symbol) <= set(det.symbol)
+    assert {"Technicals", "COT", "Crowd", "Growth", "Inflation", "Jobs", "News risk"} <= set(det.section)
+    for t in TABS:  # no em dashes anywhere Nick reads
+        assert "\u2014" not in open(os.path.join(tmp, "output", t + ".csv"), encoding="utf-8").read(), "em dash in " + t
+    print("full run OK: %d tabs filled, %d symbols" % (len(TABS), len(top)))
+
+def test_news_risk_tags_from_feed():
+    tmp, _ = run_copy(news_now="2026-10-20 12:00")   # pretend it is Tue Oct 20 noon PT; UK CPI is Tue 11:00 PM PT
+    top = read(tmp, "top_setups").set_index("symbol")
+    assert "GBP CPI y/y Tue 11:00 PM PT" in str(top.loc["GBPUSD", "news_risk"])
+    assert top.loc["GBPUSD", "news_flag"] == "HIGH"
+    assert "GBP CPI" in str(top.loc["UK100", "news_risk"])          # UK index uses GBP plus USD
+    assert "GBP" not in str(top.loc["AUDNZD", "news_risk"])
+    nr = read(tmp, "news_risk").set_index("symbol")
+    assert nr.loc["GBPJPY", "flag"] == "HIGH" and nr.loc["GBPJPY", "banner"].startswith("News risk: GBP CPI")
+    assert nr.loc["AUDNZD", "flag"] in ("none", "medium")
+    det = read(tmp, "scorecard_details")
+    banner = det[(det.symbol == "GBPUSD") & (det.section == "News risk")].value.iloc[0]
+    assert "PT" in banner
+    print("news risk from feed OK:", top.loc["GBPUSD", "news_risk"])
+
+def test_news_risk_rules_unit():
+    sys.argv = ["edge_job.py", "--offline"]
+    sys.path.insert(0, REPO); ej = importlib.import_module("edge_job")
+    now = pd.Timestamp("2026-11-05 12:00", tz=ej.PT)
+    ev = pd.DataFrame([dict(title="Non-Farm Employment Change", country="USD", impact="High", forecast="", previous=""),
+                       dict(title="Flash Manufacturing PMI", country="EUR", impact="Medium", forecast="", previous=""),
+                       dict(title="Far away event", country="JPY", impact="High", forecast="", previous="")])
+    ev["time_pt"] = [pd.Timestamp("2026-11-06 05:30", tz=ej.PT), pd.Timestamp("2026-11-06 01:00", tz=ej.PT),
+                     pd.Timestamp("2026-11-08 05:30", tz=ej.PT)]
+    hi, med = ej.news_risk("EURUSD", ev, None, now=now)
+    assert hi == "USD Non-Farm Employment Change Fri 5:30 AM PT", hi
+    assert med == "EUR Flash Manufacturing PMI Fri 1:00 AM PT", med
+    assert "USD Non-Farm" in ej.news_risk("SPX500", ev, None, now=now)[0]    # indices use USD
+    assert "USD Non-Farm" in ej.news_risk("GOLD", ev, None, now=now)[0]      # gold uses USD
+    assert ej.news_risk("GBPJPY", ev, None, now=now) == ("", "")             # JPY event is more than 24h away
+    ej.FEAT["news_risk_medium_impact"] = False
+    assert ej.news_risk("EURUSD", ev, None, now=now)[1] == ""
+    ej.FEAT["news_risk"] = False
+    assert ej.news_risk("EURUSD", ev, None, now=now) == ("", "")
+    ej.FEAT["news_risk"] = ej.FEAT["news_risk_medium_impact"] = True
+    print("news risk rules OK")
+
+def test_switches_turn_parts_off():
+    tmp, _ = run_copy(config_changes=dict(cot=False, retail_sentiment=False, options_sentiment_for_indices=False,
+                                          economic_growth=False, inflation=False, jobs=False, news_risk=False,
+                                          market_pages=False, news_feed=False, backtest=False))
+    top = read(tmp, "top_setups")
+    assert (top[["cot", "crowd", "growth", "inflation", "jobs"]] == 0).all().all()
+    assert (top.score == top.technicals).all()
+    assert top.news_risk.isna().all()
+    assert not os.path.exists(os.path.join(tmp, "output", "momentum.csv"))
+    print("switches OK")
+
+if __name__ == "__main__":
+    test_news_risk_rules_unit()
+    test_full_run_fills_every_tab()
+    test_news_risk_tags_from_feed()
+    test_switches_turn_parts_off()
+    print("ALL TESTS PASSED")

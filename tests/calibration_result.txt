@@ -1,0 +1,32 @@
+   symbol  theirs  ours  bias_theirs    bias_ours technicals   cot crowd growth inflation  jobs
+   GBPJPY       8     8 Very Bullish Very Bullish      +3/+3 +0/+0 -1/-1  +2/+1     +2/+3 +2/+2
+   GBPCHF       7     6 Very Bullish      Bullish      +3/+3 -2/-2 +1/+0  +2/+1     +2/+3 +1/+1
+   CADCHF       6    -1      Bullish      Neutral      +3/+3 -2/-2 +1/+0  +4/-2     +0/+1 +0/-1
+   CHFJPY       5     4      Bullish      Bullish      +3/+2 +2/+2 -1/-1  +0/+0     +0/+0 +1/+1
+   CADJPY       5     1      Bullish      Neutral      +3/+3 +0/+0 -1/-1  +2/-2     +0/+1 +1/+0
+ GB-POUND       5     4      Bullish      Bullish      +1/+1 -2/-2 +0/+1  +2/+1     +3/+2 +1/+1
+   AUDJPY       5     4      Bullish      Bullish      +3/+3 +0/+0 -1/+0  +3/+1     +0/+1 +0/-1
+   AUDCHF       4     2      Bullish      Neutral      +3/+3 -2/-2 +1/+1  +3/+1     +0/+1 -1/-2
+   NZDJPY       4     4      Bullish      Bullish      +3/+3 +0/+0 -1/-1  +2/+1     +0/+0 +0/+1
+   GBPAUD       4     4      Bullish      Bullish      +2/-1 +0/+0 -1/+0  -1/+0     +2/+2 +2/+3
+   GBPUSD       4     5      Bullish      Bullish      +1/+1 -2/-2 +0/+1  +2/+2     +1/+1 +2/+2
+ CH-FRANC       3     0      Neutral      Neutral      +1/+1 +0/+0 +1/+0  +0/+0     +1/-1 +0/+0
+   GBPNZD       3     4      Neutral      Bullish      -1/-1 +0/+0 +0/+1  +0/+0     +2/+3 +2/+1
+CA-DOLLAR       2    -4      Neutral      Bearish      +1/+1 -2/-2 +0/+0  +2/-2     +1/+0 +0/-1
+      DOW       2     1      Neutral      Neutral      +3/+3 +2/+2 +1/+0  -1/-1     -2/-2 -1/-1
+US-DOLLAR       1     0      Neutral      Neutral      -1/-1 +2/+2 +0/+0  -1/-1     +2/+1 -1/-1
+   GBPCAD       1     5      Neutral      Bullish      -1/-1 +0/+0 -1/-1  +0/+3     +2/+2 +1/+2
+  CHINA50       1     1      Neutral      Neutral      -3/-3 +0/+0 +0/+0  +3/+3     +0/+0 +1/+1
+   AUDNZD       1    -1      Neutral      Neutral      -1/-1 +0/+0 +1/+1  +1/+0     +0/+1 +0/-2
+   AUDUSD       1    -1      Neutral      Neutral      +1/+1 -2/-2 +0/+0  +3/+2     -1/-1 +0/-1
+AU-DOLLAR       0    -2      Neutral      Neutral      +1/+1 -2/-2 +0/+0  +1/+1     +1/+0 -1/-2
+   EURUSD      -4    -4      Bearish      Bearish      +0/+0 -2/-2 -1/-1  -2/-2     +0/+0 +1/+1
+   SPX500      -4    -4      Bearish      Bearish      -1/-1   /+0 +1/+1  -1/-1     -2/-2 -1/-1
+
+exact total: 6/23, same bias: 16/23, within 1: 14/23
+technicals parts matching 21/23
+cot        parts matching 23/23
+crowd      parts matching 14/23
+growth     parts matching 10/23
+inflation  parts matching 10/23
+jobs       parts matching 11/23

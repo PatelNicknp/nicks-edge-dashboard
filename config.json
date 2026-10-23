@@ -1,0 +1,32 @@
+{
+  "_note": "Research screen, not a trade signal. Turn any feature on or off with true / false.",
+  "features": {
+    "technicals": true,
+    "cot": true,
+    "retail_sentiment": true,
+    "options_sentiment_for_indices": true,
+    "economic_growth": true,
+    "inflation": true,
+    "jobs": true,
+    "news_risk": true,
+    "news_risk_medium_impact": true,
+    "seasonality": true,
+    "market_pages": true,
+    "news_feed": true,
+    "backtest": true
+  },
+  "scoring": {
+    "seasonality_points_fx": 1,
+    "seasonality_points_other": 1,
+    "retail_long_bearish_at": 60,
+    "retail_long_bullish_at": 40,
+    "use_previous_when_no_forecast": false,
+    "inflation_location_rule": false,
+    "very_bullish_at": 7,
+    "bullish_at": 4,
+    "bearish_at": -4,
+    "very_bearish_at": -7
+  },
+  "news_risk_hours": 24,
+  "calendar_lookback_days": 150
+}
