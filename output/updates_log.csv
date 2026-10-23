@@ -1,8 +1,9 @@
 source,status,latest,note,checked_pt
-Prices (Yahoo Finance),OK,2026-10-23,,2026-10-23 16:31
-COT (CFTC legacy futures),OK,2026-10-20,,2026-10-23 16:31
-Retail sentiment (Myfxbook),SNAPSHOT,2026-10-23 11:42,add MYFXBOOK_EMAIL / MYFXBOOK_PASSWORD secrets for live data,2026-10-23 16:31
-Options put/call (CBOE),OK,2026-10-22,,2026-10-23 16:31
-Economic calendar actual vs forecast (Nasdaq),OK,2026-10-30,11 days refreshed,2026-10-23 16:31
-Calendar this week (Forex Factory feed),OK,2026-10-24,,2026-10-23 16:31
-News feed (public RSS),OK,2026-10-23 16:31,81 headlines,2026-10-23 16:31
+Prices (Yahoo Finance),OK,2026-10-23,,2026-10-23 16:43
+COT (CFTC legacy futures),OK,2026-10-20,,2026-10-23 16:43
+Retail sentiment (Myfxbook),SNAPSHOT,2026-10-23 11:42,add MYFXBOOK_EMAIL / MYFXBOOK_PASSWORD secrets for live data,2026-10-23 16:43
+Options put/call (CBOE),OK,2026-10-22,,2026-10-23 16:43
+Economic calendar actual vs forecast (Nasdaq),OK,2026-10-30,11 days refreshed,2026-10-23 16:43
+Calendar this week (Forex Factory feed),OK,2026-10-24,,2026-10-23 16:43
+"Rates, yields and spreads (FRED)",CACHED,2026-10-21,"0 of 14 series refreshed; HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read",2026-10-23 16:43
+News feed (public RSS),OK,2026-10-23 16:43,81 headlines,2026-10-23 16:43
