@@ -539,7 +539,7 @@ CADJPY,Jobs,Jobless claims,"CAD +0, JPY +0",0.0
 CADJPY,Jobs,JOLTS,"CAD +0, JPY +0",0.0
 CADJPY,Jobs,ADP,"CAD +0, JPY +0",0.0
 CADJPY,News risk,High impact next 24h,none,0.0
-CHFJPY,Technicals,Trend score,above; down or flat,1.0
+CHFJPY,Technicals,Trend score,above; up,2.0
 CHFJPY,Technicals,Seasonality (10-year avg this month),"+0.90%, up 70% of years",1.0
 CHFJPY,COT,Net positioning,"CHF -18,150 / JPY +69,878",-2.0
 CHFJPY,COT,Latest weekly change,CHF +2.71 / JPY +3.02,0.0
