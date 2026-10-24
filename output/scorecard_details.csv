@@ -9,7 +9,7 @@ EURGBP,Growth,Manufacturing PMI,"EUR -1, GBP +1",-2.0
 EURGBP,Growth,Services PMI,"EUR -1, GBP +1",-2.0
 EURGBP,Growth,Retail sales,"EUR -1, GBP -1",0.0
 EURGBP,Growth,Consumer confidence,"EUR -1, GBP -1",0.0
-EURGBP,Inflation,CPI y/y,"EUR +0, GBP +1",-1.0
+EURGBP,Inflation,CPI y/y,"EUR +0, GBP +0",0.0
 EURGBP,Inflation,PPI y/y,"EUR +1, GBP +1",0.0
 EURGBP,Inflation,PCE y/y,"EUR +0, GBP +0",0.0
 EURGBP,Inflation,Interest rate,"EUR +0, GBP +0",0.0
@@ -49,7 +49,7 @@ EURNZD,Growth,Manufacturing PMI,"EUR -1, NZD +0",-1.0
 EURNZD,Growth,Services PMI,"EUR -1, NZD +0",-1.0
 EURNZD,Growth,Retail sales,"EUR -1, NZD +0",-1.0
 EURNZD,Growth,Consumer confidence,"EUR -1, NZD +0",-1.0
-EURNZD,Inflation,CPI y/y,"EUR +0, NZD -1",1.0
+EURNZD,Inflation,CPI y/y,"EUR +0, NZD +1",-1.0
 EURNZD,Inflation,PPI y/y,"EUR +1, NZD +0",1.0
 EURNZD,Inflation,PCE y/y,"EUR +0, NZD +0",0.0
 EURNZD,Inflation,Interest rate,"EUR +0, NZD +0",0.0
@@ -149,7 +149,7 @@ GBPAUD,Growth,Manufacturing PMI,"GBP +1, AUD +0",1.0
 GBPAUD,Growth,Services PMI,"GBP +1, AUD +0",1.0
 GBPAUD,Growth,Retail sales,"GBP -1, AUD +0",-1.0
 GBPAUD,Growth,Consumer confidence,"GBP -1, AUD +0",-1.0
-GBPAUD,Inflation,CPI y/y,"GBP +1, AUD -1",2.0
+GBPAUD,Inflation,CPI y/y,"GBP +0, AUD -1",1.0
 GBPAUD,Inflation,PPI y/y,"GBP +1, AUD +1",0.0
 GBPAUD,Inflation,PCE y/y,"GBP +0, AUD +0",0.0
 GBPAUD,Inflation,Interest rate,"GBP +0, AUD +0",0.0
@@ -169,7 +169,7 @@ GBPNZD,Growth,Manufacturing PMI,"GBP +1, NZD +0",1.0
 GBPNZD,Growth,Services PMI,"GBP +1, NZD +0",1.0
 GBPNZD,Growth,Retail sales,"GBP -1, NZD +0",-1.0
 GBPNZD,Growth,Consumer confidence,"GBP -1, NZD +0",-1.0
-GBPNZD,Inflation,CPI y/y,"GBP +1, NZD -1",2.0
+GBPNZD,Inflation,CPI y/y,"GBP +0, NZD +1",-1.0
 GBPNZD,Inflation,PPI y/y,"GBP +1, NZD +0",1.0
 GBPNZD,Inflation,PCE y/y,"GBP +0, NZD +0",0.0
 GBPNZD,Inflation,Interest rate,"GBP +0, NZD +0",0.0
@@ -189,7 +189,7 @@ GBPUSD,Growth,Manufacturing PMI,"GBP +1, USD -1",2.0
 GBPUSD,Growth,Services PMI,"GBP +1, USD -1",2.0
 GBPUSD,Growth,Retail sales,"GBP -1, USD +1",-2.0
 GBPUSD,Growth,Consumer confidence,"GBP -1, USD -1",0.0
-GBPUSD,Inflation,CPI y/y,"GBP +1, USD +1",0.0
+GBPUSD,Inflation,CPI y/y,"GBP +0, USD +1",-1.0
 GBPUSD,Inflation,PPI y/y,"GBP +1, USD +1",0.0
 GBPUSD,Inflation,PCE y/y,"GBP +0, USD -1",1.0
 GBPUSD,Inflation,Interest rate,"GBP +0, USD +0",0.0
@@ -209,7 +209,7 @@ GBPCAD,Growth,Manufacturing PMI,"GBP +1, CAD +0",1.0
 GBPCAD,Growth,Services PMI,"GBP +1, CAD -1",2.0
 GBPCAD,Growth,Retail sales,"GBP -1, CAD -1",0.0
 GBPCAD,Growth,Consumer confidence,"GBP -1, CAD +0",-1.0
-GBPCAD,Inflation,CPI y/y,"GBP +1, CAD -1",2.0
+GBPCAD,Inflation,CPI y/y,"GBP +0, CAD -1",1.0
 GBPCAD,Inflation,PPI y/y,"GBP +1, CAD +1",0.0
 GBPCAD,Inflation,PCE y/y,"GBP +0, CAD +0",0.0
 GBPCAD,Inflation,Interest rate,"GBP +0, CAD +0",0.0
@@ -229,7 +229,7 @@ GBPCHF,Growth,Manufacturing PMI,"GBP +1, CHF -1",2.0
 GBPCHF,Growth,Services PMI,"GBP +1, CHF +0",1.0
 GBPCHF,Growth,Retail sales,"GBP -1, CHF +1",-2.0
 GBPCHF,Growth,Consumer confidence,"GBP -1, CHF -1",0.0
-GBPCHF,Inflation,CPI y/y,"GBP +1, CHF +0",1.0
+GBPCHF,Inflation,CPI y/y,"GBP +0, CHF +0",0.0
 GBPCHF,Inflation,PPI y/y,"GBP +1, CHF -1",2.0
 GBPCHF,Inflation,PCE y/y,"GBP +0, CHF +0",0.0
 GBPCHF,Inflation,Interest rate,"GBP +0, CHF +0",0.0
@@ -249,7 +249,7 @@ GBPJPY,Growth,Manufacturing PMI,"GBP +1, JPY -1",2.0
 GBPJPY,Growth,Services PMI,"GBP +1, JPY +0",1.0
 GBPJPY,Growth,Retail sales,"GBP -1, JPY -1",0.0
 GBPJPY,Growth,Consumer confidence,"GBP -1, JPY +1",-2.0
-GBPJPY,Inflation,CPI y/y,"GBP +1, JPY +0",1.0
+GBPJPY,Inflation,CPI y/y,"GBP +0, JPY +0",0.0
 GBPJPY,Inflation,PPI y/y,"GBP +1, JPY -1",2.0
 GBPJPY,Inflation,PCE y/y,"GBP +0, JPY +0",0.0
 GBPJPY,Inflation,Interest rate,"GBP +0, JPY +0",0.0
@@ -269,7 +269,7 @@ AUDNZD,Growth,Manufacturing PMI,"AUD +0, NZD +0",0.0
 AUDNZD,Growth,Services PMI,"AUD +0, NZD +0",0.0
 AUDNZD,Growth,Retail sales,"AUD +0, NZD +0",0.0
 AUDNZD,Growth,Consumer confidence,"AUD +0, NZD +0",0.0
-AUDNZD,Inflation,CPI y/y,"AUD -1, NZD -1",0.0
+AUDNZD,Inflation,CPI y/y,"AUD -1, NZD +1",-2.0
 AUDNZD,Inflation,PPI y/y,"AUD +1, NZD +0",1.0
 AUDNZD,Inflation,PCE y/y,"AUD +0, NZD +0",0.0
 AUDNZD,Inflation,Interest rate,"AUD +0, NZD +0",0.0
@@ -369,7 +369,7 @@ NZDUSD,Growth,Manufacturing PMI,"NZD +0, USD -1",1.0
 NZDUSD,Growth,Services PMI,"NZD +0, USD -1",1.0
 NZDUSD,Growth,Retail sales,"NZD +0, USD +1",-1.0
 NZDUSD,Growth,Consumer confidence,"NZD +0, USD -1",1.0
-NZDUSD,Inflation,CPI y/y,"NZD -1, USD +1",-2.0
+NZDUSD,Inflation,CPI y/y,"NZD +1, USD +1",0.0
 NZDUSD,Inflation,PPI y/y,"NZD +0, USD +1",-1.0
 NZDUSD,Inflation,PCE y/y,"NZD +0, USD -1",1.0
 NZDUSD,Inflation,Interest rate,"NZD +0, USD +0",0.0
@@ -389,7 +389,7 @@ NZDCAD,Growth,Manufacturing PMI,"NZD +0, CAD +0",0.0
 NZDCAD,Growth,Services PMI,"NZD +0, CAD -1",1.0
 NZDCAD,Growth,Retail sales,"NZD +0, CAD -1",1.0
 NZDCAD,Growth,Consumer confidence,"NZD +0, CAD +0",0.0
-NZDCAD,Inflation,CPI y/y,"NZD -1, CAD -1",0.0
+NZDCAD,Inflation,CPI y/y,"NZD +1, CAD -1",2.0
 NZDCAD,Inflation,PPI y/y,"NZD +0, CAD +1",-1.0
 NZDCAD,Inflation,PCE y/y,"NZD +0, CAD +0",0.0
 NZDCAD,Inflation,Interest rate,"NZD +0, CAD +0",0.0
@@ -409,7 +409,7 @@ NZDCHF,Growth,Manufacturing PMI,"NZD +0, CHF -1",1.0
 NZDCHF,Growth,Services PMI,"NZD +0, CHF +0",0.0
 NZDCHF,Growth,Retail sales,"NZD +0, CHF +1",-1.0
 NZDCHF,Growth,Consumer confidence,"NZD +0, CHF -1",1.0
-NZDCHF,Inflation,CPI y/y,"NZD -1, CHF +0",-1.0
+NZDCHF,Inflation,CPI y/y,"NZD +1, CHF +0",1.0
 NZDCHF,Inflation,PPI y/y,"NZD +0, CHF -1",1.0
 NZDCHF,Inflation,PCE y/y,"NZD +0, CHF +0",0.0
 NZDCHF,Inflation,Interest rate,"NZD +0, CHF +0",0.0
@@ -429,7 +429,7 @@ NZDJPY,Growth,Manufacturing PMI,"NZD +0, JPY -1",1.0
 NZDJPY,Growth,Services PMI,"NZD +0, JPY +0",0.0
 NZDJPY,Growth,Retail sales,"NZD +0, JPY -1",1.0
 NZDJPY,Growth,Consumer confidence,"NZD +0, JPY +1",-1.0
-NZDJPY,Inflation,CPI y/y,"NZD -1, JPY +0",-1.0
+NZDJPY,Inflation,CPI y/y,"NZD +1, JPY +0",1.0
 NZDJPY,Inflation,PPI y/y,"NZD +0, JPY -1",1.0
 NZDJPY,Inflation,PCE y/y,"NZD +0, JPY +0",0.0
 NZDJPY,Inflation,Interest rate,"NZD +0, JPY +0",0.0
@@ -585,7 +585,7 @@ GBP Index,Growth,Manufacturing PMI,UK +1,1.0
 GBP Index,Growth,Services PMI,UK +1,1.0
 GBP Index,Growth,Retail sales,UK -1,-1.0
 GBP Index,Growth,Consumer confidence,UK -1,-1.0
-GBP Index,Inflation,CPI y/y,UK +1,1.0
+GBP Index,Inflation,CPI y/y,UK +0,0.0
 GBP Index,Inflation,PPI y/y,UK +1,1.0
 GBP Index,Inflation,Interest rate,UK +0,0.0
 GBP Index,Jobs,Employment change,UK +1,1.0
@@ -613,7 +613,7 @@ NZD Index,COT,Net positioning,21.38,-1.0
 NZD Index,COT,Latest weekly change,-4.20,-1.0
 NZD Index,Crowd,Sentiment,retail long % (vs US dollar): 78,-1.0
 NZD Index,Growth,GDP,NZ +1,1.0
-NZD Index,Inflation,CPI y/y,NZ -1,-1.0
+NZD Index,Inflation,CPI y/y,NZ +1,1.0
 NZD Index,Inflation,Interest rate,NZ +0,0.0
 NZD Index,Jobs,Employment change,NZ +1,1.0
 NZD Index,Jobs,Unemployment rate,NZ -1,-1.0
@@ -687,7 +687,7 @@ SPX500,Technicals,Trend score,below; down or flat,-2.0
 SPX500,Technicals,Seasonality (10-year avg this month),"+0.66%, up 50% of years",1.0
 SPX500,COT,Net positioning,37.58,-1.0
 SPX500,COT,Latest weekly change,-0.48,-1.0
-SPX500,Crowd,Sentiment,put/call: 1.23; vs last 60 days: higher than 85%,1.0
+SPX500,Crowd,Sentiment,put/call: 1.25; vs last 60 days: higher than 91%,2.0
 SPX500,Growth,GDP,US +1,1.0
 SPX500,Growth,Manufacturing PMI,US -1,-1.0
 SPX500,Growth,Services PMI,US -1,-1.0
@@ -707,7 +707,7 @@ NAS100,Technicals,Trend score,below; down or flat,-2.0
 NAS100,Technicals,Seasonality (10-year avg this month),"+0.91%, up 50% of years",1.0
 NAS100,COT,Net positioning,70.88,1.0
 NAS100,COT,Latest weekly change,+0.41,1.0
-NAS100,Crowd,Sentiment,put/call: 1.02; vs last 60 days: higher than 73%,1.0
+NAS100,Crowd,Sentiment,put/call: 1.10; vs last 60 days: higher than 95%,2.0
 NAS100,Growth,GDP,US +1,1.0
 NAS100,Growth,Manufacturing PMI,US -1,-1.0
 NAS100,Growth,Services PMI,US -1,-1.0
@@ -727,7 +727,7 @@ DOW,Technicals,Trend score,above; up,2.0
 DOW,Technicals,Seasonality (10-year avg this month),"+1.38%, up 50% of years",1.0
 DOW,COT,Net positioning,59.75,1.0
 DOW,COT,Latest weekly change,-3.54,-1.0
-DOW,Crowd,Sentiment,put/call: 1.39; vs last 60 days: higher than 55%,0.0
+DOW,Crowd,Sentiment,put/call: 0.49; vs last 60 days: higher than 16%,0.0
 DOW,Growth,GDP,US +1,1.0
 DOW,Growth,Manufacturing PMI,US -1,-1.0
 DOW,Growth,Services PMI,US -1,-1.0
@@ -757,7 +757,7 @@ CHINA50,Inflation,PPI y/y,CN +1,-1.0
 CHINA50,Inflation,Interest rate,CN +0,-0.0
 CHINA50,Jobs,Unemployment rate,CN +1,1.0
 CHINA50,News risk,High impact next 24h,none,0.0
-GER40,Technicals,Trend score,above; up,2.0
+GER40,Technicals,Trend score,below; up,-1.0
 GER40,Technicals,Seasonality (10-year avg this month),"-0.03%, up 60% of years",-1.0
 GER40,COT,Net positioning,,0.0
 GER40,COT,Latest weekly change,,0.0
@@ -783,7 +783,7 @@ UK100,Growth,Manufacturing PMI,UK +1,1.0
 UK100,Growth,Services PMI,UK +1,1.0
 UK100,Growth,Retail sales,UK -1,-1.0
 UK100,Growth,Consumer confidence,UK -1,-1.0
-UK100,Inflation,CPI y/y,UK +1,-1.0
+UK100,Inflation,CPI y/y,UK +0,-0.0
 UK100,Inflation,PPI y/y,UK +1,-1.0
 UK100,Inflation,Interest rate,UK +0,-0.0
 UK100,Jobs,Employment change,UK +1,1.0
@@ -810,7 +810,7 @@ GOLD,Technicals,Trend score,below; down or flat,-2.0
 GOLD,Technicals,Seasonality (10-year avg this month),"+1.28%, up 60% of years",1.0
 GOLD,COT,Net positioning,86.42,1.0
 GOLD,COT,Latest weekly change,-0.35,-1.0
-GOLD,Crowd,Sentiment,put/call: 1.11; vs last 60 days: higher than 70%,1.0
+GOLD,Crowd,Sentiment,put/call: 0.95; vs last 60 days: higher than 38%,0.0
 GOLD,Growth,GDP,US +1,-1.0
 GOLD,Growth,Manufacturing PMI,US -1,1.0
 GOLD,Growth,Services PMI,US -1,1.0
@@ -830,7 +830,7 @@ SILVER,Technicals,Trend score,below; down or flat,-2.0
 SILVER,Technicals,Seasonality (10-year avg this month),"+1.86%, up 80% of years",1.0
 SILVER,COT,Net positioning,70.05,1.0
 SILVER,COT,Latest weekly change,-4.46,-1.0
-SILVER,Crowd,Sentiment,put/call: 1.11; vs last 60 days: higher than 70%,1.0
+SILVER,Crowd,Sentiment,put/call: 0.95; vs last 60 days: higher than 38%,0.0
 SILVER,Growth,GDP,US +1,1.0
 SILVER,Growth,Manufacturing PMI,US -1,-1.0
 SILVER,Growth,Services PMI,US -1,-1.0
@@ -850,7 +850,7 @@ USOIL,Technicals,Trend score,above; up,2.0
 USOIL,Technicals,Seasonality (10-year avg this month),"-1.04%, up 50% of years",-1.0
 USOIL,COT,Net positioning,57.69,1.0
 USOIL,COT,Latest weekly change,-0.83,-1.0
-USOIL,Crowd,Sentiment,put/call: 1.11; vs last 60 days: higher than 70%,1.0
+USOIL,Crowd,Sentiment,put/call: 0.95; vs last 60 days: higher than 38%,0.0
 USOIL,Growth,GDP,US +1,1.0
 USOIL,Growth,Manufacturing PMI,US -1,-1.0
 USOIL,Growth,Services PMI,US -1,-1.0
