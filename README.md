@@ -7,6 +7,9 @@ A free research screen that scores 47 markets (28 currency pairs, 8 currency ind
 1. `edge_job.py` runs every hour on GitHub Actions (see `.github/workflows/update.yml`) and writes CSV files to `output/`.
 2. A Google Sheet pulls each CSV into its own tab with IMPORTDATA (`starter/Nicks_Edge_Dashboard_starter.xlsx`).
 3. Looker Studio draws the 19 pages from the Sheet (`LOOKER_SPEC.md`).
+4. The public site in `site/` reads those same CSV files in the browser (PapaParse), so the hourly update shows up without a rebuild. GitHub Pages publishes `site/` only when the pages change (`.github/workflows/pages.yml`).
+
+https://patelnicknp.github.io/nicks-edge-dashboard/
 
 Set-up steps for Nick: `SETUP.md`.
 
