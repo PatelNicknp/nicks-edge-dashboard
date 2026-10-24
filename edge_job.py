@@ -78,6 +78,30 @@ def risk_ccys(sym):
     c = OTHER[sym][3]; return [{v: k2 for k2, v in CCY_COUNTRY.items()}[c]] + (["USD"] if c != "US" else [])
 
 # ============================================================== prices
+ALWAYS_OPEN = {"BTC-USD"}  # tickers that genuinely trade on weekends
+
+def clean_trailing_bars(px):
+    """Drop duplicate dates, and per ticker drop a trailing bar that is not a real session:
+    a weekend-dated bar (except 24/7 tickers), or a stale placeholder (close equals the previous
+    close with zero/NaN volume). Otherwise a not-yet-traded day makes the 1-day change 0."""
+    px = {k: v[~v.index.duplicated(keep="last")].sort_index() for k, v in px.items()}
+    C, V = px["Close"], px.get("Volume")
+    for t in C.columns:
+        s = C[t].dropna(); drop = []
+        while len(s) > 1 and t not in ALWAYS_OPEN and s.index[-1].day_of_week >= 5:
+            drop.append(s.index[-1]); s = s.iloc[:-1]
+        if len(s) > 1 and s.iloc[-1] == s.iloc[-2]:
+            vol = V[t].get(s.index[-1]) if V is not None and t in V else np.nan
+            if pd.isna(vol) or vol == 0: drop.append(s.index[-1])
+        for k in px:
+            if drop and t in px[k]: px[k].loc[drop, t] = np.nan
+    return px
+
+def ffill_to_last(df, limit=3):
+    """Forward-fill short gaps (holidays) but never past a ticker's own last real bar."""
+    upto_last = df.notna().iloc[::-1].cummax().iloc[::-1]
+    return df.ffill(limit=limit).where(upto_last)
+
 def load_prices():
     import yfinance as yf
     p = os.path.join(CACHE, "prices.pkl")
@@ -85,12 +109,13 @@ def load_prices():
         if OFFLINE: raise RuntimeError("offline")
         tick = list(USD_TICK.values()) + [v[1] for v in OTHER.values()] + ["DX-Y.NYB"]
         d = yf.download(tick, period="12y", interval="1d", progress=False, auto_adjust=False, threads=True)
-        px = {k: d[k] for k in ("Close", "High", "Low")}
+        px = {k: d[k] for k in ("Close", "High", "Low", "Volume") if k in d}
         for k in px: px[k].index = pd.to_datetime(px[k].index).tz_localize(None)
         pd.to_pickle(px, p); log("Prices (Yahoo Finance)", "OK", px["Close"].dropna(how="all").index[-1].date())
     except Exception as e:
         px = pd.read_pickle(p); log("Prices (Yahoo Finance)", "CACHED", px["Close"].dropna(how="all").index[-1].date(), str(e)[:80])
-    C, Hh, Ll = px["Close"].ffill(limit=3), px["High"].ffill(limit=3), px["Low"].ffill(limit=3)
+    px = clean_trailing_bars(px)
+    C, Hh, Ll = ffill_to_last(px["Close"]), ffill_to_last(px["High"]), ffill_to_last(px["Low"])
     usd = {}  # value of 1 unit of currency in USD
     for c, t in USD_TICK.items():
         usd[c] = (C[t], Hh[t], Ll[t]) if c in ("EUR", "GBP", "AUD", "NZD") else (1 / C[t], 1 / Ll[t], 1 / Hh[t])
