@@ -1,10 +1,10 @@
 source,status,latest,note,checked_pt,checked_pt_sort
-Prices (Yahoo Finance),OK,2026-10-24,,Sat 2026-10-24 02:37 AM PT,202610240237
-COT (CFTC legacy futures),OK,2026-10-20,,Sat 2026-10-24 02:37 AM PT,202610240237
-Retail sentiment (Myfxbook),SNAPSHOT,2026-10-23 11:42,add MYFXBOOK_EMAIL / MYFXBOOK_PASSWORD secrets for live data,Sat 2026-10-24 02:37 AM PT,202610240237
-Options put/call (CBOE),OK,2026-10-23,,Sat 2026-10-24 02:37 AM PT,202610240237
-Economic calendar actual vs forecast (Nasdaq),OK,2026-10-30,11 days refreshed,Sat 2026-10-24 02:37 AM PT,202610240237
-Calendar this week (Forex Factory feed),OK,2026-10-24,,Sat 2026-10-24 02:37 AM PT,202610240237
-"Rates, yields and spreads (FRED)",CACHED,2026-10-21,"0 of 14 series refreshed; HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read",Sat 2026-10-24 02:37 AM PT,202610240237
-News feed (public RSS),OK,2026-10-24 02:37,81 headlines,Sat 2026-10-24 02:37 AM PT,202610240237
-Score history,OK,2026-10-24,"367 days, 2025-10-23 to 2026-10-24",Sat 2026-10-24 02:37 AM PT,202610240237
+Prices (Yahoo Finance),OK,Sat 2026-10-24,,Sat 2026-10-24 02:40 AM PT,202610240240
+COT (CFTC legacy futures),OK,Tue 2026-10-20,,Sat 2026-10-24 02:40 AM PT,202610240240
+Retail sentiment (Myfxbook),SNAPSHOT,Fri 2026-10-23 11:42 AM PT,add MYFXBOOK_EMAIL / MYFXBOOK_PASSWORD secrets for live data,Sat 2026-10-24 02:40 AM PT,202610240240
+Options put/call (CBOE),OK,Fri 2026-10-23,,Sat 2026-10-24 02:40 AM PT,202610240240
+Economic calendar actual vs forecast (Nasdaq),OK,Fri 2026-10-30,11 days refreshed,Sat 2026-10-24 02:40 AM PT,202610240240
+Calendar this week (Forex Factory feed),OK,Sat 2026-10-24,,Sat 2026-10-24 02:40 AM PT,202610240240
+"Rates, yields and spreads (FRED)",CACHED,Wed 2026-10-21,"0 of 14 series refreshed; HTTPSConnectionPool(host='fred.stlouisfed.org', port=443): Read timed out. (read",Sat 2026-10-24 02:40 AM PT,202610240240
+News feed (public RSS),OK,Sat 2026-10-24 02:40 AM PT,81 headlines,Sat 2026-10-24 02:40 AM PT,202610240240
+Score history,OK,Sat 2026-10-24,"367 days, 2025-10-23 to 2026-10-24",Sat 2026-10-24 02:40 AM PT,202610240240
