@@ -136,58 +136,196 @@
     return t.length <= n ? t : t.slice(0, n - 1) + "…";
   }
 
+  const TREND_FACTORS = [
+    ["f_trend", "Trend", function () { return D.featureOn("feature.technicals"); }],
+    ["f_seasonality", "Seasonality", function () { return D.featureOn("feature.seasonality"); }],
+    ["f_cot", "COT", function () { return D.featureOn("feature.cot"); }],
+    ["f_crowd", "Crowd Sentiment", function () { return D.featureOn("feature.retail_sentiment") || D.featureOn("feature.options_sentiment_for_indices"); }],
+  ];
+  const MACRO_FACTORS = [
+    ["f_gdp", "GDP", function () { return D.featureOn("feature.economic_growth"); }],
+    ["f_mpmi", "mPMI", function () { return D.featureOn("feature.economic_growth"); }],
+    ["f_spmi", "sPMI", function () { return D.featureOn("feature.economic_growth"); }],
+    ["f_retail", "Retail Sales", function () { return D.featureOn("feature.economic_growth"); }],
+    ["f_conf", "Cnsmr Conf", function () { return D.featureOn("feature.economic_growth"); }],
+    ["f_cpi", "CPI YoY", function () { return D.featureOn("feature.inflation"); }],
+    ["f_ppi", "PPI YoY", function () { return D.featureOn("feature.inflation"); }],
+    ["f_pce", "PCE YoY", function () { return D.featureOn("feature.inflation"); }],
+    ["f_rates", "Interest Rates", function () { return D.featureOn("feature.inflation"); }],
+    ["f_nfp", "NFP", function () { return D.featureOn("feature.jobs"); }],
+    ["f_unemp", "Unemploy. Rate", function () { return D.featureOn("feature.jobs"); }],
+    ["f_claims", "Unemploy. Claims", function () { return D.featureOn("feature.jobs"); }],
+    ["f_adp", "ADP", function () { return D.featureOn("feature.jobs"); }],
+    ["f_jolts", "JOLTS", function () { return D.featureOn("feature.jobs"); }],
+  ];
+  const SCORE_BANDS = [
+    { value: "ge2", label: "+2 or more" },
+    { value: "pos", label: "Positive" },
+    { value: "zero", label: "Zero" },
+    { value: "neg", label: "Negative" },
+    { value: "le2", label: "−2 or less" },
+  ];
+  const BIAS_RANK = { "Very Bullish": 5, "Bullish": 4, "Neutral": 3, "Bearish": 2, "Very Bearish": 1 };
+
+  function intOf(v) {
+    const n = D.num(v);
+    return n == null ? 0 : Math.round(n);
+  }
+  function settingNum(settings, key, fallback) {
+    const row = (settings || []).find(function (r) { return r.setting === key; });
+    const n = row ? Number(row.value) : NaN;
+    return Number.isFinite(n) ? n : fallback;
+  }
+  function biasOf(score, bands) {
+    if (score >= bands.very) return "Very Bullish";
+    if (score >= bands.bull) return "Bullish";
+    if (score <= bands.veryBear) return "Very Bearish";
+    if (score <= bands.bear) return "Bearish";
+    return "Neutral";
+  }
+  function bandOk(n, band) {
+    if (!band) return true;
+    if (band === "ge2") return n >= 2;
+    if (band === "pos") return n > 0;
+    if (band === "zero") return n === 0;
+    if (band === "neg") return n < 0;
+    if (band === "le2") return n <= -2;
+    return true;
+  }
+  function factorHtml(v) {
+    const i = intOf(v);
+    const cls = i > 0 ? "pos" : i < 0 ? "neg" : "zero";
+    return '<span class="fcell ' + cls + '">' + D.esc(D.signed(i) || "0") + "</span>";
+  }
+  function catMatch(kind, cat) {
+    if (!cat) return true;
+    if (cat === "cmd") return kind === "gold" || kind === "metal" || kind === "commodity";
+    return kind === cat;
+  }
+
   function pageTop(ctx) {
     const all = (ctx.files["top_setups.csv"] || []).slice();
-    const kinds = Array.from(new Set(all.map((r) => r.kind))).filter(Boolean);
-    const kindOpts = kinds.map((k) => ({ value: k, label: KIND[k] || k }));
     const biasOrder = ["Very Bullish", "Bullish", "Neutral", "Bearish", "Very Bearish"];
-    const biases = biasOrder.filter((b) => all.some((r) => r.bias === b));
-    const newsOn = D.featureOn("feature.news_risk");
-    const anyNews = newsOn && all.some(newsCounts);
+    const bands = {
+      very: settingNum(ctx.settings, "scoring.very_bullish_at", 7),
+      bull: settingNum(ctx.settings, "scoring.bullish_at", 4),
+      bear: settingNum(ctx.settings, "scoring.bearish_at", -4),
+      veryBear: settingNum(ctx.settings, "scoring.very_bearish_at", -8),
+    };
+    const cats = [
+      { value: "fx", label: "Forex" },
+      { value: "ccy", label: "Currency indexes" },
+      { value: "index", label: "Indices" },
+      { value: "cmd", label: "Commodities" },
+      { value: "crypto", label: "Crypto" },
+    ].filter(function (c) { return all.some(function (r) { return catMatch(r.kind, c.value); }); });
     const box = document.createElement("div");
     box.className = "ctrls";
-    box.innerHTML = D.selectHtml("kind", "Type", kindOpts, "", true) +
-      D.selectHtml("bias", "Bias", biases, "", true) +
-      (newsOn ? '<label class="check"><input type="checkbox" data-filter="news"> Only news risk</label>' : "");
+    const trendChecked = D.featureOn("feature.trend_sentiment") ? " checked" : "";
+    const macroChecked = D.featureOn("feature.macro_fundamentals") ? " checked" : "";
+    box.innerHTML =
+      '<label class="ctl"><span class="lab">Symbol</span><input data-filter="q" type="search" placeholder="Search" autocomplete="off"></label>' +
+      D.selectHtml("cat", "Category", cats, "", true) +
+      D.selectHtml("bias", "Bias", biasOrder, "", true) +
+      D.selectHtml("tech", "Technical score", SCORE_BANDS, "", true) +
+      D.selectHtml("sent", "Sentiment + COT", SCORE_BANDS, "", true) +
+      D.selectHtml("macro", "Macro score", SCORE_BANDS, "", true) +
+      '<label class="check"><input type="checkbox" data-filter="gtrend"' + trendChecked + "> Trend &amp; sentiment</label>" +
+      '<label class="check"><input type="checkbox" data-filter="gmacro"' + macroChecked + "> Macro</label>";
     const table = document.createElement("div");
     table.className = "panel";
     ctx.page.appendChild(box);
-    if (!anyNews && newsOn) ctx.page.insertAdjacentHTML("beforeend", '<p class="cap">No high-impact news in the next 24 hours.</p>');
     ctx.page.appendChild(table);
-    const state = { sort: "score", dir: "desc", page: 0 };
-    const partCols = [
-      ["technicals", "Technicals", 3, "feature.technicals"],
-      ["cot", "COT", 2, "feature.cot"],
-      ["crowd", "Crowd sentiment", 2, "feature.retail_sentiment"],
-      ["growth", "Economic growth", 3, "feature.economic_growth"],
-      ["inflation", "Inflation", 3, "feature.inflation"],
-      ["jobs", "Jobs", 3, "feature.jobs"],
-    ].filter((c) => D.featureOn(c[3])).map((c) => ({ key: c[0], label: c[1], kind: "score", cap: c[2], heat: true }));
-    const columns = [
-      { key: "symbol", label: "Symbol", render: (r) => symLink(r.symbol) },
-      { key: "bias", label: "Bias", kind: "bias", heat: true },
-      { key: "score", label: "Score", kind: "score", cap: 10, heat: true },
-      { key: "change_1d_pct", label: "1 day change", kind: "pct", dec: 2, cls: "hide-sm" },
-    ].concat(partCols);
-    if (anyNews) columns.push({ key: "news_flag", label: "News", heat: true, render: (r) => newsCounts(r) ? newsCell(r) : D.na() });
-    function current() {
-      const kind = D.fieldVal(box, "kind");
+    const state = { sort: "score", dir: "desc" };
+
+    function shownFactors() {
+      const trend = D.checked(box, "gtrend") ? TREND_FACTORS.filter(function (c) { return c[2](); }) : [];
+      const macro = D.checked(box, "gmacro") ? MACRO_FACTORS.filter(function (c) { return c[2](); }) : [];
+      return { trend: trend, macro: macro };
+    }
+    function viewScore(r, cols) {
+      return cols.trend.concat(cols.macro).reduce(function (sum, c) { return sum + intOf(r[c[0]]); }, 0);
+    }
+    function current(cols) {
+      const q = D.fieldVal(box, "q").trim().toLowerCase();
+      const cat = D.fieldVal(box, "cat");
       const bias = D.fieldVal(box, "bias");
-      const news = D.checked(box, "news");
-      return all.filter((r) => {
-        if (kind && r.kind !== kind) return false;
-        if (bias && r.bias !== bias) return false;
-        if (news && !newsCounts(r)) return false;
+      const tech = D.fieldVal(box, "tech");
+      const sent = D.fieldVal(box, "sent");
+      const macro = D.fieldVal(box, "macro");
+      return all.filter(function (r) {
+        if (q && String(r.symbol || "").toLowerCase().indexOf(q) < 0) return false;
+        if (!catMatch(r.kind, cat)) return false;
+        const score = viewScore(r, cols);
+        if (bias && biasOf(score, bands) !== bias) return false;
+        if (!bandOk(intOf(r.f_trend) + intOf(r.f_seasonality), tech)) return false;
+        if (!bandOk(intOf(r.f_cot) + intOf(r.f_crowd), sent)) return false;
+        const macroSum = MACRO_FACTORS.reduce(function (sum, c) { return sum + intOf(r[c[0]]); }, 0);
+        if (!bandOk(macroSum, macro)) return false;
         return true;
+      }).map(function (r) {
+        const score = viewScore(r, cols);
+        return Object.assign({}, r, { _view: score, _bias: biasOf(score, bands) });
       });
     }
-    function draw() {
-      D.drawTable(table, { rows: current(), columns: columns, state: state, pageSize: 60, empty: "No markets match these filters." });
+    function sortRows(rows) {
+      const dir = state.dir === "asc" ? 1 : -1;
+      const key = state.sort;
+      return rows.slice().sort(function (a, b) {
+        let c = 0;
+        if (key === "symbol") c = String(a.symbol).localeCompare(String(b.symbol));
+        else if (key === "bias") c = (BIAS_RANK[a._bias] || 0) - (BIAS_RANK[b._bias] || 0);
+        else if (key === "score") c = a._view - b._view;
+        else c = intOf(a[key]) - intOf(b[key]);
+        if (c === 0) c = b._view - a._view || String(a.symbol).localeCompare(String(b.symbol));
+        return c * dir;
+      });
     }
-    box.addEventListener("change", () => { state.page = 0; draw(); });
+    function headCell(key, label, cls) {
+      const mark = state.sort === key ? '<span class="sort">' + (state.dir === "asc" ? "▲" : "▼") + "</span>" : "";
+      return '<th class="' + cls + '" data-k="' + key + '">' + label + mark + "</th>";
+    }
+    function draw() {
+      const cols = shownFactors();
+      const rows = sortRows(current(cols));
+      const ban = '<th class="ban sum" colspan="4"><span class="ban-long">Score</span><span class="ban-short">Score</span></th>' +
+        (cols.trend.length ? '<th class="ban trend" colspan="' + cols.trend.length + '"><span class="ban-long">Trend &amp; sentiment</span><span class="ban-short">Trend</span></th>' : "") +
+        (cols.macro.length ? '<th class="ban macro" colspan="' + cols.macro.length + '"><span class="ban-long">Macro / economic data</span><span class="ban-short">Macro</span></th>' : "");
+      const labels = headCell("score_chg_1d", "1 Day<br>Change", "chg") +
+        headCell("symbol", "Symbol", "sym") +
+        headCell("bias", "Bias", "bias") +
+        headCell("score", "Score", "score") +
+        cols.trend.concat(cols.macro).map(function (c) { return headCell(c[0], D.esc(c[1]), "f"); }).join("");
+      const body = rows.map(function (r) {
+        const chg = intOf(r.score_chg_1d);
+        const chgCls = chg > 0 ? "pos" : chg < 0 ? "neg" : "flat";
+        const factors = cols.trend.concat(cols.macro).map(function (c) {
+          return '<td class="f">' + factorHtml(r[c[0]]) + "</td>";
+        }).join("");
+        return "<tr><td class=\"chg\"><span class=\"chgnum " + chgCls + "\">" + D.esc(D.signed(chg) || "0") + "</span></td>" +
+          '<td class="sym">' + symLink(r.symbol) + "</td>" +
+          '<td class="bias">' + D.biasFill(r._bias) + "</td>" +
+          '<td class="score">' + D.esc(String(r._view)) + "</td>" + factors + "</tr>";
+      }).join("");
+      const empty = rows.length ? "" : '<div class="empty">No markets match these filters.</div>';
+      table.innerHTML = '<div class="scroll edge-scroll"><table class="edge"><thead><tr>' + ban + "</tr><tr>" + labels +
+        "</tr></thead><tbody>" + body + "</tbody></table></div>" + empty +
+        '<div class="swipe-count">' + rows.length + (rows.length === 1 ? " market" : " markets") + "</div>";
+      table.querySelectorAll("thead tr:nth-child(2) th").forEach(function (th) {
+        th.addEventListener("click", function () {
+          const k = th.getAttribute("data-k");
+          if (state.sort === k) state.dir = state.dir === "asc" ? "desc" : "asc";
+          else { state.sort = k; state.dir = k === "symbol" ? "asc" : "desc"; }
+          draw();
+        });
+      });
+      D.markScroll(table);
+    }
+    box.addEventListener("input", draw);
+    box.addEventListener("change", draw);
     draw();
     ctx.page.insertAdjacentHTML("beforeend", foot(
-      "Score = Technicals + COT + Crowd + Growth + Inflation + Jobs. 7 or more is Very Bullish, 4 to 6 Bullish, −4 to −6 Bearish, −7 or less Very Bearish. Green is bullish or better, red is bearish or worse, grey is neutral. News is a high-impact event in the next 24 hours. It is not part of the score."
+      "Score is the sum of the factor cells on the row. 7 or more is Very Bullish, 4 to 6 Bullish, −3 to +3 Neutral, −4 to −7 Bearish, −8 or less Very Bearish. A blue cell is positive, a red cell is negative, and a grey cell is zero. Grey can mean the reading was flat, or that the country has no free series (see Help). 1 Day Change is today’s score minus yesterday’s score. Turning Trend &amp; sentiment or Macro off hides that group and takes it out of the score on this page. Research screen, not a trade signal."
     ));
   }
 
@@ -1162,6 +1300,7 @@
     const log = ctx.files["updates_log.csv"] || [];
     const help = ctx.files["help.csv"] || [];
     const settings = ctx.files["settings.csv"] || [];
+    const coverage = ctx.files["factor_coverage.csv"] || [];
     const labels = {
       "feature.technicals": "Technicals",
       "feature.cot": "COT",
@@ -1178,6 +1317,8 @@
       "feature.backtest": "Score backtest",
       "feature.carry": "Real yields and carry",
       "feature.calendar": "Economic calendar",
+      "feature.trend_sentiment": "Trend and sentiment group",
+      "feature.macro_fundamentals": "Macro group",
       "scoring.seasonality_points_fx": "Seasonality points, currencies",
       "scoring.seasonality_points_other": "Seasonality points, other markets",
       "scoring.retail_long_bearish_at": "Retail long counts bearish at %",
@@ -1233,11 +1374,25 @@
       '<h2 style="font-size:14px;margin:14px 0 6px">Switches</h2>' + setHtml +
       '<details class="score-settings"><summary>Score settings</summary>' + scoreHtml + "</details>" +
       '<p class="psub" style="margin-top:12px">Prices refresh every hour. COT arrives on Fridays. This site reads the same files as the sheet. Research screen, not a trade signal.</p>' +
-      "</div></section></div>";
+      "</div></section></div>" + coverageHtml(coverage);
+  }
+  function coverageHtml(rows) {
+    if (!rows.length) {
+      return '<section class="panel"><div class="phead"><div><div class="ptitle">Where each factor comes from</div></div></div>' +
+        '<div class="pbody"><p>The factor list is written the next time the data job runs.</p></div></section>';
+    }
+    const body = rows.map(function (r) {
+      return "<tr><td>" + D.esc(r.factor) + '</td><td class="wrap">' + D.esc(r.covered) + '</td><td class="wrap">' +
+        D.esc(r.source) + '</td><td class="wrap">' + D.esc(r.notes) + "</td></tr>";
+    }).join("");
+    return '<section class="panel"><div class="phead"><div><div class="ptitle">Where each factor comes from</div>' +
+      '<div class="psub">Each factor is a whole number from −2 to +2. For a currency pair, a macro factor is the base country minus the quote country. A zero means the reading was flat, the print had no consensus, or that country has no free public series.</div></div></div>' +
+      '<div class="scroll"><table class="cov"><thead><tr><th>Factor</th><th>Who has a real number</th><th>Source</th><th>Notes</th></tr></thead><tbody>' +
+      body + "</tbody></table></div></section>";
   }
 
   window.DESK_PAGES = {
-    top: { kicker: "All symbols ranked by score", files: [], render: pageTop },
+    top: { kicker: "Ranked by score. Each factor is −2 to +2.", files: [], render: pageTop },
     scorecard: { kicker: "Six checks behind the score. Pick a symbol.", files: ["scorecard_details.csv", "score_history.csv", "news_risk.csv"], render: (ctx) => renderScorecard(ctx, "EURUSD") },
     gold: { kicker: "The same six checks, opened on gold.", files: ["scorecard_details.csv", "score_history.csv", "news_risk.csv"], render: (ctx) => renderScorecard(ctx, "GOLD") },
     cot: { kicker: "What large speculators hold in futures", files: ["cot_report.csv"], render: pageCot },
@@ -1255,7 +1410,7 @@
     calendar: { kicker: "High and medium impact events. Times are Pacific.", files: ["calendar.csv", "upcoming_events.csv"], render: pageCalendar },
     news: { kicker: "Central banks and market headlines", files: ["news.csv"], render: pageNews },
     backtest: { kicker: "Did a higher score lead to a better next week?", files: ["backtest.csv"], render: pageBacktest },
-    help: { kicker: "What updates when, and how the score works", files: ["help.csv"], render: pageHelp },
+    help: { kicker: "What updates when, and how the score works", files: ["help.csv", "factor_coverage.csv"], render: pageHelp },
   };
 
   D.boot();

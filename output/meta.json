@@ -1,5 +1,5 @@
 {
- "updated_pt": "2026-10-24 10:23 PT",
+ "updated_pt": "2026-10-24 12:47 PT",
  "prices_as_of": "2026-10-23",
  "label": "Research screen, not a trade signal.",
  "tabs": [
@@ -10,6 +10,7 @@
   "cot_report",
   "econ_data",
   "econ_strength",
+  "factor_coverage",
   "help",
   "market_heatmap",
   "momentum",

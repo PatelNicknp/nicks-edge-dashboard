@@ -21,9 +21,11 @@ Score = Technicals + COT + Crowd + Growth + Inflation + Jobs.
 |---|---|
 | 7 or more | Very Bullish |
 | 4 to 6 | Bullish |
-| -4 to -6 | Bearish |
-| -7 or less | Very Bearish |
-| anything else | Neutral |
+| -3 to 3 | Neutral |
+| -4 to -7 | Bearish |
+| -8 or less | Very Bearish |
+
+Top Setups also writes each of those points as its own factor, from -2 to +2: Trend, Seasonality, COT, Crowd, and 14 macro prints (GDP, manufacturing PMI, services PMI, retail sales, consumer confidence, CPI, PPI, PCE, interest rates, employment change, unemployment, claims, ADP, JOLTS). `output/factor_coverage.csv` says which countries have a free series. A missing series scores 0. 1 Day Change is today's score minus the previous day's score. The six grouped columns are unchanged.
 
 | Part | Rule | Source |
 |---|---|---|

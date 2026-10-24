@@ -49,7 +49,7 @@ def top_setups(path, n=26):
             box(fig, .602, y - rh * .36, .045, rh * .72, "#5a4a1a"); fig.text(.6245, y, "med", fontsize=9.5, ha="center", va="center", color=YELLOW)
             fig.text(.652, y, med[:70], fontsize=10, va="center", color=MUTED)
         else: fig.text(.605, y, "none", fontsize=10, va="center", color=MUTED)
-    fig.text(0.015, 0.03, "Score = Technicals + COT + Crowd + Growth + Inflation + Jobs.  7 or more Very Bullish, 4 to 6 Bullish, -4 to -6 Bearish, -7 or less Very Bearish.", fontsize=10, color=MUTED)
+    fig.text(0.015, 0.03, "Score = Technicals + COT + Crowd + Growth + Inflation + Jobs.  7 or more Very Bullish, 4 to 6 Bullish, -3 to 3 Neutral, -4 to -7 Bearish, -8 or less Very Bearish.", fontsize=10, color=MUTED)
     fig.text(0.015, 0.012, "News risk: Forex Factory weekly calendar, high impact (red) and medium impact (amber), next 24 hours, Pacific Time.  " + LABEL, fontsize=10, color=MUTED)
     fig.savefig(path, dpi=240, facecolor=BG); plt.close(fig)
 
