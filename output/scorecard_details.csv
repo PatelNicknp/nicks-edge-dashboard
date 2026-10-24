@@ -9,7 +9,7 @@ EURGBP,Growth,Manufacturing PMI,"EUR -1, GBP +1",-2.0
 EURGBP,Growth,Services PMI,"EUR -1, GBP +1",-2.0
 EURGBP,Growth,Retail sales,"EUR -1, GBP -1",0.0
 EURGBP,Growth,Consumer confidence,"EUR -1, GBP -1",0.0
-EURGBP,Inflation,CPI y/y,"EUR +0, GBP +0",0.0
+EURGBP,Inflation,CPI y/y,"EUR +0, GBP +1",-1.0
 EURGBP,Inflation,PPI y/y,"EUR +1, GBP +1",0.0
 EURGBP,Inflation,PCE y/y,"EUR +0, GBP +0",0.0
 EURGBP,Inflation,Interest rate,"EUR +0, GBP +0",0.0
@@ -49,7 +49,7 @@ EURNZD,Growth,Manufacturing PMI,"EUR -1, NZD +0",-1.0
 EURNZD,Growth,Services PMI,"EUR -1, NZD +0",-1.0
 EURNZD,Growth,Retail sales,"EUR -1, NZD +0",-1.0
 EURNZD,Growth,Consumer confidence,"EUR -1, NZD +0",-1.0
-EURNZD,Inflation,CPI y/y,"EUR +0, NZD +1",-1.0
+EURNZD,Inflation,CPI y/y,"EUR +0, NZD -1",1.0
 EURNZD,Inflation,PPI y/y,"EUR +1, NZD +0",1.0
 EURNZD,Inflation,PCE y/y,"EUR +0, NZD +0",0.0
 EURNZD,Inflation,Interest rate,"EUR +0, NZD +0",0.0
@@ -139,7 +139,7 @@ EURJPY,Jobs,Jobless claims,"EUR +0, JPY +0",0.0
 EURJPY,Jobs,JOLTS,"EUR +0, JPY +0",0.0
 EURJPY,Jobs,ADP,"EUR +0, JPY +0",0.0
 EURJPY,News risk,High impact next 24h,none,0.0
-GBPAUD,Technicals,Trend score,below; down or flat,-2.0
+GBPAUD,Technicals,Trend score,above; up,2.0
 GBPAUD,Technicals,Seasonality (10-year avg this month),"+0.28%, up 60% of years",1.0
 GBPAUD,COT,Net positioning,"GBP -80,420 / AUD -127,292",0.0
 GBPAUD,COT,Latest weekly change,GBP +6.09 / AUD -0.96,2.0
@@ -149,7 +149,7 @@ GBPAUD,Growth,Manufacturing PMI,"GBP +1, AUD +0",1.0
 GBPAUD,Growth,Services PMI,"GBP +1, AUD +0",1.0
 GBPAUD,Growth,Retail sales,"GBP -1, AUD +0",-1.0
 GBPAUD,Growth,Consumer confidence,"GBP -1, AUD +0",-1.0
-GBPAUD,Inflation,CPI y/y,"GBP +0, AUD -1",1.0
+GBPAUD,Inflation,CPI y/y,"GBP +1, AUD -1",2.0
 GBPAUD,Inflation,PPI y/y,"GBP +1, AUD +1",0.0
 GBPAUD,Inflation,PCE y/y,"GBP +0, AUD +0",0.0
 GBPAUD,Inflation,Interest rate,"GBP +0, AUD +0",0.0
@@ -169,7 +169,7 @@ GBPNZD,Growth,Manufacturing PMI,"GBP +1, NZD +0",1.0
 GBPNZD,Growth,Services PMI,"GBP +1, NZD +0",1.0
 GBPNZD,Growth,Retail sales,"GBP -1, NZD +0",-1.0
 GBPNZD,Growth,Consumer confidence,"GBP -1, NZD +0",-1.0
-GBPNZD,Inflation,CPI y/y,"GBP +0, NZD +1",-1.0
+GBPNZD,Inflation,CPI y/y,"GBP +1, NZD -1",2.0
 GBPNZD,Inflation,PPI y/y,"GBP +1, NZD +0",1.0
 GBPNZD,Inflation,PCE y/y,"GBP +0, NZD +0",0.0
 GBPNZD,Inflation,Interest rate,"GBP +0, NZD +0",0.0
@@ -189,7 +189,7 @@ GBPUSD,Growth,Manufacturing PMI,"GBP +1, USD -1",2.0
 GBPUSD,Growth,Services PMI,"GBP +1, USD -1",2.0
 GBPUSD,Growth,Retail sales,"GBP -1, USD +1",-2.0
 GBPUSD,Growth,Consumer confidence,"GBP -1, USD -1",0.0
-GBPUSD,Inflation,CPI y/y,"GBP +0, USD +1",-1.0
+GBPUSD,Inflation,CPI y/y,"GBP +1, USD +1",0.0
 GBPUSD,Inflation,PPI y/y,"GBP +1, USD +1",0.0
 GBPUSD,Inflation,PCE y/y,"GBP +0, USD -1",1.0
 GBPUSD,Inflation,Interest rate,"GBP +0, USD +0",0.0
@@ -209,7 +209,7 @@ GBPCAD,Growth,Manufacturing PMI,"GBP +1, CAD +0",1.0
 GBPCAD,Growth,Services PMI,"GBP +1, CAD -1",2.0
 GBPCAD,Growth,Retail sales,"GBP -1, CAD -1",0.0
 GBPCAD,Growth,Consumer confidence,"GBP -1, CAD +0",-1.0
-GBPCAD,Inflation,CPI y/y,"GBP +0, CAD -1",1.0
+GBPCAD,Inflation,CPI y/y,"GBP +1, CAD -1",2.0
 GBPCAD,Inflation,PPI y/y,"GBP +1, CAD +1",0.0
 GBPCAD,Inflation,PCE y/y,"GBP +0, CAD +0",0.0
 GBPCAD,Inflation,Interest rate,"GBP +0, CAD +0",0.0
@@ -219,7 +219,7 @@ GBPCAD,Jobs,Jobless claims,"GBP -1, CAD +0",-1.0
 GBPCAD,Jobs,JOLTS,"GBP +0, CAD +0",0.0
 GBPCAD,Jobs,ADP,"GBP +0, CAD +0",0.0
 GBPCAD,News risk,High impact next 24h,none,0.0
-GBPCHF,Technicals,Trend score,above; up,2.0
+GBPCHF,Technicals,Trend score,above; down or flat,1.0
 GBPCHF,Technicals,Seasonality (10-year avg this month),"+0.49%, up 50% of years",1.0
 GBPCHF,COT,Net positioning,"GBP -80,420 / CHF -18,150",0.0
 GBPCHF,COT,Latest weekly change,GBP +6.09 / CHF +2.71,0.0
@@ -229,7 +229,7 @@ GBPCHF,Growth,Manufacturing PMI,"GBP +1, CHF -1",2.0
 GBPCHF,Growth,Services PMI,"GBP +1, CHF +0",1.0
 GBPCHF,Growth,Retail sales,"GBP -1, CHF +1",-2.0
 GBPCHF,Growth,Consumer confidence,"GBP -1, CHF -1",0.0
-GBPCHF,Inflation,CPI y/y,"GBP +0, CHF +0",0.0
+GBPCHF,Inflation,CPI y/y,"GBP +1, CHF +0",1.0
 GBPCHF,Inflation,PPI y/y,"GBP +1, CHF -1",2.0
 GBPCHF,Inflation,PCE y/y,"GBP +0, CHF +0",0.0
 GBPCHF,Inflation,Interest rate,"GBP +0, CHF +0",0.0
@@ -249,7 +249,7 @@ GBPJPY,Growth,Manufacturing PMI,"GBP +1, JPY -1",2.0
 GBPJPY,Growth,Services PMI,"GBP +1, JPY +0",1.0
 GBPJPY,Growth,Retail sales,"GBP -1, JPY -1",0.0
 GBPJPY,Growth,Consumer confidence,"GBP -1, JPY +1",-2.0
-GBPJPY,Inflation,CPI y/y,"GBP +0, JPY +0",0.0
+GBPJPY,Inflation,CPI y/y,"GBP +1, JPY +0",1.0
 GBPJPY,Inflation,PPI y/y,"GBP +1, JPY -1",2.0
 GBPJPY,Inflation,PCE y/y,"GBP +0, JPY +0",0.0
 GBPJPY,Inflation,Interest rate,"GBP +0, JPY +0",0.0
@@ -269,7 +269,7 @@ AUDNZD,Growth,Manufacturing PMI,"AUD +0, NZD +0",0.0
 AUDNZD,Growth,Services PMI,"AUD +0, NZD +0",0.0
 AUDNZD,Growth,Retail sales,"AUD +0, NZD +0",0.0
 AUDNZD,Growth,Consumer confidence,"AUD +0, NZD +0",0.0
-AUDNZD,Inflation,CPI y/y,"AUD -1, NZD +1",-2.0
+AUDNZD,Inflation,CPI y/y,"AUD -1, NZD -1",0.0
 AUDNZD,Inflation,PPI y/y,"AUD +1, NZD +0",1.0
 AUDNZD,Inflation,PCE y/y,"AUD +0, NZD +0",0.0
 AUDNZD,Inflation,Interest rate,"AUD +0, NZD +0",0.0
@@ -319,7 +319,7 @@ AUDCAD,Jobs,Jobless claims,"AUD +0, CAD +0",0.0
 AUDCAD,Jobs,JOLTS,"AUD +0, CAD +0",0.0
 AUDCAD,Jobs,ADP,"AUD +0, CAD +0",0.0
 AUDCAD,News risk,High impact next 24h,none,0.0
-AUDCHF,Technicals,Trend score,above; up,2.0
+AUDCHF,Technicals,Trend score,above; down or flat,1.0
 AUDCHF,Technicals,Seasonality (10-year avg this month),"+0.23%, up 70% of years",1.0
 AUDCHF,COT,Net positioning,"AUD -127,292 / CHF -18,150",0.0
 AUDCHF,COT,Latest weekly change,AUD -0.96 / CHF +2.71,-2.0
@@ -369,7 +369,7 @@ NZDUSD,Growth,Manufacturing PMI,"NZD +0, USD -1",1.0
 NZDUSD,Growth,Services PMI,"NZD +0, USD -1",1.0
 NZDUSD,Growth,Retail sales,"NZD +0, USD +1",-1.0
 NZDUSD,Growth,Consumer confidence,"NZD +0, USD -1",1.0
-NZDUSD,Inflation,CPI y/y,"NZD +1, USD +1",0.0
+NZDUSD,Inflation,CPI y/y,"NZD -1, USD +1",-2.0
 NZDUSD,Inflation,PPI y/y,"NZD +0, USD +1",-1.0
 NZDUSD,Inflation,PCE y/y,"NZD +0, USD -1",1.0
 NZDUSD,Inflation,Interest rate,"NZD +0, USD +0",0.0
@@ -379,7 +379,7 @@ NZDUSD,Jobs,Jobless claims,"NZD +0, USD +1",-1.0
 NZDUSD,Jobs,JOLTS,"NZD +0, USD -1",1.0
 NZDUSD,Jobs,ADP,"NZD +0, USD +1",-1.0
 NZDUSD,News risk,High impact next 24h,none,0.0
-NZDCAD,Technicals,Trend score,above; up,2.0
+NZDCAD,Technicals,Trend score,above; down or flat,1.0
 NZDCAD,Technicals,Seasonality (10-year avg this month),"-0.10%, up 50% of years",-1.0
 NZDCAD,COT,Net positioning,"NZD -58,149 / CAD -74,709",0.0
 NZDCAD,COT,Latest weekly change,NZD -4.20 / CAD +3.81,-2.0
@@ -389,7 +389,7 @@ NZDCAD,Growth,Manufacturing PMI,"NZD +0, CAD +0",0.0
 NZDCAD,Growth,Services PMI,"NZD +0, CAD -1",1.0
 NZDCAD,Growth,Retail sales,"NZD +0, CAD -1",1.0
 NZDCAD,Growth,Consumer confidence,"NZD +0, CAD +0",0.0
-NZDCAD,Inflation,CPI y/y,"NZD +1, CAD -1",2.0
+NZDCAD,Inflation,CPI y/y,"NZD -1, CAD -1",0.0
 NZDCAD,Inflation,PPI y/y,"NZD +0, CAD +1",-1.0
 NZDCAD,Inflation,PCE y/y,"NZD +0, CAD +0",0.0
 NZDCAD,Inflation,Interest rate,"NZD +0, CAD +0",0.0
@@ -409,7 +409,7 @@ NZDCHF,Growth,Manufacturing PMI,"NZD +0, CHF -1",1.0
 NZDCHF,Growth,Services PMI,"NZD +0, CHF +0",0.0
 NZDCHF,Growth,Retail sales,"NZD +0, CHF +1",-1.0
 NZDCHF,Growth,Consumer confidence,"NZD +0, CHF -1",1.0
-NZDCHF,Inflation,CPI y/y,"NZD +1, CHF +0",1.0
+NZDCHF,Inflation,CPI y/y,"NZD -1, CHF +0",-1.0
 NZDCHF,Inflation,PPI y/y,"NZD +0, CHF -1",1.0
 NZDCHF,Inflation,PCE y/y,"NZD +0, CHF +0",0.0
 NZDCHF,Inflation,Interest rate,"NZD +0, CHF +0",0.0
@@ -429,7 +429,7 @@ NZDJPY,Growth,Manufacturing PMI,"NZD +0, JPY -1",1.0
 NZDJPY,Growth,Services PMI,"NZD +0, JPY +0",0.0
 NZDJPY,Growth,Retail sales,"NZD +0, JPY -1",1.0
 NZDJPY,Growth,Consumer confidence,"NZD +0, JPY +1",-1.0
-NZDJPY,Inflation,CPI y/y,"NZD +1, JPY +0",1.0
+NZDJPY,Inflation,CPI y/y,"NZD -1, JPY +0",-1.0
 NZDJPY,Inflation,PPI y/y,"NZD +0, JPY -1",1.0
 NZDJPY,Inflation,PCE y/y,"NZD +0, JPY +0",0.0
 NZDJPY,Inflation,Interest rate,"NZD +0, JPY +0",0.0
@@ -585,7 +585,7 @@ GBP Index,Growth,Manufacturing PMI,UK +1,1.0
 GBP Index,Growth,Services PMI,UK +1,1.0
 GBP Index,Growth,Retail sales,UK -1,-1.0
 GBP Index,Growth,Consumer confidence,UK -1,-1.0
-GBP Index,Inflation,CPI y/y,UK +0,0.0
+GBP Index,Inflation,CPI y/y,UK +1,1.0
 GBP Index,Inflation,PPI y/y,UK +1,1.0
 GBP Index,Inflation,Interest rate,UK +0,0.0
 GBP Index,Jobs,Employment change,UK +1,1.0
@@ -613,7 +613,7 @@ NZD Index,COT,Net positioning,21.38,-1.0
 NZD Index,COT,Latest weekly change,-4.20,-1.0
 NZD Index,Crowd,Sentiment,retail long % (vs US dollar): 78,-1.0
 NZD Index,Growth,GDP,NZ +1,1.0
-NZD Index,Inflation,CPI y/y,NZ +1,1.0
+NZD Index,Inflation,CPI y/y,NZ -1,-1.0
 NZD Index,Inflation,Interest rate,NZ +0,0.0
 NZD Index,Jobs,Employment change,NZ +1,1.0
 NZD Index,Jobs,Unemployment rate,NZ -1,-1.0
@@ -757,7 +757,7 @@ CHINA50,Inflation,PPI y/y,CN +1,-1.0
 CHINA50,Inflation,Interest rate,CN +0,-0.0
 CHINA50,Jobs,Unemployment rate,CN +1,1.0
 CHINA50,News risk,High impact next 24h,none,0.0
-GER40,Technicals,Trend score,below; up,-1.0
+GER40,Technicals,Trend score,above; up,2.0
 GER40,Technicals,Seasonality (10-year avg this month),"-0.03%, up 60% of years",-1.0
 GER40,COT,Net positioning,,0.0
 GER40,COT,Latest weekly change,,0.0
@@ -783,7 +783,7 @@ UK100,Growth,Manufacturing PMI,UK +1,1.0
 UK100,Growth,Services PMI,UK +1,1.0
 UK100,Growth,Retail sales,UK -1,-1.0
 UK100,Growth,Consumer confidence,UK -1,-1.0
-UK100,Inflation,CPI y/y,UK +0,-0.0
+UK100,Inflation,CPI y/y,UK +1,-1.0
 UK100,Inflation,PPI y/y,UK +1,-1.0
 UK100,Inflation,Interest rate,UK +0,-0.0
 UK100,Jobs,Employment change,UK +1,1.0
