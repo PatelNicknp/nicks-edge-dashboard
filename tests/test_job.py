@@ -9,12 +9,12 @@ TABS = ["top_setups", "scorecard_details", "econ_data", "econ_strength", "cot_re
         "upcoming_events", "news", "news_risk", "score_history", "backtest", "help", "settings", "updates_log"]
 PARTS = ["technicals", "cot", "crowd", "growth", "inflation", "jobs"]
 
-def run_copy(news_now="2026-10-20 12:00", config_changes=None):
+def run_copy(news_now="2026-10-20 12:00", config_changes=None, extra_env=None):
     tmp = tempfile.mkdtemp(prefix="edge_test_")
     for item in ("edge_job.py", "config.json", "cache", "data"):
         src = os.path.join(REPO, item)
         (shutil.copytree if os.path.isdir(src) else shutil.copy)(src, os.path.join(tmp, item))
-    env = dict(os.environ, EDGE_NEWS_NOW=news_now)
+    env = dict(os.environ, EDGE_NEWS_NOW=news_now, **(extra_env or {}))
     if config_changes:
         cfg = json.load(open(os.path.join(tmp, "config.json")))
         for k, v in config_changes.items(): cfg["features"][k] = v
@@ -94,9 +94,47 @@ def test_switches_turn_parts_off():
     assert not os.path.exists(os.path.join(tmp, "output", "momentum.csv"))
     print("switches OK")
 
+def test_missing_ticker_is_skipped_not_fatal():
+    tmp, _ = run_copy(extra_env=dict(EDGE_TEST_DROP_TICKERS="EURUSD=X"))   # like the 'database is locked' run
+    eur = {s for s in read(tmp, "market_heatmap").symbol if "EUR" in s}
+    assert not eur, eur
+    assert "EURUSD" not in set(read(tmp, "top_setups").symbol) and "EURUSD" not in set(read(tmp, "carry").symbol)
+    assert len(read(tmp, "top_setups")) >= 37 and "GBPUSD" in set(read(tmp, "carry").symbol)
+    lg = read(tmp, "updates_log")
+    assert ((lg.source == "Prices for EURUSD") & (lg.status == "MISSING")).any()
+    print("missing ticker OK: %d EUR symbols skipped, run completed" % 8)
+
+def test_failed_download_retries_then_uses_cache_unit():
+    import types, tempfile
+    sys.argv = ["edge_job.py", "--offline"]
+    sys.path.insert(0, REPO); ej = importlib.import_module("edge_job")
+    tmp = tempfile.mkdtemp(prefix="edge_px_"); shutil.copy(os.path.join(REPO, "cache", "prices.pkl"), tmp)
+    cached = pd.read_pickle(os.path.join(tmp, "prices.pkl"))
+    calls = []
+    def download(t, **kw):  # EURUSD=X always fails, like yfinance's 'database is locked'; others come from the cache
+        t = [t] if isinstance(t, str) else list(t); calls.append(t)
+        d = pd.concat({k: cached[k].reindex(columns=t) for k in ("Close", "High", "Low")}, axis=1)
+        if "EURUSD=X" in t: d.loc[:, (slice(None), "EURUSD=X")] = np.nan
+        return d
+    import numpy as np
+    old = (ej.CACHE, ej.OFFLINE, ej.PRICE_RETRY_PAUSE, sys.modules.get("yfinance"))
+    ej.CACHE, ej.OFFLINE, ej.PRICE_RETRY_PAUSE = tmp, False, 0
+    sys.modules["yfinance"] = types.SimpleNamespace(download=download); ej.LOG.clear()
+    try: close, _, _ = ej.load_prices()
+    finally:
+        ej.CACHE, ej.OFFLINE, ej.PRICE_RETRY_PAUSE = old[:3]
+        if old[3] is not None: sys.modules["yfinance"] = old[3]
+        else: sys.modules.pop("yfinance", None)
+    assert calls[1:] == [["EURUSD=X"], ["EURUSD=X"]], calls       # retried twice, only the failed ticker
+    assert close["EURUSD"].dropna().shape[0] > 260                    # filled from the cache
+    assert any(r["source"] == "Prices for EURUSD=X" and r["status"] == "CACHED" for r in ej.LOG), ej.LOG
+    print("download retry + cache fallback OK")
+
 if __name__ == "__main__":
     test_news_risk_rules_unit()
     test_full_run_fills_every_tab()
     test_news_risk_tags_from_feed()
     test_switches_turn_parts_off()
+    test_failed_download_retries_then_uses_cache_unit()
+    test_missing_ticker_is_skipped_not_fatal()
     print("ALL TESTS PASSED")

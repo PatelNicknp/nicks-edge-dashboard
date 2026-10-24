@@ -102,18 +102,64 @@ def ffill_to_last(df, limit=3):
     upto_last = df.notna().iloc[::-1].cummax().iloc[::-1]
     return df.ffill(limit=limit).where(upto_last)
 
+PRICE_FIELDS = ("Close", "High", "Low", "Volume")
+PRICE_RETRIES, PRICE_RETRY_PAUSE = 2, 5  # retry failed tickers twice, pausing 5s then 10s
+
+def _yf_frames(d, tick):
+    """yf.download result -> {field: DataFrame with one column per ticker}."""
+    px = {}
+    for k in PRICE_FIELDS:
+        if k not in d: continue
+        v = d[k]
+        if isinstance(v, pd.Series): v = v.to_frame(tick[0])
+        v = v.copy(); v.index = pd.to_datetime(v.index).tz_localize(None); px[k] = v
+    return px
+
+def _missing(px, tick):
+    C = px.get("Close")
+    return [t for t in tick if C is None or t not in C or C[t].dropna().empty]
+
+def _merge(px, new, tick):
+    """Replace the given tickers' columns in px with those from new (outer join on dates)."""
+    for k in PRICE_FIELDS:
+        if k not in new: continue
+        cols = [t for t in tick if t in new[k]]
+        base = px.get(k, pd.DataFrame()).drop(columns=cols, errors="ignore")
+        px[k] = pd.concat([base, new[k][cols]], axis=1).sort_index()
+    return px
+
 def load_prices():
-    import yfinance as yf
     p = os.path.join(CACHE, "prices.pkl")
+    tick = list(USD_TICK.values()) + [v[1] for v in OTHER.values()] + ["DX-Y.NYB"]
+    try: cached = pd.read_pickle(p) if os.path.exists(p) else None
+    except Exception as e: cached = None; print("price cache unreadable:", str(e)[:80])
     try:
         if OFFLINE: raise RuntimeError("offline")
-        tick = list(USD_TICK.values()) + [v[1] for v in OTHER.values()] + ["DX-Y.NYB"]
-        d = yf.download(tick, period="12y", interval="1d", progress=False, auto_adjust=False, threads=True)
-        px = {k: d[k] for k in ("Close", "High", "Low", "Volume") if k in d}
-        for k in px: px[k].index = pd.to_datetime(px[k].index).tz_localize(None)
-        pd.to_pickle(px, p); log("Prices (Yahoo Finance)", "OK", px["Close"].dropna(how="all").index[-1].date())
+        import yfinance as yf
+        dl = lambda t: _yf_frames(yf.download(t, period="12y", interval="1d", progress=False, auto_adjust=False, threads=True), t)
+        px = dl(tick)
+        for attempt in range(1, PRICE_RETRIES + 1):  # a ticker can fail alone (e.g. yfinance 'database is locked')
+            bad = _missing(px, tick)
+            if not bad: break
+            time.sleep(PRICE_RETRY_PAUSE * attempt)
+            try: px = _merge(px, dl(bad), bad)
+            except Exception as e: print("price retry %d failed: %s" % (attempt, str(e)[:80]))
+        bad = _missing(px, tick)
+        if len(bad) == len(tick): raise RuntimeError("no prices downloaded")
+        for t in bad:  # still failing: use this ticker's cached prices if there are any
+            if cached is not None and not _missing(cached, [t]):
+                px = _merge(px, cached, [t])
+                log("Prices for " + t, "CACHED", cached["Close"][t].dropna().index[-1].date(), "download failed after %d retries" % PRICE_RETRIES)
+            else:
+                log("Prices for " + t, "MISSING", "", "download failed after %d retries, no cache; dependent symbols skipped" % PRICE_RETRIES)
+        pd.to_pickle(px, p); log("Prices (Yahoo Finance)", "OK", px["Close"].dropna(how="all").index[-1].date(),
+                                 ("%d of %d tickers failed" % (len(bad), len(tick))) if bad else "")
     except Exception as e:
-        px = pd.read_pickle(p); log("Prices (Yahoo Finance)", "CACHED", px["Close"].dropna(how="all").index[-1].date(), str(e)[:80])
+        if cached is None: raise
+        px = cached; log("Prices (Yahoo Finance)", "CACHED", px["Close"].dropna(how="all").index[-1].date(), str(e)[:80])
+    drop = [t for t in os.environ.get("EDGE_TEST_DROP_TICKERS", "").split(",") if t]  # tests: simulate a ticker with no data
+    px = {k: v.reindex(columns=tick).astype(float) for k, v in px.items()}
+    for k in px: px[k].loc[:, drop] = np.nan
     px = clean_trailing_bars(px)
     C, Hh, Ll = ffill_to_last(px["Close"]), ffill_to_last(px["High"]), ffill_to_last(px["Low"])
     usd = {}  # value of 1 unit of currency in USD
@@ -583,6 +629,7 @@ def page_tables(close, high, low, cot, ev, cal):
     car = []
     for s in PAIRS:
         rb, rq = rates[s[:3]].iloc[-1], rates[s[3:]].iloc[-1]; p = close[s].dropna()
+        if len(p) < 64: continue  # prices missing this run (already noted in updates_log)
         vol = p.pct_change().tail(63).std() * np.sqrt(252) * 100
         car.append(dict(symbol=s, base_rate=rb, quote_rate=rq, carry_pct=rb - rq, carry_to_vol=(rb - rq) / vol,
                         move_1m=(p.iloc[-1] / p.iloc[-22] - 1) * 100, move_3m=(p.iloc[-1] / p.iloc[-64] - 1) * 100))
