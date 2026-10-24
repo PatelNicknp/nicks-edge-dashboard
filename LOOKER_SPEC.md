@@ -37,7 +37,7 @@ Tab ids are listed by the menu Nick's Edge > Make Looker Studio link.
 **Field types to set once (in each data source):**
 - `score`, `technicals`, `cot`, `crowd`, `growth`, `inflation`, `jobs`, `signal`: Number, aggregation None.
 - `date` columns: Date (YYYY-MM-DD).
-- `time_pt`, `published_pt`: Text, shown as is. They already say PT.
+- `time_pt`, `published_pt` and every other `*_pt` column: Text, shown as is, like "Sat 2026-10-24 06:00 PM PT". Sort with the matching `*_pt_sort` column (Number, YYYYMMDDHHMM).
 
 **Shared colour rule:** values above 0 are green, values below 0 are red, and 0 is grey #3A3F47. Set this under Style > Conditional formatting > Colour scale, or with the rules "> 0" and "< 0".
 
@@ -130,7 +130,7 @@ Tab ids are listed by the menu Nick's Edge > Make Looker Studio link.
 
 **17. News Feed** (source `news`)
 - Table: published_pt, source, headline, link. Link shown as a hyperlink.
-- Sort by published_pt, descending.
+- Sort by published_pt_sort, descending.
 - Source drop-down.
 
 **18. Score Backtest** (source `backtest`)

@@ -706,6 +706,27 @@ def ymd(s):
 DATE_COLS = {"score_history": ["date"], "cot_history": ["date"], "cot_report": ["date"], "econ_data": ["date"],
              "put_call": ["date"], "rates": ["as_of"], "spreads": ["date"]}
 
+# Sheets also turns "2026-10-18 07:15" into a serial number, so every *_pt column is written as text Sheets leaves alone,
+# "Sat 2026-10-24 06:00 PM PT", with a numeric <col>_sort column (YYYYMMDDHHMM) right after it for sorting.
+PT_FMT = "%a %Y-%m-%d %I:%M %p PT"
+
+def pt_text(s):
+    """Parse PT times written as 2026-10-18 07:15, 2026-10-24 02:28 PT or Sat 2026-10-24 06:00 PM PT.
+    Returns (text in PT_FMT, YYYYMMDDHHMM sort key); unreadable values keep their text and get an empty key."""
+    raw = pd.Series(s).astype(str).str.strip()
+    core = raw.str.replace(r"^[A-Za-z]{3} ", "", regex=True).str.replace(r"\s*PT$", "", regex=True)
+    t = pd.to_datetime(core, format="mixed", errors="coerce")
+    text = t.dt.strftime(PT_FMT).where(t.notna(), raw.where(pd.Series(s).notna(), ""))
+    key = t.dt.strftime("%Y%m%d%H%M").where(t.notna(), "")
+    return text, key
+
+def pt_columns(df):
+    for c in [c for c in df.columns if c.endswith("_pt")]:
+        text, key = pt_text(df[c]); df[c] = text.values
+        if c + "_sort" in df.columns: df = df.drop(columns=c + "_sort")
+        df.insert(df.columns.get_loc(c) + 1, c + "_sort", key.values)
+    return df
+
 HIST_COLS = ["symbol", "score", "technicals", "cot", "crowd", "growth", "inflation", "jobs", "date"]
 HISTORY_DAYS = 730  # about 1.2 MB of CSV; small enough for Google Sheets IMPORTDATA
 
@@ -808,6 +829,7 @@ def main():
         for c in DATE_COLS.get(name, []):
             if c in df.columns:
                 d = ymd(df[c]); df[c] = d.dt.strftime("%Y%m%d").where(d.notna(), df[c].astype(str))
+        df = pt_columns(df)
         df.to_csv(os.path.join(OUT, name + ".csv"), index=False)
     json.dump(dict(updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of=str(asof.date()), label=LABEL,
                    tabs=sorted(set(T) | {"backtest"} if FEAT["backtest"] else set(T))), open(os.path.join(OUT, "meta.json"), "w"), indent=1)

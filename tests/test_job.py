@@ -44,7 +44,19 @@ def test_full_run_fills_every_tab():
     assert {"Technicals", "COT", "Crowd", "Growth", "Inflation", "Jobs", "News risk"} <= set(det.section)
     for t in TABS:  # no em dashes anywhere Nick reads
         assert "\u2014" not in open(os.path.join(tmp, "output", t + ".csv"), encoding="utf-8").read(), "em dash in " + t
-    print("full run OK: %d tabs filled, %d symbols" % (len(TABS), len(top)))
+    pt_cols = 0
+    for t in TABS:  # Pacific times are text Sheets will not turn into serial numbers, each with a sort key next to it
+        df = pd.read_csv(os.path.join(tmp, "output", t + ".csv"), dtype=str, keep_default_na=False)
+        for c in [c for c in df.columns if c.endswith("_pt")]:
+            pt_cols += 1
+            assert list(df.columns).index(c + "_sort") == list(df.columns).index(c) + 1, (t, c)
+            v = df[df[c] != ""]
+            assert v[c].str.fullmatch(r"[A-Z][a-z]{2} \d{4}-\d\d-\d\d \d\d:\d\d [AP]M PT").all(), (t, c, v[c].head(3).tolist())
+            assert v[c + "_sort"].str.fullmatch(r"\d{12}").all(), (t, c)
+            k = pd.to_datetime(v[c + "_sort"], format="%Y%m%d%H%M")
+            assert (k.dt.strftime("%a %Y-%m-%d %I:%M %p PT") == v[c]).all(), (t, c)
+    assert pt_cols >= 7, pt_cols
+    print("full run OK: %d tabs filled, %d symbols, %d PT time columns" % (len(TABS), len(top), pt_cols))
 
 def test_news_risk_tags_from_feed():
     tmp, _ = run_copy(news_now="2026-10-20 12:00")   # pretend it is Tue Oct 20 noon PT; UK CPI is Tue 11:00 PM PT
