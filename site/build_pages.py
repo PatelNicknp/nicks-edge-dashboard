@@ -13,6 +13,7 @@ PAGES = [
     ("econ-tables.html", "econtables", "Economic tables"),
     ("carry.html", "carry", "Real yields and carry"),
     ("seasonality.html", "season", "Seasonality"),
+    ("season.html", "season", "Seasonality"),
     ("momentum.html", "momentum", "Momentum"),
     ("volatility.html", "volatility", "Volatility"),
     ("markets.html", "markets", "Market heatmap"),
