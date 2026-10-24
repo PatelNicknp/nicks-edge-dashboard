@@ -49,3 +49,12 @@ Every part can be switched off in `config.json`.
 ## Secrets
 
 `MYFXBOOK_EMAIL` and `MYFXBOOK_PASSWORD` are read only from environment variables (GitHub repository secrets). They are never written to any file.
+
+## Score history backfill
+`output/score_history.csv` keeps one row per symbol per day (last 730 days). Past days come from
+`cache/score_history_seed.csv`, built once by `python backfill_history.py --days 365 --calendar-dir <older Nasdaq calendar files>`
+with the same scoring code, point in time (prices to that day, COT reports released by that day, calendar releases
+on or before that day). Crowd is 0 for fx pairs and currency indices in the backfill (no free Myfxbook history);
+indices, metals and oil use the cached CBOE put/call history. Live rows always win over seed rows for the same day.
+Dates in the pure date columns (score_history, cot_history, cot_report, econ_data, put_call: `date`; rates: `as_of`;
+spreads: `date`) are written as YYYYMMDD digits so Looker Studio can read them as Date (YYYYMMDD).

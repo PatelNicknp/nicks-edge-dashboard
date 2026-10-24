@@ -624,6 +624,38 @@ HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simpl
         ("News risk", "A high-impact event for either currency in the next 24 hours. Times are Pacific Time (PT)."),
         ("Data delay", "COT is out Fridays for the prior Tuesday. Prices are end of day plus the latest hourly snapshot.")]
 
+def ymd(s):
+    """Parse dates written as 2026-10-23, 20261023 or 2026-10-23 00:00:00 into Timestamps (NaT if unreadable)."""
+    s = pd.Series(s).astype(str).str.strip().str.replace(r"\.0$", "", regex=True).str[:10].str.replace("-", "", regex=False)
+    return pd.to_datetime(s, format="%Y%m%d", errors="coerce")
+
+# Google Sheets IMPORTDATA turns 2026-10-23 into a date serial that Looker Studio cannot read, so pure date columns
+# are written as YYYYMMDD digits (Looker field type: Date (YYYYMMDD)). Text columns ending in _pt stay readable text.
+DATE_COLS = {"score_history": ["date"], "cot_history": ["date"], "cot_report": ["date"], "econ_data": ["date"],
+             "put_call": ["date"], "rates": ["as_of"], "spreads": ["date"]}
+
+HIST_COLS = ["symbol", "score", "technicals", "cot", "crowd", "growth", "inflation", "jobs", "date"]
+HISTORY_DAYS = 730  # about 1.2 MB of CSV; small enough for Google Sheets IMPORTDATA
+
+def score_history(top):
+    today = top[HIST_COLS[:-1]].assign(date=NOW.strftime("%Y-%m-%d"))
+    frames = []
+    for f in (os.path.join(CACHE, "score_history_seed.csv"), os.path.join(OUT, "score_history.csv")):
+        if not os.path.exists(f): continue
+        try:
+            h = pd.read_csv(f, dtype={"date": str})
+            if set(HIST_COLS) <= set(h.columns): frames.append(h[HIST_COLS])
+            else: log("Score history", "ERROR", "", os.path.basename(f) + " has unexpected columns, skipped")
+        except Exception as e: log("Score history", "ERROR", "", "%s: %s" % (os.path.basename(f), str(e)[:60]))
+    hist = pd.concat(frames + [today], ignore_index=True)
+    hist["date"] = ymd(hist["date"]).dt.strftime("%Y-%m-%d")  # reads both 2026-10-23 and 20261023
+    hist = hist.dropna(subset=["date", "symbol"]).drop_duplicates(["date", "symbol"], keep="last")
+    hist = hist[hist.date >= (NOW - pd.Timedelta(days=HISTORY_DAYS)).strftime("%Y-%m-%d")]
+    for c in HIST_COLS[1:-1]: hist[c] = pd.to_numeric(hist[c], errors="coerce").fillna(0).astype(int)
+    hist = hist.sort_values(["date", "symbol"]).reset_index(drop=True)
+    log("Score history", "OK", hist.date.max(), "%d days, %s to %s" % (hist.date.nunique(), hist.date.min(), hist.date.max()))
+    return hist
+
 def fmt_parts(d): return "; ".join("%s: %s" % (k, v) for k, v in d.items() if not k.endswith("_label"))
 
 def main():
@@ -684,11 +716,10 @@ def main():
     T["upcoming_events"] = pd.DataFrame(dict(time_pt=up.time_pt.dt.strftime("%a %Y-%m-%d %I:%M %p PT"), currency=up.country,
                                              impact=up.impact, event=up.title, forecast=up.forecast, previous=up.previous))
     if FEAT["news_feed"]: T["news"] = news_feed()
-    # score history: one row per day per symbol (today's row is overwritten every hour)
-    hf = os.path.join(OUT, "score_history.csv")
-    today = top[["symbol", "score", "technicals", "cot", "crowd", "growth", "inflation", "jobs"]].assign(date=NOW.strftime("%Y-%m-%d"))
-    hist = pd.concat([pd.read_csv(hf), today]) if os.path.exists(hf) else today
-    T["score_history"] = hist.drop_duplicates(["date", "symbol"], keep="last")
+    # score history: one row per day per symbol (today's row is overwritten every hour).
+    # Order of precedence (last wins): backfilled seed (cache/score_history_seed.csv, built by backfill_history.py),
+    # then the history already in output/, then today's live row. Keeps the last HISTORY_DAYS days.
+    T["score_history"] = score_history(top)
     if FEAT["backtest"]:
         bf = os.path.join(OUT, "backtest.csv")  # heavy-ish: rebuild once a day
         if not os.path.exists(bf) or pd.Timestamp(os.path.getmtime(bf), unit="s").date() != dt.date.today() or "--backtest" in sys.argv:
@@ -702,6 +733,9 @@ def main():
         df = df.copy()
         for c in df.columns:
             if df[c].dtype.kind == "f": df[c] = df[c].round(4)
+        for c in DATE_COLS.get(name, []):
+            if c in df.columns:
+                d = ymd(df[c]); df[c] = d.dt.strftime("%Y%m%d").where(d.notna(), df[c].astype(str))
         df.to_csv(os.path.join(OUT, name + ".csv"), index=False)
     json.dump(dict(updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of=str(asof.date()), label=LABEL,
                    tabs=sorted(set(T) | {"backtest"} if FEAT["backtest"] else set(T))), open(os.path.join(OUT, "meta.json"), "w"), indent=1)

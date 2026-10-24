@@ -1,4 +1,4 @@
-pandas>=2.2
+pandas==3.1.0  # same version on every run, so cache/prices.pkl always reads back
 numpy>=1.26
 requests>=2.31
 yfinance>=0.2.54
