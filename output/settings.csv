@@ -12,6 +12,8 @@ feature.seasonality,True
 feature.market_pages,True
 feature.news_feed,True
 feature.backtest,True
+feature.carry,True
+feature.calendar,True
 scoring.seasonality_points_fx,1
 scoring.seasonality_points_other,1
 scoring.retail_long_bearish_at,60

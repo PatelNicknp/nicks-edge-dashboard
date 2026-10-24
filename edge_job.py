@@ -30,12 +30,29 @@ def log(source, status, latest="", note=""):
     LOG.append(dict(source=source, status=status, latest=str(latest), note=note, checked_pt=NOW.strftime("%Y-%m-%d %H:%M")))
     print("[%s] %s %s %s" % (status, source, latest, note))
 
-# FRED (rates, yields, spreads): stop asking after a few failures in one run and use the cache folder instead
-FRED_TIMEOUT, FRED_MAX_FAILS = 20, 2
+# FRED (rates, yields, spreads): retry a slow read, then stop asking after a few failures and use the cache
+FRED_TIMEOUT, FRED_MAX_FAILS = 45, 4
+FRED_TRIES, FRED_RETRY_PAUSE = 3, 2
 FRED_STATE = {"ok": 0, "cached": 0, "fails": 0, "err": ""}
+def _fred_plain(e):
+    msg = str(e)
+    if "timed out" in msg.lower() or "timeout" in msg.lower() or "not answering" in msg.lower():
+        return "FRED didn't answer. Showing the last saved values."
+    return msg[:120]
 def _fred_fail(e):
     FRED_STATE["cached"] += 1
-    if not OFFLINE and "not answering" not in str(e): FRED_STATE["fails"] += 1; FRED_STATE["err"] = str(e)[:80]
+    if not OFFLINE and "not answering" not in str(e): FRED_STATE["fails"] += 1; FRED_STATE["err"] = _fred_plain(e)
+def fred_text(url):
+    """Fetch one FRED file. A read timeout is retried before the series is marked cached."""
+    last = None
+    tries = 1 if OFFLINE else FRED_TRIES
+    for attempt in range(tries):
+        try: return get(url, timeout=FRED_TIMEOUT).text
+        except Exception as e:
+            last = e
+            if OFFLINE or attempt + 1 >= tries: raise
+            time.sleep(FRED_RETRY_PAUSE * (attempt + 1))
+    raise last
 
 def get(url, timeout=40, **kw):
     if OFFLINE: raise RuntimeError("offline mode")
@@ -97,6 +114,22 @@ def clean_trailing_bars(px):
             if drop and t in px[k]: px[k].loc[drop, t] = np.nan
     return px
 
+def last_cash_session(df):
+    """Last date that is a cash-market session. A Saturday bitcoin (or leftover FX) bar must not set prices_as_of."""
+    if df is None or len(df.index) == 0: return None
+    crypto = {"BTC-USD", "BTCUSD"}
+    cols = [c for c in df.columns if c not in crypto]
+    sub = df[cols].dropna(how="all") if cols else df.dropna(how="all")
+    if sub.empty: sub = df.dropna(how="all")
+    while len(sub) and int(sub.index[-1].day_of_week) >= 5: sub = sub.iloc[:-1]
+    return None if sub.empty else sub.index[-1]
+
+def session_series(sym, series):
+    """Daily series used for a 1-day change. Crypto keeps its weekend bar. Everything else stops at Friday."""
+    s = series.dropna()
+    if kind(sym) == "crypto": return s
+    return s[s.index.day_of_week < 5]
+
 def ffill_to_last(df, limit=3):
     """Forward-fill short gaps (holidays) but never past a ticker's own last real bar."""
     upto_last = df.notna().iloc[::-1].cummax().iloc[::-1]
@@ -152,11 +185,15 @@ def load_prices():
                 log("Prices for " + t, "CACHED", cached["Close"][t].dropna().index[-1].date(), "download failed after %d retries" % PRICE_RETRIES)
             else:
                 log("Prices for " + t, "MISSING", "", "download failed after %d retries, no cache; dependent symbols skipped" % PRICE_RETRIES)
-        pd.to_pickle(px, p); log("Prices (Yahoo Finance)", "OK", px["Close"].dropna(how="all").index[-1].date(),
-                                 ("%d of %d tickers failed" % (len(bad), len(tick))) if bad else "")
+        pd.to_pickle(px, p)
+        stamp = last_cash_session(px["Close"])
+        log("Prices (Yahoo Finance)", "OK", "" if stamp is None else stamp.date(),
+            ("%d of %d tickers failed" % (len(bad), len(tick))) if bad else "")
     except Exception as e:
         if cached is None: raise
-        px = cached; log("Prices (Yahoo Finance)", "CACHED", px["Close"].dropna(how="all").index[-1].date(), str(e)[:80])
+        px = cached
+        stamp = last_cash_session(px["Close"])
+        log("Prices (Yahoo Finance)", "CACHED", "" if stamp is None else stamp.date(), str(e)[:80])
     drop = [t for t in os.environ.get("EDGE_TEST_DROP_TICKERS", "").split(",") if t]  # tests: simulate a ticker with no data
     px = {k: v.reindex(columns=tick).astype(float) for k, v in px.items()}
     for k in px: px[k].loc[:, drop] = np.nan
@@ -279,7 +316,7 @@ def load_myfxbook():
     f = os.path.join(DATA, "myfxbook_latest.csv")
     if not os.path.exists(f): f = os.path.join(DATA, "myfxbook_snapshot.csv")
     df = pd.read_csv(f)
-    log("Retail sentiment (Myfxbook)", "SNAPSHOT", df.fetched_pt.iloc[0], "add MYFXBOOK_EMAIL / MYFXBOOK_PASSWORD secrets for live data")
+    log("Retail sentiment (Myfxbook)", "SNAPSHOT", df.fetched_pt.iloc[0], "Snapshot. A live reading needs a Myfxbook login.")
     return df.set_index("symbol"), "snapshot " + str(df.fetched_pt.iloc[0])
 
 def load_pcr():
@@ -416,7 +453,9 @@ def load_calendar():
                              previous_txt=html.unescape(r.get("previous", "")).replace("\xa0", "").strip()))
     cal = pd.DataFrame(rows).drop_duplicates(["country", "event", "time_et", "actual_txt", "forecast_txt", "previous_txt"], keep="last")
     for c in ("actual", "forecast", "previous"): cal[c] = cal[c + "_txt"].map(num)
-    log("Economic calendar actual vs forecast (Nasdaq)", "OK" if ok else "CACHED", cal.date.max(), "%d days refreshed" % ok)
+    released_dates = cal.loc[cal.actual.notna(), "date"] if len(cal) and "actual" in cal.columns else pd.Series(dtype=str)
+    latest = released_dates.max() if len(released_dates) else (cal.date.max() if len(cal) else "")
+    log("Economic calendar actual vs forecast (Nasdaq)", "OK" if ok else "CACHED", latest, "%d days refreshed" % ok)
     return cal
 
 def latest_releases(cal):
@@ -453,7 +492,7 @@ def latest_releases(cal):
 def two_year_trend():
     try:
         if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
-        s = pd.read_csv(io.StringIO(get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2", timeout=FRED_TIMEOUT).text))
+        s = pd.read_csv(io.StringIO(fred_text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2")))
         s.columns = ["date", "v"]; s.to_csv(os.path.join(CACHE, "dgs2.csv"), index=False); FRED_STATE["ok"] += 1
     except Exception as e:
         _fred_fail(e); s = pd.read_csv(os.path.join(CACHE, "dgs2.csv"))
@@ -546,7 +585,7 @@ def fred(sid):
     f = os.path.join(CACHE, "fred_%s.csv" % sid)
     try:
         if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
-        t = get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid, timeout=FRED_TIMEOUT).text
+        t = fred_text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid)
         pd.read_csv(io.StringIO(t)).iloc[:, 1]  # check it is a real data file before saving it
         open(f, "w").write(t); FRED_STATE["ok"] += 1
     except Exception as e: _fred_fail(e); t = open(f).read()
@@ -560,15 +599,28 @@ FEEDS = {"Federal Reserve": "https://www.federalreserve.gov/feeds/press_all.xml"
          "Reserve Bank of NZ": "https://www.rbnz.govt.nz/feeds/news", "Bank of Japan": "https://www.boj.or.jp/en/rss/whatsnew.xml",
          "Investing.com Forex": "https://www.investing.com/rss/news_1.rss", "CNBC Markets": "https://www.cnbc.com/id/10000664/device/rss/rss.html",
          "BBC Business": "https://feeds.bbci.co.uk/news/business/rss.xml"}
+def repair_text(s):
+    """Undo a UTF-8 apostrophe that was read as Latin-1 (firmâs / firm\\u0080s) and map leftover C1 controls to '."""
+    t = "" if s is None else str(s)
+    for _ in range(2):
+        if not any(ord(ch) > 127 for ch in t): break
+        try: nxt = t.encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError): break
+        if nxt == t: break
+        t = nxt
+    return "".join("\u2019" if 0x80 <= ord(ch) <= 0x9F else ch for ch in t)
+
 def news_feed():
     rows = []
     for src, url in FEEDS.items():
-        try: t = get(url, timeout=20).text
+        try:
+            raw = get(url, timeout=20)
+            t = raw.content.decode("utf-8", errors="replace")
         except Exception: continue
         for it in re.findall(r"<item[\s>].*?</item>", t, re.S)[:10]:
             g = lambda tag: (re.search(r"<%s[^>]*>(.*?)</%s>" % (tag, tag), it, re.S) or [None, ""])[1]
             clean = lambda s: html.unescape(html.unescape(re.sub(r"<!\[CDATA\[|\]\]>|<[^>]+>", "", s))).strip()
-            title = clean(g("title")).replace("\u2014", "-").replace("\u2013", "-")
+            title = repair_text(clean(g("title"))).replace("\u2014", "-").replace("\u2013", "-")
             when = clean(g("pubDate") or g("dc:date"))
             try:
                 ts = pd.to_datetime(when, utc=True) if re.search(r"[A-Za-z]|[+-]\d\d:?\d\d$|Z$", when) else pd.Timestamp(when).tz_localize("UTC")
@@ -581,6 +633,7 @@ def news_feed():
         log("News feed (public RSS)", "OK", NOW.strftime("%Y-%m-%d %H:%M"), "%d headlines" % len(rows))
     else:
         df = pd.read_csv(f) if os.path.exists(f) else pd.DataFrame(columns=["source", "published_pt", "headline", "link"])
+        if "headline" in df.columns: df["headline"] = df["headline"].map(repair_text)
         log("News feed (public RSS)", "CACHED" if len(df) else "MISSING", "")
     return df
 
@@ -593,7 +646,7 @@ def page_tables(close, high, low, cot, ev, cal):
     # market heatmap, momentum, volatility
     mh, mo, vo, se = [], [], [], []
     for s in SYMBOLS:
-        p = close[s].dropna()
+        p = session_series(s, close[s])
         if len(p) < 260: continue
         ch = lambda k: (p.iloc[-1] / p.iloc[-1 - k] - 1) * 100
         mh.append(dict(symbol=s, kind=kind(s), change_1d=ch(1), change_1w=ch(5), change_1m=ch(21)))
@@ -761,7 +814,7 @@ def fmt_parts(d): return "; ".join("%s: %s" % (k, v) for k, v in d.items() if no
 
 def main():
     close, high, low = load_prices()
-    asof = close.dropna(how="all").index[-1]
+    asof_fx = last_cash_session(close)
     cot = load_cot()
     mfx, mfx_src = load_myfxbook()
     pcr = load_pcr() if FEAT["options_sentiment_for_indices"] else pd.DataFrame(columns=["date", "name", "value"])
@@ -773,13 +826,16 @@ def main():
     for s in SYMBOLS:
         if close[s].dropna().shape[0] < 30:
             log("Prices for " + s, "MISSING", "", "symbol skipped this run"); continue
+        own = close[s].dropna()
+        asof = own.index[-1] if kind(s) == "crypto" and len(own) else (
+            own[own.index.day_of_week < 5].index[-1] if len(own[own.index.day_of_week < 5]) else asof_fx)
         tech, td = technicals(s, close, asof) if FEAT["technicals"] else (0, {})
         cs, cd = cot_score(s, cot) if FEAT["cot"] else (0, {})
         ss, sd = sentiment_score(s, mfx, pcr)
         ec = econ_score(s, rel, two_y)
         hi, med = news_risk(s, ev, cal)
         total = tech + cs + ss + sum(v[0] for v in ec.values())
-        p = close[s].dropna()
+        p = session_series(s, close[s])
         top.append(dict(symbol=s, kind=kind(s), bias=bias(total), score=int(total), technicals=int(tech), cot=int(cs),
                         crowd=int(ss), growth=ec[G][0], inflation=ec[I][0], jobs=ec[J][0],
                         news_risk=hi, news_risk_medium=med, news_flag="HIGH" if hi else ("medium" if med else ""),
@@ -840,7 +896,7 @@ def main():
         df = pt_columns(df)
         if name == "updates_log" and "latest" in df.columns: df["latest"] = date_or_pt_text(df["latest"]).values
         df.to_csv(os.path.join(OUT, name + ".csv"), index=False)
-    json.dump(dict(updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of=str(asof.date()), label=LABEL,
+    json.dump(dict(updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of="" if asof_fx is None else str(asof_fx.date()), label=LABEL,
                    tabs=sorted(set(T) | {"backtest"} if FEAT["backtest"] else set(T))), open(os.path.join(OUT, "meta.json"), "w"), indent=1)
     print("wrote %d tabs to %s" % (len(T), OUT))
     return T

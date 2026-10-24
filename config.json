@@ -13,7 +13,9 @@
     "seasonality": true,
     "market_pages": true,
     "news_feed": true,
-    "backtest": true
+    "backtest": true,
+    "carry": true,
+    "calendar": true
   },
   "scoring": {
     "seasonality_points_fx": 1,

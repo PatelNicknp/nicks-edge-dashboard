@@ -4,9 +4,12 @@
   const GREEN = "#2F8E61";
   const BLUE = "#2F81F7";
   const MU = "#8B949E";
-  const TX = "#E6EDF3";
+  const TX = "#E8EAED";
   const GRID = "#2A3040";
-  const AMBER = "#E6C27A";
+  const AMBER = "#D29922";
+  const GREY = "#5B6372";
+  const GREEN_STEPS = ["#3D8565", "#2F8E61", "#24985C"];
+  const RED_STEPS = ["#A35158", "#B44D51", "#D64545"];
   let RESEARCH = "Research screen, not a trade signal.";
 
   const NAV = [
@@ -25,7 +28,7 @@
       ["Economic heatmap", "econ-heat.html", "econheat"],
       ["Economic tables", "econ-tables.html", "econtables"],
       ["Real yields and carry", "carry.html", "carry"],
-      ["Seasonality", "season.html", "season"],
+      ["Seasonality", "seasonality.html", "season"],
     ]],
     ["Markets", [
       ["Momentum", "momentum.html", "momentum"],
@@ -43,15 +46,23 @@
     ]],
   ];
 
+  function econPagesOn() {
+    return featureOn("feature.economic_growth") || featureOn("feature.inflation") || featureOn("feature.jobs");
+  }
   const FEATURE = {
     cot: "feature.cot",
     cothist: "feature.cot",
     sentiment: "feature.retail_sentiment",
+    strength: econPagesOn,
+    econheat: econPagesOn,
+    econtables: econPagesOn,
+    carry: "feature.carry",
     season: "feature.seasonality",
     momentum: "feature.market_pages",
     volatility: "feature.market_pages",
     markets: "feature.market_pages",
     spreads: "feature.market_pages",
+    calendar: "feature.calendar",
     news: "feature.news_feed",
     backtest: "feature.backtest",
   };
@@ -142,10 +153,10 @@
     const n = num(v);
     if (n == null) return null;
     const digits = d == null ? (Number.isInteger(n) ? 0 : 1) : d;
-    const body = Math.abs(n).toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
-    if (n > 0) return "+" + body;
-    if (n < 0) return "−" + body;
-    return digits ? (0).toFixed(digits) : "0";
+    const r = Number(n.toFixed(digits));
+    if (r === 0) return digits ? (0).toFixed(digits) : "0";
+    const body = Math.abs(r).toLocaleString("en-US", { minimumFractionDigits: digits, maximumFractionDigits: digits });
+    return (r > 0 ? "+" : "−") + body;
   }
   function pct(v, d) {
     const n = num(v);
@@ -174,15 +185,27 @@
     return Number.isNaN(dt.getTime()) ? "" : DAYS[dt.getUTCDay()];
   }
   function formatUpdated(s) {
-    const raw = String(s || "");
+    const raw = String(s || "").trim();
     if (!raw) return "n/a";
-    if (/[AP]M/.test(raw)) return raw;
-    const m = raw.match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+    const m = raw.match(/(?:[A-Za-z]{3}\s+)?(\d{4})-(\d{2})-(\d{2})(?:[ T](\d{1,2}):(\d{2})(?:\s*([AP]M))?)?/);
     if (!m) return raw;
-    let h = Number(m[4]);
-    const ap = h >= 12 ? "PM" : "AM";
-    h = h % 12 || 12;
-    return MONTHS[Number(m[2]) - 1] + " " + Number(m[3]) + ", " + m[1] + ", " + h + ":" + m[5] + " " + ap + " PT";
+    const iso = m[1] + "-" + m[2] + "-" + m[3];
+    const day = weekday(iso);
+    let clock = "";
+    if (m[4]) {
+      let h = Number(m[4]);
+      let ap = m[6];
+      if (!ap) {
+        ap = h >= 12 ? "PM" : "AM";
+        h = h % 12 || 12;
+      } else if (h > 12) {
+        h = h % 12;
+      } else if (h === 0) {
+        h = 12;
+      }
+      clock = ", " + h + ":" + m[5] + " " + ap;
+    }
+    return (day ? day + " " : "") + MONTHS[Number(m[2]) - 1] + " " + Number(m[3]) + ", " + m[1] + clock + " PT";
   }
   function latestChecked(rows) {
     let best = "";
@@ -194,35 +217,37 @@
     return label;
   }
 
-  function mix(a, b, t) {
-    return a.map((v, i) => Math.round(v + (b[i] - v) * t));
-  }
   function heatBg(value, cap, invert) {
     const n0 = num(value);
-    if (n0 == null || !cap) return "#2C3344";
+    if (n0 == null || !cap) return GREY;
     const n = invert ? -n0 : n0;
-    const t = Math.max(-1, Math.min(1, n / cap));
-    const red = [180, 77, 81];
-    const mid = [44, 51, 68];
-    const green = [47, 142, 97];
-    const c = t >= 0 ? mix(mid, green, Math.pow(t, 0.85)) : mix(mid, red, Math.pow(-t, 0.85));
-    return "rgb(" + c.join(",") + ")";
+    const t = n / cap;
+    if (!Number.isFinite(t) || Math.abs(t) < 1e-9) return GREY;
+    const mag = Math.min(1, Math.abs(t));
+    const idx = mag >= 0.67 ? 2 : mag >= 0.33 ? 1 : 0;
+    return t > 0 ? GREEN_STEPS[idx] : RED_STEPS[idx];
   }
   function signalBg(v) {
     const n = num(v);
-    if (n == null) return "#2C3344";
-    if (n > 0.05) return GREEN;
-    if (n < -0.05) return RED;
-    return "#3A4150";
+    if (n == null) return GREY;
+    if (n > 0.05) return heatBg(n, Math.max(Math.abs(n), 1));
+    if (n < -0.05) return heatBg(n, Math.max(Math.abs(n), 1));
+    return GREY;
   }
   function biasBg(v) {
     const s = String(v || "");
-    if (/bull/i.test(s)) return GREEN;
-    if (/bear/i.test(s)) return RED;
-    return "#4A5368";
+    if (/very\s*bull/i.test(s)) return "#24985C";
+    if (/bull/i.test(s)) return "#2F8E61";
+    if (/very\s*bear/i.test(s)) return "#D64545";
+    if (/bear/i.test(s)) return "#B44D51";
+    return GREY;
   }
-  function fill(text, bg) {
-    return '<span class="hmfill" style="background:' + bg + '">' + text + "</span>";
+  function fill(text, bg, color) {
+    const extra = color ? ";color:" + color : "";
+    return '<span class="hmfill" style="background:' + bg + extra + '">' + text + "</span>";
+  }
+  function noData(label) {
+    return '<span class="nodata">' + esc(label || "no data") + "</span>";
   }
   function scoreFill(v, cap) {
     const text = signed(v);
@@ -236,8 +261,10 @@
   function pctColor(v, d) {
     const n = num(v);
     if (n == null) return na();
-    const cls = n > 0 ? "up" : n < 0 ? "dn" : "mut";
-    return '<span class="' + cls + '">' + esc(pct(n, d)) + "</span>";
+    const digits = d == null ? 2 : d;
+    const r = Number(n.toFixed(digits));
+    const cls = r > 0 ? "up" : r < 0 ? "dn" : "mut";
+    return '<span class="' + cls + '">' + esc(pct(n, digits)) + "</span>";
   }
 
   function weekEndingFriday(iso) {
@@ -357,12 +384,12 @@
     const view = sorted.slice(start, start + pageSize);
     const head = columns.map((c) => {
       const mark = state.sort === c.key ? '<span class="sort">' + (state.dir === "asc" ? "▲" : "▼") + "</span>" : "";
-      const cls = [align(c), c.now ? "is-now" : ""].filter(Boolean).join(" ");
+      const cls = [align(c), c.now ? "is-now" : "", c.cls || ""].filter(Boolean).join(" ");
       return '<th class="' + cls + '" data-k="' + esc(c.key) + '">' + esc(c.label) + mark + "</th>";
     }).join("");
     const body = view.map((r) => {
       const tds = columns.map((c) => {
-        const cls = [align(c), c.wrap ? "wrap" : "", c.heat ? "hm" : "", c.tdClass ? c.tdClass(r) : ""].filter(Boolean).join(" ");
+        const cls = [align(c), c.wrap ? "wrap" : "", c.heat ? "hm" : "", c.cls || "", c.tdClass ? c.tdClass(r) : ""].filter(Boolean).join(" ");
         return '<td class="' + cls + '">' + cell(r, c) + "</td>";
       }).join("");
       const extra = r._rowClass ? " " + r._rowClass : "";
@@ -393,6 +420,16 @@
         drawTable(host, opts);
       });
     });
+    markScroll(host);
+  }
+  function markScroll(host) {
+    const sc = host.querySelector(":scope > .scroll");
+    if (!sc) return;
+    const old = host.querySelector(":scope > .swipe");
+    if (old) old.remove();
+    if (sc.scrollWidth > sc.clientWidth + 8) {
+      sc.insertAdjacentHTML("afterend", '<div class="swipe">Swipe for more →</div>');
+    }
   }
 
   function selectHtml(id, label, options, value, withAll) {
@@ -425,7 +462,7 @@
   }
   function timeTicks(labels) {
     const iso = labels && labels.length && /^\d{4}-\d{2}-\d{2}$/.test(String(labels[0]));
-    if (!iso) return { maxRotation: 0, autoSkip: true, maxTicksLimit: 6, color: MU };
+    if (!iso) return { maxRotation: 0, autoSkip: false, color: MU };
     return {
       maxRotation: 0,
       autoSkip: true,
@@ -527,8 +564,13 @@
     if (!row) return true;
     return String(row.value).toLowerCase() !== "false";
   }
+  function gateOpen(gate) {
+    if (!gate) return true;
+    if (typeof gate === "function") return gate();
+    return featureOn(gate);
+  }
   function navOn(items) {
-    return items.filter((it) => !FEATURE[it[2]] || featureOn(FEATURE[it[2]]));
+    return items.filter((it) => gateOpen(FEATURE[it[2]]));
   }
   function findPage(id) {
     for (let i = 0; i < NAV.length; i++) {
@@ -538,13 +580,17 @@
     }
     return null;
   }
+  function drawerMode() {
+    return window.matchMedia("(max-width: 1199px)").matches;
+  }
   function renderShell(page) {
+    const wideOpen = drawerMode();
     const groups = NAV.map(([name, items]) => {
       const shown = navOn(items);
       if (!shown.length) return "";
-      const open = shown.some((it) => it[2] === page.id);
-      const links = open ? shown.map((it) =>
-        '<a class="item' + (it[2] === page.id ? " sel" : "") + '" href="' + it[1] + '">' + esc(it[0]) + "</a>").join("") : "";
+      const open = wideOpen || shown.some((it) => it[2] === page.id);
+      const links = shown.map((it) =>
+        '<a class="item' + (it[2] === page.id ? " sel" : "") + '" href="' + it[1] + '">' + esc(it[0]) + "</a>").join("");
       return '<div class="group">' +
         '<button type="button" class="grp" data-name="' + esc(name) + '" aria-expanded="' + (open ? "true" : "false") + '"><span class="chev">' +
         (open ? "▾" : "▸") + "</span>" + esc(name) + '<span class="cnt">' + shown.length + "</span></button>" +
@@ -552,7 +598,8 @@
     }).join("");
     document.getElementById("app").innerHTML =
       '<div class="scrim" id="scrim"></div><div class="app"><nav class="nav" id="nav">' +
-      '<a class="brand" href="index.html"><span class="logo">N</span>Nick\'s Edge Dashboard</a>' + groups +
+      '<div class="brandrow"><a class="brand" href="index.html"><span class="logo">N</span>Nick\'s Edge Dashboard</a>' +
+      '<button type="button" class="nav-close" id="nav-close">Close</button></div>' + groups +
       '</nav><div class="main"><div class="hdr"><div><button type="button" class="menu-btn" id="menu">Menu</button>' +
       "<h1>" + esc(page.title) + "</h1><div class=\"rl\">" + esc(RESEARCH) + "</div>" +
       (page.kicker ? '<div class="kicker">' + esc(page.kicker) + "</div>" : "") +
@@ -582,10 +629,31 @@
       }
     });
     document.getElementById("menu").addEventListener("click", () => document.body.classList.toggle("nav-open"));
+    document.getElementById("nav-close").addEventListener("click", () => document.body.classList.remove("nav-open"));
     document.getElementById("scrim").addEventListener("click", () => document.body.classList.remove("nav-open"));
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") document.body.classList.remove("nav-open");
     });
+    const mq = window.matchMedia("(max-width: 1199px)");
+    const onMq = () => {
+      if (!mq.matches) return;
+      document.querySelectorAll("#nav .items").forEach((items) => {
+        const btn = items.parentElement.querySelector(".grp");
+        if (btn && !items.childElementCount) {
+          const spec = NAV.find((g) => g[0] === btn.getAttribute("data-name"));
+          if (spec) {
+            items.innerHTML = navOn(spec[1]).map((it) =>
+              '<a class="item' + (it[2] === page.id ? " sel" : "") + '" href="' + it[1] + '">' + esc(it[0]) + "</a>").join("");
+          }
+        }
+        items.removeAttribute("hidden");
+        if (btn) {
+          btn.querySelector(".chev").textContent = "▾";
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    };
+    if (mq.addEventListener) mq.addEventListener("change", onMq);
   }
   function markReady(value) {
     requestAnimationFrame(() => requestAnimationFrame(() => { document.body.dataset.ready = value; }));
@@ -617,12 +685,15 @@
       const setups = loaded["top_setups.csv"] || [];
       const stamp = (setups[0] && setups[0].updated_pt) || (meta && meta.updated_pt) || latestChecked(loaded["updates_log.csv"]);
       document.getElementById("updated").textContent = formatUpdated(stamp);
-      if (FEATURE[id] && !featureOn(FEATURE[id])) {
+      if (FEATURE[id] && !gateOpen(FEATURE[id])) {
         document.getElementById("page").innerHTML = '<div class="panel pad">This page is turned off in Settings.</div>';
         markReady("1");
         return;
       }
       spec.render({ page: document.getElementById("page"), files: loaded, settings: SETTINGS, meta: meta });
+      window.addEventListener("resize", () => {
+        document.querySelectorAll("#page .scroll").forEach((sc) => markScroll(sc.parentElement));
+      });
       markReady("1");
     } catch (err) {
       console.error(err);
@@ -637,10 +708,10 @@
     RED: RED, GREEN: GREEN, BLUE: BLUE, MU: MU, TX: TX, AMBER: AMBER,
     num: num, isBlank: isBlank, esc: esc, na: na, fmt: fmt, commas: commas, signed: signed, pct: pct,
     ymd: ymd, prettyDate: prettyDate, shortDate: shortDate, weekday: weekday,
-    heatBg: heatBg, signalBg: signalBg, biasBg: biasBg, fill: fill, scoreFill: scoreFill, biasFill: biasFill, pctColor: pctColor,
+    heatBg: heatBg, signalBg: signalBg, biasBg: biasBg, fill: fill, noData: noData, scoreFill: scoreFill, biasFill: biasFill, pctColor: pctColor,
     weeklySeries: weeklySeries, sparkHtml: sparkHtml, gaugeSvg: gaugeSvg, p90: p90,
     drawTable: drawTable, selectHtml: selectHtml, fieldVal: fieldVal, checked: checked,
     destroyCharts: destroyCharts, barChart: barChart, lineChart: lineChart, comboChart: comboChart, makeChart: makeChart,
-    featureOn: featureOn, boot: boot,
+    featureOn: featureOn, markScroll: markScroll, boot: boot,
   };
 })();
