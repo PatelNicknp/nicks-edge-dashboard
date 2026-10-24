@@ -727,6 +727,14 @@ def pt_columns(df):
         df.insert(df.columns.get_loc(c) + 1, c + "_sort", key.values)
     return df
 
+def date_or_pt_text(s):
+    """updates_log.latest holds plain dates or PT times: dates become "Sat 2026-10-24", times "Sat 2026-10-24 06:00 PM PT"."""
+    raw = pd.Series(s).fillna("").astype(str).str.strip()
+    is_date = raw.str.fullmatch(r"\d{4}-\d\d-\d\d")
+    d = pd.to_datetime(raw.where(is_date), format="%Y-%m-%d", errors="coerce")
+    times = pt_text(raw.where(~is_date & raw.str.match(r"\d{4}-\d\d-\d\d \d")))[0]
+    return d.dt.strftime("%a %Y-%m-%d").where(d.notna(), times.where(times != "", raw))
+
 HIST_COLS = ["symbol", "score", "technicals", "cot", "crowd", "growth", "inflation", "jobs", "date"]
 HISTORY_DAYS = 730  # about 1.2 MB of CSV; small enough for Google Sheets IMPORTDATA
 
@@ -830,6 +838,7 @@ def main():
             if c in df.columns:
                 d = ymd(df[c]); df[c] = d.dt.strftime("%Y%m%d").where(d.notna(), df[c].astype(str))
         df = pt_columns(df)
+        if name == "updates_log" and "latest" in df.columns: df["latest"] = date_or_pt_text(df["latest"]).values
         df.to_csv(os.path.join(OUT, name + ".csv"), index=False)
     json.dump(dict(updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of=str(asof.date()), label=LABEL,
                    tabs=sorted(set(T) | {"backtest"} if FEAT["backtest"] else set(T))), open(os.path.join(OUT, "meta.json"), "w"), indent=1)

@@ -56,6 +56,9 @@ def test_full_run_fills_every_tab():
             k = pd.to_datetime(v[c + "_sort"], format="%Y%m%d%H%M")
             assert (k.dt.strftime("%a %Y-%m-%d %I:%M %p PT") == v[c]).all(), (t, c)
     assert pt_cols >= 7, pt_cols
+    lt = read(tmp, "updates_log").latest.dropna().astype(str)   # plain dates and PT times, both kept as text
+    assert lt.str.fullmatch(r"[A-Z][a-z]{2} \d{4}-\d\d-\d\d( \d\d:\d\d [AP]M PT)?").all(), lt.tolist()
+    assert lt.str.contains(" PT").any() and (~lt.str.contains(" PT")).any(), lt.tolist()
     print("full run OK: %d tabs filled, %d symbols, %d PT time columns" % (len(TABS), len(top), pt_cols))
 
 def test_news_risk_tags_from_feed():
