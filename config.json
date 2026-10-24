@@ -15,7 +15,9 @@
     "news_feed": true,
     "backtest": true,
     "carry": true,
-    "calendar": true
+    "calendar": true,
+    "trend_sentiment": true,
+    "macro_fundamentals": true
   },
   "scoring": {
     "seasonality_points_fx": 1,
@@ -27,7 +29,7 @@
     "very_bullish_at": 7,
     "bullish_at": 4,
     "bearish_at": -4,
-    "very_bearish_at": -7
+    "very_bearish_at": -8
   },
   "news_risk_hours": 24,
   "calendar_lookback_days": 150

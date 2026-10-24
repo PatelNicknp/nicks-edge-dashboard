@@ -6,8 +6,14 @@ import pandas as pd
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TABS = ["top_setups", "scorecard_details", "econ_data", "econ_strength", "cot_report", "cot_history", "retail_sentiment",
         "put_call", "seasonality", "momentum", "volatility", "market_heatmap", "carry", "rates", "spreads", "calendar",
-        "upcoming_events", "news", "news_risk", "score_history", "backtest", "help", "settings", "updates_log"]
+        "upcoming_events", "news", "news_risk", "score_history", "backtest", "help", "settings", "updates_log",
+        "factor_coverage"]
 PARTS = ["technicals", "cot", "crowd", "growth", "inflation", "jobs"]
+FACTORS = ["f_trend", "f_seasonality", "f_cot", "f_crowd", "f_gdp", "f_mpmi", "f_spmi", "f_retail", "f_conf",
+           "f_cpi", "f_ppi", "f_pce", "f_rates", "f_nfp", "f_unemp", "f_claims", "f_adp", "f_jolts"]
+GROWTH_F = ["f_gdp", "f_mpmi", "f_spmi", "f_retail", "f_conf"]
+INFL_F = ["f_cpi", "f_ppi", "f_pce", "f_rates"]
+JOBS_F = ["f_nfp", "f_unemp", "f_claims", "f_adp", "f_jolts"]
 
 def run_copy(news_now="2026-10-20 12:00", config_changes=None, extra_env=None):
     tmp = tempfile.mkdtemp(prefix="edge_test_")
@@ -33,12 +39,30 @@ def test_full_run_fills_every_tab():
     top = read(tmp, "top_setups")
     assert len(top) >= 45, "expected 28 pairs + 8 currency indices + other markets"
     assert (top[PARTS].sum(axis=1) == top.score).all(), "score must be the plain sum of the six parts"
+    assert (top[FACTORS].sum(axis=1) == top.score).all(), "score must be the sum of the 18 factors"
+    assert (top.f_trend + top.f_seasonality == top.technicals).all()
+    assert (top.f_cot == top.cot).all() and (top.f_crowd == top.crowd).all()
+    assert (top[GROWTH_F].sum(axis=1) == top.growth).all()
+    assert (top[INFL_F].sum(axis=1) == top.inflation).all()
+    assert (top[JOBS_F].sum(axis=1) == top.jobs).all()
+    assert top[FACTORS].abs().max().max() <= 2
+    assert top.score_chg_1d.notna().all() and (top.score_chg_1d != 0).any()
+    assert {"change_1d_pct", "technicals", "cot", "crowd", "growth", "inflation", "jobs"} <= set(top.columns)
     assert top.label.str.contains("Research screen, not a trade signal").all()
+    sc = json.load(open(os.path.join(tmp, "config.json")))["scoring"]
     for _, r in top.iterrows():
-        exp = ("Very Bullish" if r.score >= 7 else "Bullish" if r.score >= 4 else "Very Bearish" if r.score <= -7
-               else "Bearish" if r.score <= -4 else "Neutral")
+        exp = ("Very Bullish" if r.score >= sc["very_bullish_at"] else "Bullish" if r.score >= sc["bullish_at"] else
+               "Very Bearish" if r.score <= sc["very_bearish_at"] else "Bearish" if r.score <= sc["bearish_at"] else "Neutral")
         assert r.bias == exp
     assert top.technicals.abs().max() <= 3 and top.cot.abs().max() <= 2 and top.crowd.abs().max() <= 2
+    cov = read(tmp, "factor_coverage").set_index("factor")
+    assert list(cov.index) == ["Trend", "Seasonality", "COT", "Crowd Sentiment", "GDP", "mPMI", "sPMI", "Retail Sales",
+                               "Cnsmr Conf", "CPI YoY", "PPI YoY", "PCE YoY", "Interest Rates", "NFP", "Unemploy. Rate",
+                               "Unemploy. Claims", "ADP", "JOLTS"]
+    for name in ("ADP", "JOLTS", "PCE YoY"):
+        assert "United States" in cov.loc[name, "covered"], name
+        assert "No free series" in cov.loc[name, "notes"], name
+    assert "no consensus" in cov.loc["mPMI", "notes"] and "New Zealand" in cov.loc["mPMI", "notes"]
     det = read(tmp, "scorecard_details")
     assert set(top.symbol) <= set(det.symbol)
     assert {"Technicals", "COT", "Crowd", "Growth", "Inflation", "Jobs", "News risk"} <= set(det.section)
@@ -109,6 +133,18 @@ def test_switches_turn_parts_off():
     assert not os.path.exists(os.path.join(tmp, "output", "momentum.csv"))
     print("switches OK")
 
+def test_group_switches():
+    tmp, _ = run_copy(config_changes=dict(trend_sentiment=False))
+    top = read(tmp, "top_setups")
+    assert (top[["technicals", "cot", "crowd", "f_trend", "f_seasonality", "f_cot", "f_crowd"]] == 0).all().all()
+    assert (top.score == top.growth + top.inflation + top.jobs).all()
+    tmp, _ = run_copy(config_changes=dict(macro_fundamentals=False))
+    top = read(tmp, "top_setups")
+    macro = ["growth", "inflation", "jobs"] + GROWTH_F + INFL_F + JOBS_F
+    assert (top[macro] == 0).all().all()
+    assert (top.score == top.technicals + top.cot + top.crowd).all()
+    print("group switches OK")
+
 def test_missing_ticker_is_skipped_not_fatal():
     tmp, _ = run_copy(extra_env=dict(EDGE_TEST_DROP_TICKERS="EURUSD=X"))   # like the 'database is locked' run
     eur = {s for s in read(tmp, "market_heatmap").symbol if "EUR" in s}
@@ -150,6 +186,7 @@ if __name__ == "__main__":
     test_full_run_fills_every_tab()
     test_news_risk_tags_from_feed()
     test_switches_turn_parts_off()
+    test_group_switches()
     test_failed_download_retries_then_uses_cache_unit()
     test_missing_ticker_is_skipped_not_fatal()
     print("ALL TESTS PASSED")

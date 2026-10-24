@@ -398,18 +398,25 @@ ECON_MAP = {  # (category, label, calendar names, which row if several, good dir
     "CH": [(G, "GDP", ["GDP"], "mom", 1), (G, "Manufacturing PMI", ["procure.ch Manufacturing PMI"], "first", 1),
            (G, "Retail sales", ["Retail Sales"], "first", 1), (G, "Consumer confidence", ["SECO Consumer Climate"], "first", 1),
            (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "PPI y/y", ["PPI"], "yoy", 1),
-           (I, "Interest rate", ["SNB Interest Rate Decision"], "first", 1), (J, "Unemployment rate", ["Unemployment Rate s.a."], "first", -1)],
+           (I, "Interest rate", ["SNB Interest Rate Decision"], "first", 1),
+           (J, "Employment change", ["Employment Level"], "first", 1), (J, "Unemployment rate", ["Unemployment Rate s.a."], "first", -1)],
     "CA": [(G, "GDP", ["GDP"], "mom", 1), (G, "Manufacturing PMI", ["S&P Global Manufacturing PMI"], "first", 1),
-           (G, "Services PMI", ["Ivey PMI"], "first", 1), (G, "Retail sales", ["Retail Sales"], "mom", 1),
+           (G, "Services PMI", ["S&P Global Services PMI", "Ivey PMI"], "first", 1), (G, "Retail sales", ["Retail Sales"], "mom", 1),
            (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "PPI y/y", ["IPPI"], "yoy", 1),
            (I, "Interest rate", ["BoC Interest Rate Decision"], "first", 1), (J, "Employment change", ["Employment Change"], "first", 1),
            (J, "Unemployment rate", ["Unemployment Rate"], "first", -1)],
     "AU": [(G, "GDP", ["GDP"], "mom", 1), (G, "Manufacturing PMI", ["S&P Global Manufacturing PMI"], "first", 1),
-           (G, "Services PMI", ["S&P Global Services PMI"], "first", 1), (G, "Retail sales", ["Retail Sales", "Household Spending"], "mom", 1),
+           (G, "Services PMI", ["S&P Global Services PMI"], "first", 1),
+           (G, "Consumer confidence", ["Westpac Consumer Sentiment"], "first", 1),
            (I, "CPI y/y", ["Monthly CPI Indicator", "CPI"], "yoy", 1), (I, "PPI y/y", ["PPI"], "yoy", 1),
            (I, "Interest rate", ["RBA Interest Rate Decision"], "first", 1), (J, "Employment change", ["Employment Change"], "first", 1),
            (J, "Unemployment rate", ["Unemployment Rate"], "first", -1)],
-    "NZ": [(G, "GDP", ["GDP"], "mom", 1), (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "Interest rate", ["RBNZ Interest Rate Decision"], "first", 1),
+    "NZ": [(G, "GDP", ["GDP"], "mom", 1), (G, "Manufacturing PMI", ["Business NZ PMI"], "first", 1),
+           (G, "Services PMI", ["Performance of Services Index"], "first", 1),
+           (G, "Retail sales", ["Retail Sales", "Core Retail Sales"], "mom", 1),
+           (G, "Consumer confidence", ["Westpac Consumer Sentiment"], "first", 1),
+           (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "PPI y/y", ["PPI Output"], "yoy", 1),
+           (I, "Interest rate", ["RBNZ Interest Rate Decision"], "first", 1),
            (J, "Employment change", ["Employment Change"], "first", 1), (J, "Unemployment rate", ["Unemployment Rate"], "first", -1)],
     "CN": [(G, "GDP", ["GDP"], "yoy", 1), (G, "Manufacturing PMI", ["Manufacturing PMI"], "first", 1),
            (G, "Services PMI", ["Non-Manufacturing PMI"], "first", 1), (G, "Retail sales", ["Retail Sales"], "first", 1),
@@ -458,6 +465,22 @@ def load_calendar():
     log("Economic calendar actual vs forecast (Nasdaq)", "OK" if ok else "CACHED", latest, "%d days refreshed" % ok)
     return cal
 
+def _pick_release(sub, names, pick):
+    """First preferred event whose latest print has a forecast. Otherwise the first event with a print."""
+    fallback = None
+    for nm in names:
+        m = sub[sub.event == nm]
+        if m.empty: continue
+        last = m.sort_values(["date", "time_et", "order"]).iloc[-1]
+        grp = m[(m.date == last.date) & (m.time_et.str[:4] == str(last.time_et)[:4])].sort_values("order")
+        withf = grp[grp.forecast.notna()]
+        use = withf if len(withf) else grp
+        if use.empty or not use.actual.notna().any(): continue
+        row = use.loc[use.actual.abs().idxmax()] if pick == "yoy" else use.iloc[0]
+        if len(withf): return row
+        if fallback is None: fallback = row
+    return fallback
+
 def latest_releases(cal):
     """Most recent released value for every indicator we score."""
     out = []
@@ -465,18 +488,9 @@ def latest_releases(cal):
     for country, specs in ECON_MAP.items():
         sub = released[released.country == country]
         for cat, label, names, pick, good in specs:
-            m = pd.DataFrame()
-            for nm in names:  # names are in order of preference
-                m = sub[sub.event == nm]
-                if len(m): break
-            if m.empty:
+            row = _pick_release(sub, names, pick)
+            if row is None:
                 out.append(dict(country=country, category=cat, indicator=label, status="no data")); continue
-            last = m.sort_values(["date", "time_et", "order"]).iloc[-1]
-            grp = m[(m.date == last.date) & (m.time_et.str[:4] == str(last.time_et)[:4])].sort_values("order")
-            withf = grp[grp.forecast.notna()]
-            if len(withf): grp = withf
-            # "yoy": the year-on-year row is the larger one; otherwise the first (headline) row
-            row = grp.loc[grp.actual.abs().idxmax()] if pick == "yoy" else grp.iloc[0]
             fc = row.forecast
             basis = "forecast"
             if np.isnan(fc) and SC["use_previous_when_no_forecast"]: fc, basis = row.previous, "previous"
@@ -531,6 +545,33 @@ def econ_score(sym, rel, two_y):
 def bias(score):
     return ("Very Bullish" if score >= SC["very_bullish_at"] else "Bullish" if score >= SC["bullish_at"] else
             "Very Bearish" if score <= SC["very_bearish_at"] else "Bearish" if score <= SC["bearish_at"] else "Neutral")
+
+# One integer per EdgeFinder factor. The six grouped columns stay; these are the same points split out.
+FACTOR_COLS = ["f_trend", "f_seasonality", "f_cot", "f_crowd", "f_gdp", "f_mpmi", "f_spmi", "f_retail",
+               "f_conf", "f_cpi", "f_ppi", "f_pce", "f_rates", "f_nfp", "f_unemp", "f_claims", "f_adp", "f_jolts"]
+FACTOR_LABEL = {"GDP": "f_gdp", "Manufacturing PMI": "f_mpmi", "Services PMI": "f_spmi", "Retail sales": "f_retail",
+                "Consumer confidence": "f_conf", "CPI y/y": "f_cpi", "PPI y/y": "f_ppi", "PCE y/y": "f_pce",
+                "Interest rate": "f_rates", "2-year yield trend (21-day avg)": "f_rates",
+                "Employment change": "f_nfp", "Unemployment rate": "f_unemp", "Jobless claims": "f_claims",
+                "ADP": "f_adp", "JOLTS": "f_jolts"}
+
+def clip2(n):
+    try: n = int(n)
+    except (TypeError, ValueError): n = 0
+    return max(-2, min(2, n))
+
+def factor_values(td, cot_sc, crowd_sc, ec):
+    f = {k: 0 for k in FACTOR_COLS}
+    td = td or {}
+    f["f_trend"] = clip2(td.get("trend", 0) or 0)
+    f["f_seasonality"] = clip2(td.get("seasonality", 0) or 0)
+    f["f_cot"] = clip2(cot_sc)
+    f["f_crowd"] = clip2(crowd_sc)
+    for cat in (G, I, J):
+        for lab, sc, _why in ec.get(cat, (0, []))[1]:
+            key = FACTOR_LABEL.get(lab)
+            if key: f[key] = clip2(sc)
+    return f
 
 # ============================================================== news risk
 def load_ff_week():
@@ -741,7 +782,8 @@ def backtest(close, cot):
 
 # ============================================================== main
 HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simple checks into one score per market."),
-        ("Score", "Technicals + COT + Crowd + Growth + Inflation + Jobs. 7 or more Very Bullish, 4 to 6 Bullish, -4 to -6 Bearish, -7 or less Very Bearish, else Neutral."),
+        ("Score", "Technicals + COT + Crowd + Growth + Inflation + Jobs. 7 or more Very Bullish, 4 to 6 Bullish, -3 to 3 Neutral, -4 to -7 Bearish, -8 or less Very Bearish."),
+        ("Top Setups factors", "Top Setups splits that score into 18 factors, each a whole number from -2 to +2. 1 Day Change is today's score minus the previous day's score. The factor coverage table says which countries have a free series. A zero there means no free series, or a print with no consensus."),
         ("Technicals", "Trend score (3-day average vs 14-day average, -2 to +2) plus seasonality (+1 if this month is usually up over 10 years, -1 if usually down)."),
         ("COT", "Big speculators in futures (CFTC, weekly). For a pair: did the long share rise or fall for each side. For other markets: are they net long, and did the long share rise."),
         ("Crowd", "Retail traders (Myfxbook). 60% or more long scores -1, 40% or less long scores +1. Indices, metals and oil use the put/call ratio instead."),
@@ -791,6 +833,89 @@ def date_or_pt_text(s):
 HIST_COLS = ["symbol", "score", "technicals", "cot", "crowd", "growth", "inflation", "jobs", "date"]
 HISTORY_DAYS = 730  # about 1.2 MB of CSV; small enough for Google Sheets IMPORTDATA
 
+def prior_scores():
+    """Last saved score for each symbol on a day before today. Today's row is not yesterday."""
+    frames = []
+    for f in (os.path.join(CACHE, "score_history_seed.csv"), os.path.join(OUT, "score_history.csv")):
+        if not os.path.exists(f): continue
+        try:
+            h = pd.read_csv(f, dtype=str)
+            if {"symbol", "score", "date"} <= set(h.columns): frames.append(h[["symbol", "score", "date"]])
+        except Exception as e:
+            log("Score change", "ERROR", "", "%s: %s" % (os.path.basename(f), str(e)[:60]))
+    if not frames: return {}
+    hist = pd.concat(frames, ignore_index=True)
+    hist["date"] = ymd(hist["date"])
+    today = pd.Timestamp(NOW.strftime("%Y-%m-%d"))
+    hist = hist[hist.date.notna() & (hist.date < today)]
+    if hist.empty: return {}
+    hist = hist.sort_values("date").drop_duplicates("symbol", keep="last")
+    scores = pd.to_numeric(hist.score, errors="coerce").fillna(0).astype(int)
+    return dict(zip(hist.symbol, scores))
+
+COUNTRY_NAME = {"US": "United States", "EZ": "Eurozone", "UK": "United Kingdom", "JP": "Japan", "CH": "Switzerland",
+                "CA": "Canada", "AU": "Australia", "NZ": "New Zealand", "CN": "China"}
+MACRO_COVERAGE = [
+    ("GDP", "GDP", "Nasdaq economic calendar, actual versus forecast", ""),
+    ("mPMI", "Manufacturing PMI", "Nasdaq economic calendar, actual versus forecast", "Manufacturing PMI only. Services PMI is the next column."),
+    ("sPMI", "Services PMI", "Nasdaq economic calendar, actual versus forecast", "Services PMI only. Switzerland has no services PMI on the free calendar. Canada is scored from Ivey PMI, because the S&P Global services print has no consensus."),
+    ("Retail Sales", "Retail sales", "Nasdaq economic calendar, actual versus forecast", "Australia has no retail-sales print on the free calendar."),
+    ("Cnsmr Conf", "Consumer confidence", "Nasdaq economic calendar, actual versus forecast", "Business-confidence surveys are not used in place of a consumer series."),
+    ("CPI YoY", "CPI y/y", "Nasdaq economic calendar, actual versus forecast", ""),
+    ("PPI YoY", "PPI y/y", "Nasdaq economic calendar, actual versus forecast", "New Zealand uses PPI output."),
+    ("PCE YoY", "PCE y/y", "Nasdaq economic calendar, actual versus forecast", "PCE is a United States series. Every other country is 0."),
+    ("Interest Rates", "Interest rate", "Nasdaq economic calendar for policy rates. US indexes, gold, silver, oil and bitcoin use the FRED 2-year yield (DGS2).",
+     "US stock indexes, gold, silver, oil and bitcoin use the 2-year yield trend instead of the Fed decision. A rising yield scores against those markets. Gold flips the sign of every US line."),
+    ("NFP", "Employment change", "Nasdaq economic calendar, actual versus forecast", "The United States print is Nonfarm Payrolls. Japan uses the jobs-to-applications ratio. China has no free employment-change series."),
+    ("Unemploy. Rate", "Unemployment rate", "Nasdaq economic calendar, actual versus forecast", "A lower unemployment rate scores positive."),
+    ("Unemploy. Claims", "Jobless claims", "Nasdaq economic calendar, actual versus forecast", "The United States is initial jobless claims. The United Kingdom is the claimant count. A higher print scores negative."),
+    ("ADP", "ADP", "Nasdaq economic calendar, actual versus forecast", "ADP is a United States series. Every other country is 0."),
+    ("JOLTS", "JOLTS", "Nasdaq economic calendar, actual versus forecast", "JOLTS job openings are a United States series. Every other country is 0."),
+]
+
+def _join_names(names):
+    names = list(names)
+    if not names: return "none"
+    if len(names) == 1: return names[0]
+    return ", ".join(names[:-1]) + " and " + names[-1]
+
+def factor_coverage(rel):
+    """Plain-language list of which countries have a free reading for each of the 18 factors."""
+    rows = [
+        dict(factor="Trend", covered="All markets with a Yahoo price history: 28 currency pairs, 8 currency indexes, 7 stock indexes, gold, silver, oil and bitcoin.",
+             source="Yahoo Finance daily prices",
+             notes="Plus 2 or minus 2 when the 3-day average and the 14-day slope agree. Plus 1 or minus 1 when they disagree."),
+        dict(factor="Seasonality", covered="The same markets as Trend.",
+             source="Yahoo Finance monthly closes, last 10 years",
+             notes="Plus 1 if this calendar month rose on average, minus 1 if it fell, 0 if there is not enough history."),
+        dict(factor="COT", covered="EUR, GBP, JPY, CHF, CAD, AUD, NZD and USD, plus gold, silver, WTI crude, S&P 500, Nasdaq 100, Dow and bitcoin.",
+             source="CFTC legacy futures, weekly",
+             notes="Scored 0, no CFTC contract in this feed: GER40, UK100, JPN225 and CHINA50. A pair is the base currency minus the quote currency."),
+        dict(factor="Crowd Sentiment", covered="All 28 pairs and 8 currency indexes from Myfxbook. S&P 500, Nasdaq 100, Dow, gold, silver and oil from the CBOE put/call ratio.",
+             source="Myfxbook retail positioning, and CBOE put/call",
+             notes="Scored 0, no free put/call series: CHINA50, GER40, UK100, JPN225 and bitcoin. Retail is the saved Myfxbook snapshot unless a login is set on the data job."),
+    ]
+    for title, label, source, extra in MACRO_COVERAGE:
+        ok, quiet, missing = [], [], []
+        for code in ("US", "EZ", "UK", "JP", "CH", "CA", "AU", "NZ", "CN"):
+            name = COUNTRY_NAME[code]
+            mapped = any(lab == label for _c, lab, *_r in ECON_MAP.get(code, []))
+            if not mapped:
+                missing.append(name); continue
+            hit = rel[(rel.country == code) & (rel.indicator == label)] if len(rel) else rel
+            status = str(hit.iloc[0].status) if len(hit) else "no data"
+            if status == "ok": ok.append(name)
+            elif status == "no forecast": quiet.append(name)
+            else: missing.append(name)
+        covered = ("Scored from actual versus forecast: " + _join_names(ok) + ".") if ok else "No country has a scored print right now."
+        bits = []
+        if quiet: bits.append("In the free calendar but no consensus, so scored 0: " + _join_names(quiet) + ".")
+        if missing: bits.append("No free series, scored 0: " + _join_names(missing) + ".")
+        bits.append("A currency pair is the base country minus the quote country. A country with no series adds 0.")
+        if extra: bits.append(extra)
+        rows.append(dict(factor=title, covered=covered, source=source, notes=" ".join(bits)))
+    return pd.DataFrame(rows)
+
 def score_history(top):
     today = top[HIST_COLS[:-1]].assign(date=NOW.strftime("%Y-%m-%d"))
     frames = []
@@ -829,18 +954,24 @@ def main():
         own = close[s].dropna()
         asof = own.index[-1] if kind(s) == "crypto" and len(own) else (
             own[own.index.day_of_week < 5].index[-1] if len(own[own.index.day_of_week < 5]) else asof_fx)
-        tech, td = technicals(s, close, asof) if FEAT["technicals"] else (0, {})
-        cs, cd = cot_score(s, cot) if FEAT["cot"] else (0, {})
-        ss, sd = sentiment_score(s, mfx, pcr)
+        trend_on = FEAT.get("trend_sentiment", True)
+        macro_on = FEAT.get("macro_fundamentals", True)
+        tech, td = technicals(s, close, asof) if FEAT["technicals"] and trend_on else (0, {})
+        cs, cd = cot_score(s, cot) if FEAT["cot"] and trend_on else (0, {})
+        ss, sd = sentiment_score(s, mfx, pcr) if trend_on else (0, {})
         ec = econ_score(s, rel, two_y)
+        if not macro_on: ec = {G: (0, []), I: (0, []), J: (0, [])}
         hi, med = news_risk(s, ev, cal)
         total = tech + cs + ss + sum(v[0] for v in ec.values())
+        fac = factor_values(td, cs, ss, ec)
         p = session_series(s, close[s])
-        top.append(dict(symbol=s, kind=kind(s), bias=bias(total), score=int(total), technicals=int(tech), cot=int(cs),
-                        crowd=int(ss), growth=ec[G][0], inflation=ec[I][0], jobs=ec[J][0],
-                        news_risk=hi, news_risk_medium=med, news_flag="HIGH" if hi else ("medium" if med else ""),
-                        price=p.iloc[-1], change_1d_pct=(p.iloc[-1] / p.iloc[-2] - 1) * 100,
-                        updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), label=LABEL))
+        row = dict(symbol=s, kind=kind(s), bias=bias(total), score=int(total), technicals=int(tech), cot=int(cs),
+                   crowd=int(ss), growth=ec[G][0], inflation=ec[I][0], jobs=ec[J][0],
+                   news_risk=hi, news_risk_medium=med, news_flag="HIGH" if hi else ("medium" if med else ""),
+                   price=p.iloc[-1], change_1d_pct=(p.iloc[-1] / p.iloc[-2] - 1) * 100,
+                   updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), label=LABEL)
+        row.update(fac)
+        top.append(row)
         add = lambda sec, item, val, sc: det.append(dict(symbol=s, section=sec, item=item, value=str(val), signal=sc))
         if td:
             add("Technicals", "Trend score", "%s; %s" % (td.get("3-day avg vs 14-day avg", ""), td.get("14-day avg slope", "")), td["trend"])
@@ -857,6 +988,10 @@ def main():
                               banner=("News risk: " + hi) if hi else (("Lighter news risk: " + med) if med else "No high-impact news in the next %d hours" % CFG["news_risk_hours"]),
                               checked_pt=NEWS_NOW.strftime("%a %Y-%m-%d %I:%M %p PT")))
     top = pd.DataFrame(top).sort_values(["score", "symbol"], ascending=[False, True]); top.insert(0, "rank", range(1, len(top) + 1))
+    prior = prior_scores()
+    top["score_chg_1d"] = [(int(sc) - int(prior[sym])) if sym in prior else 0 for sym, sc in zip(top.symbol, top.score)]
+    for c in FACTOR_COLS + ["score_chg_1d"]:
+        top[c] = pd.to_numeric(top[c], errors="coerce").fillna(0).astype(int)
     T, rates = page_tables(close, high, low, cot, ev, cal) if FEAT["market_pages"] else ({}, {})
     T["top_setups"], T["scorecard_details"] = top, pd.DataFrame(det)
     T["econ_data"] = rel
@@ -881,6 +1016,7 @@ def main():
         bf = os.path.join(OUT, "backtest.csv")  # heavy-ish: rebuild once a day
         if not os.path.exists(bf) or pd.Timestamp(os.path.getmtime(bf), unit="s").date() != dt.date.today() or "--backtest" in sys.argv:
             T["backtest"] = backtest(close, cot)
+    T["factor_coverage"] = factor_coverage(rel)
     T["help"] = pd.DataFrame(HELP, columns=["topic", "plain_english"])
     T["settings"] = pd.DataFrame([dict(setting="feature." + k, value=v) for k, v in FEAT.items()] +
                                  [dict(setting="scoring." + k, value=v) for k, v in SC.items()] +
