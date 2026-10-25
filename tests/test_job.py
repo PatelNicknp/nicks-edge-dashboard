@@ -7,7 +7,8 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TABS = ["top_setups", "scorecard_details", "econ_data", "econ_strength", "cot_report", "cot_history", "retail_sentiment",
         "put_call", "seasonality", "momentum", "volatility", "market_heatmap", "carry", "rates", "spreads", "calendar",
         "upcoming_events", "news", "news_risk", "score_history", "backtest", "help", "settings", "updates_log",
-        "factor_coverage"]
+        "factor_coverage", "top_summary", "trade_ideas"]
+NEW_SYMBOLS = ["US10T", "RUSSELL", "PLATINUM", "COPPER", "NATGAS", "ETHUSD", "USDZAR"]
 PARTS = ["technicals", "cot", "crowd", "growth", "inflation", "jobs"]
 FACTORS = ["f_trend", "f_seasonality", "f_cot", "f_crowd", "f_gdp", "f_mpmi", "f_spmi", "f_retail", "f_conf",
            "f_cpi", "f_ppi", "f_pce", "f_rates", "f_nfp", "f_unemp", "f_claims", "f_adp", "f_jolts"]
@@ -20,6 +21,10 @@ def run_copy(news_now="2026-10-20 12:00", config_changes=None, extra_env=None):
     for item in ("edge_job.py", "config.json", "cache", "data"):
         src = os.path.join(REPO, item)
         (shutil.copytree if os.path.isdir(src) else shutil.copy)(src, os.path.join(tmp, item))
+    # the hourly job keeps replacing cache/ff_thisweek.json with the current week; tests use the saved seed week
+    # (Oct 18 to Oct 24 2026) so the news-risk checks do not depend on when they run
+    ff = os.path.join(tmp, "cache", "ff_thisweek.json")
+    if os.path.exists(ff): os.remove(ff)
     env = dict(os.environ, EDGE_NEWS_NOW=news_now, **(extra_env or {}))
     if config_changes:
         cfg = json.load(open(os.path.join(tmp, "config.json")))
@@ -38,6 +43,17 @@ def test_full_run_fills_every_tab():
         assert len(read(tmp, t)) > 0, "tab %s is empty" % t
     top = read(tmp, "top_setups")
     assert len(top) >= 45, "expected 28 pairs + 8 currency indices + other markets"
+    assert set(NEW_SYMBOLS) <= set(top.symbol), set(NEW_SYMBOLS) - set(top.symbol)   # the markets added to match EdgeFinder
+    assert len(top) == 54, len(top)
+    k = top.set_index("symbol").kind
+    assert k["US10T"] == "bond" and k["RUSSELL"] == "index" and k["PLATINUM"] == k["COPPER"] == "metal"
+    assert k["NATGAS"] == "commodity" and k["ETHUSD"] == "crypto" and k["USDZAR"] == "fx"
+    summ = read(tmp, "top_summary")
+    assert summ.text.str.contains("strongest").any() and summ.text.str.contains("not AI").any()
+    ideas = read(tmp, "trade_ideas")
+    assert set(ideas.side) == {"Bullish", "Bearish"} and ideas.label.str.contains("not a trade signal").all()
+    assert (ideas[ideas.side == "Bullish"].score > 0).all() and (ideas[ideas.side == "Bearish"].score < 0).all()
+    assert (ideas.groupby("side").size() >= 1).all() and ideas.reason.str.startswith("Pushing it").all()
     assert (top[PARTS].sum(axis=1) == top.score).all(), "score must be the plain sum of the six parts"
     assert (top[FACTORS].sum(axis=1) == top.score).all(), "score must be the sum of the 18 factors"
     assert (top.f_trend + top.f_seasonality == top.technicals).all()
@@ -133,6 +149,34 @@ def test_switches_turn_parts_off():
     assert not os.path.exists(os.path.join(tmp, "output", "momentum.csv"))
     print("switches OK")
 
+def test_one_day_change_skips_weekends_unit():
+    sys.argv = ["edge_job.py", "--offline"]
+    sys.path.insert(0, REPO); ej = importlib.import_module("edge_job")
+    tmp = tempfile.mkdtemp(prefix="edge_hist_")
+    pd.DataFrame(dict(symbol=["EURUSD"] * 4, score=[1, 3, 3, 3], date=["20261022", "20261023", "20261024", "20261025"])).to_csv(
+        os.path.join(tmp, "score_history.csv"), index=False)
+    old = (ej.CACHE, ej.OUT)
+    ej.CACHE = ej.OUT = tmp
+    try:
+        assert ej.prior_scores(today="2026-10-25") == {"EURUSD": 1}   # Sunday: Friday against Thursday
+        assert ej.prior_scores(today="2026-10-24") == {"EURUSD": 1}   # Saturday: the same
+        assert ej.prior_scores(today="2026-10-26") == {"EURUSD": 3}   # Monday: against Friday, not Sunday
+        assert ej.prior_scores(today="2026-10-23") == {"EURUSD": 1}   # Friday: against Thursday
+    finally:
+        ej.CACHE, ej.OUT = old
+    print("1 day change trading days OK")
+
+def test_new_switches():
+    tmp, _ = run_copy(config_changes=dict(extra_markets=False, trade_ideas=False, top_setups_summary=False))
+    top = read(tmp, "top_setups")
+    assert len(top) == 47 and not (set(NEW_SYMBOLS) & set(top.symbol))
+    assert pd.read_csv(os.path.join(tmp, "output", "trade_ideas.csv")).empty
+    assert pd.read_csv(os.path.join(tmp, "output", "top_summary.csv")).empty
+    st = read(tmp, "settings").set_index("setting").value.astype(str)
+    for key in ("solid_score_cells", "top_setups_compact", "top_setups_macro_only", "top_setups_indicator", "trade_ideas"):
+        assert "feature." + key in st.index, key
+    print("new switches OK")
+
 def test_group_switches():
     tmp, _ = run_copy(config_changes=dict(trend_sentiment=False))
     top = read(tmp, "top_setups")
@@ -187,6 +231,8 @@ if __name__ == "__main__":
     test_news_risk_tags_from_feed()
     test_switches_turn_parts_off()
     test_group_switches()
+    test_one_day_change_skips_weekends_unit()
+    test_new_switches()
     test_failed_download_retries_then_uses_cache_unit()
     test_missing_ticker_is_skipped_not_fatal()
     print("ALL TESTS PASSED")

@@ -65,9 +65,14 @@ def sgn(x, tol=0.0):
 # ============================================================== symbols
 CCYS = ["EUR", "GBP", "AUD", "NZD", "USD", "CAD", "CHF", "JPY"]  # market priority order
 PAIRS = [a + b for i, a in enumerate(CCYS) for b in CCYS[i + 1:]]  # the 28 standard pairs
-CCY_COUNTRY = {"USD": "US", "EUR": "EZ", "GBP": "UK", "JPY": "JP", "CHF": "CH", "CAD": "CA", "AUD": "AU", "NZD": "NZ", "CNY": "CN"}
+CCY_COUNTRY = {"USD": "US", "EUR": "EZ", "GBP": "UK", "JPY": "JP", "CHF": "CH", "CAD": "CA", "AUD": "AU", "NZD": "NZ", "CNY": "CN",
+               "ZAR": "ZA"}
 USD_TICK = {"EUR": "EURUSD=X", "GBP": "GBPUSD=X", "AUD": "AUDUSD=X", "NZD": "NZDUSD=X",
             "CAD": "USDCAD=X", "CHF": "USDCHF=X", "JPY": "USDJPY=X"}  # first four quoted XXXUSD, rest USDXXX
+EXTRA_ON = FEAT.get("extra_markets", True)  # the markets added to match EdgeFinder (switch in config.json)
+# Extra pairs outside the 28 majors and crosses. Scored with the same pair rules (base country minus quote country).
+EXOTIC_PAIRS = ["USDZAR"] if EXTRA_ON else []
+if EXTRA_ON: USD_TICK["ZAR"] = "USDZAR=X"
 OTHER = {  # name: (kind, yahoo, cot asset, econ country, options put/call series)
     "SPX500": ("index", "^GSPC", "S&P 500", "US", "SPX + SPXW PUT/CALL RATIO"),
     "NAS100": ("index", "^NDX", "Nasdaq 100", "US", "INDEX PUT/CALL RATIO"),
@@ -81,10 +86,20 @@ OTHER = {  # name: (kind, yahoo, cot asset, econ country, options put/call serie
     "USOIL": ("commodity", "CL=F", "WTI Crude", "US", "EXCHANGE TRADED PRODUCTS PUT/CALL RATIO"),
     "BTCUSD": ("crypto", "BTC-USD", "Bitcoin", "US", None),
 }
-SYMBOLS = PAIRS + ["%s Index" % c for c in CCYS] + list(OTHER)
+EXTRA_OTHER = {  # added to match EdgeFinder; scored like the market next to it in the comment
+    "US10T": ("bond", "ZN=F", "10Y T-Note", "US", None),                                  # like the US indexes
+    "RUSSELL": ("index", "^RUT", "Russell 2000", "US", "MRUT PUT/CALL RATIO"),            # like the US indexes
+    "PLATINUM": ("metal", "PL=F", "Platinum", "US", "EXCHANGE TRADED PRODUCTS PUT/CALL RATIO"),   # like silver
+    "COPPER": ("metal", "HG=F", "Copper", "US", "EXCHANGE TRADED PRODUCTS PUT/CALL RATIO"),       # like silver
+    "NATGAS": ("commodity", "NG=F", "Natural Gas", "US", "EXCHANGE TRADED PRODUCTS PUT/CALL RATIO"),  # like oil
+    "ETHUSD": ("crypto", "ETH-USD", "Ether", "US", None),                                 # like bitcoin
+}
+if EXTRA_ON: OTHER.update(EXTRA_OTHER)
+SYMBOLS = PAIRS + EXOTIC_PAIRS + ["%s Index" % c for c in CCYS] + list(OTHER)
+RISK_KINDS = ("index", "bond", "crypto", "commodity", "metal")  # hot inflation and a rising 2-year yield count against these
 
 def kind(sym):
-    if sym in PAIRS: return "fx"
+    if sym in PAIRS or sym in EXOTIC_PAIRS: return "fx"
     if sym.endswith(" Index"): return "ccy"
     return OTHER[sym][0]
 
@@ -95,7 +110,7 @@ def risk_ccys(sym):
     c = OTHER[sym][3]; return [{v: k2 for k2, v in CCY_COUNTRY.items()}[c]] + (["USD"] if c != "US" else [])
 
 # ============================================================== prices
-ALWAYS_OPEN = {"BTC-USD"}  # tickers that genuinely trade on weekends
+ALWAYS_OPEN = {"BTC-USD", "ETH-USD"}  # tickers that genuinely trade on weekends
 
 def clean_trailing_bars(px):
     """Drop duplicate dates, and per ticker drop a trailing bar that is not a real session:
@@ -117,7 +132,7 @@ def clean_trailing_bars(px):
 def last_cash_session(df):
     """Last date that is a cash-market session. A Saturday bitcoin (or leftover FX) bar must not set prices_as_of."""
     if df is None or len(df.index) == 0: return None
-    crypto = {"BTC-USD", "BTCUSD"}
+    crypto = {"BTC-USD", "BTCUSD", "ETH-USD", "ETHUSD"}
     cols = [c for c in df.columns if c not in crypto]
     sub = df[cols].dropna(how="all") if cols else df.dropna(how="all")
     if sub.empty: sub = df.dropna(how="all")
@@ -204,7 +219,7 @@ def load_prices():
         usd[c] = (C[t], Hh[t], Ll[t]) if c in ("EUR", "GBP", "AUD", "NZD") else (1 / C[t], 1 / Ll[t], 1 / Hh[t])
     ones = pd.Series(1.0, index=C.index); usd["USD"] = (ones, ones, ones)
     close, high, low = {}, {}, {}
-    for s in PAIRS:
+    for s in PAIRS + EXOTIC_PAIRS:
         a, b = usd[s[:3]], usd[s[3:]]
         close[s] = a[0] / b[0]; high[s] = a[1] / b[2]; low[s] = a[2] / b[1]   # approximate high/low for crosses
     for c in CCYS:  # currency index: the currency priced in US dollars (like its futures contract); USD uses the dollar index
@@ -243,7 +258,10 @@ def technicals(sym, close, asof):
 # ============================================================== COT
 COT_CODES = {"EUR": "099741", "GBP": "096742", "JPY": "097741", "CHF": "092741", "CAD": "090741", "AUD": "232741",
              "NZD": "112741", "USD": "098662", "Gold": "088691", "Silver": "084691", "WTI Crude": "067651",
-             "S&P 500": "13874A", "Nasdaq 100": "209742", "Dow": "124603", "Bitcoin": "133741"}
+             "S&P 500": "13874A", "Nasdaq 100": "209742", "Dow": "124603", "Bitcoin": "133741",
+             # added markets: 10-year T-note, Russell 2000 E-mini, platinum, copper, Henry Hub natural gas, ether, rand
+             "10Y T-Note": "043602", "Russell 2000": "239742", "Platinum": "076651", "Copper": "085692",
+             "Natural Gas": "023651", "Ether": "146021", "ZAR": "122741"}
 def load_cot():
     year = NOW.year
     for y in range(2016, year + 1):  # first run downloads the history; after that only this year's file
@@ -281,6 +299,7 @@ def cot_score(sym, cot):
     last = cot.sort_values("date").groupby("asset").tail(1).set_index("asset")
     k = kind(sym)
     if k == "fx":
+        if sym[:3] not in last.index or sym[3:] not in last.index: return 0, {"note": "no CFTC market"}
         A, B = last.loc[sym[:3]], last.loc[sym[3:]]
         sc = sgn(A.long_pct_chg) - sgn(B.long_pct_chg)
         netpos = sgn(A.net) - sgn(B.net)  # shown for context only
@@ -367,7 +386,7 @@ def sentiment_score(sym, mfx, pcr):
 
 # ============================================================== economic calendar (actual vs consensus)
 NASDAQ_COUNTRY = {"United States": "US", "Euro Zone": "EZ", "United Kingdom": "UK", "Japan": "JP", "Switzerland": "CH",
-                  "Canada": "CA", "Australia": "AU", "New Zealand": "NZ", "China": "CN"}
+                  "Canada": "CA", "Australia": "AU", "New Zealand": "NZ", "China": "CN", "South Africa": "ZA"}
 G, I, J = "Growth", "Inflation", "Jobs"
 ECON_MAP = {  # (category, label, calendar names, which row if several, good direction)
     "US": [(G, "GDP", ["GDP"], "first", 1), (G, "Manufacturing PMI", ["ISM Manufacturing PMI"], "first", 1),
@@ -401,7 +420,7 @@ ECON_MAP = {  # (category, label, calendar names, which row if several, good dir
            (I, "Interest rate", ["SNB Interest Rate Decision"], "first", 1),
            (J, "Employment change", ["Employment Level"], "first", 1), (J, "Unemployment rate", ["Unemployment Rate s.a."], "first", -1)],
     "CA": [(G, "GDP", ["GDP"], "mom", 1), (G, "Manufacturing PMI", ["S&P Global Manufacturing PMI"], "first", 1),
-           (G, "Services PMI", ["S&P Global Services PMI", "Ivey PMI"], "first", 1), (G, "Retail sales", ["Retail Sales"], "mom", 1),
+           (G, "Services PMI", ["S&P Global Services PMI"], "first", 1), (G, "Retail sales", ["Retail Sales"], "mom", 1),
            (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "PPI y/y", ["IPPI"], "yoy", 1),
            (I, "Interest rate", ["BoC Interest Rate Decision"], "first", 1), (J, "Employment change", ["Employment Change"], "first", 1),
            (J, "Unemployment rate", ["Unemployment Rate"], "first", -1)],
@@ -422,6 +441,9 @@ ECON_MAP = {  # (category, label, calendar names, which row if several, good dir
            (G, "Services PMI", ["Non-Manufacturing PMI"], "first", 1), (G, "Retail sales", ["Retail Sales"], "first", 1),
            (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "PPI y/y", ["PPI"], "yoy", 1), (I, "Interest rate", ["PBoC Loan Prime Rate"], "first", 1),
            (J, "Unemployment rate", ["Chinese Unemployment Rate"], "first", -1)],
+    "ZA": [(G, "GDP", ["GDP"], "first", 1), (G, "Manufacturing PMI", ["S&P Global Manufacturing PMI", "Manufacturing PMI"], "first", 1),
+           (G, "Retail sales", ["Retail Sales"], "yoy", 1), (I, "CPI y/y", ["CPI"], "yoy", 1), (I, "PPI y/y", ["PPI"], "yoy", 1),
+           (I, "Interest rate", ["Interest Rate Decision"], "first", 1), (J, "Unemployment rate", ["Unemployment Rate"], "first", -1)],
 }
 
 def num(v):
@@ -532,7 +554,7 @@ def econ_score(sym, rel, two_y):
             for c, lab, *_ in ECON_MAP[ctry if ctry in ECON_MAP else "US"]:
                 if c != cat: continue
                 s = sig.get((ctry, lab), 0)
-                if k in ("index", "crypto", "commodity", "metal") and cat == I:
+                if k in RISK_KINDS and cat == I:
                     if lab == "Interest rate":
                         if ctry == "US":
                             rows.append(("2-year yield trend (21-day avg)", -two_y, "rising = hawkish" if two_y > 0 else "falling")); continue
@@ -783,7 +805,10 @@ def backtest(close, cot):
 # ============================================================== main
 HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simple checks into one score per market."),
         ("Score", "Technicals + COT + Crowd + Growth + Inflation + Jobs. 7 or more Very Bullish, 4 to 6 Bullish, -3 to 3 Neutral, -4 to -7 Bearish, -8 or less Very Bearish."),
-        ("Top Setups factors", "Top Setups splits that score into 18 factors, each a whole number from -2 to +2. 1 Day Change is today's score minus the previous day's score. The factor coverage table says which countries have a free series. A zero there means no free series, or a print with no consensus."),
+        ("Markets", "54 markets, like EdgeFinder: 29 currency pairs (the 28 majors and crosses plus USDZAR), 8 currency indexes, 8 stock indexes (with the Russell 2000), the US 10-year Treasury note (US10T), gold, silver, platinum, copper, oil, natural gas, bitcoin and ether. The added markets are scored with the same rules as the market most like them: US10T and the Russell like the other US stock indexes, platinum and copper like silver, natural gas like oil, ether like bitcoin, and USDZAR like any other pair. The added markets can be switched off in Settings."),
+        ("Top Setups factors", "Top Setups splits that score into 18 factors, each a whole number from -2 to +2. 1 Day Change is today's score minus the score on the trading day before. On a Saturday or Sunday it shows Friday against Thursday, the same way EdgeFinder does. The factor coverage table says which countries have a free series. A zero there means no free series, or a print with no consensus."),
+        ("Score history", "A score snapshot is saved for every market every day. Days before the live job started were rebuilt from saved prices, COT reports and calendar releases. Rebuilt days use the latest saved retail crowd reading, because there is no free history of it."),
+        ("Why a score can differ from EdgeFinder", "We use free data: Yahoo Finance prices, CFTC COT, Myfxbook or CBOE crowd readings and the Nasdaq economic calendar. EdgeFinder uses its own paid feeds. Three things cause most gaps. 1) Some releases have no forecast on the free calendar, so they score 0 here (for example Canada's manufacturing PMI and Switzerland's services PMI). 2) EdgeFinder's prices close at a different hour, so a trend that is just turning can read +1 there and +2 here. 3) Where both sides have a forecast, EdgeFinder's forecast can differ from the free one, so a single cell can flip. EURUSD shows the rules match: on Oct 24 all 14 macro cells, COT, crowd and seasonality matched EdgeFinder, and only Trend differed. CADCHF (EdgeFinder +8) differs mostly because of points 1 and 3: Canada's PMIs have no free forecast, and Canada's retail sales and jobs, and Swiss GDP and PPI, scored differently on the free calendar."),
         ("Technicals", "Trend score (3-day average vs 14-day average, -2 to +2) plus seasonality (+1 if this month is usually up over 10 years, -1 if usually down)."),
         ("COT", "Big speculators in futures (CFTC, weekly). For a pair: did the long share rise or fall for each side. For other markets: are they net long, and did the long share rise."),
         ("Crowd", "Retail traders (Myfxbook). 60% or more long scores -1, 40% or less long scores +1. Indices, metals and oil use the put/call ratio instead."),
@@ -833,8 +858,16 @@ def date_or_pt_text(s):
 HIST_COLS = ["symbol", "score", "technicals", "cot", "crowd", "growth", "inflation", "jobs", "date"]
 HISTORY_DAYS = 730  # about 1.2 MB of CSV; small enough for Google Sheets IMPORTDATA
 
-def prior_scores():
-    """Last saved score for each symbol on a day before today. Today's row is not yesterday."""
+def session_day(ts):
+    """The trading day a date belongs to: a Saturday or Sunday counts as the Friday before it."""
+    d = pd.Timestamp(ts).normalize()
+    while d.day_of_week >= 5: d -= pd.Timedelta(days=1)
+    return d
+
+def prior_scores(today=None):
+    """Score saved for each symbol on the trading day before today's trading day.
+    Weekends are skipped on both sides, so on a Saturday or Sunday the 1 Day Change is Friday versus Thursday
+    (like EdgeFinder) instead of a flat 0 against the day before. Today's row is never "yesterday"."""
     frames = []
     for f in (os.path.join(CACHE, "score_history_seed.csv"), os.path.join(OUT, "score_history.csv")):
         if not os.path.exists(f): continue
@@ -846,8 +879,11 @@ def prior_scores():
     if not frames: return {}
     hist = pd.concat(frames, ignore_index=True)
     hist["date"] = ymd(hist["date"])
-    today = pd.Timestamp(NOW.strftime("%Y-%m-%d"))
-    hist = hist[hist.date.notna() & (hist.date < today)]
+    ref = session_day(today if today is not None else NOW.strftime("%Y-%m-%d"))
+    if FEAT.get("one_day_change_trading_days", True):
+        hist = hist[hist.date.notna() & (hist.date < ref) & (hist.date.dt.day_of_week < 5)]
+    else:
+        hist = hist[hist.date.notna() & (hist.date < pd.Timestamp(NOW.strftime("%Y-%m-%d")))]
     if hist.empty: return {}
     hist = hist.sort_values("date").drop_duplicates("symbol", keep="last")
     scores = pd.to_numeric(hist.score, errors="coerce").fillna(0).astype(int)
@@ -858,14 +894,14 @@ COUNTRY_NAME = {"US": "United States", "EZ": "Eurozone", "UK": "United Kingdom",
 MACRO_COVERAGE = [
     ("GDP", "GDP", "Nasdaq economic calendar, actual versus forecast", ""),
     ("mPMI", "Manufacturing PMI", "Nasdaq economic calendar, actual versus forecast", "Manufacturing PMI only. Services PMI is the next column."),
-    ("sPMI", "Services PMI", "Nasdaq economic calendar, actual versus forecast", "Services PMI only. Switzerland has no services PMI on the free calendar. Canada is scored from Ivey PMI, because the S&P Global services print has no consensus."),
+    ("sPMI", "Services PMI", "Nasdaq economic calendar, actual versus forecast", "Services PMI only. Switzerland has no services PMI on the free calendar. Canada uses the S&P Global services PMI. The Ivey PMI is not used, because it is a different survey (EdgeFinder's CAD services cell did not follow it on Oct 24)."),
     ("Retail Sales", "Retail sales", "Nasdaq economic calendar, actual versus forecast", "Australia has no retail-sales print on the free calendar."),
     ("Cnsmr Conf", "Consumer confidence", "Nasdaq economic calendar, actual versus forecast", "Business-confidence surveys are not used in place of a consumer series."),
     ("CPI YoY", "CPI y/y", "Nasdaq economic calendar, actual versus forecast", ""),
     ("PPI YoY", "PPI y/y", "Nasdaq economic calendar, actual versus forecast", "New Zealand uses PPI output."),
     ("PCE YoY", "PCE y/y", "Nasdaq economic calendar, actual versus forecast", "PCE is a United States series. Every other country is 0."),
-    ("Interest Rates", "Interest rate", "Nasdaq economic calendar for policy rates. US indexes, gold, silver, oil and bitcoin use the FRED 2-year yield (DGS2).",
-     "US stock indexes, gold, silver, oil and bitcoin use the 2-year yield trend instead of the Fed decision. A rising yield scores against those markets. Gold flips the sign of every US line."),
+    ("Interest Rates", "Interest rate", "Nasdaq economic calendar for policy rates. US indexes, the 10-year note, metals, oil, gas and crypto use the FRED 2-year yield (DGS2).",
+     "US stock indexes, the 10-year note, gold, silver, platinum, copper, oil, natural gas, bitcoin and ether use the 2-year yield trend instead of the Fed decision. A rising yield scores against those markets. Gold flips the sign of every US line."),
     ("NFP", "Employment change", "Nasdaq economic calendar, actual versus forecast", "The United States print is Nonfarm Payrolls. Japan uses the jobs-to-applications ratio. China has no free employment-change series."),
     ("Unemploy. Rate", "Unemployment rate", "Nasdaq economic calendar, actual versus forecast", "A lower unemployment rate scores positive."),
     ("Unemploy. Claims", "Jobless claims", "Nasdaq economic calendar, actual versus forecast", "The United States is initial jobless claims. The United Kingdom is the claimant count. A higher print scores negative."),
@@ -882,18 +918,18 @@ def _join_names(names):
 def factor_coverage(rel):
     """Plain-language list of which countries have a free reading for each of the 18 factors."""
     rows = [
-        dict(factor="Trend", covered="All markets with a Yahoo price history: 28 currency pairs, 8 currency indexes, 7 stock indexes, gold, silver, oil and bitcoin.",
+        dict(factor="Trend", covered="All markets with a Yahoo price history: 29 currency pairs, 8 currency indexes, 8 stock indexes, the US 10-year note, gold, silver, platinum, copper, oil, natural gas, bitcoin and ether.",
              source="Yahoo Finance daily prices",
              notes="Plus 2 or minus 2 when the 3-day average and the 14-day slope agree. Plus 1 or minus 1 when they disagree."),
         dict(factor="Seasonality", covered="The same markets as Trend.",
              source="Yahoo Finance monthly closes, last 10 years",
              notes="Plus 1 if this calendar month rose on average, minus 1 if it fell, 0 if there is not enough history."),
-        dict(factor="COT", covered="EUR, GBP, JPY, CHF, CAD, AUD, NZD and USD, plus gold, silver, WTI crude, S&P 500, Nasdaq 100, Dow and bitcoin.",
+        dict(factor="COT", covered="EUR, GBP, JPY, CHF, CAD, AUD, NZD, USD and ZAR, plus gold, silver, platinum, copper, WTI crude, natural gas, S&P 500, Nasdaq 100, Dow, Russell 2000, the 10-year note, bitcoin and ether.",
              source="CFTC legacy futures, weekly",
              notes="Scored 0, no CFTC contract in this feed: GER40, UK100, JPN225 and CHINA50. A pair is the base currency minus the quote currency."),
-        dict(factor="Crowd Sentiment", covered="All 28 pairs and 8 currency indexes from Myfxbook. S&P 500, Nasdaq 100, Dow, gold, silver and oil from the CBOE put/call ratio.",
+        dict(factor="Crowd Sentiment", covered="The 28 pairs and 8 currency indexes from Myfxbook. S&P 500, Nasdaq 100, Dow, Russell 2000, gold, silver, platinum, copper, oil and natural gas from the CBOE put/call ratio.",
              source="Myfxbook retail positioning, and CBOE put/call",
-             notes="Scored 0, no free put/call series: CHINA50, GER40, UK100, JPN225 and bitcoin. Retail is the saved Myfxbook snapshot unless a login is set on the data job."),
+             notes="Scored 0, no free reading: USDZAR (not on Myfxbook), CHINA50, GER40, UK100, JPN225, the 10-year note, bitcoin and ether. Retail is the saved Myfxbook snapshot unless a login is set on the data job."),
     ]
     for title, label, source, extra in MACRO_COVERAGE:
         ok, quiet, missing = [], [], []
@@ -934,6 +970,103 @@ def score_history(top):
     hist = hist.sort_values(["date", "symbol"]).reset_index(drop=True)
     log("Score history", "OK", hist.date.max(), "%d days, %s to %s" % (hist.date.nunique(), hist.date.min(), hist.date.max()))
     return hist
+
+# ============================================================== plain-words summary and trade ideas (rules only, no AI)
+FACTOR_WORDS = {  # factor: (words when it helps, words when it hurts)
+    "f_trend": ("uptrend", "downtrend"), "f_seasonality": ("usually a good month", "usually a weak month"),
+    "f_cot": ("big speculators buying", "big speculators selling"),
+    "f_crowd": ("the crowd leans the other way", "the crowd is on the same side")}
+MACRO_WORDS = {"f_gdp": "GDP", "f_mpmi": "manufacturing PMI", "f_spmi": "services PMI", "f_retail": "retail sales",
+               "f_conf": "consumer confidence", "f_cpi": "CPI", "f_ppi": "PPI", "f_pce": "PCE", "f_rates": "interest rates",
+               "f_nfp": "jobs", "f_unemp": "unemployment", "f_claims": "jobless claims", "f_adp": "ADP", "f_jolts": "JOLTS"}
+GROUP_WORDS = [("Stock indexes", ("index",), "lean"), ("Bonds", ("bond",), "lean"), ("Metals", ("gold", "metal"), "lean"),
+               ("Energy", ("commodity",), "leans"), ("Crypto", ("crypto",), "leans")]
+
+def _and(items, most=4):
+    items = list(items)
+    if len(items) > most: items = items[:most] + ["%d more" % (len(items) - most)]
+    return _join_names(items)
+
+def _signed(n): return ("+%d" % n) if n > 0 else str(int(n))
+
+def setup_reason(r, side):
+    """One plain line built from the factor cells. side = 1 for a bullish setup, -1 for a bearish one."""
+    k, sym = r["kind"], r["symbol"]
+    push, hold = [], []
+    for f, (good, bad) in FACTOR_WORDS.items():
+        v = int(r.get(f, 0) or 0)
+        if v: (push if v * side > 0 else hold).append(good if v > 0 else bad)
+    up = [w for f, w in MACRO_WORDS.items() if int(r.get(f, 0) or 0) > 0]
+    dn = [w for f, w in MACRO_WORDS.items() if int(r.get(f, 0) or 0) < 0]
+    def macro(words, helps):
+        if not words: return None
+        if k == "fx": return "%s data %s %s on %s" % (sym[:3], "ahead of" if helps else "behind", sym[3:], _and(words))
+        if k == "ccy": return "%s data %s on %s" % (sym[:3], "beat forecasts" if helps else "missed forecasts", _and(words))
+        home = {v: k2 for k2, v in CCY_COUNTRY.items()}.get(OTHER[sym][3], "US") if sym in OTHER else "US"
+        return "%s data %s it on %s" % ("US" if home == "USD" else home, "helps" if helps else "hurts", _and(words))
+    m_push, m_hold = (macro(up, True), macro(dn, False)) if side > 0 else (macro(dn, False), macro(up, True))
+    if m_push: push.append(m_push)
+    if m_hold: hold.append(m_hold)
+    text = "%s: %s." % ("Pushing it up" if side > 0 else "Pushing it down", _and(push, 6) if push else "no single factor")
+    if hold: text += " Working against it: %s." % _and(hold, 6)
+    return text
+
+def trade_ideas(top):
+    """Strongest bullish and bearish setups. Research only, no alerts."""
+    bull_at, bear_at = SC.get("trade_ideas_bullish_at", 7), SC.get("trade_ideas_bearish_at", -7)
+    n_min = int(SC.get("trade_ideas_min_each_side", 5))
+    t = top.sort_values(["score", "symbol"], ascending=[False, True])
+    bull = t[t.score >= bull_at]
+    if len(bull) < n_min: bull = t[t.score > 0].head(n_min)
+    bear = t.sort_values(["score", "symbol"], ascending=[True, True])
+    bear = bear[bear.score <= bear_at] if (bear.score <= bear_at).sum() >= n_min else bear[bear.score < 0].head(n_min)
+    rows = []
+    for side, frame in ((1, bull), (-1, bear)):
+        for i, r in enumerate(frame.to_dict("records"), 1):
+            rows.append(dict(side="Bullish" if side > 0 else "Bearish", rank=i, symbol=r["symbol"], kind=r["kind"],
+                             score=int(r["score"]), bias=r["bias"], score_chg_1d=int(r.get("score_chg_1d", 0) or 0),
+                             reason=setup_reason(r, side), label="Research only, not a trade signal."))
+    return pd.DataFrame(rows, columns=["side", "rank", "symbol", "kind", "score", "bias", "score_chg_1d", "reason", "label"])
+
+def top_summary(top):
+    """A few plain sentences about the Top setups table, built from fixed rules (no AI)."""
+    lines = []
+    t = top.sort_values(["score", "symbol"], ascending=[False, True])
+    fx = t[t.symbol.isin(PAIRS)]
+    if len(fx):
+        strength = {}
+        for c in CCYS:
+            vals = [int(r.score) if r.symbol[:3] == c else -int(r.score) for r in fx.itertuples() if c in (r.symbol[:3], r.symbol[3:])]
+            if vals: strength[c] = float(np.mean(vals))
+        best, worst = max(strength, key=strength.get), min(strength, key=strength.get)
+        big = fx.assign(a=fx.score.abs()).sort_values(["a", "symbol"], ascending=[False, True]).head(5)
+        winner = [r.symbol[:3] if r.score > 0 else r.symbol[3:] for r in big.itertuples() if r.score != 0]
+        loser = [r.symbol[3:] if r.score > 0 else r.symbol[:3] for r in big.itertuples() if r.score != 0]
+        n_best, n_worst = winner.count(best), loser.count(worst)
+        lines.append("%s is strongest: %s" % (best, ("%d of the 5 biggest pair setups favor %s." % (n_best, best)) if n_best >= 2
+                     else "it averages %+.1f across its 7 pairs." % strength[best]))
+        lines.append("%s is weakest: %s" % (worst, ("%d of the 5 biggest pair setups go against %s." % (n_worst, worst)) if n_worst >= 2
+                     else "it averages %+.1f across its 7 pairs." % strength[worst]))
+    hi, lo = t.iloc[0], t.iloc[-1]
+    lines.append("Highest score: %s at %s (%s). Lowest: %s at %s (%s)." % (hi.symbol, _signed(hi.score), hi.bias, lo.symbol, _signed(lo.score), lo.bias))
+    bulls = int(t.bias.str.contains("Bullish").sum()); bears = int(t.bias.str.contains("Bearish").sum())
+    lines.append("Across all %d markets: %d bullish, %d bearish and %d neutral." % (len(t), bulls, bears, len(t) - bulls - bears))
+    moods = []
+    for name, kinds, verb in GROUP_WORDS:
+        g = t[t.kind.isin(kinds)]
+        if len(g) == 0: continue
+        avg = float(g.score.mean())
+        if abs(avg) >= 2: moods.append("%s %s %s (average %+.1f)" % (name if not moods else name.lower(), verb, "bullish" if avg > 0 else "bearish", avg))
+    if moods: lines.append(_and(moods, 5) + ".")
+    if "score_chg_1d" in t.columns:
+        mv = t[t.score_chg_1d != 0].copy()
+        if len(mv):
+            mv["a"] = mv.score_chg_1d.abs(); mv = mv.sort_values(["a", "symbol"], ascending=[False, True]).head(3)
+            lines.append("Biggest score changes since the last trading day: %s." % _and(["%s %s" % (r.symbol, _signed(r.score_chg_1d)) for r in mv.itertuples()]))
+        else:
+            lines.append("No score changed since the last trading day.")
+    lines.append("Built from simple rules, not AI. " + LABEL)
+    return pd.DataFrame(dict(line=range(1, len(lines) + 1), text=lines))
 
 def fmt_parts(d): return "; ".join("%s: %s" % (k, v) for k, v in d.items() if not k.endswith("_label"))
 
@@ -994,6 +1127,9 @@ def main():
         top[c] = pd.to_numeric(top[c], errors="coerce").fillna(0).astype(int)
     T, rates = page_tables(close, high, low, cot, ev, cal) if FEAT["market_pages"] else ({}, {})
     T["top_setups"], T["scorecard_details"] = top, pd.DataFrame(det)
+    T["top_summary"] = top_summary(top) if FEAT.get("top_setups_summary", True) else pd.DataFrame(columns=["line", "text"])
+    T["trade_ideas"] = trade_ideas(top) if FEAT.get("trade_ideas", True) else pd.DataFrame(
+        columns=["side", "rank", "symbol", "kind", "score", "bias", "score_chg_1d", "reason", "label"])
     T["econ_data"] = rel
     if "rates" in T:  # real rate = policy rate minus the latest CPI y/y
         cpi = {r.country: num(r.actual) for r in rel.itertuples() if r.indicator == "CPI y/y" and r.status != "no data"}

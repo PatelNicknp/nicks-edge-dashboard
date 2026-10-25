@@ -1,6 +1,6 @@
 # Nick's Edge Dashboard
 
-A free research screen that scores 47 markets (28 currency pairs, 8 currency indices, stock indices, gold, silver, oil and bitcoin) from six simple checks. Research screen, not a trade signal.
+A free research screen that scores 54 markets (28 currency pairs, USDZAR, 8 currency indices, stock indices including the Russell 2000, the US 10-year T-Note, gold, silver, platinum, copper, oil, natural gas, bitcoin and ether) from six simple checks. Research screen, not a trade signal.
 
 ## How it works
 
@@ -25,7 +25,7 @@ Score = Technicals + COT + Crowd + Growth + Inflation + Jobs.
 | -4 to -7 | Bearish |
 | -8 or less | Very Bearish |
 
-Top Setups also writes each of those points as its own factor, from -2 to +2: Trend, Seasonality, COT, Crowd, and 14 macro prints (GDP, manufacturing PMI, services PMI, retail sales, consumer confidence, CPI, PPI, PCE, interest rates, employment change, unemployment, claims, ADP, JOLTS). `output/factor_coverage.csv` says which countries have a free series. A missing series scores 0. 1 Day Change is today's score minus the previous day's score. The six grouped columns are unchanged.
+Top Setups also writes each of those points as its own factor, from -2 to +2: Trend, Seasonality, COT, Crowd, and 14 macro prints (GDP, manufacturing PMI, services PMI, retail sales, consumer confidence, CPI, PPI, PCE, interest rates, employment change, unemployment, claims, ADP, JOLTS). `output/factor_coverage.csv` says which countries have a free series. A missing series scores 0. 1 Day Change is today's score minus the score on the previous trading day (on a weekend, Friday against Thursday). The six grouped columns are unchanged.
 
 | Part | Rule | Source |
 |---|---|---|
@@ -36,6 +36,20 @@ Top Setups also writes each of those points as its own factor, from -2 to +2: Tr
 | News risk (not scored) | Any high-impact event in the next 24 hours for either currency. Indices, gold and other assets use their home currency plus USD. Medium-impact events can be shown as a lighter tag. | Forex Factory weekly feed, with the Nasdaq calendar as a look-ahead past the end of the week |
 
 Every part can be switched off in `config.json`.
+
+## Website pages under SCORES
+
+Each one has its own switch in `config.json` (`features`), and all are on by default.
+
+| Page | Switch | What it shows |
+|---|---|---|
+| Top setups | `top_setups_summary` | The full table, with a short summary box built from simple rules (no AI). |
+| Top setups (Compact) | `top_setups_compact` | Symbol, Bias, Score and the three subtotals. Fits an iPhone without sideways scroll. |
+| Top setups (Macro only) | `top_setups_macro_only` | Markets ranked by the macro score (Growth + Inflation + Jobs). |
+| Top setups indicator | `top_setups_indicator` | A sorted bar chart of every score. |
+| Trade ideas | `trade_ideas` | Scores of +7 or more and -7 or less (or the top and bottom 5), each with a one-line reason. Research only, no alerts. |
+
+`solid_score_cells` colors score cells like EdgeFinder: solid blue when positive, red when negative, dark grey at zero. `extra_markets` adds the 7 markets added in this version.
 
 ## Files
 
@@ -57,9 +71,9 @@ Every part can be switched off in `config.json`.
 
 ## Score history backfill
 `output/score_history.csv` keeps one row per symbol per day (last 730 days). Past days come from
-`cache/score_history_seed.csv`, built once by `python backfill_history.py --days 365 --calendar-dir <older Nasdaq calendar files>`
+`cache/score_history_seed.csv`, built once by `python backfill_history.py --days 367 --recent-crowd-days 42 --calendar-dir <older Nasdaq calendar files>`
 with the same scoring code, point in time (prices to that day, COT reports released by that day, calendar releases
-on or before that day). Crowd is 0 for fx pairs and currency indices in the backfill (no free Myfxbook history);
+on or before that day). Crowd is 0 for fx pairs and currency indices in the backfill (no free Myfxbook history), except the last `--recent-crowd-days` days, which use the saved Myfxbook reading;
 indices, metals and oil use the cached CBOE put/call history. Live rows always win over seed rows for the same day.
 Dates in the pure date columns (score_history, cot_history, cot_report, econ_data, put_call: `date`; rates: `as_of`;
 spreads: `date`) are written as YYYYMMDD digits so Looker Studio can read them as Date (YYYYMMDD).

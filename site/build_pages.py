@@ -3,6 +3,10 @@ import os
 
 PAGES = [
     ("index.html", "top", "Top setups"),
+    ("top-compact.html", "topcompact", "Top setups (Compact)"),
+    ("top-macro.html", "topmacro", "Top setups (Macro only)"),
+    ("top-indicator.html", "topind", "Top setups indicator"),
+    ("trade-ideas.html", "ideas", "Trade ideas"),
     ("scorecard.html", "scorecard", "Scorecard"),
     ("gold.html", "gold", "Gold scorecard"),
     ("cot.html", "cot", "COT report"),

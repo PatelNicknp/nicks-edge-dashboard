@@ -5,6 +5,7 @@
     fx: "Currency pairs",
     ccy: "Currency indexes",
     index: "Stock indexes",
+    bond: "Bonds",
     gold: "Gold",
     metal: "Metals",
     commodity: "Commodities",
@@ -197,10 +198,86 @@
     const cls = i > 0 ? "pos" : i < 0 ? "neg" : "zero";
     return '<span class="fcell ' + cls + '">' + D.esc(D.signed(i) || "0") + "</span>";
   }
+  function signCls(v) {
+    const i = intOf(v);
+    return i > 0 ? "pos" : i < 0 ? "neg" : "zero";
+  }
+  // One factor cell. With solid cells on, the whole cell is filled (EdgeFinder style); otherwise a small pill.
+  function factorTd(v, extra) {
+    const i = intOf(v);
+    const cls = "f" + (extra ? " " + extra : "");
+    if (D.solidOn()) return '<td class="' + cls + " sf " + signCls(i) + '">' + D.esc(D.signed(i) || "0") + "</td>";
+    return '<td class="' + cls + '">' + factorHtml(i) + "</td>";
+  }
+  // Bias and Score cells share one colored band, like EdgeFinder.
+  function bandTd(cls, score, html) {
+    if (!D.solidOn()) return '<td class="' + cls + '">' + html + "</td>";
+    return '<td class="' + cls + ' band" style="background:' + D.bandBg(score) + '">' + html + "</td>";
+  }
+  function biasCell(bias, score) {
+    return bandTd("bias", score, D.solidOn() ? D.esc(bias) : D.biasFill(bias));
+  }
+  function scoreCell(score, cls) {
+    return bandTd(cls || "score", score, D.esc(D.signed(score) || "0"));
+  }
   function catMatch(kind, cat) {
     if (!cat) return true;
     if (cat === "cmd") return kind === "gold" || kind === "metal" || kind === "commodity";
     return kind === cat;
+  }
+
+  function categoriesFor(all) {
+    return [
+      { value: "fx", label: "Forex" },
+      { value: "ccy", label: "Currency indexes" },
+      { value: "index", label: "Indices" },
+      { value: "bond", label: "Bonds" },
+      { value: "cmd", label: "Commodities" },
+      { value: "crypto", label: "Crypto" },
+    ].filter(function (c) { return all.some(function (r) { return catMatch(r.kind, c.value); }); });
+  }
+  function summaryHtml(lines) {
+    const rows = (lines || []).slice().sort(function (a, b) { return intOf(a.line) - intOf(b.line); });
+    if (!rows.length) return "";
+    const last = rows[rows.length - 1];
+    const isLabel = /not AI/i.test(String(last.text || ""));
+    const body = (isLabel ? rows.slice(0, -1) : rows).map(function (r) { return "<li>" + D.esc(r.text) + "</li>"; }).join("");
+    return '<section class="panel summary"><div class="phead"><div><div class="ptitle">Summary</div>' +
+      '<div class="psub">' + D.esc(isLabel ? last.text : "Built from simple rules, not AI.") + "</div></div></div>" +
+      '<div class="pbody"><ul class="sumlist">' + body + "</ul></div></section>";
+  }
+  function bandsFrom(settings) {
+    return {
+      very: settingNum(settings, "scoring.very_bullish_at", 7),
+      bull: settingNum(settings, "scoring.bullish_at", 4),
+      bear: settingNum(settings, "scoring.bearish_at", -4),
+      veryBear: settingNum(settings, "scoring.very_bearish_at", -8),
+    };
+  }
+  function macroSum(r) {
+    return MACRO_FACTORS.reduce(function (sum, c) { return sum + intOf(r[c[0]]); }, 0);
+  }
+  function sortHead(state, key, label, cls) {
+    const mark = state.sort === key ? '<span class="sort">' + (state.dir === "asc" ? "▲" : "▼") + "</span>" : "";
+    return '<th class="' + cls + '" data-k="' + key + '">' + label + mark + "</th>";
+  }
+  function bindSort(host, state, draw, selector) {
+    host.querySelectorAll(selector || "thead th[data-k]").forEach(function (th) {
+      th.addEventListener("click", function () {
+        const k = th.getAttribute("data-k");
+        if (state.sort === k) state.dir = state.dir === "asc" ? "desc" : "asc";
+        else { state.sort = k; state.dir = k === "symbol" ? "asc" : "desc"; }
+        draw();
+      });
+    });
+  }
+  function sortBy(rows, state, valueOf) {
+    const dir = state.dir === "asc" ? 1 : -1;
+    return rows.slice().sort(function (a, b) {
+      let c = state.sort === "symbol" ? String(a.symbol).localeCompare(String(b.symbol)) : valueOf(a, state.sort) - valueOf(b, state.sort);
+      if (c === 0) c = (valueOf(b, "_main") - valueOf(a, "_main")) * dir || String(a.symbol).localeCompare(String(b.symbol)) * dir;
+      return c * dir;
+    });
   }
 
   function pageTop(ctx) {
@@ -212,13 +289,8 @@
       bear: settingNum(ctx.settings, "scoring.bearish_at", -4),
       veryBear: settingNum(ctx.settings, "scoring.very_bearish_at", -8),
     };
-    const cats = [
-      { value: "fx", label: "Forex" },
-      { value: "ccy", label: "Currency indexes" },
-      { value: "index", label: "Indices" },
-      { value: "cmd", label: "Commodities" },
-      { value: "crypto", label: "Crypto" },
-    ].filter(function (c) { return all.some(function (r) { return catMatch(r.kind, c.value); }); });
+    const cats = categoriesFor(all);
+    if (D.featureOn("feature.top_setups_summary")) ctx.page.insertAdjacentHTML("beforeend", summaryHtml(ctx.files["top_summary.csv"] || []));
     const box = document.createElement("div");
     box.className = "ctrls";
     const trendChecked = D.featureOn("feature.trend_sentiment") ? " checked" : "";
@@ -299,16 +371,13 @@
       const body = rows.map(function (r) {
         const chg = intOf(r.score_chg_1d);
         const chgCls = chg > 0 ? "pos" : chg < 0 ? "neg" : "flat";
-        const factors = cols.trend.concat(cols.macro).map(function (c) {
-          return '<td class="f">' + factorHtml(r[c[0]]) + "</td>";
-        }).join("");
+        const factors = cols.trend.concat(cols.macro).map(function (c) { return factorTd(r[c[0]]); }).join("");
         return "<tr><td class=\"chg\"><span class=\"chgnum " + chgCls + "\">" + D.esc(D.signed(chg) || "0") + "</span></td>" +
           '<td class="sym">' + symLink(r.symbol) + "</td>" +
-          '<td class="bias">' + D.biasFill(r._bias) + "</td>" +
-          '<td class="score">' + D.esc(String(r._view)) + "</td>" + factors + "</tr>";
+          biasCell(r._bias, r._view) + scoreCell(r._view) + factors + "</tr>";
       }).join("");
       const empty = rows.length ? "" : '<div class="empty">No markets match these filters.</div>';
-      table.innerHTML = '<div class="scroll edge-scroll"><table class="edge"><thead><tr>' + ban + "</tr><tr>" + labels +
+      table.innerHTML = '<div class="scroll edge-scroll"><table class="edge' + (D.solidOn() ? " solid" : "") + '"><thead><tr>' + ban + "</tr><tr>" + labels +
         "</tr></thead><tbody>" + body + "</tbody></table></div>" + empty +
         '<div class="swipe-count">' + rows.length + (rows.length === 1 ? " market" : " markets") + "</div>";
       table.querySelectorAll("thead tr:nth-child(2) th").forEach(function (th) {
@@ -325,7 +394,7 @@
     box.addEventListener("change", draw);
     draw();
     ctx.page.insertAdjacentHTML("beforeend", foot(
-      "Score is the sum of the factor cells on the row. 7 or more is Very Bullish, 4 to 6 Bullish, −3 to +3 Neutral, −4 to −7 Bearish, −8 or less Very Bearish. A blue cell is positive, a red cell is negative, and a grey cell is zero. Grey can mean the reading was flat, or that the country has no free series (see Help). 1 Day Change is today’s score minus yesterday’s score. Turning Trend &amp; sentiment or Macro off hides that group and takes it out of the score on this page. Research screen, not a trade signal."
+      "Score is the sum of the factor cells on the row. 7 or more is Very Bullish, 4 to 6 Bullish, −3 to +3 Neutral, −4 to −7 Bearish, −8 or less Very Bearish. A blue cell is positive, a red cell is negative, and a grey cell is zero. Grey can mean the reading was flat, or that the country has no free series (see Help). 1 Day Change is today’s score minus the score on the trading day before (on a weekend, Friday against Thursday). Turning Trend &amp; sentiment or Macro off hides that group and takes it out of the score on this page. Research screen, not a trade signal."
     ));
   }
 
@@ -362,7 +431,7 @@
     if (real.length && real.length < 4) sparkNote = "History starts " + D.shortDate(real[0].key);
     const spark = series.length ? D.sparkHtml(series, 3) + '<div class="psub">' + D.esc(sparkNote) + "</div>" : "";
     return '<section class="panel"><div class="phead"><div><div class="ptitle">' + D.esc(title) + '</div><div class="psub">' + D.esc(sub) + "</div></div>" +
-      '<span class="badge" style="background:' + D.heatBg(score, 3) + '">' + D.esc(D.signed(score) || "–") + "</span></div>" +
+      '<span class="badge" style="background:' + D.partBg(score, 3) + '">' + D.esc(D.signed(score) || "–") + "</span></div>" +
       '<div class="pbody">' + body + spark + "</div></section>";
   }
   function renderScorecard(ctx, fallback) {
@@ -410,7 +479,7 @@
         banner +
         '<div class="score-top">' + top.join("") + "</div>" +
         '<div class="score-bot">' + bot.join("") + "</div>" +
-        foot("Each line inside a card is one reading. The badge is that part's score. Green helps the score, red hurts it. A high-impact event in the next 24 hours is flagged above and is not added into the score.");
+        foot("Each line inside a card is one reading. The badge is that part's score. " + (D.solidOn() ? "Blue helps the score, red hurts it." : "Green helps the score, red hurts it.") + " A high-impact event in the next 24 hours is flagged above and is not added into the score.");
       const sel = ctx.page.querySelector("select");
       if (sel) sel.addEventListener("change", () => {
         symbol = sel.value;
@@ -422,7 +491,7 @@
       const canvas = ctx.page.querySelector("#scoreline");
       if (canvas && weeks.length) {
         D.barChart(canvas, weeks.map((p) => D.shortDate(p.key)), weeks.map((p) => p.v),
-          weeks.map((p) => (p.v || 0) >= 0 ? "#2F8E61" : "#B44D51"),
+          weeks.map((p) => D.solidOn() ? D.signBg(p.v) : ((p.v || 0) >= 0 ? "#2F8E61" : "#B44D51")),
           { zero: false });
       }
     }
@@ -472,7 +541,8 @@
   function pageCotHist(ctx) {
     const all = ctx.files["cot_history.csv"] || [];
     const report = ctx.files["cot_report.csv"] || [];
-    const order = ["EUR", "GBP", "JPY", "AUD", "NZD", "CAD", "CHF", "USD", "Gold", "Silver", "WTI Crude", "Bitcoin", "S&P 500", "Nasdaq 100", "Dow"];
+    const order = ["EUR", "GBP", "JPY", "AUD", "NZD", "CAD", "CHF", "USD", "ZAR", "Gold", "Silver", "Platinum", "Copper", "WTI Crude", "Natural Gas",
+      "Bitcoin", "Ether", "S&P 500", "Nasdaq 100", "Dow", "Russell 2000", "10Y T-Note"];
     const have = Array.from(new Set(all.map((r) => r.asset)));
     const assets = order.filter((a) => have.indexOf(a) >= 0).concat(have.filter((a) => order.indexOf(a) < 0).sort());
     let asset = assets.indexOf("EUR") >= 0 ? "EUR" : (assets[0] || "");
@@ -827,8 +897,9 @@
     const ordered = majors.filter((s) => symbols.indexOf(s) >= 0)
       .concat(symbols.filter((s) => majors.indexOf(s) < 0 && raw.find((r) => r.symbol === s && r.symbol.indexOf("Index") < 0))
         .filter((s, i, a) => a.indexOf(s) === i));
-    const fx = ordered.filter((s) => s.indexOf("Index") < 0 && ["SPX500", "NAS100", "DOW", "GER40", "UK100", "JPN225", "CHINA50", "GOLD", "SILVER", "USOIL", "BTCUSD"].indexOf(s) < 0);
-    const rest = ["SPX500", "NAS100", "DOW", "GER40", "UK100", "JPN225", "CHINA50", "GOLD", "SILVER", "USOIL", "BTCUSD"].filter((s) => symbols.indexOf(s) >= 0);
+    const nonFx = ["SPX500", "NAS100", "DOW", "RUSSELL", "GER40", "UK100", "JPN225", "CHINA50", "US10T", "GOLD", "SILVER", "PLATINUM", "COPPER", "USOIL", "NATGAS", "BTCUSD", "ETHUSD"];
+    const fx = ordered.filter((s) => s.indexOf("Index") < 0 && nonFx.indexOf(s) < 0);
+    const rest = nonFx.filter((s) => symbols.indexOf(s) >= 0);
     const indexes = symbols.filter((s) => s.indexOf("Index") >= 0);
     const show = fx.concat(rest).concat(indexes);
     const rows = show.map((sym, idx) => {
@@ -994,15 +1065,15 @@
   function pageMarkets(ctx) {
     const rows = ctx.files["market_heatmap.csv"] || [];
     const majors = ["EURUSD", "GBPUSD", "USDJPY", "USDCHF", "USDCAD", "AUDUSD", "NZDUSD"];
-    const indexes = ["SPX500", "NAS100", "DOW", "GER40", "UK100", "JPN225", "CHINA50"];
-    const cmd = ["GOLD", "SILVER", "USOIL", "BTCUSD"];
+    const indexes = ["SPX500", "NAS100", "DOW", "RUSSELL", "GER40", "UK100", "JPN225", "CHINA50", "US10T"];
+    const cmd = ["GOLD", "SILVER", "PLATINUM", "COPPER", "USOIL", "NATGAS", "BTCUSD", "ETHUSD"];
     function take(list) {
       return list.map((s) => rows.find((r) => r.symbol === s)).filter(Boolean);
     }
     const groups = [
       ["USD majors", take(majors)],
       ["Crosses", rows.filter((r) => r.kind === "fx" && majors.indexOf(r.symbol) < 0)],
-      ["Stock indexes", take(indexes)],
+      ["Stock indexes and bonds", take(indexes)],
       ["Currency indexes", rows.filter((r) => r.kind === "ccy")],
       ["Commodities and crypto", take(cmd)],
     ];
@@ -1030,7 +1101,7 @@
     const seg = horizons.map((h, i) =>
       '<button type="button"' + (i === 0 ? ' class="on"' : "") + ' data-h="' + i + '">' + D.esc(h[0]) + "</button>").join("");
     ctx.page.innerHTML = '<div class="seg">' + seg + '</div><div class="heat3">' + html + "</div>" +
-      foot("Daily closes. Forex pairs are priced in the second currency. Gold, silver and oil are the front contract. 1 week is 5 trading days. 1 month is about 21.");
+      foot("Daily closes. Forex pairs are priced in the second currency. Gold, silver, platinum, copper, oil, natural gas and the 10-year note are the front futures contract. 1 week is 5 trading days. 1 month is about 21.");
     ctx.page.querySelectorAll(".seg button").forEach((btn) => {
       btn.addEventListener("click", () => {
         const id = btn.getAttribute("data-h");
@@ -1319,6 +1390,17 @@
       "feature.calendar": "Economic calendar",
       "feature.trend_sentiment": "Trend and sentiment group",
       "feature.macro_fundamentals": "Macro group",
+      "feature.extra_markets": "Added markets (US10T, Russell, platinum, copper, gas, ether, USDZAR)",
+      "feature.one_day_change_trading_days": "1 Day Change skips weekends",
+      "feature.solid_score_cells": "Solid score cells (blue, red, grey)",
+      "feature.top_setups_summary": "Top setups summary box",
+      "feature.top_setups_compact": "Top setups (Compact) page",
+      "feature.top_setups_macro_only": "Top setups (Macro only) page",
+      "feature.top_setups_indicator": "Top setups indicator page",
+      "feature.trade_ideas": "Trade ideas page",
+      "scoring.trade_ideas_bullish_at": "Trade ideas: bullish at",
+      "scoring.trade_ideas_bearish_at": "Trade ideas: bearish at",
+      "scoring.trade_ideas_min_each_side": "Trade ideas: at least this many each side",
       "scoring.seasonality_points_fx": "Seasonality points, currencies",
       "scoring.seasonality_points_other": "Seasonality points, other markets",
       "scoring.retail_long_bearish_at": "Retail long counts bearish at %",
@@ -1391,8 +1473,202 @@
       body + "</tbody></table></div></section>";
   }
 
+  // ---------------------------------------------------------------- Top setups (Compact): fits a phone, no sideways scroll
+  function pageTopCompact(ctx) {
+    const all = (ctx.files["top_setups.csv"] || []).slice();
+    const bands = bandsFrom(ctx.settings);
+    const box = document.createElement("div");
+    box.className = "ctrls";
+    box.innerHTML =
+      '<label class="ctl"><span class="lab">Symbol</span><input data-filter="q" type="search" placeholder="Search" autocomplete="off"></label>' +
+      D.selectHtml("cat", "Category", categoriesFor(all), "", true) +
+      D.selectHtml("bias", "Bias", ["Very Bullish", "Bullish", "Neutral", "Bearish", "Very Bearish"], "", true);
+    const host = document.createElement("div");
+    host.className = "panel";
+    ctx.page.appendChild(box);
+    ctx.page.appendChild(host);
+    const state = { sort: "score", dir: "desc" };
+    function val(r, key) {
+      if (key === "score" || key === "_main") return intOf(r.score);
+      if (key === "bias") return BIAS_RANK[r.bias] || 0;
+      if (key === "tech") return intOf(r.f_trend) + intOf(r.f_seasonality);
+      if (key === "sent") return intOf(r.f_cot) + intOf(r.f_crowd);
+      if (key === "macro") return macroSum(r);
+      return intOf(r[key]);
+    }
+    function draw() {
+      const q = D.fieldVal(box, "q").trim().toLowerCase();
+      const cat = D.fieldVal(box, "cat");
+      const bias = D.fieldVal(box, "bias");
+      const rows = sortBy(all.filter(function (r) {
+        if (q && String(r.symbol || "").toLowerCase().indexOf(q) < 0) return false;
+        if (!catMatch(r.kind, cat)) return false;
+        if (bias && biasOf(intOf(r.score), bands) !== bias) return false;
+        return true;
+      }), state, val);
+      const head = sortHead(state, "symbol", "Symbol", "sym") + sortHead(state, "bias", "Bias", "bias") +
+        sortHead(state, "score", "Score", "score") + sortHead(state, "tech", "Tech", "f") +
+        sortHead(state, "sent", "COT + crowd", "f") + sortHead(state, "macro", "Macro", "f");
+      const body = rows.map(function (r) {
+        const sc = intOf(r.score);
+        return '<tr><td class="sym">' + symLink(r.symbol) + "</td>" + biasCell(biasOf(sc, bands), sc) + scoreCell(sc) +
+          groupTd(val(r, "tech")) + groupTd(val(r, "sent")) + groupTd(val(r, "macro")) + "</tr>";
+      }).join("");
+      host.innerHTML = '<div class="scroll"><table class="compact' + (D.solidOn() ? " solid" : "") + '"><thead><tr>' + head + "</tr></thead><tbody>" + body +
+        "</tbody></table></div>" + (rows.length ? "" : '<div class="empty">No markets match these filters.</div>') +
+        '<div class="swipe-count">' + rows.length + (rows.length === 1 ? " market" : " markets") + "</div>";
+      bindSort(host, state, draw);
+    }
+    function groupTd(n) {
+      if (D.solidOn()) return '<td class="f sf ' + signCls(n) + '">' + D.esc(D.signed(n) || "0") + "</td>";
+      return '<td class="f">' + D.scoreFill(n, 6) + "</td>";
+    }
+    box.addEventListener("input", draw);
+    box.addEventListener("change", draw);
+    draw();
+    ctx.page.insertAdjacentHTML("beforeend", foot(
+      "The same scores as Top setups, in three group totals. Tech is trend plus seasonality. COT + crowd is big speculators plus the retail crowd. Macro is the 14 economic factors added up. Tap a symbol for its scorecard. Research screen, not a trade signal."
+    ));
+  }
+
+  // ---------------------------------------------------------------- Top setups (Macro only): ranked by the macro total
+  function pageTopMacro(ctx) {
+    const all = (ctx.files["top_setups.csv"] || []).slice();
+    const box = document.createElement("div");
+    box.className = "ctrls";
+    box.innerHTML =
+      '<label class="ctl"><span class="lab">Symbol</span><input data-filter="q" type="search" placeholder="Search" autocomplete="off"></label>' +
+      D.selectHtml("cat", "Category", categoriesFor(all), "", true) +
+      D.selectHtml("macro", "Macro score", SCORE_BANDS, "", true);
+    const host = document.createElement("div");
+    host.className = "panel";
+    ctx.page.appendChild(box);
+    ctx.page.appendChild(host);
+    const state = { sort: "macro", dir: "desc" };
+    function val(r, key) {
+      if (key === "macro" || key === "_main") return macroSum(r);
+      return intOf(r[key]);
+    }
+    function draw() {
+      const cols = MACRO_FACTORS.filter(function (c) { return c[2](); });
+      const q = D.fieldVal(box, "q").trim().toLowerCase();
+      const cat = D.fieldVal(box, "cat");
+      const band = D.fieldVal(box, "macro");
+      const rows = sortBy(all.filter(function (r) {
+        if (q && String(r.symbol || "").toLowerCase().indexOf(q) < 0) return false;
+        if (!catMatch(r.kind, cat)) return false;
+        return bandOk(macroSum(r), band);
+      }), state, val);
+      const ban = '<th class="ban sum" colspan="2"><span class="ban-long">Macro score</span><span class="ban-short">Score</span></th>' +
+        (cols.length ? '<th class="ban macro" colspan="' + cols.length + '"><span class="ban-long">Macro / economic data</span><span class="ban-short">Macro</span></th>' : "");
+      const labels = sortHead(state, "symbol", "Symbol", "sym msym") + sortHead(state, "macro", "Macro<br>score", "score") +
+        cols.map(function (c) { return sortHead(state, c[0], D.esc(c[1]), "f"); }).join("");
+      const body = rows.map(function (r) {
+        const m = macroSum(r);
+        return '<tr><td class="sym msym">' + symLink(r.symbol) + "</td>" + scoreCell(m) +
+          cols.map(function (c) { return factorTd(r[c[0]]); }).join("") + "</tr>";
+      }).join("");
+      host.innerHTML = '<div class="scroll edge-scroll"><table class="edge macro-only' + (D.solidOn() ? " solid" : "") + '"><thead><tr>' + ban + "</tr><tr>" + labels +
+        "</tr></thead><tbody>" + body + "</tbody></table></div>" + (rows.length ? "" : '<div class="empty">No markets match these filters.</div>') +
+        '<div class="swipe-count">' + rows.length + (rows.length === 1 ? " market" : " markets") + "</div>";
+      bindSort(host, state, draw, "thead tr:nth-child(2) th[data-k]");
+      D.markScroll(host);
+    }
+    box.addEventListener("input", draw);
+    box.addEventListener("change", draw);
+    draw();
+    ctx.page.insertAdjacentHTML("beforeend", foot(
+      "Only the 14 economic factors, ranked by their total. Trend, seasonality, COT and the crowd are left out. For a currency pair each cell is the base country minus the quote country. Research screen, not a trade signal."
+    ));
+  }
+
+  // ---------------------------------------------------------------- Top setups indicator: one sorted bar per market
+  function pageTopIndicator(ctx) {
+    const all = (ctx.files["top_setups.csv"] || []).slice();
+    const box = document.createElement("div");
+    box.className = "ctrls";
+    box.innerHTML = D.selectHtml("cat", "Category", categoriesFor(all), "", true);
+    const host = document.createElement("section");
+    host.className = "panel";
+    ctx.page.appendChild(box);
+    ctx.page.appendChild(host);
+    function draw() {
+      D.destroyCharts();
+      const cat = D.fieldVal(box, "cat");
+      const rows = all.filter(function (r) { return catMatch(r.kind, cat); })
+        .sort(function (a, b) { return intOf(b.score) - intOf(a.score) || String(a.symbol).localeCompare(String(b.symbol)); });
+      const h = Math.max(220, rows.length * 18 + 60);
+      host.innerHTML = '<div class="phead"><div><div class="ptitle">Score by market</div><div class="psub">' + rows.length +
+        " markets, highest score at the top. Blue is positive, red is negative.</div></div></div>" +
+        '<div class="pbody"><div class="chart-box" style="height:' + h + 'px"><canvas id="ind"></canvas></div></div>';
+      const canvas = host.querySelector("#ind");
+      if (!canvas || !rows.length) return;
+      const solid = D.solidOn();
+      D.makeChart(canvas, {
+        type: "bar",
+        data: {
+          labels: rows.map(function (r) { return r.symbol; }),
+          datasets: [{
+            data: rows.map(function (r) { return intOf(r.score); }),
+            backgroundColor: rows.map(function (r) { const n = intOf(r.score); return solid ? D.signBg(n) : (n > 0 ? D.GREEN : n < 0 ? D.RED : "#5B6372"); }),
+            borderWidth: 0, borderRadius: 2, barPercentage: 0.85, categoryPercentage: 0.9,
+          }],
+        },
+        options: {
+          indexAxis: "y",
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: function (c) { return "Score " + (D.signed(c.raw) || "0"); } } } },
+          scales: {
+            x: { ticks: { color: D.MU, stepSize: 2 }, grid: { color: "#2A3040" }, border: { color: "#2A3040" }, suggestedMin: -10, suggestedMax: 10 },
+            y: { ticks: { color: D.TX, autoSkip: false, font: { size: 11 } }, grid: { display: false }, border: { color: "#2A3040" } },
+          },
+        },
+      });
+    }
+    box.addEventListener("change", draw);
+    draw();
+    ctx.page.insertAdjacentHTML("beforeend", foot(
+      "Each bar is one market's total score, the same number as on Top setups. Research screen, not a trade signal."
+    ));
+  }
+
+  // ---------------------------------------------------------------- Trade ideas: a plain list, research only, no alerts
+  function pageIdeas(ctx) {
+    const ideas = ctx.files["trade_ideas.csv"] || [];
+    const bullAt = settingNum(ctx.settings, "scoring.trade_ideas_bullish_at", 7);
+    const bearAt = settingNum(ctx.settings, "scoring.trade_ideas_bearish_at", -7);
+    function list(side) {
+      const rows = ideas.filter(function (r) { return r.side === side; }).sort(function (a, b) { return intOf(a.rank) - intOf(b.rank); });
+      if (!rows.length) return '<div class="empty">No ' + side.toLowerCase() + " setups right now.</div>";
+      return rows.map(function (r) {
+        const sc = intOf(r.score);
+        const chg = intOf(r.score_chg_1d);
+        return '<div class="idea"><div class="idea-top">' + symLink(r.symbol) +
+          '<span class="idea-bias">' + D.esc(r.bias) + "</span>" +
+          (chg ? '<span class="idea-chg ' + (chg > 0 ? "pos" : "neg") + '">' + D.esc(D.signed(chg)) + " today</span>" : "") +
+          '<span class="badge" style="background:' + D.bandBg(sc) + '">' + D.esc(D.signed(sc) || "0") + "</span></div>" +
+          '<div class="idea-why">' + D.esc(r.reason) + "</div></div>";
+      }).join("");
+    }
+    const strongBull = ideas.some(function (r) { return r.side === "Bullish" && intOf(r.score) >= bullAt; });
+    const strongBear = ideas.some(function (r) { return r.side === "Bearish" && intOf(r.score) <= bearAt; });
+    ctx.page.innerHTML =
+      '<div class="note">Research only. This is not a trade signal and it sends no alerts. Check the chart and your own plan first.</div>' +
+      '<div class="split even ideas">' +
+      '<section class="panel"><div class="phead"><div><div class="ptitle">Strongest bullish setups</div><div class="psub">' +
+      D.esc(strongBull ? "Score of " + D.signed(bullAt) + " or more." : "Fewer than 5 at " + D.signed(bullAt) + " or more, so this shows the top 5.") +
+      '</div></div></div><div class="pbody">' + list("Bullish") + "</div></section>" +
+      '<section class="panel"><div class="phead"><div><div class="ptitle">Strongest bearish setups</div><div class="psub">' +
+      D.esc(strongBear ? "Score of " + D.signed(bearAt) + " or less." : "Fewer than 5 at " + D.signed(bearAt) + " or less, so this shows the bottom 5.") +
+      '</div></div></div><div class="pbody">' + list("Bearish") + "</div></section></div>" +
+      foot("Each reason is built from the factor cells on Top setups. It lists what pushes the score one way and what works against it. Research screen, not a trade signal.");
+  }
+
   window.DESK_PAGES = {
-    top: { kicker: "Ranked by score. Each factor is −2 to +2.", files: [], render: pageTop },
+    top: { kicker: "Ranked by score. Each factor is −2 to +2.", files: [], optional: ["top_summary.csv"], render: pageTop },
+    topcompact: { kicker: "Symbol, bias, score and the three group totals. Fits a phone.", files: [], render: pageTopCompact },
+    topmacro: { kicker: "Only the economic data, ranked by its total.", files: [], render: pageTopMacro },
+    topind: { kicker: "Every market's score as one sorted bar.", files: [], render: pageTopIndicator },
+    ideas: { kicker: "The strongest bullish and bearish setups, with the reason in plain words.", files: [], optional: ["trade_ideas.csv"], render: pageIdeas },
     scorecard: { kicker: "Six checks behind the score. Pick a symbol.", files: ["scorecard_details.csv", "score_history.csv", "news_risk.csv"], render: (ctx) => renderScorecard(ctx, "EURUSD") },
     gold: { kicker: "The same six checks, opened on gold.", files: ["scorecard_details.csv", "score_history.csv", "news_risk.csv"], render: (ctx) => renderScorecard(ctx, "GOLD") },
     cot: { kicker: "What large speculators hold in futures", files: ["cot_report.csv"], render: pageCot },
