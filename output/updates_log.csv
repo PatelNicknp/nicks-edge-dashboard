@@ -1,10 +1,10 @@
 source,status,latest,note,checked_pt,checked_pt_sort
-Prices (Yahoo Finance),OK,Fri 2026-10-23,,Sun 2026-10-25 11:22 AM PT,202610251122
-COT (CFTC legacy futures),OK,Tue 2026-10-20,,Sun 2026-10-25 11:22 AM PT,202610251122
-Retail sentiment (Myfxbook),SNAPSHOT,Fri 2026-10-23 11:42 AM PT,Snapshot. A live reading needs a Myfxbook login.,Sun 2026-10-25 11:22 AM PT,202610251122
-Options put/call (CBOE),OK,Fri 2026-10-23,,Sun 2026-10-25 11:22 AM PT,202610251122
-Economic calendar actual vs forecast (Nasdaq),OK,Fri 2026-10-23,11 days refreshed,Sun 2026-10-25 11:22 AM PT,202610251122
-Calendar this week (Forex Factory feed),OK,Fri 2026-10-30,,Sun 2026-10-25 11:22 AM PT,202610251122
-"Rates, yields and spreads (FRED)",CACHED,Wed 2026-10-21,0 of 14 series refreshed; FRED didn't answer. Showing the last saved values.,Sun 2026-10-25 11:22 AM PT,202610251122
-News feed (public RSS),OK,Sun 2026-10-25 11:22 AM PT,81 headlines,Sun 2026-10-25 11:22 AM PT,202610251122
-Score history,OK,Sun 2026-10-25,"368 days, 2025-10-23 to 2026-10-25",Sun 2026-10-25 11:22 AM PT,202610251122
+Prices (Yahoo Finance),OK,Fri 2026-10-23,,Sun 2026-10-25 02:42 PM PT,202610251442
+COT (CFTC legacy futures),OK,Tue 2026-10-20,,Sun 2026-10-25 02:42 PM PT,202610251442
+Retail sentiment (Myfxbook),SNAPSHOT,Fri 2026-10-23 11:42 AM PT,Snapshot. A live reading needs a Myfxbook login.,Sun 2026-10-25 02:42 PM PT,202610251442
+Options put/call (CBOE),OK,Fri 2026-10-23,,Sun 2026-10-25 02:42 PM PT,202610251442
+Economic calendar actual vs forecast (Nasdaq),OK,Fri 2026-10-23,11 days refreshed,Sun 2026-10-25 02:42 PM PT,202610251442
+Calendar this week (Forex Factory feed),OK,Fri 2026-10-30,,Sun 2026-10-25 02:42 PM PT,202610251442
+"Rates, yields and spreads (FRED)",CACHED,Wed 2026-10-21,0 of 14 series refreshed; FRED didn't answer. Showing the last saved values.,Sun 2026-10-25 02:42 PM PT,202610251442
+News feed (public RSS),OK,Sun 2026-10-25 02:42 PM PT,71 headlines,Sun 2026-10-25 02:42 PM PT,202610251442
+Score history,OK,Sun 2026-10-25,"368 days, 2025-10-23 to 2026-10-25",Sun 2026-10-25 02:42 PM PT,202610251442

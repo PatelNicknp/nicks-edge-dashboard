@@ -59,7 +59,7 @@ EURNZD,Jobs,Jobless claims,"EUR +0, NZD +0",0
 EURNZD,Jobs,JOLTS,"EUR +0, NZD +0",0
 EURNZD,Jobs,ADP,"EUR +0, NZD +0",0
 EURNZD,News risk,High impact next 24h,none,0
-EURUSD,Technicals,Trend score,above; down or flat,1
+EURUSD,Technicals,Trend score,above; up,2
 EURUSD,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EURUSD,COT,Net positioning,"EUR -134,524 / USD +15,044",-2
 EURUSD,COT,Latest weekly change,EUR +0.34 / USD +2.75,0
@@ -339,7 +339,7 @@ AUDCHF,Jobs,Jobless claims,"AUD +0, CHF +0",0
 AUDCHF,Jobs,JOLTS,"AUD +0, CHF +0",0
 AUDCHF,Jobs,ADP,"AUD +0, CHF +0",0
 AUDCHF,News risk,High impact next 24h,none,0
-AUDJPY,Technicals,Trend score,above; up,2
+AUDJPY,Technicals,Trend score,above; down or flat,1
 AUDJPY,Technicals,Seasonality (10-year avg this month),"+1.12%, up 60% of years",1
 AUDJPY,COT,Net positioning,"AUD -127,292 / JPY +69,878",-2
 AUDJPY,COT,Latest weekly change,AUD -0.96 / JPY +3.02,-2
@@ -559,7 +559,7 @@ CHFJPY,Jobs,Jobless claims,"CHF +0, JPY +0",0
 CHFJPY,Jobs,JOLTS,"CHF +0, JPY +0",0
 CHFJPY,Jobs,ADP,"CHF +0, JPY +0",0
 CHFJPY,News risk,High impact next 24h,none,0
-EUR Index,Technicals,Trend score,above; down or flat,1
+EUR Index,Technicals,Trend score,above; up,2
 EUR Index,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EUR Index,COT,Net positioning,38.55,-1
 EUR Index,COT,Latest weekly change,+0.34,1
