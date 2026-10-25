@@ -1,48 +1,48 @@
 rank,symbol,kind,bias,score,technicals,cot,crowd,growth,inflation,jobs,news_risk,news_risk_medium,news_flag,price,change_1d_pct,updated_pt,updated_pt_sort,label,f_trend,f_seasonality,f_cot,f_crowd,f_gdp,f_mpmi,f_spmi,f_retail,f_conf,f_cpi,f_ppi,f_pce,f_rates,f_nfp,f_unemp,f_claims,f_adp,f_jolts,score_chg_1d
-1,GBPAUD,fx,Very Bullish,10,3,2,0,0,2,3,,,,1.9094,0.1971,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,2,0,0,1,1,-1,-1,2,0,0,0,2,2,-1,0,0,5
-2,GBPJPY,fx,Very Bullish,8,3,0,-1,1,3,2,,,,210.1923,-0.7723,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,0,-1,0,2,1,0,-2,1,2,0,0,1,2,-1,0,0,1
-3,GBPCHF,fx,Very Bullish,7,2,0,0,1,3,1,,,,1.0989,-0.4472,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",1,1,0,0,0,2,1,-2,0,1,2,0,0,1,1,-1,0,0,0
-4,GBPUSD,fx,Very Bullish,7,1,0,1,2,1,2,,,,1.3404,0.0617,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,0,1,0,2,2,-2,0,0,0,1,0,2,2,-2,-1,1,1
-5,GBP Index,ccy,Bullish,6,1,0,1,1,2,1,,,,1.3404,0.0617,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,0,1,1,1,1,-1,-1,1,1,0,0,1,1,-1,0,0,1
-6,GBPNZD,fx,Bullish,6,-1,2,1,1,2,1,,,,2.3578,0.4136,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,2,1,0,1,1,0,-1,2,0,0,0,0,2,-1,0,0,3
-7,GBPCAD,fx,Bullish,5,-1,0,-1,3,2,2,,,,1.8769,-0.2191,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,-1,1,1,2,0,-1,2,0,0,0,2,1,-1,0,0,1
-8,CHFJPY,fx,Neutral,3,3,0,-1,0,0,1,,,,191.2809,-0.3266,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,0,-1,0,0,0,2,-2,0,0,0,0,0,1,0,0,0,0
-9,AUDJPY,fx,Neutral,2,3,-2,0,1,1,-1,,,,110.0803,-0.9675,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,-2,0,0,1,0,1,-1,-1,2,0,0,-1,0,0,0,0,0
-10,JPY Index,ccy,Neutral,2,1,2,1,0,-1,-1,,,,0.0064,0.8405,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,2,1,1,-1,0,-1,1,0,-1,0,0,0,-1,0,0,0,0
-11,NZDJPY,fx,Neutral,2,3,-2,-1,0,1,1,,,,89.1488,-1.181,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,-2,-1,0,1,0,0,-1,-1,2,0,0,1,0,0,0,0,-2
-12,AUDCHF,fx,Neutral,1,2,-2,1,1,1,-2,,,,0.5755,-0.6429,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",1,1,-2,1,0,1,0,-1,1,-1,2,0,0,-1,-1,0,0,0,-1
-13,CADCHF,fx,Neutral,1,3,0,0,-2,1,-1,,,,0.5855,-0.2286,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,0,0,-1,1,-1,-2,1,-1,2,0,0,-1,0,0,0,0,0
-14,CADJPY,fx,Neutral,1,3,0,-1,-2,1,0,,,,111.9892,-0.5545,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,0,-1,-1,1,-1,0,-1,-1,2,0,0,-1,1,0,0,0,0
-15,CHINA50,index,Neutral,1,-3,0,0,3,0,1,,,,15.11,1.4094,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,-1,0,0,1,0,1,1,0,1,-1,0,0,0,1,0,0,0,0
-16,NZDCHF,fx,Neutral,1,3,-2,-1,0,1,0,,,,0.4661,-0.8572,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,-2,-1,0,1,0,-2,1,-1,2,0,0,1,-1,0,0,0,-2
-17,USDCAD,fx,Neutral,1,-1,0,0,1,1,0,,,,1.4003,-0.2806,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,0,1,-1,0,2,-1,2,0,-1,0,0,-1,1,1,-1,0
-18,AUDCAD,fx,Neutral,0,-1,-2,1,3,0,-1,,,,0.983,-0.4153,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,-2,1,1,0,1,1,0,0,0,0,0,0,-1,0,0,0,0
-19,CHF Index,ccy,Neutral,0,1,0,0,0,-1,0,,,,1.2198,0.5111,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,0,0,1,-1,0,1,-1,0,-1,0,0,0,0,0,0,0,0
-20,GOLD,gold,Neutral,0,-1,0,0,1,-1,1,,,,4007.8999,-1.293,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,0,-1,1,1,-1,1,-1,-1,1,0,1,1,-1,-1,1,0
-21,NZDCAD,fx,Neutral,0,0,-2,-1,2,0,1,,,,0.796,-0.6301,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",1,-1,-2,-1,1,0,1,0,0,0,0,0,0,2,-1,0,0,0,-3
-22,USD Index,ccy,Neutral,0,-1,2,0,-1,1,-1,,,,101.81,0.1968,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,2,0,1,-1,-1,1,-1,1,1,-1,0,-1,-1,1,1,-1,0
-23,AUDNZD,fx,Neutral,-1,-1,0,1,1,0,-2,,,,1.2348,0.2161,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,1,0,0,0,1,0,0,0,0,0,-2,0,0,0,0,2
-24,AUDUSD,fx,Neutral,-1,1,-2,0,2,-1,-1,,,,0.702,-0.1351,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,-2,0,0,1,1,-1,1,-2,0,1,0,0,0,-1,-1,1,0
-25,DOW,index,Neutral,-1,3,0,0,-1,-2,-1,,,,52215.1602,-1.2348,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,1,1,-1,0
-26,EURAUD,fx,Neutral,-1,-1,2,-1,-4,1,2,,,,1.5961,-0.134,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,2,-1,0,-1,-1,-1,-1,1,0,0,0,1,1,0,0,0,0
-27,EURCAD,fx,Neutral,-1,-1,0,-1,-1,1,1,,,,1.5689,-0.5487,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,-1,1,-1,0,0,-1,1,0,0,0,1,0,0,0,0,0
-28,JPN225,index,Neutral,-1,-1,0,0,0,1,-1,,,,62693.1602,-0.3413,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,0,1,-1,0,-1,1,0,1,0,0,0,-1,0,0,0,0
-29,NAS100,index,Neutral,-1,-1,2,2,-1,-2,-1,,,,28957.5293,-0.004,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,2,2,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,1,1,-1,0
-30,NZDUSD,fx,Neutral,-1,1,-2,-1,1,-1,1,,,,0.5685,-0.3505,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,-2,-1,0,1,1,-2,1,-2,0,1,0,2,0,-1,-1,1,-2
-31,USDCHF,fx,Neutral,-1,-1,0,0,-1,2,-1,,,,0.8198,-0.5085,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,0,0,0,-1,0,0,1,2,-1,0,-1,-1,1,1,-1,0
-32,USDJPY,fx,Neutral,-1,-1,0,-1,-1,2,0,,,,156.814,-0.8335,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,-1,0,0,-1,2,-2,1,2,-1,0,-1,0,1,1,-1,0
-33,AUD Index,ccy,Neutral,-2,1,-2,0,1,0,-2,,,,0.702,-0.1351,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,-2,0,1,0,0,0,0,-1,1,0,0,-1,-1,0,0,0,0
-34,CAD Index,ccy,Neutral,-2,1,0,0,-2,0,-1,,,,0.7142,0.2814,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,0,0,0,0,-1,-1,0,-1,1,0,0,-1,0,0,0,0,0
-35,EURJPY,fx,Neutral,-2,-1,0,-1,-3,2,1,,,,175.702,-1.1001,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,-1,0,0,-1,0,-2,0,2,0,0,0,1,0,0,0,0
-36,EURNZD,fx,Neutral,-2,-1,2,-1,-3,1,0,,,,1.9709,0.0819,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,2,-1,0,-1,-1,0,-1,1,0,0,0,-1,1,0,0,0,2
-37,EURUSD,fx,Neutral,-2,0,0,-1,-2,0,1,,,,1.1204,-0.2689,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",1,-1,0,-1,0,0,0,-2,0,-1,0,1,0,1,1,-1,-1,1,0
-38,NZD Index,ccy,Neutral,-2,1,-2,-1,0,0,0,,,,0.5685,-0.3505,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,-2,-1,1,0,0,-1,0,-1,1,0,0,1,-1,0,0,0,-2
-39,UK100,index,Neutral,-2,-2,0,0,1,-2,1,,,,10690.4004,-0.3226,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-1,-1,0,0,1,1,1,-1,-1,-1,-1,0,0,1,1,-1,0,0,-1
-40,EUR Index,ccy,Neutral,-3,0,0,-1,-3,1,0,,,,1.1204,-0.2689,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",1,-1,0,-1,1,-1,-1,-1,-1,0,1,0,0,0,0,0,0,0,0
-41,EURCHF,fx,Neutral,-3,-1,0,-1,-3,2,0,,,,0.9186,-0.776,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,-1,0,0,-1,-2,0,0,2,0,0,0,0,0,0,0,0
-42,GER40,index,Neutral,-3,1,0,0,-3,-1,0,,,,25181.6504,-0.7493,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,0,0,1,-1,-1,-1,-1,0,-1,0,0,0,0,0,0,0,3
-43,USOIL,commodity,Neutral,-3,1,0,0,-1,-2,-1,,,,103.27,3.8202,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",2,-1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,1,1,-1,0
-44,BTCUSD,crypto,Bearish,-5,-1,0,0,-1,-2,-1,,,,80777.7969,-0.3656,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,1,1,-1,0
-45,SILVER,metal,Bearish,-5,-1,0,0,-1,-2,-1,,,,53.949,-1.4882,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,1,1,-1,0
-46,SPX500,index,Bearish,-5,-1,-2,2,-1,-2,-1,,,,7623.6802,-0.5187,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,1,-2,2,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,1,1,-1,0
-47,EURGBP,fx,Very Bearish,-10,-3,0,-1,-4,-1,-1,,,,0.8359,-0.3304,Sat 2026-10-24 09:32 PM PT,202610242132,"Research screen, not a trade signal.",-2,-1,0,-1,0,-2,-2,0,0,-1,0,0,0,-1,-1,1,0,0,-1
+1,GBPJPY,fx,Very Bullish,11,3,0,-1,3,4,2,,,,210.1923,-0.7723,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,0,-1,0,-1,2,2,0,2,2,0,0,1,2,-1,0,0,3
+2,GBPAUD,fx,Very Bullish,10,3,2,0,0,2,3,,,,1.9094,0.1971,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,2,0,0,-2,0,1,1,2,0,0,0,2,2,-1,0,0,0
+3,GBPUSD,fx,Very Bullish,10,1,0,1,4,1,3,,,,1.3404,0.0617,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,0,1,0,0,2,0,2,0,0,1,0,2,2,-1,-1,1,3
+4,GBPCHF,fx,Very Bullish,9,2,0,0,3,3,1,,,,1.0989,-0.4472,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",1,1,0,0,0,0,1,0,2,1,2,0,0,1,1,-1,0,0,2
+5,GBP Index,ccy,Very Bullish,8,1,0,1,3,2,1,,,,1.3404,0.0617,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,0,1,1,-1,1,1,1,1,1,0,0,1,1,-1,0,0,2
+6,GBPNZD,fx,Very Bullish,8,-1,2,1,3,2,1,,,,2.3578,0.4136,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,2,1,0,-1,1,2,1,2,0,0,0,0,2,-1,0,0,2
+7,AUDJPY,fx,Bullish,5,3,-2,0,3,2,-1,,,,110.0803,-0.9675,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,-2,0,0,1,2,1,-1,0,2,0,0,-1,0,0,0,0,3
+8,GBPCAD,fx,Bullish,5,-1,0,-1,3,2,2,,,,1.8769,-0.2191,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,-1,1,-1,2,0,1,2,0,0,0,2,1,-1,0,0,0
+9,CADJPY,fx,Bullish,4,3,0,-1,0,2,0,,,,111.9892,-0.5545,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,0,-1,-1,0,0,2,-1,0,2,0,0,-1,1,0,0,0,3
+10,CHFJPY,fx,Bullish,4,3,0,-1,0,1,1,,,,191.2809,-0.3266,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,0,-1,0,-1,1,2,-2,1,0,0,0,0,1,0,0,0,1
+11,AUDCHF,fx,Neutral,3,2,-2,1,3,1,-2,,,,0.5755,-0.6429,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",1,1,-2,1,0,2,1,-1,1,-1,2,0,0,-1,-1,0,0,0,2
+12,CADCHF,fx,Neutral,3,3,0,0,0,1,-1,,,,0.5855,-0.2286,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,0,0,-1,1,-1,0,1,-1,2,0,0,-1,0,0,0,0,2
+13,EURJPY,fx,Neutral,3,-1,0,-1,1,3,1,,,,175.702,-1.1001,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,-1,0,1,1,0,-1,1,2,0,0,0,1,0,0,0,5
+14,EURUSD,fx,Neutral,3,0,0,-1,2,0,2,,,,1.1204,-0.2689,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",1,-1,0,-1,0,2,1,-2,1,-1,0,1,0,1,1,0,-1,1,5
+15,NZDJPY,fx,Neutral,3,3,-2,-1,0,2,1,,,,89.1488,-1.181,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,-2,-1,0,0,1,0,-1,0,2,0,0,1,0,0,0,0,1
+16,AUDUSD,fx,Neutral,2,1,-2,0,4,-1,0,,,,0.702,-0.1351,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,-2,0,0,2,2,-1,1,-2,0,1,0,0,0,0,-1,1,3
+17,EURNZD,fx,Neutral,2,-1,2,-1,1,1,0,,,,1.9709,0.0819,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,2,-1,0,1,0,0,0,1,0,0,0,-1,1,0,0,0,4
+18,AUDNZD,fx,Neutral,1,-1,0,1,3,0,-2,,,,1.2348,0.2161,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,1,0,1,1,1,0,0,0,0,0,-2,0,0,0,0,2
+19,CHINA50,index,Neutral,1,-3,0,0,3,0,1,,,,15.11,1.4094,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,-1,0,0,1,0,1,1,0,1,-1,0,0,0,1,0,0,0,0
+20,EUR Index,ccy,Neutral,1,0,0,-1,1,1,0,,,,1.1204,-0.2689,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",1,-1,0,-1,1,1,0,-1,0,0,1,0,0,0,0,0,0,0,4
+21,EURAUD,fx,Neutral,1,-1,2,-1,-2,1,2,,,,1.5961,-0.134,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,2,-1,0,0,-1,-1,0,1,0,0,0,1,1,0,0,0,2
+22,EURCAD,fx,Neutral,1,-1,0,-1,1,1,1,,,,1.5689,-0.5487,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,-1,1,1,1,-2,0,1,0,0,0,1,0,0,0,0,2
+23,EURCHF,fx,Neutral,1,-1,0,-1,1,2,0,,,,0.9186,-0.776,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,-1,0,2,0,-2,1,0,2,0,0,0,0,0,0,0,4
+24,GER40,index,Neutral,1,1,0,0,1,-1,0,,,,25181.6504,-0.7493,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,0,0,1,1,0,-1,0,0,-1,0,0,0,0,0,0,0,4
+25,GOLD,gold,Neutral,1,-1,0,0,1,-1,2,,,,4007.8999,-1.293,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,0,-1,1,1,-1,1,-1,-1,1,0,1,1,0,-1,1,1
+26,JPY Index,ccy,Neutral,1,1,2,1,0,-2,-1,,,,0.0064,0.8405,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,2,1,1,0,-1,-1,1,-1,-1,0,0,0,-1,0,0,0,-1
+27,NZDCHF,fx,Neutral,1,3,-2,-1,0,1,0,,,,0.4661,-0.8572,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,-2,-1,0,1,0,-2,1,-1,2,0,0,1,-1,0,0,0,0
+28,AUD Index,ccy,Neutral,0,1,-2,0,3,0,-2,,,,0.702,-0.1351,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,-2,0,1,1,1,0,0,-1,1,0,0,-1,-1,0,0,0,2
+29,AUDCAD,fx,Neutral,0,-1,-2,1,3,0,-1,,,,0.983,-0.4153,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,-2,1,1,1,2,-1,0,0,0,0,0,0,-1,0,0,0,0
+30,CAD Index,ccy,Neutral,0,1,0,0,0,0,-1,,,,0.7142,0.2814,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,0,0,0,0,-1,1,0,-1,1,0,0,-1,0,0,0,0,2
+31,CHF Index,ccy,Neutral,0,1,0,0,0,-1,0,,,,1.2198,0.5111,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,0,0,1,-1,0,1,-1,0,-1,0,0,0,0,0,0,0,0
+32,JPN225,index,Neutral,0,-1,0,0,0,2,-1,,,,62693.1602,-0.3413,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,0,1,0,-1,-1,1,1,1,0,0,0,-1,0,0,0,1
+33,NZDUSD,fx,Neutral,0,1,-2,-1,1,-1,2,,,,0.5685,-0.3505,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,-2,-1,0,1,1,-2,1,-2,0,1,0,2,0,0,-1,1,1
+34,UK100,index,Neutral,0,-2,0,0,3,-2,1,,,,10690.4004,-0.3226,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-1,-1,0,0,1,-1,1,1,1,-1,-1,0,0,1,1,-1,0,0,2
+35,USD Index,ccy,Neutral,-1,-1,2,0,-1,1,-2,,,,101.81,0.1968,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,2,0,1,-1,-1,1,-1,1,1,-1,0,-1,-1,0,1,-1,-1
+36,USDJPY,fx,Neutral,-1,-1,0,-1,-1,3,-1,,,,156.814,-0.8335,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,-1,0,-1,0,2,-2,2,2,-1,0,-1,0,0,1,-1,0
+37,DOW,index,Neutral,-2,3,0,0,-1,-2,-2,,,,52215.1602,-1.2348,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,0,1,-1,-1
+38,NAS100,index,Neutral,-2,-1,2,2,-1,-2,-2,,,,28957.5293,-0.004,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,2,2,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,0,1,-1,-1
+39,NZD Index,ccy,Neutral,-2,1,-2,-1,0,0,0,,,,0.5685,-0.3505,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,-2,-1,1,0,0,-1,0,-1,1,0,0,1,-1,0,0,0,0
+40,NZDCAD,fx,Neutral,-2,0,-2,-1,0,0,1,,,,0.796,-0.6301,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",1,-1,-2,-1,1,0,1,-2,0,0,0,0,0,2,-1,0,0,0,-2
+41,USDCAD,fx,Neutral,-2,-1,0,0,-1,1,-1,,,,1.4003,-0.2806,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,0,1,-1,0,0,-1,2,0,-1,0,0,-1,0,1,-1,-3
+42,USDCHF,fx,Neutral,-2,-1,0,0,-1,2,-2,,,,0.8198,-0.5085,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,0,0,0,-1,0,0,1,2,-1,0,-1,-1,0,1,-1,-1
+43,USOIL,commodity,Bearish,-4,1,0,0,-1,-2,-2,,,,103.27,3.8202,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",2,-1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,0,1,-1,-1
+44,BTCUSD,crypto,Bearish,-6,-1,0,0,-1,-2,-2,,,,80169.0312,-0.7696,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,0,1,-1,-1
+45,SILVER,metal,Bearish,-6,-1,0,0,-1,-2,-2,,,,53.949,-1.4882,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,0,0,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,0,1,-1,-1
+46,SPX500,index,Bearish,-6,-1,-2,2,-1,-2,-2,,,,7623.6802,-0.5187,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,1,-2,2,1,-1,-1,1,-1,-1,-1,1,-1,-1,-1,0,1,-1,-1
+47,EURGBP,fx,Very Bearish,-8,-3,0,-1,-2,-1,-1,,,,0.8359,-0.3304,Sun 2026-10-25 02:45 AM PT,202610250245,"Research screen, not a trade signal.",-2,-1,0,-1,0,2,-1,-2,-1,-1,0,0,0,-1,-1,1,0,0,2
