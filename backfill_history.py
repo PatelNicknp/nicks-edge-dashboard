@@ -13,8 +13,12 @@ What is point in time:
   COT         only reports released by that day (Tuesday report date + 3 days = Friday release).
   Growth / Inflation / Jobs   releases dated on or before that day, from the last 150 days (live job window);
               2-year yield trend uses FRED DGS2 values before that day.
-  Crowd       fx pairs and currency indices: 0 (Myfxbook retail sentiment has no free history).
+  Crowd       fx pairs and currency indices: 0 (Myfxbook retail sentiment has no free history), except the last
+              --recent-crowd-days days, which use the saved Myfxbook reading the live job uses. That keeps the
+              1 Day Change honest: a rebuilt day and a live day count the crowd the same way.
               indices / metals / oil: CBOE put/call from cache/pcr up to that day (0 until 30 days of data exist).
+Run with --days 400 --recent-crowd-days 45 --calendar-dir <older Nasdaq files> to rebuild everything, including
+the markets added later (US10T, RUSSELL, PLATINUM, COPPER, NATGAS, ETHUSD, USDZAR).
 """
 import os, sys, glob, json, html, argparse
 import numpy as np, pandas as pd
@@ -54,6 +58,8 @@ def main():
     ap.add_argument("--end", default=None, help="last day to build (default: yesterday, Pacific Time)")
     ap.add_argument("--calendar-dir", action="append", default=[])
     ap.add_argument("--out", default=os.path.join(E.CACHE, "score_history_seed.csv"))
+    ap.add_argument("--recent-crowd-days", type=int, default=0,
+                    help="use the saved Myfxbook reading for the crowd on this many most recent days")
     a = ap.parse_args()
     end = pd.Timestamp(a.end) if a.end else pd.Timestamp(E.NOW.date()) - pd.Timedelta(days=1)
     days = pd.date_range(end - pd.Timedelta(days=a.days - 1), end, freq="D")
@@ -69,7 +75,11 @@ def main():
     print("calendar days loaded: %s to %s" % (cal.date.min(), cal.date.max()))
     s = pd.read_csv(os.path.join(E.CACHE, "dgs2.csv")); s.columns = ["date", "v"]
     s["date"] = pd.to_datetime(s.date); s["v"] = pd.to_numeric(s.v, errors="coerce"); dgs2 = s.dropna()
-    mfx = pd.DataFrame(columns=["long_pct"])  # no retail history: fx crowd = 0
+    no_mfx = pd.DataFrame(columns=["long_pct"])  # no retail history: fx crowd = 0
+    saved = os.path.join(E.DATA, "myfxbook_latest.csv")
+    if not os.path.exists(saved): saved = os.path.join(E.DATA, "myfxbook_snapshot.csv")
+    mfx_saved = pd.read_csv(saved).set_index("symbol") if os.path.exists(saved) else no_mfx
+    crowd_from = end - pd.Timedelta(days=a.recent_crowd_days - 1) if a.recent_crowd_days > 0 else end + pd.Timedelta(days=1)
 
     out = []
     for D in days:
@@ -84,7 +94,7 @@ def main():
             if close[sym].dropna().loc[:asof].shape[0] < 30: continue
             tech, _ = E.technicals(sym, close, asof) if E.FEAT["technicals"] else (0, {})
             cs, _ = E.cot_score(sym, cot_d) if E.FEAT["cot"] else (0, {})
-            ss, _ = E.sentiment_score(sym, mfx, pcr_d)
+            ss, _ = E.sentiment_score(sym, mfx_saved if D >= crowd_from else no_mfx, pcr_d)
             ec = E.econ_score(sym, rel, two_y)
             parts = dict(technicals=int(tech), cot=int(cs), crowd=int(ss), growth=int(ec[E.G][0]),
                          inflation=int(ec[E.I][0]), jobs=int(ec[E.J][0]))

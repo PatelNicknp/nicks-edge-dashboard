@@ -17,7 +17,15 @@
     "carry": true,
     "calendar": true,
     "trend_sentiment": true,
-    "macro_fundamentals": true
+    "macro_fundamentals": true,
+    "extra_markets": true,
+    "one_day_change_trading_days": true,
+    "solid_score_cells": true,
+    "top_setups_summary": true,
+    "top_setups_compact": true,
+    "top_setups_macro_only": true,
+    "top_setups_indicator": true,
+    "trade_ideas": true
   },
   "scoring": {
     "seasonality_points_fx": 1,
@@ -29,7 +37,10 @@
     "very_bullish_at": 7,
     "bullish_at": 4,
     "bearish_at": -4,
-    "very_bearish_at": -8
+    "very_bearish_at": -8,
+    "trade_ideas_bullish_at": 7,
+    "trade_ideas_bearish_at": -7,
+    "trade_ideas_min_each_side": 5
   },
   "news_risk_hours": 24,
   "calendar_lookback_days": 150

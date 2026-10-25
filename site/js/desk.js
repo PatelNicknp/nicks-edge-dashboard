@@ -10,11 +10,21 @@
   const GREY = "#5B6372";
   const GREEN_STEPS = ["#3D8565", "#2F8E61", "#24985C"];
   const RED_STEPS = ["#A35158", "#B44D51", "#D64545"];
+  // Solid score cells, like EdgeFinder: blue when positive, red when negative, dark grey at zero, white text.
+  const SOLID_POS = "#3F48CC";
+  const SOLID_NEG = "#D9534F";
+  const SOLID_ZERO = "#4B4952";
+  // Bias and Score band, from strongly bullish (blue) through neutral (grey) to strongly bearish (red).
+  const BAND = { veryBull: "#3F48CC", bull: "#4248AE", upNeutral: "#45498F", flat: "#4B4952", downNeutral: "#744F56", bear: "#A8545A", veryBear: "#D9534F" };
   let RESEARCH = "Research screen, not a trade signal.";
 
   const NAV = [
     ["Scores", [
       ["Top setups", "index.html", "top"],
+      ["Top setups (Compact)", "top-compact.html", "topcompact"],
+      ["Top setups (Macro only)", "top-macro.html", "topmacro"],
+      ["Top setups indicator", "top-indicator.html", "topind"],
+      ["Trade ideas", "trade-ideas.html", "ideas"],
       ["Scorecard", "scorecard.html", "scorecard"],
       ["Gold scorecard", "gold.html", "gold"],
     ]],
@@ -50,6 +60,10 @@
     return featureOn("feature.economic_growth") || featureOn("feature.inflation") || featureOn("feature.jobs");
   }
   const FEATURE = {
+    topcompact: "feature.top_setups_compact",
+    topmacro: "feature.top_setups_macro_only",
+    topind: "feature.top_setups_indicator",
+    ideas: "feature.trade_ideas",
     cot: "feature.cot",
     cothist: "feature.cot",
     sentiment: "feature.retail_sentiment",
@@ -234,8 +248,47 @@
     if (n < -0.05) return heatBg(n, Math.max(Math.abs(n), 1));
     return GREY;
   }
+  function solidOn() {
+    return featureOn("feature.solid_score_cells");
+  }
+  function signBg(v) {
+    const n = num(v);
+    if (n == null || Math.abs(n) < 1e-9) return SOLID_ZERO;
+    return n > 0 ? SOLID_POS : SOLID_NEG;
+  }
+  function settingNumber(key, fallback) {
+    const row = SETTINGS.find((r) => r.setting === key);
+    const n = row ? Number(row.value) : NaN;
+    return Number.isFinite(n) ? n : fallback;
+  }
+  function bandBg(score) {
+    const n = num(score);
+    if (n == null) return BAND.flat;
+    if (!solidOn()) return biasBg(biasFor(n));
+    if (n >= settingNumber("scoring.very_bullish_at", 7)) return BAND.veryBull;
+    if (n >= settingNumber("scoring.bullish_at", 4)) return BAND.bull;
+    if (n <= settingNumber("scoring.very_bearish_at", -8)) return BAND.veryBear;
+    if (n <= settingNumber("scoring.bearish_at", -4)) return BAND.bear;
+    if (n > 0) return BAND.upNeutral;
+    if (n < 0) return BAND.downNeutral;
+    return BAND.flat;
+  }
+  function biasFor(n) {
+    if (n >= settingNumber("scoring.very_bullish_at", 7)) return "Very Bullish";
+    if (n >= settingNumber("scoring.bullish_at", 4)) return "Bullish";
+    if (n <= settingNumber("scoring.very_bearish_at", -8)) return "Very Bearish";
+    if (n <= settingNumber("scoring.bearish_at", -4)) return "Bearish";
+    return "Neutral";
+  }
   function biasBg(v) {
     const s = String(v || "");
+    if (solidOn()) {
+      if (/very\s*bull/i.test(s)) return BAND.veryBull;
+      if (/bull/i.test(s)) return BAND.bull;
+      if (/very\s*bear/i.test(s)) return BAND.veryBear;
+      if (/bear/i.test(s)) return BAND.bear;
+      return BAND.flat;
+    }
     if (/very\s*bull/i.test(s)) return "#24985C";
     if (/bull/i.test(s)) return "#2F8E61";
     if (/very\s*bear/i.test(s)) return "#D64545";
@@ -252,7 +305,11 @@
   function scoreFill(v, cap) {
     const text = signed(v);
     if (text == null) return na();
+    if (solidOn() && (cap || 2) <= 3) return fill(esc(text), signBg(v));
     return fill(esc(text), heatBg(v, cap || 2));
+  }
+  function partBg(v, cap) {
+    return solidOn() ? signBg(v) : heatBg(v, cap || 3);
   }
   function biasFill(v) {
     if (isBlank(v)) return na();
@@ -313,7 +370,9 @@
     const gid = "garc-" + String(id || "main").replace(/[^a-z0-9-]/gi, "");
     return '<svg viewBox="0 0 200 118" role="img" aria-label="Score ' + esc(signed(n) || "–") + '">' +
       '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="1" y2="0">' +
-      '<stop offset="0" stop-color="#B44D51"/><stop offset="0.5" stop-color="#5B6372"/><stop offset="1" stop-color="#2F8E61"/>' +
+      (solidOn()
+        ? '<stop offset="0" stop-color="' + SOLID_NEG + '"/><stop offset="0.5" stop-color="' + SOLID_ZERO + '"/><stop offset="1" stop-color="' + SOLID_POS + '"/>'
+        : '<stop offset="0" stop-color="#B44D51"/><stop offset="0.5" stop-color="#5B6372"/><stop offset="1" stop-color="#2F8E61"/>') +
       "</linearGradient></defs>" +
       '<path d="M28 96 A72 72 0 0 1 172 96" fill="none" stroke="#2A3040" stroke-width="14" stroke-linecap="round"/>' +
       '<path d="M28 96 A72 72 0 0 1 172 96" fill="none" stroke="url(#' + gid + ')" stroke-width="14" stroke-linecap="round"/>' +
@@ -680,6 +739,10 @@
       const unique = Array.from(new Set(names));
       const loaded = {};
       await Promise.all(unique.map(async (n) => { loaded[n] = await loadCsv(n); }));
+      // optional files (written by newer data jobs): a missing file shows an empty section, not an error
+      await Promise.all((spec.optional || []).map(async (n) => {
+        try { loaded[n] = await loadCsv(n); } catch (e) { loaded[n] = []; }
+      }));
       SETTINGS = loaded["settings.csv"] || [];
       renderShell(Object.assign({}, metaPage, { kicker: spec.kicker || "" }));
       const setups = loaded["top_setups.csv"] || [];
@@ -708,7 +771,9 @@
     RED: RED, GREEN: GREEN, BLUE: BLUE, MU: MU, TX: TX, AMBER: AMBER,
     num: num, isBlank: isBlank, esc: esc, na: na, fmt: fmt, commas: commas, signed: signed, pct: pct,
     ymd: ymd, prettyDate: prettyDate, shortDate: shortDate, weekday: weekday,
-    heatBg: heatBg, signalBg: signalBg, biasBg: biasBg, fill: fill, noData: noData, scoreFill: scoreFill, biasFill: biasFill, pctColor: pctColor,
+    heatBg: heatBg, signalBg: signalBg, biasBg: biasBg, fill: fill,
+    solidOn: solidOn, signBg: signBg, bandBg: bandBg, partBg: partBg, biasFor: biasFor,
+    SOLID_POS: SOLID_POS, SOLID_NEG: SOLID_NEG, SOLID_ZERO: SOLID_ZERO, noData: noData, scoreFill: scoreFill, biasFill: biasFill, pctColor: pctColor,
     weeklySeries: weeklySeries, sparkHtml: sparkHtml, gaugeSvg: gaugeSvg, p90: p90,
     drawTable: drawTable, selectHtml: selectHtml, fieldVal: fieldVal, checked: checked,
     destroyCharts: destroyCharts, barChart: barChart, lineChart: lineChart, comboChart: comboChart, makeChart: makeChart,
