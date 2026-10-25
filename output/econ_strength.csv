@@ -1,6 +1,6 @@
 country,Growth,Inflation,Jobs
 AU,1,0,-2
-CA,-2,0,-1
+CA,-1,0,-1
 CH,0,-1,0
 CN,3,0,1
 EZ,-3,1,0
@@ -8,3 +8,4 @@ JP,0,-1,-1
 NZ,0,0,0
 UK,1,2,1
 US,-1,1,-1
+ZA,1,-1,0

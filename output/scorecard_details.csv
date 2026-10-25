@@ -86,7 +86,7 @@ EURCAD,COT,Latest weekly change,EUR +0.34 / CAD +3.81,0
 EURCAD,Crowd,Sentiment,retail long %: 93; crowd: bullish,-1
 EURCAD,Growth,GDP,"EUR +1, CAD +0",1
 EURCAD,Growth,Manufacturing PMI,"EUR -1, CAD +0",-1
-EURCAD,Growth,Services PMI,"EUR -1, CAD -1",0
+EURCAD,Growth,Services PMI,"EUR -1, CAD +0",-1
 EURCAD,Growth,Retail sales,"EUR -1, CAD -1",0
 EURCAD,Growth,Consumer confidence,"EUR -1, CAD +0",-1
 EURCAD,Inflation,CPI y/y,"EUR +0, CAD -1",1
@@ -206,7 +206,7 @@ GBPCAD,COT,Latest weekly change,GBP +6.09 / CAD +3.81,0
 GBPCAD,Crowd,Sentiment,retail long %: 69; crowd: bullish,-1
 GBPCAD,Growth,GDP,"GBP +1, CAD +0",1
 GBPCAD,Growth,Manufacturing PMI,"GBP +1, CAD +0",1
-GBPCAD,Growth,Services PMI,"GBP +1, CAD -1",2
+GBPCAD,Growth,Services PMI,"GBP +1, CAD +0",1
 GBPCAD,Growth,Retail sales,"GBP -1, CAD -1",0
 GBPCAD,Growth,Consumer confidence,"GBP -1, CAD +0",-1
 GBPCAD,Inflation,CPI y/y,"GBP +1, CAD -1",2
@@ -306,7 +306,7 @@ AUDCAD,COT,Latest weekly change,AUD -0.96 / CAD +3.81,-2
 AUDCAD,Crowd,Sentiment,retail long %: 32; crowd: bearish,1
 AUDCAD,Growth,GDP,"AUD +1, CAD +0",1
 AUDCAD,Growth,Manufacturing PMI,"AUD +0, CAD +0",0
-AUDCAD,Growth,Services PMI,"AUD +0, CAD -1",1
+AUDCAD,Growth,Services PMI,"AUD +0, CAD +0",0
 AUDCAD,Growth,Retail sales,"AUD +0, CAD -1",1
 AUDCAD,Growth,Consumer confidence,"AUD +0, CAD +0",0
 AUDCAD,Inflation,CPI y/y,"AUD -1, CAD -1",0
@@ -386,7 +386,7 @@ NZDCAD,COT,Latest weekly change,NZD -4.20 / CAD +3.81,-2
 NZDCAD,Crowd,Sentiment,retail long %: 87; crowd: bullish,-1
 NZDCAD,Growth,GDP,"NZD +1, CAD +0",1
 NZDCAD,Growth,Manufacturing PMI,"NZD +0, CAD +0",0
-NZDCAD,Growth,Services PMI,"NZD +0, CAD -1",1
+NZDCAD,Growth,Services PMI,"NZD +0, CAD +0",0
 NZDCAD,Growth,Retail sales,"NZD -1, CAD -1",0
 NZDCAD,Growth,Consumer confidence,"NZD +0, CAD +0",0
 NZDCAD,Inflation,CPI y/y,"NZD -1, CAD -1",0
@@ -446,7 +446,7 @@ USDCAD,COT,Latest weekly change,USD +2.75 / CAD +3.81,0
 USDCAD,Crowd,Sentiment,retail long %: 44; crowd: bearish,0
 USDCAD,Growth,GDP,"USD +1, CAD +0",1
 USDCAD,Growth,Manufacturing PMI,"USD -1, CAD +0",-1
-USDCAD,Growth,Services PMI,"USD -1, CAD -1",0
+USDCAD,Growth,Services PMI,"USD -1, CAD +0",-1
 USDCAD,Growth,Retail sales,"USD +1, CAD -1",2
 USDCAD,Growth,Consumer confidence,"USD -1, CAD +0",-1
 USDCAD,Inflation,CPI y/y,"USD +1, CAD -1",2
@@ -506,7 +506,7 @@ CADCHF,COT,Latest weekly change,CAD +3.81 / CHF +2.71,0
 CADCHF,Crowd,Sentiment,retail long %: 58; crowd: bullish,0
 CADCHF,Growth,GDP,"CAD +0, CHF +1",-1
 CADCHF,Growth,Manufacturing PMI,"CAD +0, CHF -1",1
-CADCHF,Growth,Services PMI,"CAD -1, CHF +0",-1
+CADCHF,Growth,Services PMI,"CAD +0, CHF +0",0
 CADCHF,Growth,Retail sales,"CAD -1, CHF +1",-2
 CADCHF,Growth,Consumer confidence,"CAD +0, CHF -1",1
 CADCHF,Inflation,CPI y/y,"CAD -1, CHF +0",-1
@@ -526,7 +526,7 @@ CADJPY,COT,Latest weekly change,CAD +3.81 / JPY +3.02,0
 CADJPY,Crowd,Sentiment,retail long %: 71; crowd: bullish,-1
 CADJPY,Growth,GDP,"CAD +0, JPY +1",-1
 CADJPY,Growth,Manufacturing PMI,"CAD +0, JPY -1",1
-CADJPY,Growth,Services PMI,"CAD -1, JPY +0",-1
+CADJPY,Growth,Services PMI,"CAD +0, JPY +0",0
 CADJPY,Growth,Retail sales,"CAD -1, JPY -1",0
 CADJPY,Growth,Consumer confidence,"CAD +0, JPY +1",-1
 CADJPY,Inflation,CPI y/y,"CAD -1, JPY +0",-1
@@ -559,6 +559,26 @@ CHFJPY,Jobs,Jobless claims,"CHF +0, JPY +0",0
 CHFJPY,Jobs,JOLTS,"CHF +0, JPY +0",0
 CHFJPY,Jobs,ADP,"CHF +0, JPY +0",0
 CHFJPY,News risk,High impact next 24h,none,0
+USDZAR,Technicals,Trend score,below; down or flat,-2
+USDZAR,Technicals,Seasonality (10-year avg this month),"+0.54%, up 50% of years",1
+USDZAR,COT,Net positioning,"USD +15,044 / ZAR +12,928",0
+USDZAR,COT,Latest weekly change,USD +2.75 / ZAR -0.04,2
+USDZAR,Crowd,Sentiment,retail long %: n/a,0
+USDZAR,Growth,GDP,"USD +1, ZAR +0",1
+USDZAR,Growth,Manufacturing PMI,"USD -1, ZAR +0",-1
+USDZAR,Growth,Services PMI,"USD -1, ZAR +0",-1
+USDZAR,Growth,Retail sales,"USD +1, ZAR +1",0
+USDZAR,Growth,Consumer confidence,"USD -1, ZAR +0",-1
+USDZAR,Inflation,CPI y/y,"USD +1, ZAR -1",2
+USDZAR,Inflation,PPI y/y,"USD +1, ZAR +0",1
+USDZAR,Inflation,PCE y/y,"USD -1, ZAR +0",-1
+USDZAR,Inflation,Interest rate,"USD +0, ZAR +0",0
+USDZAR,Jobs,Employment change,"USD -1, ZAR +0",-1
+USDZAR,Jobs,Unemployment rate,"USD -1, ZAR +0",-1
+USDZAR,Jobs,Jobless claims,"USD +1, ZAR +0",1
+USDZAR,Jobs,JOLTS,"USD -1, ZAR +0",-1
+USDZAR,Jobs,ADP,"USD +1, ZAR +0",1
+USDZAR,News risk,High impact next 24h,none,0
 EUR Index,Technicals,Trend score,above; up,2
 EUR Index,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EUR Index,COT,Net positioning,38.55,-1
@@ -650,7 +670,7 @@ CAD Index,COT,Latest weekly change,+3.81,1
 CAD Index,Crowd,Sentiment,retail long % (vs US dollar): 56,0
 CAD Index,Growth,GDP,CA +0,0
 CAD Index,Growth,Manufacturing PMI,CA +0,0
-CAD Index,Growth,Services PMI,CA -1,-1
+CAD Index,Growth,Services PMI,CA +0,0
 CAD Index,Growth,Retail sales,CA -1,-1
 CAD Index,Inflation,CPI y/y,CA -1,-1
 CAD Index,Inflation,PPI y/y,CA +1,1
@@ -892,3 +912,123 @@ BTCUSD,Jobs,Jobless claims,US +1,1
 BTCUSD,Jobs,JOLTS,US -1,-1
 BTCUSD,Jobs,ADP,US +1,1
 BTCUSD,News risk,High impact next 24h,none,0
+US10T,Technicals,Trend score,above; up,2
+US10T,Technicals,Seasonality (10-year avg this month),"-0.96%, up 10% of years",-1
+US10T,COT,Net positioning,29.97,-1
+US10T,COT,Latest weekly change,+1.58,1
+US10T,Crowd,Sentiment,put/call: no free data,0
+US10T,Growth,GDP,US +1,1
+US10T,Growth,Manufacturing PMI,US -1,-1
+US10T,Growth,Services PMI,US -1,-1
+US10T,Growth,Retail sales,US +1,1
+US10T,Growth,Consumer confidence,US -1,-1
+US10T,Inflation,CPI y/y,US +1,-1
+US10T,Inflation,PPI y/y,US +1,-1
+US10T,Inflation,PCE y/y,US -1,1
+US10T,Inflation,2-year yield trend (21-day avg),rising = hawkish,-1
+US10T,Jobs,Employment change,US -1,-1
+US10T,Jobs,Unemployment rate,US -1,-1
+US10T,Jobs,Jobless claims,US +1,1
+US10T,Jobs,JOLTS,US -1,-1
+US10T,Jobs,ADP,US +1,1
+US10T,News risk,High impact next 24h,none,0
+RUSSELL,Technicals,Trend score,above; down or flat,1
+RUSSELL,Technicals,Seasonality (10-year avg this month),"-0.18%, up 60% of years",-1
+RUSSELL,COT,Net positioning,42.34,-1
+RUSSELL,COT,Latest weekly change,+3.03,1
+RUSSELL,Crowd,Sentiment,put/call: 1.11; vs last 60 days: higher than 28%,0
+RUSSELL,Growth,GDP,US +1,1
+RUSSELL,Growth,Manufacturing PMI,US -1,-1
+RUSSELL,Growth,Services PMI,US -1,-1
+RUSSELL,Growth,Retail sales,US +1,1
+RUSSELL,Growth,Consumer confidence,US -1,-1
+RUSSELL,Inflation,CPI y/y,US +1,-1
+RUSSELL,Inflation,PPI y/y,US +1,-1
+RUSSELL,Inflation,PCE y/y,US -1,1
+RUSSELL,Inflation,2-year yield trend (21-day avg),rising = hawkish,-1
+RUSSELL,Jobs,Employment change,US -1,-1
+RUSSELL,Jobs,Unemployment rate,US -1,-1
+RUSSELL,Jobs,Jobless claims,US +1,1
+RUSSELL,Jobs,JOLTS,US -1,-1
+RUSSELL,Jobs,ADP,US +1,1
+RUSSELL,News risk,High impact next 24h,none,0
+PLATINUM,Technicals,Trend score,below; down or flat,-2
+PLATINUM,Technicals,Seasonality (10-year avg this month),"+1.47%, up 70% of years",1
+PLATINUM,COT,Net positioning,65.99,1
+PLATINUM,COT,Latest weekly change,+0.04,1
+PLATINUM,Crowd,Sentiment,put/call: 0.95; vs last 60 days: higher than 38%,0
+PLATINUM,Growth,GDP,US +1,1
+PLATINUM,Growth,Manufacturing PMI,US -1,-1
+PLATINUM,Growth,Services PMI,US -1,-1
+PLATINUM,Growth,Retail sales,US +1,1
+PLATINUM,Growth,Consumer confidence,US -1,-1
+PLATINUM,Inflation,CPI y/y,US +1,-1
+PLATINUM,Inflation,PPI y/y,US +1,-1
+PLATINUM,Inflation,PCE y/y,US -1,1
+PLATINUM,Inflation,2-year yield trend (21-day avg),rising = hawkish,-1
+PLATINUM,Jobs,Employment change,US -1,-1
+PLATINUM,Jobs,Unemployment rate,US -1,-1
+PLATINUM,Jobs,Jobless claims,US +1,1
+PLATINUM,Jobs,JOLTS,US -1,-1
+PLATINUM,Jobs,ADP,US +1,1
+PLATINUM,News risk,High impact next 24h,none,0
+COPPER,Technicals,Trend score,below; down or flat,-2
+COPPER,Technicals,Seasonality (10-year avg this month),"+0.92%, up 50% of years",1
+COPPER,COT,Net positioning,70.55,1
+COPPER,COT,Latest weekly change,-2.82,-1
+COPPER,Crowd,Sentiment,put/call: 0.95; vs last 60 days: higher than 38%,0
+COPPER,Growth,GDP,US +1,1
+COPPER,Growth,Manufacturing PMI,US -1,-1
+COPPER,Growth,Services PMI,US -1,-1
+COPPER,Growth,Retail sales,US +1,1
+COPPER,Growth,Consumer confidence,US -1,-1
+COPPER,Inflation,CPI y/y,US +1,-1
+COPPER,Inflation,PPI y/y,US +1,-1
+COPPER,Inflation,PCE y/y,US -1,1
+COPPER,Inflation,2-year yield trend (21-day avg),rising = hawkish,-1
+COPPER,Jobs,Employment change,US -1,-1
+COPPER,Jobs,Unemployment rate,US -1,-1
+COPPER,Jobs,Jobless claims,US +1,1
+COPPER,Jobs,JOLTS,US -1,-1
+COPPER,Jobs,ADP,US +1,1
+COPPER,News risk,High impact next 24h,none,0
+NATGAS,Technicals,Trend score,below; down or flat,-2
+NATGAS,Technicals,Seasonality (10-year avg this month),"+8.05%, up 60% of years",1
+NATGAS,COT,Net positioning,34.34,-1
+NATGAS,COT,Latest weekly change,-0.85,-1
+NATGAS,Crowd,Sentiment,put/call: 0.95; vs last 60 days: higher than 38%,0
+NATGAS,Growth,GDP,US +1,1
+NATGAS,Growth,Manufacturing PMI,US -1,-1
+NATGAS,Growth,Services PMI,US -1,-1
+NATGAS,Growth,Retail sales,US +1,1
+NATGAS,Growth,Consumer confidence,US -1,-1
+NATGAS,Inflation,CPI y/y,US +1,-1
+NATGAS,Inflation,PPI y/y,US +1,-1
+NATGAS,Inflation,PCE y/y,US -1,1
+NATGAS,Inflation,2-year yield trend (21-day avg),rising = hawkish,-1
+NATGAS,Jobs,Employment change,US -1,-1
+NATGAS,Jobs,Unemployment rate,US -1,-1
+NATGAS,Jobs,Jobless claims,US +1,1
+NATGAS,Jobs,JOLTS,US -1,-1
+NATGAS,Jobs,ADP,US +1,1
+NATGAS,News risk,High impact next 24h,none,0
+ETHUSD,Technicals,Trend score,below; down or flat,-2
+ETHUSD,Technicals,Seasonality (10-year avg this month),"+6.73%, up 62% of years",1
+ETHUSD,COT,Net positioning,52.29,1
+ETHUSD,COT,Latest weekly change,-0.50,-1
+ETHUSD,Crowd,Sentiment,put/call: no free data,0
+ETHUSD,Growth,GDP,US +1,1
+ETHUSD,Growth,Manufacturing PMI,US -1,-1
+ETHUSD,Growth,Services PMI,US -1,-1
+ETHUSD,Growth,Retail sales,US +1,1
+ETHUSD,Growth,Consumer confidence,US -1,-1
+ETHUSD,Inflation,CPI y/y,US +1,-1
+ETHUSD,Inflation,PPI y/y,US +1,-1
+ETHUSD,Inflation,PCE y/y,US -1,1
+ETHUSD,Inflation,2-year yield trend (21-day avg),rising = hawkish,-1
+ETHUSD,Jobs,Employment change,US -1,-1
+ETHUSD,Jobs,Unemployment rate,US -1,-1
+ETHUSD,Jobs,Jobless claims,US +1,1
+ETHUSD,Jobs,JOLTS,US -1,-1
+ETHUSD,Jobs,ADP,US +1,1
+ETHUSD,News risk,High impact next 24h,none,0

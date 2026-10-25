@@ -16,6 +16,14 @@ feature.carry,True
 feature.calendar,True
 feature.trend_sentiment,True
 feature.macro_fundamentals,True
+feature.extra_markets,True
+feature.one_day_change_trading_days,True
+feature.solid_score_cells,True
+feature.top_setups_summary,True
+feature.top_setups_compact,True
+feature.top_setups_macro_only,True
+feature.top_setups_indicator,True
+feature.trade_ideas,True
 scoring.seasonality_points_fx,1
 scoring.seasonality_points_other,1
 scoring.retail_long_bearish_at,60
@@ -26,4 +34,7 @@ scoring.very_bullish_at,7
 scoring.bullish_at,4
 scoring.bearish_at,-4
 scoring.very_bearish_at,-8
+scoring.trade_ideas_bullish_at,7
+scoring.trade_ideas_bearish_at,-7
+scoring.trade_ideas_min_each_side,5
 news_risk_hours,24

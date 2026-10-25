@@ -55,7 +55,7 @@ CH,Jobs,Employment change,Employment Level,20260827,5.698M,,5.537M,,0,higher,no 
 CH,Jobs,Unemployment rate,Unemployment Rate s.a.,20261006,3.1%,3.1%,3.1%,0.0,0,lower,ok
 CA,Growth,GDP,GDP,20260929,0.0%,0.0%,0.3%,0.0,0,higher,ok
 CA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261001,51.5,,53.0,,0,higher,no forecast
-CA,Growth,Services PMI,Ivey PMI,20261006,58.2,65.2,64.3,-7.0,-1,higher,ok
+CA,Growth,Services PMI,S&P Global Services PMI,20261005,48.30,,49.10,,0,higher,no forecast
 CA,Growth,Retail sales,Retail Sales,20261023,1.2%,1.3%,-0.7%,-0.1,-1,higher,ok
 CA,Inflation,CPI y/y,CPI,20261019,3.1%,3.2%,3.0%,-0.1,-1,higher,ok
 CA,Inflation,PPI y/y,IPPI,20261022,2.0%,0.9%,1.2%,1.1,1,higher,ok
@@ -89,3 +89,10 @@ CN,Inflation,CPI y/y,CPI,20261013,0.9%,1.0%,0.8%,-0.1,-1,higher,ok
 CN,Inflation,PPI y/y,PPI,20261013,5.0%,4.4%,3.8%,0.6,1,higher,ok
 CN,Inflation,Interest rate,PBoC Loan Prime Rate,20261019,3.00%,3.00%,3.00%,0.0,0,higher,ok
 CN,Jobs,Unemployment rate,Chinese Unemployment Rate,20261018,5.2%,5.3%,5.3%,-0.1,1,lower,ok
+ZA,Growth,GDP,GDP,20260908,0.9%,,1.9%,,0,higher,no forecast
+ZA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261005,49.0,,50.5,,0,higher,no forecast
+ZA,Growth,Retail sales,Retail Sales,20261021,3.3%,3.0%,3.4%,0.3,1,higher,ok
+ZA,Inflation,CPI y/y,CPI,20261021,4.5%,4.7%,4.4%,-0.2,-1,higher,ok
+ZA,Inflation,PPI y/y,PPI,20260930,5.0%,,5.7%,,0,higher,no forecast
+ZA,Inflation,Interest rate,Interest Rate Decision,20260923,7.25%,7.25%,7.00%,0.0,0,higher,ok
+ZA,Jobs,Unemployment rate,Unemployment Rate,20260811,33.60%,,32.70%,,0,lower,no forecast
