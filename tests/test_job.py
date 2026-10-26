@@ -225,8 +225,114 @@ def test_failed_download_retries_then_uses_cache_unit():
     assert any(r["source"] == "Prices for EURUSD=X" and r["status"] == "CACHED" for r in ej.LOG), ej.LOG
     print("download retry + cache fallback OK")
 
+IG_SAMPLE = """<div class="ma__sentiment" style="--long-percent: 66%"><span>Long</span><span>Short</span>
+<span>66%</span><span>34%</span><p><strong>66%</strong> of client accounts are <span>long</span> on this market</p></div>"""
+MFX_SAMPLE = """<input id="outlookTip0" style="display:none" value="&lt;table&gt;&lt;tr&gt;&lt;td&gt;Symbol&lt;/td&gt;&lt;td&gt;Action&lt;/td&gt;
+&lt;td&gt;Percentage&lt;/td&gt;&lt;td&gt;Volume&lt;/td&gt;&lt;td&gt;Positions&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;EURUSD&lt;/td&gt;
+&lt;td&gt;Short&lt;/td&gt;&lt;td&gt;16%&lt;/td&gt;&lt;td&gt;3402.02 Lots&lt;/td&gt;&lt;td&gt;10939&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Long&lt;/td&gt;
+&lt;td&gt;83%&lt;/td&gt;&lt;td&gt;16856.83 Lots&lt;/td&gt;&lt;td&gt;30328&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;">
+<input id="outlookTip1" style="display:none" value="Symbol Action Percentage Volume Positions XAUUSD Short 36% 840.8 Lots 3897 Long 63% 1455.89 Lots 10827">
+<input id="outlookTip2" style="display:none" value="Symbol Action Percentage Volume Positions SPA35 Short 0% 0.00 Lots 0 Long 100% 0.18 Lots 1">
+<input id="outlookTip3" style="display:none" value="Symbol Action Percentage Volume Positions XPTUSD Short 49% 10.49 Lots 15 Long 50% 10.55 Lots 10">"""
+
+def _ej():
+    sys.argv = ["edge_job.py", "--offline"]
+    sys.path.insert(0, REPO); return importlib.import_module("edge_job")
+
+def test_retail_parsers_unit():
+    ej = _ej()
+    assert ej.parse_ig_page(IG_SAMPLE) == 66.0
+    assert ej.parse_ig_page("<p>66% of client accounts are <b>long</b> on this market</p>") == 66.0
+    assert ej.parse_ig_page("<html>no sentiment box</html>") is None and ej.parse_ig_page("") is None
+    m = ej.parse_myfxbook_widget(MFX_SAMPLE)
+    assert set(m) == {"EURUSD", "GOLD"}, m          # XAUUSD becomes GOLD; SPA35 is not ours; XPTUSD has too few positions
+    assert abs(m["EURUSD"] - 83 / 99 * 100) < 0.1 and abs(m["GOLD"] - 63 / 99 * 100) < 0.1
+    assert ej.parse_myfxbook_widget("<html></html>") == {}
+    print("retail parsers OK")
+
+def test_retail_fallback_order_unit():
+    ej = _ej()
+    syms = ["EURUSD", "GBPUSD", "CHINA50"]
+    readings = {"A": {"EURUSD": 70.0}, "B": {"EURUSD": 30.0, "GBPUSD": 45.0}}
+    df = ej.pick_retail(readings, ["A", "B"], syms, {"A": "2026-10-25 17:00", "B": "2026-10-25 17:01"}).set_index("symbol")
+    assert df.loc["EURUSD", "source"] == "A" and df.loc["EURUSD", "long_pct"] == 70.0   # first source wins
+    assert df.loc["GBPUSD", "source"] == "B" and df.loc["GBPUSD", "short_pct"] == 55.0  # next source fills the gap
+    assert df.loc["CHINA50", "status"] == ej.NO_RETAIL and pd.isna(df.loc["CHINA50", "long_pct"])  # never invented
+    df = ej.pick_retail(readings, ["B", "A"], syms, {}).set_index("symbol")
+    assert df.loc["EURUSD", "source"] == "B"
+    # the live loader: a failing first source falls through to the next; a switched-off source is never called
+    calls = []
+    def fail(need): calls.append("ig"); raise RuntimeError("blocked")
+    def widget(need): calls.append("widget"); return {s: 62.0 for s in need if s in ("EURUSD", "GOLD")}
+    def login(need): calls.append("login"); return {}
+    tmp = tempfile.mkdtemp(prefix="edge_retail_")
+    old = (ej.RETAIL_SOURCES, ej.OFFLINE, ej.DATA, dict(ej.RETAIL_CFG), ej.LOG[:])
+    ej.RETAIL_SOURCES = [("ig_client_sentiment", "IG", fail), ("myfxbook_widget", "MW", widget), ("myfxbook_login", "ML", login)]
+    ej.OFFLINE, ej.DATA = False, tmp
+    try:
+        df = ej.load_retail().set_index("symbol")
+        assert calls == ["ig", "widget"], calls     # no Myfxbook login saved, so it is not tried
+        assert df.loc["EURUSD", "source"] == "MW" and df.loc["EURUSD", "status"] == "live"
+        assert df.loc["USDJPY", "status"] == ej.NO_RETAIL
+        assert any(r["source"] == "Retail sentiment (IG)" and r["status"] == "ERROR" for r in ej.LOG)
+        assert os.path.exists(os.path.join(tmp, "retail_latest.csv"))
+        calls.clear(); ej.RETAIL_CFG["ig_client_sentiment"] = False
+        df = ej.load_retail().set_index("symbol")
+        assert calls == ["widget"], calls
+        # every source fails: a recent saved reading is kept and marked saved
+        ej.RETAIL_SOURCES = [("ig_client_sentiment", "IG", fail)]; ej.RETAIL_CFG["ig_client_sentiment"] = True
+        df = ej.load_retail().set_index("symbol")
+        assert df.loc["EURUSD", "status"] == "saved" and df.loc["EURUSD", "source"] == "MW"
+        ej.RETAIL_CFG["keep_saved_reading_hours"] = 0
+        df = ej.load_retail().set_index("symbol")
+        assert (df.status == ej.NO_RETAIL).all()
+    finally:
+        ej.RETAIL_SOURCES, ej.OFFLINE, ej.DATA = old[:3]
+        ej.RETAIL_CFG.clear(); ej.RETAIL_CFG.update(old[3]); ej.LOG[:] = old[4]
+    print("retail fallback order OK")
+
+def test_crowd_score_rules_unit():
+    ej = _ej()
+    r = pd.DataFrame(dict(symbol=["EURUSD", "GBPUSD", "USDJPY", "GOLD", "AUDUSD", "NZDUSD", "USDCAD", "USDCHF"],
+                          long_pct=[66, 56, 41, 88, 35, 80, 47, 80], source="IG client sentiment", status="live",
+                          fetched_pt="2026-10-25 17:07")).set_index("symbol")
+    pcr = pd.DataFrame(columns=["date", "name", "value"])
+    sc, d = ej.sentiment_score("EURUSD", r, pcr)
+    assert sc == -1 and d["crowd_source"] == "IG client sentiment" and "5:07 PM PT" in d["source"]
+    assert ej.sentiment_score("GBPUSD", r, pcr)[0] == 0
+    assert ej.sentiment_score("AUDUSD", r, pcr)[0] == 1
+    assert ej.sentiment_score("GOLD", r, pcr)[0] == -1           # gold now uses the retail crowd
+    sc, d = ej.sentiment_score("CHINA50", r, pcr)
+    assert sc == 0 and d["crowd_source"] == ej.NO_RETAIL
+    sc, d = ej.sentiment_score("EUR Index", r, pcr)               # EUR against the dollar: 66% long
+    assert sc == -1 and "vs US dollar" in " ".join(d)
+    print("crowd score rules OK")
+
+def test_offline_run_shows_crowd_source():
+    tmp, _ = run_copy()
+    rs = read(tmp, "retail_sentiment")
+    assert {"symbol", "long_pct", "short_pct", "source", "status", "fetched_pt"} <= set(rs.columns)
+    assert len(rs) == 46 and set(rs.status) <= {"live", "saved", "no retail data"}
+    nd = rs[rs.status == "no retail data"]
+    assert nd.long_pct.isna().all() and (nd.source.fillna("") == "").all()
+    top = read(tmp, "top_setups").set_index("symbol")
+    assert "crowd_source" in top.columns
+    for s in nd.symbol:
+        if top.loc[s, "kind"] in ("fx", "crypto", "bond"): assert top.loc[s, "crowd"] == 0
+    meta = json.load(open(os.path.join(tmp, "output", "meta.json")))
+    assert meta["crowd"]["sources_in_order"][0] == "IG client sentiment"
+    st = read(tmp, "settings").set_index("setting")
+    assert {"source.ig_client_sentiment", "source.myfxbook_widget", "source.myfxbook_login"} <= set(st.index)
+    hp = read(tmp, "help")
+    assert hp.plain_english.str.contains("IG client sentiment").any()
+    print("offline crowd source OK")
+
 if __name__ == "__main__":
     test_news_risk_rules_unit()
+    test_retail_parsers_unit()
+    test_retail_fallback_order_unit()
+    test_crowd_score_rules_unit()
+    test_offline_run_shows_crowd_source()
     test_full_run_fills_every_tab()
     test_news_risk_tags_from_feed()
     test_switches_turn_parts_off()

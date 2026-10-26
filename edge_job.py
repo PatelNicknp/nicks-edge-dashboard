@@ -313,30 +313,186 @@ def cot_score(sym, cot):
                                               "change %": "%+.2f" % r.long_pct_chg, "net_label": sgn(r.net),
                                               "change_label": sgn(r.long_pct_chg), "report_date": str(r.date.date())}
 
-# ============================================================== retail sentiment (Myfxbook) and options put/call
-def load_myfxbook():
-    em, pw = os.environ.get("MYFXBOOK_EMAIL"), os.environ.get("MYFXBOOK_PASSWORD")
-    if em and pw and not OFFLINE:
+# ============================================================== retail client sentiment (IG first, Myfxbook as fallback) and options put/call
+# Each source returns {our symbol: percent of retail traders long}. Sources are tried in this order, market by market:
+# the first source that has a reading for a market wins. Every source has its own on/off switch in config.json
+# ("retail_sources"). A market no source covers scores 0 and is labelled "no retail data". Nothing is made up.
+RETAIL_CFG = CFG.get("retail_sources", {})
+NO_RETAIL = "no retail data"
+BOT_UA = {"User-Agent": "Mozilla/5.0 (compatible; NicksEdgeDashboard/1.0; +https://github.com/PatelNicknp/nicks-edge-dashboard)",
+          "Accept": "text/html,application/json,*/*"}
+
+# IG public market pages show "x% of client accounts are long on this market" (the same IG Client Sentiment DailyFX used).
+IG_BASE = "https://www.ig.com/"
+IG_PAGES = {p: "uk/forex/markets-forex/%s-%s" % (p[:3].lower(), p[3:].lower()) for p in PAIRS + ["USDZAR"]}
+IG_PAGES.update({
+    "NZDCAD": "uk/forex/markets-forex/spot-fx-nzdcad",
+    "SPX500": "uk/indices/markets-indices/us-spx-500", "NAS100": "uk/indices/markets-indices/us-tech-100",
+    "DOW": "uk/indices/markets-indices/wall-street", "RUSSELL": "uk/indices/markets-indices/russell-2000",
+    "UK100": "uk/indices/markets-indices/ftse-100", "GER40": "uk/indices/markets-indices/germany-40",
+    "JPN225": "uk/indices/markets-indices/japan-225",
+    "GOLD": "uk/commodities/markets-commodities/gold", "SILVER": "uk/commodities/markets-commodities/silver",
+    "PLATINUM": "uk/commodities/markets-commodities/platinum", "COPPER": "uk/commodities/markets-commodities/high-grade-copper",
+    "USOIL": "uk/commodities/markets-commodities/us-light-crude", "NATGAS": "uk/commodities/markets-commodities/natural-gas",
+    "US10T": "uk/bonds/markets-bonds/10-year-t-note-decimalised",
+    "BTCUSD": "en/forex/markets-forex/bitcoin-1", "ETHUSD": "en/forex/markets-forex/ether-usd",  # IG UK has no crypto page
+})  # CHINA50: IG's China A50 page shows no client sentiment
+
+def parse_ig_page(text):
+    """Percent of IG client accounts long, from one IG market page. None when the page has no sentiment box."""
+    m = re.search(r"--long-percent:\s*(\d{1,3}(?:\.\d+)?)%", text or "")
+    if not m:
+        m = re.search(r"(\d{1,3})%\s*(?:<[^>]+>\s*)*of client accounts are\s*(?:<[^>]+>\s*)*long", text or "")
+    if not m: return None
+    v = float(m.group(1))
+    return v if 0 <= v <= 100 else None
+
+def load_ig(symbols):
+    from concurrent.futures import ThreadPoolExecutor
+    want = [s for s in symbols if s in IG_PAGES]
+    def one(s):
         try:
-            s = get("https://www.myfxbook.com/api/login.json", params={"email": em, "password": pw}).json()
-            if s.get("error"): raise RuntimeError(s.get("message"))
-            sess = s["session"]
-            j = get("https://www.myfxbook.com/api/get-community-outlook.json", params={"session": sess}).json()
-            try: get("https://www.myfxbook.com/api/logout.json", params={"session": sess})
-            except Exception: pass
-            rows = [dict(symbol=x["name"], long_pct=float(x["longPercentage"]), short_pct=float(x["shortPercentage"]))
-                    for x in j["symbols"]]
-            df = pd.DataFrame(rows); df["fetched_pt"] = NOW.strftime("%Y-%m-%d %H:%M")
-            df.to_csv(os.path.join(DATA, "myfxbook_latest.csv"), index=False)
-            log("Retail sentiment (Myfxbook API)", "OK", NOW.strftime("%Y-%m-%d %H:%M"))
-            return df.set_index("symbol"), "live"
+            r = requests.get(IG_BASE + IG_PAGES[s], headers=BOT_UA, timeout=25)
+            return s, parse_ig_page(r.text) if r.status_code == 200 else None
+        except Exception:
+            return s, None
+    with ThreadPoolExecutor(4) as ex:
+        got = dict(ex.map(one, want))
+    out = {s: v for s, v in got.items() if v is not None}
+    if len(out) < 5: raise RuntimeError("IG pages gave %d readings out of %d" % (len(out), len(want)))
+    return out
+
+# Myfxbook's free Community Outlook widget, made for other websites to embed. No login. Pairs, gold and silver.
+MFX_WIDGET = "https://widgets.myfxbook.com/widgets/outlook.html?type=0&symbols=," + ",".join(str(i) for i in range(1, 61))
+MFX_NAMES = {"XAUUSD": "GOLD", "XAGUSD": "SILVER"}
+MFX_MIN_POSITIONS = 100  # ignore thinly traded symbols where a few accounts swing the percentage
+
+def _mfx_symbol(name):
+    name = MFX_NAMES.get(name, name)
+    return name if (name in PAIRS or name in EXOTIC_PAIRS or name in OTHER) else None
+
+def parse_myfxbook_widget(text):
+    """{our symbol: long %} from the Myfxbook Community Outlook widget page."""
+    out = {}
+    for m in re.finditer(r'id="outlookTip\d+"[^>]*value="(.*?)"', text or "", re.S):
+        t = " ".join(re.sub(r"<[^>]+>", " ", html.unescape(m.group(1))).split())
+        sym = re.search(r"Positions\s+([A-Z0-9]+)\s", t)
+        sh = re.search(r"Short\s+(\d+(?:\.\d+)?)%\s+[\d.,]+\s+Lots\s+(\d+)", t)
+        lo = re.search(r"Long\s+(\d+(?:\.\d+)?)%\s+[\d.,]+\s+Lots\s+(\d+)", t)
+        if not (sym and sh and lo): continue
+        s = _mfx_symbol(sym.group(1))
+        sp, lp = float(sh.group(1)), float(lo.group(1))
+        if s is None or sp + lp <= 0 or int(sh.group(2)) + int(lo.group(2)) < MFX_MIN_POSITIONS: continue
+        out[s] = round(lp / (lp + sp) * 100, 1)
+    return out
+
+def load_myfxbook_widget(symbols):
+    r = requests.get(MFX_WIDGET, headers=BOT_UA, timeout=25); r.raise_for_status()
+    allv = parse_myfxbook_widget(r.text)
+    if not allv: raise RuntimeError("no readings in the Myfxbook widget page")
+    return {s: v for s, v in allv.items() if s in symbols}
+
+def load_myfxbook_login(symbols):
+    """Myfxbook API. Only used when a Myfxbook login is saved as a repository secret."""
+    em, pw = os.environ.get("MYFXBOOK_EMAIL"), os.environ.get("MYFXBOOK_PASSWORD")
+    if not (em and pw): raise RuntimeError("no Myfxbook login saved")
+    s = get("https://www.myfxbook.com/api/login.json", params={"email": em, "password": pw}).json()
+    if s.get("error"): raise RuntimeError(s.get("message"))
+    sess = s["session"]
+    j = get("https://www.myfxbook.com/api/get-community-outlook.json", params={"session": sess}).json()
+    try: get("https://www.myfxbook.com/api/logout.json", params={"session": sess})
+    except Exception: pass
+    out = {}
+    for x in j["symbols"]:
+        sym = _mfx_symbol(x["name"])
+        if sym in symbols: out[sym] = float(x["longPercentage"])
+    return out
+
+# (config key, name shown on the page, loader), in the order they are tried
+RETAIL_SOURCES = [
+    ("ig_client_sentiment", "IG client sentiment", load_ig),
+    ("myfxbook_widget", "Myfxbook community outlook", load_myfxbook_widget),
+    ("myfxbook_login", "Myfxbook (login)", load_myfxbook_login),
+]
+RETAIL_COLS = ["symbol", "long_pct", "short_pct", "source", "status", "fetched_pt"]
+
+def retail_symbols():
+    return [s for s in SYMBOLS if kind(s) != "ccy"]
+
+def pick_retail(readings, order, symbols, fetched):
+    """readings: {source name: {symbol: long %}}. For each market take the first source in `order` that has it.
+    fetched: {source name: time text}. Markets with no reading get status "no retail data" and no numbers."""
+    rows = []
+    for s in symbols:
+        row = dict(symbol=s, long_pct=np.nan, short_pct=np.nan, source="", status=NO_RETAIL, fetched_pt="")
+        for name in order:
+            v = (readings.get(name) or {}).get(s)
+            if v is None or not (0 <= float(v) <= 100): continue
+            row.update(long_pct=round(float(v), 1), short_pct=round(100 - float(v), 1), source=name, status="live",
+                       fetched_pt=fetched.get(name, ""))
+            break
+        rows.append(row)
+    return pd.DataFrame(rows, columns=RETAIL_COLS)
+
+def load_retail():
+    """Live retail readings, market by market, from the sources that are switched on. Saves the result to
+    data/retail_latest.csv. A market that no source answers this hour keeps its saved reading for a few hours
+    (marked "saved"), then shows "no retail data". Offline runs (tests) use the saved file as it is."""
+    syms = retail_symbols()
+    saved_f = os.path.join(DATA, "retail_latest.csv")
+    saved = pd.read_csv(saved_f) if os.path.exists(saved_f) else pd.DataFrame(columns=RETAIL_COLS)
+    if not FEAT.get("retail_sentiment", True):
+        return pick_retail({}, [], syms, {})
+    if OFFLINE:
+        df = pick_retail({}, [], syms, {}).set_index("symbol")
+        if len(saved):
+            sv = saved.set_index("symbol"); sv = sv[sv.status.isin(["live", "saved"]) & sv.long_pct.notna()]
+            for s in df.index.intersection(sv.index):
+                df.loc[s, ["long_pct", "short_pct", "source", "fetched_pt"]] = sv.loc[s, ["long_pct", "short_pct", "source", "fetched_pt"]].values
+                df.loc[s, "status"] = "saved"
+        when = str(saved.fetched_pt.dropna().astype(str).max())[:16] if len(saved) and saved.fetched_pt.notna().any() else ""
+        log("Retail sentiment", "CACHED", when, "Offline run, saved readings")
+        return df.reset_index()[RETAIL_COLS]
+    readings, fetched, order = {}, {}, []
+    for key, name, loader in RETAIL_SOURCES:
+        if not RETAIL_CFG.get(key, True): continue
+        order.append(name)
+        if key == "myfxbook_login" and not (os.environ.get("MYFXBOOK_EMAIL") and os.environ.get("MYFXBOOK_PASSWORD")):
+            continue  # no login saved, nothing to try
+        need = [s for s in syms if not any(s in r for r in readings.values())]
+        if not need: break
+        try:
+            readings[name] = loader(need)
+            fetched[name] = NOW.strftime("%Y-%m-%d %H:%M")
+            n = len(readings[name])
+            log("Retail sentiment (%s)" % name, "OK", fetched[name],
+                ("%d markets" % n) if len(readings) == 1 else ("Backup source. Filled %d of the %d markets still missing" % (n, len(need))))
         except Exception as e:
-            log("Retail sentiment (Myfxbook API)", "ERROR", "", str(e)[:80])
-    f = os.path.join(DATA, "myfxbook_latest.csv")
-    if not os.path.exists(f): f = os.path.join(DATA, "myfxbook_snapshot.csv")
-    df = pd.read_csv(f)
-    log("Retail sentiment (Myfxbook)", "SNAPSHOT", df.fetched_pt.iloc[0], "Snapshot. A live reading needs a Myfxbook login.")
-    return df.set_index("symbol"), "snapshot " + str(df.fetched_pt.iloc[0])
+            log("Retail sentiment (%s)" % name, "ERROR", "", str(e)[:100])
+    df = pick_retail(readings, order, syms, fetched)
+    keep_h = float(RETAIL_CFG.get("keep_saved_reading_hours", 6))
+    if len(saved) and keep_h > 0:
+        sv = saved.set_index("symbol")
+        for i, r in df[df.status == NO_RETAIL].iterrows():
+            if r.symbol not in sv.index or pd.isna(sv.loc[r.symbol, "long_pct"]): continue
+            t = pd.to_datetime(str(sv.loc[r.symbol, "fetched_pt"])[:16], errors="coerce")
+            if pd.isna(t) or (NOW.tz_localize(None) - t) > pd.Timedelta(hours=keep_h): continue
+            df.loc[i, ["long_pct", "short_pct", "source", "fetched_pt"]] = sv.loc[r.symbol, ["long_pct", "short_pct", "source", "fetched_pt"]].values
+            df.loc[i, "status"] = "saved"
+    live = df[df.status == "live"]
+    if len(live): df.to_csv(saved_f, index=False)
+    log("Retail sentiment", "OK" if len(live) else "MISSING", NOW.strftime("%Y-%m-%d %H:%M"),
+        "%d of %d markets live" % (len(live), len(df)) + ("" if len(live) else ". No source answered"))
+    return df
+
+def retail_when(r):
+    t = pd.to_datetime(str(r.get("fetched_pt", ""))[:16], errors="coerce")
+    when = t.strftime("%a %b %d, %I:%M %p PT").replace(" 0", " ") if pd.notna(t) else ""
+    return ("%s, %s" % (r.get("source", ""), when)).strip(", ") + (" (saved reading)" if r.get("status") == "saved" else "")
+
+def crowd_score(lp):
+    lo, hi = SC["retail_long_bullish_at"], SC["retail_long_bearish_at"]
+    return -1 if lp >= hi else 1 if lp <= lo else 0
 
 def load_pcr():
     d = NOW.date()
@@ -361,28 +517,43 @@ def load_pcr():
     return df
 
 def sentiment_score(sym, mfx, pcr):
+    """Crowd Sentiment. mfx: retail readings indexed by symbol (long_pct, plus source, status and fetched_pt when live).
+    Retail traders first (contrarian: a crowded long scores -1, a crowded short +1). A currency index uses the
+    currency against the US dollar. With no retail reading, indexes and commodities fall back to the CBOE put/call
+    ratio if that switch is on. Otherwise 0, "no retail data"."""
     k = kind(sym)
-    lo, hi = SC["retail_long_bullish_at"], SC["retail_long_bearish_at"]
-    if k == "fx":
-        if not FEAT["retail_sentiment"] or sym not in mfx.index: return 0, {"retail long %": "n/a"}
-        lp = mfx.loc[sym, "long_pct"]
-        return (-1 if lp >= hi else 1 if lp <= lo else 0), {"retail long %": "%.0f" % lp, "crowd": "bullish" if lp >= 50 else "bearish"}
+    has = lambda s: s in mfx.index and pd.notna(pd.to_numeric(mfx.loc[s, "long_pct"], errors="coerce"))
+    on = FEAT.get("retail_sentiment", True)
     if k == "ccy":  # crowd on the currency against the US dollar; for USD the average across the 7 USD pairs
-        c = sym[:3]; vals = []
+        c = sym[:3]; vals, srcs = [], []
         for p in PAIRS:
-            if c in p and "USD" in p and p in mfx.index:
-                vals.append(mfx.loc[p, "long_pct"] if p.startswith(c) else 100 - mfx.loc[p, "long_pct"])
-        if not vals or not FEAT["retail_sentiment"]: return 0, {"retail long %": "n/a"}
+            if c in p and "USD" in p and has(p):
+                lp0 = float(mfx.loc[p, "long_pct"]); vals.append(lp0 if p.startswith(c) else 100 - lp0)
+                if "source" in mfx.columns: srcs.append(mfx.loc[p].to_dict())
+        if not vals or not on: return 0, {"retail": NO_RETAIL, "crowd_source": NO_RETAIL}
         lp = float(np.mean(vals))
-        return (-1 if lp >= hi else 1 if lp <= lo else 0), {"retail long % (vs US dollar)": "%.0f" % lp}
+        names = sorted({str(r.get("source", "")) for r in srcs if r.get("source")})
+        d = {"retail long % (vs US dollar)": "%.0f" % lp}
+        if srcs: d["source"] = retail_when(srcs[0]) if len(names) == 1 else ", ".join(names)
+        d["crowd_source"] = names[0] if len(names) == 1 else (", ".join(names) or "retail")
+        return crowd_score(lp), d
+    if on and has(sym):
+        lp = float(mfx.loc[sym, "long_pct"])
+        d = {"retail long %": "%.0f" % lp, "crowd": "mostly long" if lp >= 50 else "mostly short"}
+        if "source" in mfx.columns:
+            r = mfx.loc[sym].to_dict(); d["source"] = retail_when(r); d["crowd_source"] = r.get("source", "")
+        return crowd_score(lp), d
+    if k == "fx" or k == "crypto" or k == "bond" or sym not in OTHER or OTHER[sym][4] is None or \
+            not FEAT["options_sentiment_for_indices"] or pcr.empty:
+        return 0, {"retail": NO_RETAIL, "crowd_source": NO_RETAIL}
     name = OTHER[sym][4]
-    if not FEAT["options_sentiment_for_indices"] or name is None or pcr.empty: return 0, {"put/call": "no free data"}
     s = pcr[pcr.name == name].set_index("date").value
     s = s[s > 0]
-    if len(s) < 30: return 0, {"put/call": "history too short"}
+    if len(s) < 30: return 0, {"retail": NO_RETAIL, "put/call": "history too short", "crowd_source": NO_RETAIL}
     pct = (s.iloc[-60:] < s.iloc[-1]).mean() * 100
     sc = 2 if pct >= 90 else 1 if pct >= 65 else -1 if pct <= 15 else 0
-    return sc, {"put/call": "%.2f" % s.iloc[-1], "vs last 60 days": "higher than %d%%" % pct}
+    return sc, {"retail": NO_RETAIL, "put/call": "%.2f" % s.iloc[-1], "vs last 60 days": "higher than %d%%" % pct,
+                "crowd_source": "CBOE put/call"}
 
 # ============================================================== economic calendar (actual vs consensus)
 NASDAQ_COUNTRY = {"United States": "US", "Euro Zone": "EZ", "United Kingdom": "UK", "Japan": "JP", "Switzerland": "CH",
@@ -807,11 +978,12 @@ HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simpl
         ("Score", "Technicals + COT + Crowd + Growth + Inflation + Jobs. 7 or more Very Bullish, 4 to 6 Bullish, -3 to 3 Neutral, -4 to -7 Bearish, -8 or less Very Bearish."),
         ("Markets", "54 markets, like EdgeFinder: 29 currency pairs (the 28 majors and crosses plus USDZAR), 8 currency indexes, 8 stock indexes (with the Russell 2000), the US 10-year Treasury note (US10T), gold, silver, platinum, copper, oil, natural gas, bitcoin and ether. The added markets are scored with the same rules as the market most like them: US10T and the Russell like the other US stock indexes, platinum and copper like silver, natural gas like oil, ether like bitcoin, and USDZAR like any other pair. The added markets can be switched off in Settings."),
         ("Top Setups factors", "Top Setups splits that score into 18 factors, each a whole number from -2 to +2. 1 Day Change is today's score minus the score on the trading day before. On a Saturday or Sunday it shows Friday against Thursday, the same way EdgeFinder does. The factor coverage table says which countries have a free series. A zero there means no free series, or a print with no consensus."),
-        ("Score history", "A score snapshot is saved for every market every day. Days before the live job started were rebuilt from saved prices, COT reports and calendar releases. Rebuilt days use the latest saved retail crowd reading, because there is no free history of it."),
-        ("Why a score can differ from EdgeFinder", "We use free data: Yahoo Finance prices, CFTC COT, Myfxbook or CBOE crowd readings and the Nasdaq economic calendar. EdgeFinder uses its own paid feeds. Three things cause most gaps. 1) Some releases have no forecast on the free calendar, so they score 0 here (for example Canada's manufacturing PMI and Switzerland's services PMI). 2) EdgeFinder's prices close at a different hour, so a trend that is just turning can read +1 there and +2 here. 3) Where both sides have a forecast, EdgeFinder's forecast can differ from the free one, so a single cell can flip. EURUSD shows the rules match: on Oct 24 all 14 macro cells, COT, crowd and seasonality matched EdgeFinder, and only Trend differed. CADCHF (EdgeFinder +8) differs mostly because of points 1 and 3: Canada's PMIs have no free forecast, and Canada's retail sales and jobs, and Swiss GDP and PPI, scored differently on the free calendar."),
+        ("Score history", "A score snapshot is saved for every market every day. Days before the live job started were rebuilt from saved prices, COT reports and calendar releases. Retail crowd readings have no free history, so the crowd is only counted from the day the live readings started. Older days use the put/call ratio for US indexes and commodities, and 0 for the rest."),
+        ("Why a score can differ from EdgeFinder", "We use free data: Yahoo Finance prices, CFTC COT, IG client sentiment and Myfxbook crowd readings and the Nasdaq economic calendar. EdgeFinder uses its own paid feeds. Three things cause most gaps. 1) Some releases have no forecast on the free calendar, so they score 0 here (for example Canada's manufacturing PMI and Switzerland's services PMI). 2) EdgeFinder's prices close at a different hour, so a trend that is just turning can read +1 there and +2 here. 3) Where both sides have a forecast, EdgeFinder's forecast can differ from the free one, so a single cell can flip. EURUSD shows the rules match: on Oct 24 all 14 macro cells, COT, crowd and seasonality matched EdgeFinder, and only Trend differed. CADCHF (EdgeFinder +8) differs mostly because of points 1 and 3: Canada's PMIs have no free forecast, and Canada's retail sales and jobs, and Swiss GDP and PPI, scored differently on the free calendar."),
         ("Technicals", "Trend score (3-day average vs 14-day average, -2 to +2) plus seasonality (+1 if this month is usually up over 10 years, -1 if usually down)."),
         ("COT", "Big speculators in futures (CFTC, weekly). For a pair: did the long share rise or fall for each side. For other markets: are they net long, and did the long share rise."),
-        ("Crowd", "Retail traders (Myfxbook). 60% or more long scores -1, 40% or less long scores +1. Indices, metals and oil use the put/call ratio instead."),
+        ("Crowd", "What retail traders hold. Most of them lose, so the score leans the other way. 60% or more long scores -1, 40% or less long scores +1, in between scores 0. A currency index uses that currency against the US dollar. A grey 0 marked no retail data means no free source had a reading for that market."),
+        ("Where the crowd numbers come from", "We check free public pages every hour, with no login. First IG client sentiment: the share of IG client accounts that are long each market (the same numbers DailyFX used to show). If IG has no number for a market, we use the Myfxbook community outlook, which Myfxbook offers free for other websites to show. A Myfxbook login is tried last, only if one is saved. If no source answers this hour, a reading up to 6 hours old is kept and marked saved. After that the market shows no retail data. If no retail source covers an index or commodity, the CBOE put/call ratio is used when that switch is on. Each source can be turned on or off in config.json, under retail_sources. The source and time are shown on the Retail sentiment page, on each scorecard, and under Top setups."),
         ("Growth / Inflation / Jobs", "Latest release beat the forecast = +1, missed = -1, for each country. For a pair the second currency is subtracted."),
         ("News risk", "A high-impact event for either currency in the next 24 hours. Times are Pacific Time (PT)."),
         ("Data delay", "COT is out Fridays for the prior Tuesday. Prices are end of day plus the latest hourly snapshot.")]
@@ -915,6 +1087,22 @@ def _join_names(names):
     if len(names) == 1: return names[0]
     return ", ".join(names[:-1]) + " and " + names[-1]
 
+RETAIL_STATE = {}  # set by main(): the retail readings of this run, for the coverage table
+
+def crowd_coverage():
+    r = RETAIL_STATE.get("retail")
+    if r is None or not len(r):
+        return dict(factor="Crowd Sentiment", covered="No retail readings this run.", source=", ".join(n for _, n, _ in RETAIL_SOURCES),
+                    notes="Every market scores 0, no retail data.")
+    got = r[r.status.isin(["live", "saved"])]
+    miss = list(r[~r.status.isin(["live", "saved"])].symbol)
+    by = "; ".join("%s: %d markets" % (k, v) for k, v in got.source.value_counts().items())
+    return dict(factor="Crowd Sentiment",
+                covered="%d of %d markets have a retail reading, plus the 8 currency indexes worked out from the US dollar pairs. %s." % (len(got), len(r), by),
+                source="Tried in this order: " + ", ".join(n for k, n, _ in RETAIL_SOURCES if RETAIL_CFG.get(k, True)) + ". CBOE put/call for US indexes and commodities with no retail reading.",
+                notes=("No retail data: " + ", ".join(miss) + "." if miss else "Every market has a retail reading.") +
+                      " 60% or more long scores -1, 40% or less long scores +1.")
+
 def factor_coverage(rel):
     """Plain-language list of which countries have a free reading for each of the 18 factors."""
     rows = [
@@ -927,9 +1115,7 @@ def factor_coverage(rel):
         dict(factor="COT", covered="EUR, GBP, JPY, CHF, CAD, AUD, NZD, USD and ZAR, plus gold, silver, platinum, copper, WTI crude, natural gas, S&P 500, Nasdaq 100, Dow, Russell 2000, the 10-year note, bitcoin and ether.",
              source="CFTC legacy futures, weekly",
              notes="Scored 0, no CFTC contract in this feed: GER40, UK100, JPN225 and CHINA50. A pair is the base currency minus the quote currency."),
-        dict(factor="Crowd Sentiment", covered="The 28 pairs and 8 currency indexes from Myfxbook. S&P 500, Nasdaq 100, Dow, Russell 2000, gold, silver, platinum, copper, oil and natural gas from the CBOE put/call ratio.",
-             source="Myfxbook retail positioning, and CBOE put/call",
-             notes="Scored 0, no free reading: USDZAR (not on Myfxbook), CHINA50, GER40, UK100, JPN225, the 10-year note, bitcoin and ether. Retail is the saved Myfxbook snapshot unless a login is set on the data job."),
+        crowd_coverage(),
     ]
     for title, label, source, extra in MACRO_COVERAGE:
         ok, quiet, missing = [], [], []
@@ -1068,13 +1254,15 @@ def top_summary(top):
     lines.append("Built from simple rules, not AI. " + LABEL)
     return pd.DataFrame(dict(line=range(1, len(lines) + 1), text=lines))
 
-def fmt_parts(d): return "; ".join("%s: %s" % (k, v) for k, v in d.items() if not k.endswith("_label"))
+def fmt_parts(d): return "; ".join("%s: %s" % (k, v) for k, v in d.items() if not k.endswith("_label") and k != "crowd_source")
 
 def main():
     close, high, low = load_prices()
     asof_fx = last_cash_session(close)
     cot = load_cot()
-    mfx, mfx_src = load_myfxbook()
+    retail = load_retail()
+    RETAIL_STATE["retail"] = retail
+    mfx = retail.set_index("symbol")
     pcr = load_pcr() if FEAT["options_sentiment_for_indices"] else pd.DataFrame(columns=["date", "name", "value"])
     cal = load_calendar()
     rel = latest_releases(cal)
@@ -1099,7 +1287,9 @@ def main():
         fac = factor_values(td, cs, ss, ec)
         p = session_series(s, close[s])
         row = dict(symbol=s, kind=kind(s), bias=bias(total), score=int(total), technicals=int(tech), cot=int(cs),
-                   crowd=int(ss), growth=ec[G][0], inflation=ec[I][0], jobs=ec[J][0],
+                   crowd=int(ss), crowd_source=sd.get("crowd_source", "") if trend_on else "",
+                   crowd_long_pct=sd.get("retail long %", sd.get("retail long % (vs US dollar)", "")) if trend_on else "",
+                   growth=ec[G][0], inflation=ec[I][0], jobs=ec[J][0],
                    news_risk=hi, news_risk_medium=med, news_flag="HIGH" if hi else ("medium" if med else ""),
                    price=p.iloc[-1], change_1d_pct=(p.iloc[-1] / p.iloc[-2] - 1) * 100,
                    updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), label=LABEL)
@@ -1137,7 +1327,7 @@ def main():
         T["rates"]["real_rate"] = T["rates"].rate - T["rates"].cpi_yoy
     es = rel[rel.status == "ok"].groupby(["country", "category"]).signal.sum().unstack(fill_value=0).reset_index()
     T["econ_strength"] = es
-    T["retail_sentiment"] = mfx.reset_index().assign(source=mfx_src)
+    T["retail_sentiment"] = retail
     T["put_call"] = pcr.pivot_table(index="date", columns="name", values="value").reset_index().tail(260) if len(pcr) else pd.DataFrame()
     T["news_risk"] = pd.DataFrame(risk_rows) if FEAT["news_risk"] else pd.DataFrame(columns=["symbol", "flag", "banner"])
     up = ev[ev.time_pt > NEWS_NOW].sort_values("time_pt")
@@ -1156,6 +1346,7 @@ def main():
     T["help"] = pd.DataFrame(HELP, columns=["topic", "plain_english"])
     T["settings"] = pd.DataFrame([dict(setting="feature." + k, value=v) for k, v in FEAT.items()] +
                                  [dict(setting="scoring." + k, value=v) for k, v in SC.items()] +
+                                 [dict(setting="source." + k, value=RETAIL_CFG.get(k, True)) for k, _, _ in RETAIL_SOURCES] +
                                  [dict(setting="news_risk_hours", value=CFG["news_risk_hours"])])
     T["updates_log"] = pd.DataFrame(LOG)
     for name, df in T.items():
@@ -1168,7 +1359,12 @@ def main():
         df = pt_columns(df)
         if name == "updates_log" and "latest" in df.columns: df["latest"] = date_or_pt_text(df["latest"]).values
         df.to_csv(os.path.join(OUT, name + ".csv"), index=False)
-    json.dump(dict(updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of="" if asof_fx is None else str(asof_fx.date()), label=LABEL,
+    live = retail[retail.status.isin(["live", "saved"])]
+    crowd_meta = dict(sources_in_order=[n for k, n, _ in RETAIL_SOURCES if RETAIL_CFG.get(k, True)],
+                      used={str(k): int(v) for k, v in live.source.value_counts().items()},
+                      markets_with_retail=int(len(live)), markets_checked=int(len(retail)),
+                      checked=retail_when(live.sort_values("status").iloc[0].to_dict()) if len(live) else "")
+    json.dump(dict(crowd=crowd_meta, updated_pt=NOW.strftime("%Y-%m-%d %H:%M PT"), prices_as_of="" if asof_fx is None else str(asof_fx.date()), label=LABEL,
                    tabs=sorted(set(T) | {"backtest"} if FEAT["backtest"] else set(T))), open(os.path.join(OUT, "meta.json"), "w"), indent=1)
     print("wrote %d tabs to %s" % (len(T), OUT))
     return T

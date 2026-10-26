@@ -43,5 +43,12 @@
     "trade_ideas_min_each_side": 5
   },
   "news_risk_hours": 24,
-  "calendar_lookback_days": 150
+  "calendar_lookback_days": 150,
+  "retail_sources": {
+    "_note": "Where the crowd numbers come from, tried in this order. Turn a source off with false.",
+    "ig_client_sentiment": true,
+    "myfxbook_widget": true,
+    "myfxbook_login": true,
+    "keep_saved_reading_hours": 6
+  }
 }

@@ -31,7 +31,7 @@ Top Setups also writes each of those points as its own factor, from -2 to +2: Tr
 |---|---|---|
 | Technicals (-3 to +3) | Trend score plus seasonality. Trend score: 3-day average vs 14-day average is +2 or -2, and becomes +1 or -1 when the 14-day average slopes the other way. Seasonality: +1 or -1 from the 10-year average of this month. | Yahoo Finance |
 | COT (-2 to +2) | For pairs: the sign of the weekly change in speculators' long % for the first currency, minus the same for the second. For everything else: the sign of net positioning plus the sign of the weekly change in long %. | CFTC legacy futures |
-| Crowd | For pairs: 60% or more of retail traders long scores -1, 40% or less scores +1. Currency indices use the currency against USD. Indices, metals and oil use the CBOE put/call ratio against its last 60 days: top 10% scores +2, top 35% scores +1, bottom 15% scores -1. | Myfxbook API, CBOE |
+| Crowd | Retail client sentiment, read as a contrarian signal: 60% or more of retail traders long scores -1, 40% or less scores +1. Currency indices use the currency against USD. Sources are tried market by market in this order: IG client sentiment (public IG market pages), the Myfxbook community outlook widget (public, no login), then the Myfxbook API if a login is saved. Each has an on/off switch under `retail_sources` in config.json. A market no source covers scores 0 and is marked "no retail data". US indices and commodities with no retail reading fall back to the CBOE put/call ratio. | IG, Myfxbook, CBOE |
 | Growth, Inflation, Jobs | Each latest release scores +1 if it beat the forecast and -1 if it missed (for unemployment and claims, lower is better). For pairs, the second country is subtracted line by line. For indices, oil and bitcoin, hot inflation counts against, and the rate line is the US 2-year yield trend (rising scores -1). For gold, all US lines are flipped. | Nasdaq economic calendar (actual and consensus) |
 | News risk (not scored) | Any high-impact event in the next 24 hours for either currency. Indices, gold and other assets use their home currency plus USD. Medium-impact events can be shown as a lighter tag. | Forex Factory weekly feed, with the Nasdaq calendar as a look-ahead past the end of the week |
 
@@ -62,18 +62,18 @@ Each one has its own switch in `config.json` (`features`), and all are on by def
 | `apps_script/LookerLink.gs` | Optional Sheet menu: set up tabs, refresh, and a Looker Studio link. |
 | `starter/` | The starter workbook for Google Sheets, plus today's snapshot. |
 | `render_samples.py`, `samples/` | Sample pictures of the v2 Top Setups and Scorecard. |
-| `data/` | Myfxbook snapshot, the seed Forex Factory week, and `forecast_log.csv`, a growing store of every forecast seen. |
+| `data/` | `retail_latest.csv` (the latest retail crowd reading, with source and time), the seed Forex Factory week, and `forecast_log.csv`, a growing store of every forecast seen. |
 | `cache/` | Downloaded raw data, kept between runs. |
 
 ## Secrets
 
-`MYFXBOOK_EMAIL` and `MYFXBOOK_PASSWORD` are read only from environment variables (GitHub repository secrets). They are never written to any file.
+`MYFXBOOK_EMAIL` and `MYFXBOOK_PASSWORD` are optional and only used by the last crowd fallback. They are read only from environment variables (GitHub repository secrets) and never written to any file. Live crowd data does not need them.
 
 ## Score history backfill
 `output/score_history.csv` keeps one row per symbol per day (last 730 days). Past days come from
 `cache/score_history_seed.csv`, built once by `python backfill_history.py --days 367 --recent-crowd-days 42 --calendar-dir <older Nasdaq calendar files>`
 with the same scoring code, point in time (prices to that day, COT reports released by that day, calendar releases
-on or before that day). Crowd is 0 for fx pairs and currency indices in the backfill (no free Myfxbook history), except the last `--recent-crowd-days` days, which use the saved Myfxbook reading;
+on or before that day). Retail crowd is 0 in the backfill (IG and Myfxbook have no free history), except the last `--recent-crowd-days` days, which use the saved reading in `data/retail_latest.csv`;
 indices, metals and oil use the cached CBOE put/call history. Live rows always win over seed rows for the same day.
 Dates in the pure date columns (score_history, cot_history, cot_report, econ_data, put_call: `date`; rates: `as_of`;
 spreads: `date`) are written as YYYYMMDD digits so Looker Studio can read them as Date (YYYYMMDD).

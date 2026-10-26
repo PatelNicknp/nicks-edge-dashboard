@@ -27,7 +27,7 @@
   const PARTS = [
     ["Technicals", "technicals", "Trend, plus whether this month is usually up or down"],
     ["COT", "cot", "Large speculators in futures"],
-    ["Crowd", "crowd", "Retail traders. Indexes and metals use put/call"],
+    ["Crowd", "crowd", "Retail traders, leaning the other way"],
     ["Growth", "growth", "Did the latest growth news beat the forecast?"],
     ["Inflation", "inflation", "Inflation and the policy rate"],
     ["Jobs", "jobs", "Jobs, unemployment and claims"],
@@ -35,6 +35,17 @@
 
   function foot(text) {
     return '<p class="pagefoot">' + text + "</p>";
+  }
+  // where the crowd numbers came from and when, from meta.json (written by the data job)
+  function crowdNote(ctx) {
+    if (!D.featureOn("feature.retail_sentiment")) return "Crowd: retail sentiment is turned off in Settings.";
+    const c = (ctx && ctx.meta && ctx.meta.crowd) || null;
+    if (!c || !c.checked) return "Crowd: no retail reading this hour, so the crowd scores 0.";
+    const used = c.used || {};
+    const names = Object.keys(used).sort((a, b) => used[b] - used[a]);
+    const extra = names.slice(1).map((n) => n + " for " + used[n]).join(", ");
+    return "Crowd source: " + c.checked + ". " + c.markets_with_retail + " of " + c.markets_checked +
+      " markets have a retail reading" + (extra ? " (" + extra + ")" : "") + ".";
   }
   function symLink(sym) {
     return '<a class="tk" href="scorecard.html?s=' + encodeURIComponent(sym) + '">' + D.esc(sym) + "</a>";
@@ -93,8 +104,8 @@
     if (title === "Inflation") return D.featureOn("feature.inflation");
     if (title === "Jobs") return D.featureOn("feature.jobs");
     if (title === "Crowd") {
-      if (kind === "fx" || kind === "ccy") return D.featureOn("feature.retail_sentiment");
-      return D.featureOn("feature.options_sentiment_for_indices");
+      if (D.featureOn("feature.retail_sentiment")) return true;
+      return kind !== "fx" && kind !== "ccy" && D.featureOn("feature.options_sentiment_for_indices");
     }
     return true;
   }
@@ -394,7 +405,7 @@
     box.addEventListener("change", draw);
     draw();
     ctx.page.insertAdjacentHTML("beforeend", foot(
-      "Score is the sum of the factor cells on the row. 7 or more is Very Bullish, 4 to 6 Bullish, −3 to +3 Neutral, −4 to −7 Bearish, −8 or less Very Bearish. A blue cell is positive, a red cell is negative, and a grey cell is zero. Grey can mean the reading was flat, or that the country has no free series (see Help). 1 Day Change is today’s score minus the score on the trading day before (on a weekend, Friday against Thursday). Turning Trend &amp; sentiment or Macro off hides that group and takes it out of the score on this page. Research screen, not a trade signal."
+      "Score is the sum of the factor cells on the row. 7 or more is Very Bullish, 4 to 6 Bullish, −3 to +3 Neutral, −4 to −7 Bearish, −8 or less Very Bearish. A blue cell is positive, a red cell is negative, and a grey cell is zero. Grey can mean the reading was flat, or that the country has no free series (see Help). 1 Day Change is today’s score minus the score on the trading day before (on a weekend, Friday against Thursday). Turning Trend &amp; sentiment or Macro off hides that group and takes it out of the score on this page. " + D.esc(crowdNote(ctx)) + " Research screen, not a trade signal."
     ));
   }
 
@@ -479,7 +490,7 @@
         banner +
         '<div class="score-top">' + top.join("") + "</div>" +
         '<div class="score-bot">' + bot.join("") + "</div>" +
-        foot("Each line inside a card is one reading. The badge is that part's score. " + (D.solidOn() ? "Blue helps the score, red hurts it." : "Green helps the score, red hurts it.") + " A high-impact event in the next 24 hours is flagged above and is not added into the score.");
+        foot("Each line inside a card is one reading. The badge is that part's score. " + (D.solidOn() ? "Blue helps the score, red hurts it." : "Green helps the score, red hurts it.") + " A high-impact event in the next 24 hours is flagged above and is not added into the score. " + D.esc(crowdNote(ctx)));
       const sel = ctx.page.querySelector("select");
       if (sel) sel.addEventListener("change", () => {
         symbol = sel.value;
@@ -623,36 +634,50 @@
     return { score: 0, words: "Balanced: no signal" };
   }
   function pageSentiment(ctx) {
-    const rows = (ctx.files["retail_sentiment.csv"] || []).slice()
-      .sort((a, b) => (D.num(b.long_pct) || 0) - (D.num(a.long_pct) || 0));
-    const src = rows[0] || {};
-    const live = String(src.source || "").toLowerCase().indexOf("live") === 0;
-    const showPutCall = D.featureOn("feature.options_sentiment_for_indices");
+    const all = ctx.files["retail_sentiment.csv"] || [];
+    const has = (r) => D.num(r.long_pct) != null;
+    const rows = all.filter(has).sort((a, b) => (D.num(b.long_pct) || 0) - (D.num(a.long_pct) || 0));
+    const none = all.filter((r) => !has(r));
+    const count = {};
+    rows.forEach((r) => { count[r.source] = (count[r.source] || 0) + 1; });
+    const names = Object.keys(count).sort((a, b) => count[b] - count[a]);
+    const primary = names[0] || "";
+    const lead = rows.find((r) => r.source === primary && r.status === "live") || rows.find((r) => r.source === primary) || {};
+    function srcWords(r) {
+      const bits = [];
+      if (r.source && r.source !== primary) bits.push("from " + r.source);
+      if (r.status === "saved") bits.push("saved reading" + (r.fetched_pt ? ", " + r.fetched_pt : ""));
+      return bits.length ? " (" + bits.join(", ") + ")" : "";
+    }
     const bars = rows.map((r) => {
       const lp = Math.max(0, Math.min(100, D.num(r.long_pct) || 0));
-      const sp = Math.max(0, Math.min(100, D.num(r.short_pct) || (100 - lp)));
+      const sp = Math.max(0, Math.min(100, D.num(r.short_pct) != null ? D.num(r.short_pct) : 100 - lp));
       const s = crowdSignal(r.long_pct);
-      const metal = r.symbol === "XAUUSD" || r.symbol === "XAGUSD";
-      const badge = metal ? (showPutCall ? D.fill("Put/call", "#5B6372") : D.noData("off")) : D.scoreFill(s.score, 2);
-      return '<div class="sigrow" style="grid-template-columns:72px minmax(0,1fr) auto"><span>' + D.esc(r.symbol) +
-        "</span>" + splitBar(lp, sp) + '<span class="sent-badge">' + badge + "</span></div>";
-    }).join("");
+      return '<div class="sigrow" style="grid-template-columns:80px minmax(0,1fr) auto"><span>' + D.esc(r.symbol) +
+        "</span>" + splitBar(lp, sp) + '<span class="sent-badge">' + D.scoreFill(s.score, 2) + "</span></div>";
+    }).join("") + none.map((r) =>
+      '<div class="sigrow" style="grid-template-columns:80px minmax(0,1fr) auto"><span>' + D.esc(r.symbol) +
+      '</span><span class="words">No retail data</span><span class="sent-badge">' + D.scoreFill(0, 2) + "</span></div>").join("");
     const sigs = rows.map((r) => {
       const s = crowdSignal(r.long_pct);
-      const metal = r.symbol === "XAUUSD" || r.symbol === "XAGUSD";
-      const words = metal ? (showPutCall ? "Retail only. Score uses put/call" : "Put/call is turned off in Settings") : s.words;
-      const badge = metal ? (showPutCall ? D.fill("–", "#5B6372") : D.noData("off")) : D.scoreFill(s.score, 2);
-      return '<div class="sigrow"><span>' + D.esc(r.symbol) + '</span><span class="words">' + D.esc(words) + "</span>" + badge + "</div>";
-    }).join("");
+      return '<div class="sigrow" style="grid-template-columns:80px minmax(0,1fr) auto"><span>' + D.esc(r.symbol) + '</span><span class="words">' +
+        D.esc(s.words + srcWords(r)) + "</span>" + D.scoreFill(s.score, 2) + "</div>";
+    }).join("") + none.map((r) =>
+      '<div class="sigrow" style="grid-template-columns:80px minmax(0,1fr) auto"><span>' + D.esc(r.symbol) +
+      '</span><span class="words">No retail data. Scores 0</span>' + D.scoreFill(0, 2) + "</div>").join("");
+    const others = names.slice(1).map((n) => n + " for " + count[n] + (count[n] === 1 ? " market" : " markets")).join(", ");
+    const cap = rows.length
+      ? "Source: " + primary + (lead.fetched_pt ? ". Checked " + lead.fetched_pt : "") + ". " + rows.length + " of " + all.length +
+        " markets have a reading" + (others ? ". Also used: " + others : "") + "."
+      : "No retail reading this hour. Every market scores 0.";
     ctx.page.innerHTML =
-      '<p class="cap">' + (live ? "Live Myfxbook reading." : "Snapshot from Myfxbook") +
-      (src.fetched_pt ? ", " + D.esc(src.fetched_pt) : "") + ".</p>" +
+      '<p class="cap">' + D.esc(cap) + "</p>" +
       '<div class="split"><section class="panel"><div class="phead"><div><div class="ptitle">Percent of traders long vs short</div>' +
       '<div class="psub">Green is long. Red is short. Most retail traders lose, so a crowded side is a warning.</div></div></div><div class="pbody">' +
       bars + '</div></section><section class="panel sent-read"><div class="phead"><div><div class="ptitle">Contrarian read</div>' +
       '<div class="psub">60% or more long scores −1. 40% or less long scores +1.</div></div></div><div class="pbody">' +
       sigs + "</div></section></div>" +
-      foot("Gold (XAUUSD) and silver (XAGUSD) are listed here because Myfxbook publishes them. Their score uses the put/call ratio instead of this retail reading.");
+      foot("Retail traders are people trading small accounts with brokers. We read IG client sentiment first, the share of IG client accounts that are long. If IG has no number for a market, the Myfxbook community outlook is used. The 8 currency indexes use each currency against the US dollar, so they are not listed here. A market with no retail data scores 0. Research screen, not a trade signal.");
   }
 
   function pageStrength(ctx) {
@@ -1375,8 +1400,11 @@
     const labels = {
       "feature.technicals": "Technicals",
       "feature.cot": "COT",
-      "feature.retail_sentiment": "Retail sentiment",
-      "feature.options_sentiment_for_indices": "Put/call for indexes and metals",
+      "feature.retail_sentiment": "Retail sentiment (crowd)",
+      "feature.options_sentiment_for_indices": "Put/call when an index or commodity has no retail reading",
+      "source.ig_client_sentiment": "Crowd source 1: IG client sentiment",
+      "source.myfxbook_widget": "Crowd source 2: Myfxbook community outlook",
+      "source.myfxbook_login": "Crowd source 3: Myfxbook with a login",
       "feature.economic_growth": "Economic growth",
       "feature.inflation": "Inflation",
       "feature.jobs": "Jobs",
@@ -1417,7 +1445,7 @@
       const note = String(r.note || "");
       const status = String(r.status || "").toUpperCase();
       const source = String(r.source || "");
-      if (/MYFXBOOK|myfxbook/i.test(note)) return "Snapshot. A live reading needs a Myfxbook login.";
+      if (/no Myfxbook login saved/i.test(note)) return "Skipped. No Myfxbook login is saved, and none is needed.";
       if (/fred|stlouisfed|timed out|timeout/i.test(note) || (/rate|yield|spread/i.test(source) && status === "CACHED" && /http|error|fail/i.test(note))) {
         return "FRED didn't answer. Showing the last saved values.";
       }
@@ -1431,8 +1459,9 @@
     }
     const helpHtml = help.map((r) =>
       '<div class="help-block"><h2>' + D.esc(r.topic) + "</h2><p>" + D.esc(r.plain_english) + "</p></div>").join("");
-    const switches = settings.filter((r) => String(r.setting || "").indexOf("feature.") === 0);
-    const scores = settings.filter((r) => String(r.setting || "").indexOf("feature.") !== 0);
+    const isSwitch = (r) => /^(feature|source)\./.test(String(r.setting || ""));
+    const switches = settings.filter(isSwitch);
+    const scores = settings.filter((r) => !isSwitch(r));
     const setHtml = switches.map((r) =>
       '<div class="setrow"><span>' + D.esc(labels[r.setting] || r.setting) + "</span>" + onOff(r.value) + "</div>").join("");
     const scoreHtml = scores.map((r) =>
@@ -1527,7 +1556,7 @@
     box.addEventListener("change", draw);
     draw();
     ctx.page.insertAdjacentHTML("beforeend", foot(
-      "The same scores as Top setups, in three group totals. Tech is trend plus seasonality. COT + crowd is big speculators plus the retail crowd. Macro is the 14 economic factors added up. Tap a symbol for its scorecard. Research screen, not a trade signal."
+      "The same scores as Top setups, in three group totals. Tech is trend plus seasonality. COT + crowd is big speculators plus the retail crowd. Macro is the 14 economic factors added up. Tap a symbol for its scorecard. " + D.esc(crowdNote(ctx)) + " Research screen, not a trade signal."
     ));
   }
 
@@ -1627,7 +1656,7 @@
     box.addEventListener("change", draw);
     draw();
     ctx.page.insertAdjacentHTML("beforeend", foot(
-      "Each bar is one market's total score, the same number as on Top setups. Research screen, not a trade signal."
+      "Each bar is one market's total score, the same number as on Top setups. " + D.esc(crowdNote(ctx)) + " Research screen, not a trade signal."
     ));
   }
 
@@ -1660,7 +1689,7 @@
       '<section class="panel"><div class="phead"><div><div class="ptitle">Strongest bearish setups</div><div class="psub">' +
       D.esc(strongBear ? "Score of " + D.signed(bearAt) + " or less." : "Fewer than 5 at " + D.signed(bearAt) + " or less, so this shows the bottom 5.") +
       '</div></div></div><div class="pbody">' + list("Bearish") + "</div></section></div>" +
-      foot("Each reason is built from the factor cells on Top setups. It lists what pushes the score one way and what works against it. Research screen, not a trade signal.");
+      foot("Each reason is built from the factor cells on Top setups. It lists what pushes the score one way and what works against it. " + D.esc(crowdNote(ctx)) + " Research screen, not a trade signal.");
   }
 
   window.DESK_PAGES = {
