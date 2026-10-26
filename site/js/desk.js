@@ -21,6 +21,7 @@
   const NAV = [
     ["Scores", [
       ["Top setups", "index.html", "top"],
+      ["Top Setups AI Method", "top-ai-method.html", "aimethod"],
       ["Top setups (Compact)", "top-compact.html", "topcompact"],
       ["Top setups (Macro only)", "top-macro.html", "topmacro"],
       ["Top setups indicator", "top-indicator.html", "topind"],
@@ -60,6 +61,7 @@
     return featureOn("feature.economic_growth") || featureOn("feature.inflation") || featureOn("feature.jobs");
   }
   const FEATURE = {
+    aimethod: "feature.ai_method_page",
     topcompact: "feature.top_setups_compact",
     topmacro: "feature.top_setups_macro_only",
     topind: "feature.top_setups_indicator",

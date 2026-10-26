@@ -1456,6 +1456,16 @@
       "scoring.bearish_at": "Bearish at",
       "scoring.very_bearish_at": "Very bearish at",
       "news_risk_hours": "News window, hours",
+      "feature.ai_method_page": "Top Setups AI Method page",
+      "ai_method.policy": "AI Method: policy edge",
+      "ai_method.yield_gap": "AI Method: 2-year yield gap",
+      "ai_method.data_momentum": "AI Method: data momentum",
+      "ai_method.risk_mood": "AI Method: risk mood",
+      "ai_method.positioning": "AI Method: positioning (COT)",
+      "ai_method.structure": "AI Method: chart structure",
+      "ai_method.commodities": "AI Method: commodities (off by default)",
+      "ai_method.yield_gap_band_bp": "AI Method: 2-year gap move that counts, in basis points",
+      "ai_method.yield_gap_days": "AI Method: 2-year gap lookback, in days",
     };
     function plainNote(r) {
       const note = String(r.note || "");
@@ -1475,7 +1485,8 @@
     }
     const helpHtml = help.map((r) =>
       '<div class="help-block"><h2>' + D.esc(r.topic) + "</h2><p>" + D.esc(r.plain_english) + "</p></div>").join("");
-    const isSwitch = (r) => /^(feature|source)\./.test(String(r.setting || ""));
+    const isSwitch = (r) => /^(feature|source)\./.test(String(r.setting || "")) ||
+      (/^ai_method\./.test(String(r.setting || "")) && /^(true|false)$/i.test(String(r.value)));
     const switches = settings.filter(isSwitch);
     const scores = settings.filter((r) => !isSwitch(r));
     const setHtml = switches.map((r) =>
@@ -1708,8 +1719,156 @@
       foot("Each reason is built from the factor cells on Top setups. It lists what pushes the score one way and what works against it. " + D.esc(crowdNote(ctx)) + " Research screen, not a trade signal.");
   }
 
+
+  // ---------------------------------------------------------------- Top Setups AI Method: a separate fundamental bias checklist
+  const AIM_FACTORS = [
+    ["policy", "f_policy", "Policy", "Policy edge"],
+    ["yield_gap", "f_yield", "2Y gap", "2-year yield gap"],
+    ["data_momentum", "f_data", "Data", "Data momentum"],
+    ["risk_mood", "f_risk", "Risk", "Risk mood"],
+    ["positioning", "f_pos", "COT", "Positioning"],
+    ["structure", "f_struct", "Chart", "Chart structure"],
+    ["commodities", "f_cmdty", "Cmdty", "Commodities"],
+  ];
+  const AIM_RANK = { "Strong Bullish": 5, "Bullish": 4, "No trade": 3, "Bearish": 2, "Strong Bearish": 1 };
+  function aimOn(ctx, key) {
+    const row = (ctx.settings || []).find(function (r) { return r.setting === "ai_method." + key; });
+    if (!row) return key !== "commodities";
+    return String(row.value).toLowerCase() === "true";
+  }
+  function aimVerdictCls(v) {
+    if (/strong bull/i.test(v)) return "sbull";
+    if (/bull/i.test(v)) return "bull";
+    if (/strong bear/i.test(v)) return "sbear";
+    if (/bear/i.test(v)) return "bear";
+    return "none";
+  }
+  function pageAiMethod(ctx) {
+    const all = (ctx.files["ai_method.csv"] || []).slice();
+    const srcs = ctx.files["ai_method_sources.csv"] || [];
+    const info = {};
+    (ctx.files["ai_method_info.csv"] || []).forEach(function (r) { info[r.key] = r.value; });
+    const cols = AIM_FACTORS.filter(function (f) { return aimOn(ctx, f[0]); });
+    const counts = { bull: 0, bear: 0, none: 0 };
+    all.forEach(function (r) {
+      const c = aimVerdictCls(r.verdict);
+      if (c === "none") counts.none++; else if (/bull/.test(c)) counts.bull++; else counts.bear++;
+    });
+    const updated = all.length ? all[0].updated_pt : "";
+    ctx.page.insertAdjacentHTML("beforeend",
+      '<section class="panel aim-how"><div class="phead"><div><div class="ptitle">How this works</div>' +
+      '<div class="psub">A simple checklist for the 29 currency pairs. It is separate from the Top setups score.</div></div></div><div class="pbody">' +
+      '<p class="aim-rule">Bias picks the direction, the chart picks the entry. Mixed signals means no trade.</p>' +
+      "<ul class=\"aim-list\">" +
+      "<li>Each pair gets a few quick checks. Each check is <b>+1</b> (helps the first currency), <b>0</b> (no help either way) or <b>−1</b> (helps the second currency).</li>" +
+      "<li><b>Policy</b>: is the first currency's central bank more likely to raise rates than the second one's?</li>" +
+      "<li><b>2Y gap</b>: did the gap between the two countries' 2-year bond yields move toward the first currency in the last 4 weeks?</li>" +
+      "<li><b>Data</b>: has the first country's economic news (GDP, PMIs, retail sales, inflation, jobs) beaten forecasts more often?</li>" +
+      "<li><b>Risk</b>: when markets are calm and hopeful, AUD, NZD, CAD, GBP and ZAR tend to do well. When markets are scared, USD, JPY and CHF tend to do well.</li>" +
+      "<li><b>COT</b>: big speculators in futures. If everyone is already on our side, there is less fuel left, so it counts against. If they are not stretched, or just turned our way, it counts for.</li>" +
+      "<li><b>Chart</b>: is the price above this week's open and making higher highs and higher lows (or the mirror for down)?</li>" +
+      (aimOn(ctx, "commodities") ? "<li><b>Cmdty</b>: oil for CAD, copper for AUD, gold for ZAR. NZD has no free dairy price, so it is 0.</li>" : "") +
+      "<li>Add them up. <b>+3 or more</b> is Bullish, <b>−3 or less</b> is Bearish, anything in between is <b>No trade</b>. Strong and High conviction mean Policy, 2Y gap and Risk all point the same way.</li>" +
+      "</ul><p class=\"aim-warn\">This is a checklist, not a proven signal. Research only. It sends no alerts.</p></div></section>");
+    ctx.page.insertAdjacentHTML("beforeend",
+      '<div class="aim-stats">' +
+      '<div class="aim-stat"><span>Risk mood</span><b>' + D.esc(info.risk_mood || "n/a") + "</b></div>" +
+      '<div class="aim-stat"><span>Bullish</span><b class="up">' + counts.bull + "</b></div>" +
+      '<div class="aim-stat"><span>Bearish</span><b class="dn">' + counts.bear + "</b></div>" +
+      '<div class="aim-stat"><span>No trade</span><b>' + counts.none + "</b></div></div>");
+    const box = document.createElement("div");
+    box.className = "ctrls";
+    box.innerHTML =
+      '<label class="ctl"><span class="lab">Pair</span><input data-filter="q" type="search" placeholder="Search" autocomplete="off"></label>' +
+      D.selectHtml("verdict", "Verdict", ["Strong Bullish", "Bullish", "No trade", "Bearish", "Strong Bearish"], "", true) +
+      '<label class="check"><input type="checkbox" data-filter="hc"> High conviction only</label>';
+    const host = document.createElement("div");
+    host.className = "panel";
+    ctx.page.appendChild(box);
+    ctx.page.appendChild(host);
+    const tip = document.createElement("div");
+    const state = { sort: "total", dir: "desc" };
+    function val(r, key) {
+      if (key === "total" || key === "_main") return intOf(r.total) * 10 + (AIM_RANK[r.verdict] || 0);
+      if (key === "verdict") return AIM_RANK[r.verdict] || 0;
+      if (key === "high_conviction") return r.high_conviction ? 1 : 0;
+      return intOf(r[key]);
+    }
+    function cellHtml(r, f) {
+      const n = intOf(r[f[1]]);
+      const why = r[f[1] + "_why"] || "";
+      const nodata = f[1] === "f_yield" && intOf(r.f_yield_nodata) === 1;
+      const cls = nodata ? "nod" : n > 0 ? "pos" : n < 0 ? "neg" : "zero";
+      return '<td class="aimf ' + cls + '" title="' + D.esc(f[3] + ": " + why) + '" data-why="' + D.esc(f[3] + ": " + why) + '" data-sym="' + D.esc(r.symbol) + '">' +
+        (nodata ? "0<i>no free data</i>" : D.esc(D.signed(n) || "0")) + "</td>";
+    }
+    function draw() {
+      const q = D.fieldVal(box, "q").trim().toLowerCase();
+      const v = D.fieldVal(box, "verdict");
+      const hc = D.checked(box, "hc");
+      const rows = sortBy(all.filter(function (r) {
+        if (q && String(r.symbol).toLowerCase().indexOf(q) < 0) return false;
+        if (v && r.verdict !== v) return false;
+        if (hc && !r.high_conviction) return false;
+        return true;
+      }), state, val);
+      const head = sortHead(state, "symbol", "Pair", "sym") + sortHead(state, "total", "Total", "c") +
+        sortHead(state, "verdict", "Verdict", "c") + sortHead(state, "high_conviction", "High<br>conviction", "c") +
+        cols.map(function (f) { return sortHead(state, f[1], D.esc(f[2]), "c"); }).join("");
+      const body = rows.map(function (r) {
+        const t = intOf(r.total);
+        return '<tr><td class="sym">' + D.esc(r.symbol) + '</td><td class="aimt ' + (t > 0 ? "pos" : t < 0 ? "neg" : "zero") + '">' + D.esc(D.signed(t) || "0") + "</td>" +
+          '<td class="c"><span class="aimv ' + aimVerdictCls(r.verdict) + '">' + D.esc(r.verdict) + "</span></td>" +
+          '<td class="c">' + (r.high_conviction ? '<span class="aimhc">High conviction</span>' : '<span class="mut">–</span>') + "</td>" +
+          cols.map(function (f) { return cellHtml(r, f); }).join("") + "</tr>";
+      }).join("");
+      host.innerHTML = '<div class="aim-tip" hidden></div><div class="scroll"><table class="aim"><thead><tr>' + head + "</tr></thead><tbody>" + body +
+        "</tbody></table></div>" + (rows.length ? "" : '<div class="empty">No pairs match these filters.</div>') +
+        '<div class="swipe-count">' + rows.length + (rows.length === 1 ? " pair" : " pairs") + ". Tap or hover a coloured cell to see why.</div>";
+      bindSort(host, state, draw);
+      D.markScroll(host);
+      const tipEl = host.querySelector(".aim-tip");
+      host.querySelectorAll("td.aimf").forEach(function (td) {
+        td.addEventListener("click", function () {
+          host.querySelectorAll("td.aimf.sel").forEach(function (x) { x.classList.remove("sel"); });
+          td.classList.add("sel");
+          tipEl.innerHTML = "<b>" + D.esc(td.getAttribute("data-sym")) + "</b> " + D.esc(td.getAttribute("data-why"));
+          tipEl.hidden = false;
+        });
+      });
+    }
+    box.addEventListener("input", draw);
+    box.addEventListener("change", draw);
+    draw();
+    // sources and update time
+    const kindTxt = { "2y": "2-year yield", proxy: "Proxy (not a 2-year yield)", missing: "No free data" };
+    const srcRows = srcs.map(function (r) {
+      const cls = r.kind === "2y" ? "" : r.kind === "proxy" ? "aim-proxy" : "aim-miss";
+      const saved = r.status && r.status !== "OK" && !/saved copy/i.test(r.source || "") ? " (saved copy)" : "";
+      return '<tr><td>' + D.esc(r.currency) + '</td><td class="wrap aim-srccell"><b class="' + cls + '">' + D.esc(kindTxt[r.kind] || r.kind) + "</b>" +
+        '<span>' + D.esc(r.source) + D.esc(saved) + "</span></td>" +
+        '<td class="num">' + (D.isBlank(r.level) ? D.na() : D.esc(D.fmt(r.level, 2) + "%")) + "</td>" +
+        '<td class="num">' + (D.isBlank(r.change_4w) ? D.na() : D.esc(D.signed(r.change_4w, 2))) + "</td>" +
+        "<td>" + D.esc(D.shortDate(r.as_of) || "–") + "</td></tr>";
+    }).join("");
+    ctx.page.insertAdjacentHTML("beforeend",
+      '<section class="panel"><div class="phead"><div><div class="ptitle">Data sources</div><div class="psub">Updated ' +
+      D.esc(updated || "n/a") + ". Free sources only, checked every hour.</div></div></div><div class=\"pbody aim-src\">" +
+      "<p><b>Risk mood:</b> " + D.esc(info.risk_mood || "n/a") + ". " + D.esc(info.risk_detail || "") + ".</p>" +
+      "<p><b>Policy:</b> central bank rate forecasts from the free Trading Economics forecast page" + (info.rate_forecast_checked ? ", checked " + D.esc(info.rate_forecast_checked) + " PT" : "") + ".</p>" +
+      "<p><b>Data:</b> latest releases against the forecast, Nasdaq economic calendar. <b>COT:</b> CFTC weekly report" + (info.cot_report ? " of " + D.esc(info.cot_report) : "") +
+      ". <b>Chart</b>" + (aimOn(ctx, "commodities") ? " and <b>Cmdty</b>" : "") + ": Yahoo Finance daily prices" + (info.prices_as_of ? " to " + D.esc(info.prices_as_of) : "") + ".</p>" +
+      (srcRows ? '<p><b>2-year yields</b> (change over about 4 weeks; a move under ' + D.esc(D.fmt(info.yield_band_pct || 0.05, 2)) + " points scores 0):</p>" +
+        '<div class="scroll"><table class="aim-srct"><thead><tr><th>Ccy</th><th>Source</th><th class="num">Level</th><th class="num">4 wk</th><th>As of</th></tr></thead><tbody>' +
+        srcRows + "</tbody></table></div>" : "") +
+      "</div></section>");
+    ctx.page.insertAdjacentHTML("beforeend", foot(
+      "Total is the sum of the coloured cells. Green helps the first currency, red helps the second, grey is 0. A grey cell marked no free data means no free number was found, so it counts as 0. Research screen, not a trade signal."));
+  }
+
   window.DESK_PAGES = {
     top: { kicker: "Ranked by score. Each factor is −2 to +2.", files: [], optional: ["top_summary.csv"], render: pageTop },
+    aimethod: { kicker: "A fundamental bias checklist for the 29 currency pairs. Separate from the Top setups score.", files: [], optional: ["ai_method.csv", "ai_method_sources.csv", "ai_method_info.csv"], render: pageAiMethod },
     topcompact: { kicker: "Symbol, bias, score and the three group totals. Fits a phone.", files: [], render: pageTopCompact },
     topmacro: { kicker: "Only the economic data, ranked by its total.", files: [], render: pageTopMacro },
     topind: { kicker: "Every market's score as one sorted bar.", files: [], render: pageTopIndicator },

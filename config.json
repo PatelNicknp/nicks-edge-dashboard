@@ -28,7 +28,8 @@
     "trade_ideas": true,
     "interest_rate_forecast": true,
     "two_year_yield_7day": true,
-    "carry_policy_rates": true
+    "carry_policy_rates": true,
+    "ai_method_page": true
   },
   "scoring": {
     "seasonality_points_fx": 1,
@@ -64,5 +65,17 @@
     "_note": "Self-healing schedule. watchdog true = a small job checks a few times an hour and starts the hourly update if no run started in the last update_overdue_minutes. false = only GitHub's own cron.",
     "watchdog": true,
     "update_overdue_minutes": 70
+  },
+  "ai_method": {
+    "_note": "Top Setups AI Method page. ai_method_page (under features) turns the whole page on or off. Each factor has its own switch. commodities is off by default; when off it has no column and adds nothing to the total. yield_gap_band_bp: a 2-year gap move smaller than this (in basis points) scores 0.",
+    "policy": true,
+    "yield_gap": true,
+    "data_momentum": true,
+    "risk_mood": true,
+    "positioning": true,
+    "structure": true,
+    "commodities": false,
+    "yield_gap_band_bp": 5,
+    "yield_gap_days": 28
   }
 }
