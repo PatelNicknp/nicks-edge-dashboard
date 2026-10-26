@@ -2,7 +2,7 @@
 
 Research screen, not a trade signal.
 
-This takes about 30 minutes of clicking, plus building the pages, all free. You only sign in to three places: GitHub, Google and (if you want live crowd data) Myfxbook. Nothing here needs a credit card.
+This takes about 30 minutes of clicking, plus building the pages, all free. You only sign in to two places: GitHub and Google. Nothing here needs a credit card.
 
 What you need: the file `nicks-edge-dashboard.zip` (unzip it first) and a computer with a web browser.
 
@@ -31,8 +31,8 @@ What you need: the file `nicks-edge-dashboard.zip` (unzip it first) and a comput
    - Click "Settings" (top of the repository), then "Actions", then "General".
    - Scroll to "Workflow permissions", choose "Read and write permissions", and click "Save".
 
-6. **(Optional) Add your Myfxbook login for live crowd numbers** (about 5 minutes).
-   - Without this, the crowd part uses the saved snapshot from Oct 23.
+6. **(Optional, not needed) Add a Myfxbook login** (about 5 minutes).
+   - Live crowd numbers come from IG client sentiment and the free Myfxbook widget, with no login. A login is only a last backup.
    - If you have no Myfxbook account, make a free one at myfxbook.com.
    - In GitHub, click "Settings", then "Secrets and variables", then "Actions", then "New repository secret".
    - Add one secret named `MYFXBOOK_EMAIL` with your Myfxbook email.
