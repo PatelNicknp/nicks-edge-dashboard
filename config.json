@@ -59,5 +59,10 @@
   "rate_forecast_max_age_days": 14,
   "_rate_note": "interest_rate_forecast: score each currency's policy rate against the central bank forecast (EdgeFinder rule). Off = score the rate decision against its consensus. interest_rate_forecast_column 1 = the first quarter shown (end of this quarter).",
   "_two_year_note": "two_year_yield_7day: score the US 2-year yield like EdgeFinder (latest yield against its 7-day average; the USD Index uses it too). Off = the old rule (21-day average now against 5 days ago). two_year_avg_days sets the 7.",
-  "_carry_note": "carry_policy_rates: carry and real yields use each central bank's policy rate from the Trading Economics forecast page. Off, or if the page has no number, = the FRED series."
+  "_carry_note": "carry_policy_rates: carry and real yields use each central bank's policy rate from the Trading Economics forecast page. Off, or if the page has no number, = the FRED series.",
+  "self_heal_schedule": {
+    "_note": "Self-healing schedule. watchdog true = a small job checks a few times an hour and starts the hourly update if no run started in the last update_overdue_minutes. false = only GitHub's own cron.",
+    "watchdog": true,
+    "update_overdue_minutes": 70
+  }
 }

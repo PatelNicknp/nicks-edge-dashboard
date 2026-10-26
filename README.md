@@ -53,12 +53,30 @@ Each one has its own switch in `config.json` (`features`), and all are on by def
 
 `solid_score_cells` colors score cells like EdgeFinder: solid blue when positive, red when negative, dark grey at zero. `extra_markets` adds the 7 markets added in this version.
 
+## Self-healing schedule
+
+GitHub's own cron sometimes skips or delays scheduled runs. Three layers keep the hourly update going, all inside GitHub:
+
+1. **The normal cron** in `update.yml` (7 minutes past every hour).
+2. **A watchdog** (`.github/workflows/watchdog.yml`). It wakes at 11, 22, 37, 41 and 52 minutes past the hour, looks up the last `update.yml` run through the GitHub API, and starts a new one with "Run workflow" only if no run started in the last 70 minutes and nothing is already queued or running. It uses the built-in `GITHUB_TOKEN`, so no extra secret is needed.
+3. **A concurrency group** (`edge-update`), so two updates never overlap or pile up.
+
+Switches in `config.json` under `self_heal_schedule`:
+
+- `watchdog`: `true` or `false`. Set `false` to go back to GitHub's cron only.
+- `update_overdue_minutes`: how late a run must be before the watchdog starts one (70).
+
+To test it by hand, open Actions, pick "Schedule watchdog", press "Run workflow", and set a small "overdue_minutes" (tick "dry_run" to only see what it would do). The run summary says when it started an update.
+
+GitHub turns off scheduled workflows in a public repo after 60 days with no repo activity. The hourly data commits count as activity, so this does not apply while the update keeps saving data.
+
 ## Files
 
 | Path | What it is |
 |---|---|
 | `edge_job.py` | The whole hourly job. `--offline` runs from the cache only. |
 | `config.json` | On/off switches and thresholds. |
+| `.github/workflows/watchdog.yml` | Starts the hourly update if GitHub skipped it. |
 | `calibrate.py` | Compares our scores with EdgeFinder readings from Oct 23 2026 (`tests/edgefinder_reference.csv`). |
 | `tests/test_job.py` | End-to-end test. Run with `python tests/test_job.py`. |
 | `apps_script/LookerLink.gs` | Optional Sheet menu: set up tabs, refresh, and a Looker Studio link. |

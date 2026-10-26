@@ -1,0 +1,72 @@
+name: Schedule watchdog
+# Self-healing schedule. GitHub's cron sometimes skips or delays runs.
+# This small job wakes up several times an hour and starts the hourly update
+# only when it is overdue and nothing is already queued or running.
+# Turn it off with self_heal_schedule.watchdog in config.json.
+on:
+  schedule:
+    - cron: "22,52 * * * *"
+    - cron: "37 * * * *"
+    - cron: "11,41 * * * *"
+  workflow_dispatch:
+    inputs:
+      overdue_minutes:
+        description: "Test only: use this overdue limit instead of config.json"
+        required: false
+        default: ""
+      dry_run:
+        description: "Only report, do not start a run"
+        type: boolean
+        default: false
+permissions:
+  actions: write
+  contents: read
+concurrency:
+  group: edge-watchdog
+  cancel-in-progress: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: config.json
+          sparse-checkout-cone-mode: false
+      - name: Start the hourly update if it is overdue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          BRANCH: ${{ github.event.repository.default_branch }}
+          OVERRIDE: ${{ inputs.overdue_minutes }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          WF=update.yml
+          on=$(jq -r '.self_heal_schedule.watchdog // true' config.json)
+          limit=$(jq -r '.self_heal_schedule.update_overdue_minutes // 70' config.json)
+          [ -n "${OVERRIDE:-}" ] && limit="$OVERRIDE"
+          if [ "$on" != "true" ]; then
+            echo "Watchdog is off in config.json. Nothing to do."; exit 0
+          fi
+          state=$(gh api "repos/$REPO/actions/workflows/$WF" -q .state)
+          if [ "$state" != "active" ]; then
+            echo "$WF is $state. Not starting it."; exit 0
+          fi
+          runs=$(gh api "repos/$REPO/actions/workflows/$WF/runs?per_page=20")
+          busy=$(echo "$runs" | jq '[.workflow_runs[] | select(.status != "completed")] | length')
+          if [ "$busy" -gt 0 ]; then
+            echo "A run is already queued or running. Nothing to do."; exit 0
+          fi
+          last=$(echo "$runs" | jq -r '.workflow_runs[0].created_at // "1970-01-01T00:00:00Z"')
+          age=$(( ( $(date -u +%s) - $(date -u -d "$last" +%s) ) / 60 ))
+          echo "Last run started $last, $age minutes ago. Limit is $limit minutes."
+          if [ "$age" -le "$limit" ]; then
+            echo "Not overdue. Nothing to do."; exit 0
+          fi
+          if [ "${DRY_RUN:-false}" = "true" ]; then
+            echo "Overdue. Dry run, so not starting it."; exit 0
+          fi
+          gh workflow run "$WF" -R "$REPO" --ref "$BRANCH"
+          echo "Overdue. Started $WF on $BRANCH."
+          echo "Started $WF on $BRANCH: last run was $age minutes ago (limit $limit)." >> "$GITHUB_STEP_SUMMARY"
