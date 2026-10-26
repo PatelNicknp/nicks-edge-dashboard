@@ -1,9 +1,9 @@
-currency,rate,as_of,series,cpi_yoy,real_rate
-USD,3.88,20261021,DFF,3.7,0.18
-EUR,2.5,20261023,ECBDFR,3.8,-1.3
-GBP,3.734,20261021,IUDSOIA,3.5,0.234
-JPY,1.043,20260901,IRSTCI01JPM156N,2.1,-1.057
-CAD,2.238,20260901,IRSTCI01CAM156N,3.1,-0.862
-AUD,4.35,20260901,IRSTCI01AUM156N,4.0,0.35
-NZD,3.13,20260901,IR3TIB01NZM156N,3.7,-0.57
-CHF,-0.041,20260901,IR3TIB01CHM156N,1.0,-1.041
+currency,rate,as_of,series,cpi_yoy,real_rate,policy_rate,forecast_quarter,policy_rate_forecast,rate_score,forecast_source
+USD,3.88,20261021,DFF,3.7,0.18,4.0,Q4/26,4.25,1,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+EUR,2.5,20261023,ECBDFR,3.8,-1.3,2.65,Q4/26,2.9,1,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+GBP,3.734,20261021,IUDSOIA,3.5,0.234,3.75,Q4/26,4.0,1,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+JPY,1.043,20260901,IRSTCI01JPM156N,2.1,-1.057,1.25,Q4/26,1.25,0,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+CAD,2.238,20260901,IRSTCI01CAM156N,3.1,-0.862,2.25,Q4/26,2.5,1,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+AUD,4.35,20260901,IRSTCI01AUM156N,4.0,0.35,4.6,Q4/26,4.85,1,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+NZD,3.13,20260901,IR3TIB01NZM156N,3.7,-0.57,2.75,Q4/26,3.0,1,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
+CHF,-0.041,20260901,IR3TIB01CHM156N,1.0,-1.041,0.0,Q4/26,0.0,0,"Trading Economics forecast, checked 2026-10-25 20:36 PT"
