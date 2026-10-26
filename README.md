@@ -27,6 +27,8 @@ Score = Technicals + COT + Crowd + Growth + Inflation + Jobs.
 
 Top Setups also writes each of those points as its own factor, from -2 to +2: Trend, Seasonality, COT, Crowd, and 14 macro prints (GDP, manufacturing PMI, services PMI, retail sales, consumer confidence, CPI, PPI, PCE, interest rates, employment change, unemployment, claims, ADP, JOLTS). `output/factor_coverage.csv` says which countries have a free series. A missing series scores 0. 1 Day Change is today's score minus the score on the previous trading day (on a weekend, Friday against Thursday). The six grouped columns are unchanged.
 
+Interest rates are scored like EdgeFinder: each currency is +1 if the central bank forecast for the end of this quarter is above today's policy rate, -1 if below, 0 if the same, and a pair is the first currency minus the second. The forecasts come from the free Trading Economics forecast page (`cache/rate_forecasts.csv` keeps the last copy). Switch: `features.interest_rate_forecast` in `config.json`. Off = the old rule (rate decision against its consensus).
+
 | Part | Rule | Source |
 |---|---|---|
 | Technicals (-3 to +3) | Trend score plus seasonality. Trend score: 3-day average vs 14-day average is +2 or -2, and becomes +1 or -1 when the 14-day average slopes the other way. Seasonality: +1 or -1 from the 10-year average of this month. | Yahoo Finance |
