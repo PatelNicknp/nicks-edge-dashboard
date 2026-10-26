@@ -46,6 +46,7 @@ Each one has its own switch in `config.json` (`features`), and all are on by def
 | Page | Switch | What it shows |
 |---|---|---|
 | Top setups | `top_setups_summary` | The full table, with a short summary box built from simple rules (no AI). |
+| Top Setups AI Method | `ai_method_page` | A separate checklist for the 29 currency pairs (does not change the Top setups score). Six factors, each +1, 0 or -1, base minus quote: policy edge (rate forecasts), 2-year yield gap momentum (about 4 weeks, 5 bp band), data momentum, risk mood (VIX, S&P 500 vs 50-day, high-yield spread), COT positioning (3-year percentile) and chart structure. Optional commodities factor. +3 Bullish, -3 Bearish, in between No trade; Strong and High conviction when policy, yield gap and risk agree. Code in `ai_method.py`. Per factor switches under `ai_method` in `config.json` (`policy`, `yield_gap`, `data_momentum`, `risk_mood`, `positioning`, `structure` on; `commodities` off). |
 | Top setups (Compact) | `top_setups_compact` | Symbol, Bias, Score and the three subtotals. Fits an iPhone without sideways scroll. |
 | Top setups (Macro only) | `top_setups_macro_only` | Markets ranked by the macro score (Growth + Inflation + Jobs). |
 | Top setups indicator | `top_setups_indicator` | A sorted bar chart of every score. |
@@ -77,6 +78,7 @@ GitHub turns off scheduled workflows in a public repo after 60 days with no repo
 | `edge_job.py` | The whole hourly job. `--offline` runs from the cache only. |
 | `config.json` | On/off switches and thresholds. |
 | `.github/workflows/watchdog.yml` | Starts the hourly update if GitHub skipped it. |
+| `ai_method.py` | The Top Setups AI Method page: 2-year yields (FRED, Bundesbank, Bank of Canada, RBA, Japan MOF, Trading Economics pages for UK, Switzerland and New Zealand, FRED 3-month proxy for South Africa), risk mood and the six factor scores. Writes `ai_method.csv`, `ai_method_sources.csv`, `ai_method_info.csv`. |
 | `calibrate.py` | Compares our scores with EdgeFinder readings from Oct 23 2026 (`tests/edgefinder_reference.csv`). |
 | `tests/test_job.py` | End-to-end test. Run with `python tests/test_job.py`. |
 | `apps_script/LookerLink.gs` | Optional Sheet menu: set up tabs, refresh, and a Looker Studio link. |

@@ -1193,6 +1193,14 @@ HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simpl
         ("Carry and real yields", "Carry is what you earn for holding a pair: the first currency's interest rate minus the second one's. The rate for every currency is its central bank policy rate, from the same free Trading Economics page the Interest rate score uses. The real yield is that rate minus the latest yearly inflation (CPI). If the page has no number for a currency, the FRED rate is used instead and the Carry page says so. You can switch this off in config.json (carry_policy_rates)."),
         ("Where the rate and yield numbers come from", "FRED (the St. Louis Fed) for the US 2-year and 10-year yields, the US real yield and breakeven inflation, and credit spreads. Each one has a free backup if FRED does not answer: the US Treasury for yields, the New York Fed for the US overnight rate, the ECB for the euro deposit rate, and the Bank of England for SONIA. Credit spreads have no free backup, so the last saved values are shown. The Updates log says which source was used each hour."),
         ("USDZAR interest rate", "USDZAR can differ from EdgeFinder on interest rates. Both the Fed and the South African Reserve Bank have a higher forecast than today's rate on the free Trading Economics page (US 4.00% to 4.25%, South Africa 7.25% to 7.50% by the end of this quarter), so here they cancel out to 0. EdgeFinder showed +1 on Oct 24, so its South Africa forecast was likely flat. This is a difference in the data source, not in the rule."),
+        ("Top Setups AI Method", "A separate page with its own checklist for the 29 currency pairs. It does not change the Top Setups score. Six checks, each +1, 0 or -1, base currency minus quote currency: policy edge, 2-year yield gap momentum, data momentum, risk mood, positioning and chart structure. A commodities check can be switched on too (off by default). The total is the sum. +3 or more is Bullish, +4 or more with policy, yield gap and risk all agreeing is Strong Bullish. -3 or less is Bearish, -4 or less with all three agreeing is Strong Bearish. Anything in between is No trade. Bias picks the direction, the chart picks the entry. Mixed signals means no trade. It is a checklist, not a proven signal."),
+        ("AI Method: policy edge", "Is each central bank expected to hike, hold or cut by the end of this quarter? Same Trading Economics forecast as the Interest rate score. A hike scores +1, a cut -1. For a pair the quote currency is subtracted, then kept between -1 and +1."),
+        ("AI Method: 2-year yield gap", "The 2-year government yield of the base currency minus the quote currency, today against about 4 weeks ago. If the gap moved more than 0.05 percentage points toward the base currency it scores +1, the other way -1, smaller moves 0. Sources: FRED for the US, the Bundesbank for Germany (EUR), the Bank of Canada, the Reserve Bank of Australia and Japan's Ministry of Finance. The UK, Swiss and New Zealand 2-year yields come from the free Trading Economics pages (their one-month change). South Africa has no free current 2-year yield, so its 3-month interest rate from FRED is used and labelled as a proxy. A currency with no free number shows a grey no free data cell."),
+        ("AI Method: data momentum", "How each country's latest GDP, PMI, retail sales, CPI and jobs numbers did against the forecast: beats minus misses. Base minus quote, then +1 if positive, -1 if negative, 0 if equal."),
+        ("AI Method: risk mood", "Three free gauges vote: VIX (under 18 is risk-on, over 25 or up 20% in 5 days is risk-off), the S&P 500 against its 50-day average, and the high-yield credit spread over about 4 weeks. Two or more votes the same way set the mood. In risk-on, AUD, NZD, CAD, GBP and ZAR get +1 and USD, JPY and CHF get -1. Risk-off is the reverse. EUR is 0. Neutral is 0 for all."),
+        ("AI Method: positioning", "Where big speculators stand in CFTC futures, against their own last 3 years (0% = most short, 100% = most long). If the trade is already crowded (base above 90% or quote below 10% for a long), it scores against the trade. If positioning is middling, or speculators just turned our way this week, it scores for the trade. Otherwise 0."),
+        ("AI Method: chart structure", "+1 when price is above this week's open (last week's close) and the daily chart makes higher highs and higher lows. -1 for the mirror. Otherwise 0. If there are not enough clear swings, the 20-day average against the 50-day average is used."),
+        ("AI Method: commodities", "Off by default (switch ai_method.commodities). When on: oil for CAD, copper for AUD (a stand-in for iron ore), gold for ZAR, each +1 if its 20-day average is above its 50-day average and -1 if below. NZD is 0 because there is no free dairy price feed."),
         ("News risk", "A high-impact event for either currency in the next 24 hours. Times are Pacific Time (PT)."),
         ("Data delay", "COT is out Fridays for the prior Tuesday. Prices are end of day plus the latest hourly snapshot.")]
 
@@ -1463,6 +1471,10 @@ def top_summary(top):
     lines.append("Built from simple rules, not AI. " + LABEL)
     return pd.DataFrame(dict(line=range(1, len(lines) + 1), text=lines))
 
+def _ai_settings():
+    import ai_method
+    return ai_method.settings(CFG)
+
 def fmt_parts(d): return "; ".join("%s: %s" % (k, v) for k, v in d.items() if not k.endswith("_label") and k != "crowd_source")
 
 def main():
@@ -1528,6 +1540,16 @@ def main():
         top[c] = pd.to_numeric(top[c], errors="coerce").fillna(0).astype(int)
     T, rates = page_tables(close, high, low, cot, ev, cal) if FEAT["market_pages"] else ({}, {})
     T["top_setups"], T["scorecard_details"] = top, pd.DataFrame(det)
+    if FEAT.get("ai_method_page", True):  # Top Setups AI Method: a separate checklist page, does not touch the score above
+        try:
+            import ai_method
+            T["ai_method"], T["ai_method_sources"], T["ai_method_info"] = ai_method.build(dict(
+                close=close, high=high, low=low, cot=cot, rel=rel, rfc=rfc, cfg=CFG, now=NOW, offline=OFFLINE, cache=CACHE,
+                log=log, fred_series=fred_series, rate_forecast_signal=rate_forecast_signal,
+                us2y=TWO_Y_STATE.get("series"), us2y_how=TWO_Y_STATE.get("how", ""),
+                pairs=PAIRS + [p for p in ["USDZAR"] if p in close.columns]))
+        except Exception as e:
+            log("AI method page", "ERROR", "", str(e)[:150])
     T["top_summary"] = top_summary(top) if FEAT.get("top_setups_summary", True) else pd.DataFrame(columns=["line", "text"])
     T["trade_ideas"] = trade_ideas(top) if FEAT.get("trade_ideas", True) else pd.DataFrame(
         columns=["side", "rank", "symbol", "kind", "score", "bias", "score_chg_1d", "reason", "label"])
@@ -1567,7 +1589,8 @@ def main():
     T["settings"] = pd.DataFrame([dict(setting="feature." + k, value=v) for k, v in FEAT.items()] +
                                  [dict(setting="scoring." + k, value=v) for k, v in SC.items()] +
                                  [dict(setting="source." + k, value=RETAIL_CFG.get(k, True)) for k, _, _ in RETAIL_SOURCES] +
-                                 [dict(setting="news_risk_hours", value=CFG["news_risk_hours"])])
+                                 [dict(setting="news_risk_hours", value=CFG["news_risk_hours"])] +
+                                 [dict(setting="ai_method." + k, value=v) for k, v in _ai_settings().items()])
     T["updates_log"] = pd.DataFrame(LOG)
     for name, df in T.items():
         df = df.copy()

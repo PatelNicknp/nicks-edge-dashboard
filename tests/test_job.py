@@ -16,9 +16,9 @@ GROWTH_F = ["f_gdp", "f_mpmi", "f_spmi", "f_retail", "f_conf"]
 INFL_F = ["f_cpi", "f_ppi", "f_pce", "f_rates"]
 JOBS_F = ["f_nfp", "f_unemp", "f_claims", "f_adp", "f_jolts"]
 
-def run_copy(news_now="2026-10-20 12:00", config_changes=None, extra_env=None):
+def run_copy(news_now="2026-10-20 12:00", config_changes=None, extra_env=None, ai_changes=None):
     tmp = tempfile.mkdtemp(prefix="edge_test_")
-    for item in ("edge_job.py", "config.json", "cache", "data"):
+    for item in ("edge_job.py", "ai_method.py", "config.json", "cache", "data"):
         src = os.path.join(REPO, item)
         (shutil.copytree if os.path.isdir(src) else shutil.copy)(src, os.path.join(tmp, item))
     # the hourly job keeps replacing cache/ff_thisweek.json with the current week; tests use the saved seed week
@@ -29,6 +29,10 @@ def run_copy(news_now="2026-10-20 12:00", config_changes=None, extra_env=None):
     if config_changes:
         cfg = json.load(open(os.path.join(tmp, "config.json")))
         for k, v in config_changes.items(): cfg["features"][k] = v
+        json.dump(cfg, open(os.path.join(tmp, "config.json"), "w"))
+    if ai_changes:
+        cfg = json.load(open(os.path.join(tmp, "config.json")))
+        cfg.setdefault("ai_method", {}).update(ai_changes)
         json.dump(cfg, open(os.path.join(tmp, "config.json"), "w"))
     r = subprocess.run([sys.executable, "edge_job.py", "--offline", "--backtest"], cwd=tmp, env=env,
                        capture_output=True, text=True, timeout=900)
@@ -435,6 +439,78 @@ def test_carry_uses_policy_rates():
     assert not help_.plain_english.str.contains("\u2014").any()
     print("carry policy rates OK")
 
+AI_COLS = ["f_policy", "f_yield", "f_data", "f_risk", "f_pos", "f_struct", "f_cmdty"]
+
+def test_ai_method_rules_unit():
+    sys.path.insert(0, REPO); am = importlib.import_module("ai_method")
+    s = am.settings({})
+    assert s["commodities"] is False and all(s[k] for k in ("policy", "yield_gap", "data_momentum", "risk_mood", "positioning", "structure"))
+    on = {k: True for k in ("policy", "yield_gap", "risk_mood")}
+    assert am.verdict(4, 1, 1, 1, on) == ("Strong Bullish", "Yes")
+    assert am.verdict(4, 1, 0, 1, on) == ("Bullish", "")
+    assert am.verdict(3, 0, 0, 0, on) == ("Bullish", "")
+    assert am.verdict(2, 1, 1, 1, on) == ("No trade", "Yes")      # aligned but not enough points
+    assert am.verdict(-2, 0, 0, 0, on) == ("No trade", "")
+    assert am.verdict(-3, 0, 0, 0, on) == ("Bearish", "")
+    assert am.verdict(-5, -1, -1, -1, on) == ("Strong Bearish", "Yes")
+    pc = {"EUR": (95, 1000, ""), "USD": (50, 0, ""), "JPY": (5, -10, ""), "GBP": (80, -5, ""), "CHF": (60, 10, "")}
+    assert am.positioning_score("EURUSD", 1, pc)[0] == -1          # base above the 90th percentile: crowded long
+    assert am.positioning_score("USDJPY", 1, pc)[0] == -1          # quote below the 10th percentile: crowded
+    assert am.positioning_score("EURUSD", -1, pc)[0] == -1         # short EUR while specs are very long: room, scores for the short
+    assert am.positioning_score("USDCHF", 1, pc)[0] == 1           # both middling: room to run
+    assert am.positioning_score("GBPCHF", 1, pc)[0] == 0           # GBP getting full, specs not turning our way
+    assert am.positioning_score("USDCHF", 0, pc)[0] == 0
+    page = ('<meta id="metaDesc" name="description" content="The yield on Switzerland 2Y Bond Yield rose to 0.22% on October 26, 2026, '
+            'marking a 0.03 percentage points increase from the previous session. Over the past month, the yield has fallen by 0.12 points, '
+            'though it remains 0.37 points higher than a year ago." />')
+    got = am.parse_te_yield(page)
+    assert got["level"] == 0.22 and got["change"] == -0.12 and str(got["as_of"].date()) == "2026-10-26"
+    page2 = page.replace("has fallen by 0.12", "has edged up by 0.07").replace("rose to 0.22%", "held steady at 4.95%")
+    got = am.parse_te_yield(page2)
+    assert got["level"] == 4.95 and got["change"] == 0.07
+    assert am.parse_te_yield("<html>nothing</html>") is None
+    idx = pd.bdate_range("2026-06-01", periods=100)
+    up = pd.Series(range(100), index=idx, dtype=float) + 100
+    assert am.structure_score(up, up + 0.5, up - 0.5)[0] == 1            # steady climb: 20-day above 50-day, above weekly open
+    assert am.structure_score(-up + 300, -up + 300.5, -up + 299.5)[0] == -1
+    print("ai method rules OK")
+
+def test_ai_method_page_offline():
+    tmp, out = run_copy()
+    t = read(tmp, "ai_method")
+    assert len(t) == 29 and "USDZAR" in set(t.symbol) and t.symbol.is_unique
+    assert t[AI_COLS].abs().max().max() <= 1
+    assert (t.f_cmdty == 0).all() and (t.f_cmdty_why == "switched off").all()     # commodities off by default
+    assert (t[AI_COLS].sum(axis=1) == t.total).all()
+    assert list(t.total) == sorted(t.total, reverse=True)
+    for _, r in t.iterrows():
+        exp = "Bullish" if r.total >= 3 else "Bearish" if r.total <= -3 else "No trade"
+        assert r.verdict.endswith(exp) or (exp == "No trade" and r.verdict == "No trade"), (r.symbol, r.total, r.verdict)
+    src = read(tmp, "ai_method_sources")
+    assert set(src.currency) == {"USD", "EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD", "ZAR"}
+    assert set(src.kind) <= {"2y", "proxy", "missing"}
+    st = read(tmp, "settings").set_index("setting").value.astype(str)
+    assert st["feature.ai_method_page"] == "True" and st["ai_method.commodities"] == "False" and st["ai_method.yield_gap"] == "True"
+    for name in ("ai_method", "ai_method_sources", "ai_method_info", "help"):
+        assert "\u2014" not in open(os.path.join(tmp, "output", name + ".csv"), encoding="utf-8").read(), "em dash in " + name
+    help_ = read(tmp, "help")
+    assert help_.plain_english.str.contains("Bias picks the direction, the chart picks the entry. Mixed signals means no trade.").any()
+    # the Top setups score is untouched by this page
+    top = read(tmp, "top_setups")
+    assert (top[FACTORS].sum(axis=1) == top.score).all()
+    print("ai method page OK")
+
+def test_ai_method_switches():
+    tmp, _ = run_copy(ai_changes=dict(commodities=True, risk_mood=False, yield_gap=False))
+    t = read(tmp, "ai_method")
+    assert (t.f_risk == 0).all() and (t.f_yield == 0).all() and (t.f_risk_why == "switched off").all()
+    assert t.f_cmdty_why.str.contains("WTI oil").any() and t.f_cmdty_why.str.contains("dairy").any()
+    assert (t[AI_COLS].sum(axis=1) == t.total).all()
+    assert t.high_conviction.isna().all()          # only policy is left of the three, so nothing can align
+    tmp2, _ = run_copy(config_changes={"ai_method_page": False})
+    assert not os.path.exists(os.path.join(tmp2, "output", "ai_method.csv"))
+    print("ai method switches OK")
+
 if __name__ == "__main__":
     test_two_year_yield_rule_unit()
     test_fred_user_agent_and_backups_unit()
@@ -454,4 +530,7 @@ if __name__ == "__main__":
     test_missing_ticker_is_skipped_not_fatal()
     test_interest_rate_forecast_rule_unit()
     test_offline_run_scores_interest_rates()
+    test_ai_method_rules_unit()
+    test_ai_method_page_offline()
+    test_ai_method_switches()
     print("ALL TESTS PASSED")

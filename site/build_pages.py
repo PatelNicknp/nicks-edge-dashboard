@@ -3,6 +3,7 @@ import os
 
 PAGES = [
     ("index.html", "top", "Top setups"),
+    ("top-ai-method.html", "aimethod", "Top Setups AI Method"),
     ("top-compact.html", "topcompact", "Top setups (Compact)"),
     ("top-macro.html", "topmacro", "Top setups (Macro only)"),
     ("top-indicator.html", "topind", "Top setups indicator"),
