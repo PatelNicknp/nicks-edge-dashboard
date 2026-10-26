@@ -706,10 +706,79 @@ def two_year_trend():
     v = pd.to_numeric(s.v, errors="coerce").dropna(); sma = v.rolling(21).mean()
     return sgn(sma.iloc[-1] - sma.iloc[-6]), v.iloc[-1]
 
-def econ_score(sym, rel, two_y):
-    """returns {category: (score, rows)}; rows are what the scorecard shows"""
+# Central bank rate forecasts, the way EdgeFinder scores interest rates for currencies:
+# current policy rate against the forecast for the end of the quarter. Forecast higher = +1, lower = -1, same = 0.
+# Free public page (Trading Economics interest rate forecast table), no key. Saved to the cache every run.
+RATE_FC_URL = "https://tradingeconomics.com/forecast/interest-rate"
+RATE_FC_COUNTRY = {"US": "United States", "EZ": "Euro Area", "UK": "United Kingdom", "JP": "Japan", "CH": "Switzerland",
+                   "CA": "Canada", "AU": "Australia", "NZ": "New Zealand", "CN": "China", "ZA": "South Africa"}
+RATE_FC_FILE = os.path.join(CACHE, "rate_forecasts.csv")
+BROWSER_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"
+
+def _strip_tags(x):
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", x))).strip()
+
+def parse_rate_forecasts(page):
+    """Rows of the forecast table: country, current rate, month of the last decision, then one column per quarter."""
+    tab = re.search(r"<table.*?</table>", page, re.S)
+    if not tab: raise ValueError("no forecast table on the page")
+    tab = tab.group(0)
+    heads = [_strip_tags(h) for h in re.findall(r"<th[^>]*>(.*?)</th>", tab, re.S)]
+    quarters = [h for h in heads if re.match(r"^Q\d/\d\d$", h)]
+    if not quarters: raise ValueError("no quarter columns on the forecast page")
+    want = {v: k for k, v in RATE_FC_COUNTRY.items()}; rows = []
+    for tr in re.findall(r"<tr[^>]*>(.*?)</tr>", tab, re.S):
+        cells = [_strip_tags(c) for c in re.findall(r"<td[^>]*>(.*?)</td>", tr, re.S)]
+        if len(cells) < 3 + len(quarters) or cells[0] not in want: continue
+        cur = num(cells[1]); fc = [num(c) for c in cells[3:3 + len(quarters)]]
+        if np.isnan(cur): continue
+        r = dict(country=want[cells[0]], country_name=cells[0], current=cur, last_decision=cells[2])
+        for i, (q, v) in enumerate(zip(quarters, fc), 1): r["q%d" % i], r["q%d_rate" % i] = q, v
+        rows.append(r)
+    if len(rows) < 6: raise ValueError("forecast page had only %d of our countries" % len(rows))
+    return pd.DataFrame(rows)
+
+def load_rate_forecasts():
+    """Current policy rate and the next quarterly forecasts per country. Falls back to the saved copy."""
+    max_age = CFG.get("rate_forecast_max_age_days", 14)
+    try:
+        if OFFLINE: raise RuntimeError("offline mode")
+        r = requests.get(RATE_FC_URL, timeout=30, headers={**UA, "User-Agent": BROWSER_UA}); r.raise_for_status()
+        df = parse_rate_forecasts(r.text)
+        df["fetched_pt"] = NOW.strftime("%Y-%m-%d %H:%M"); df.to_csv(RATE_FC_FILE, index=False); st, note = "OK", ""
+    except Exception as e:
+        if not os.path.exists(RATE_FC_FILE):
+            log("Central bank rate forecasts (Trading Economics)", "MISSING", "", "No forecast page and no saved copy. Interest rate scores are 0.")
+            return None
+        df = pd.read_csv(RATE_FC_FILE); st = "CACHED"
+        note = "Forecast page did not load (%s). Using the saved copy." % str(e)[:80]
+        age = (NOW.tz_localize(None) - pd.Timestamp(str(df.fetched_pt.iloc[0]))).days
+        if age > max_age and not OFFLINE:
+            log("Central bank rate forecasts (Trading Economics)", "STALE", df.fetched_pt.iloc[0],
+                "Saved copy is %d days old. Interest rate scores are 0 until the page loads again." % age)
+            return None
+    log("Central bank rate forecasts (Trading Economics)", st, df.fetched_pt.iloc[0], note)
+    return df.set_index("country")
+
+def rate_forecast_signal(rfc, country):
+    """(+1 / -1 / 0, text) for one country: forecast above, below or equal to the current rate."""
+    if rfc is None or country not in rfc.index: return 0, "no forecast"
+    r = rfc.loc[country]; col = int(SC.get("interest_rate_forecast_column", 1))
+    q, fc = r.get("q%d" % col), r.get("q%d_rate" % col)
+    if fc is None or pd.isna(fc): return 0, "no forecast"
+    s = sgn(float(fc) - float(r.current), 1e-9)
+    return s, "%.2f%% now, %s forecast %.2f%%" % (float(r.current), q, float(fc))
+
+def econ_score(sym, rel, two_y, rfc=None):
+    """returns {category: (score, rows)}; rows are what the scorecard shows.
+    rfc: central bank rate forecasts. When given (and the interest_rate_forecast switch is on), the Interest rate
+    line uses the EdgeFinder rule (forecast vs current rate) instead of the rate decision against its consensus."""
     k = kind(sym); res = {}
     sig = {(r.country, r.indicator): (r.signal if r.status == "ok" else 0) for r in rel.itertuples()}
+    use_fc = rfc is not None and FEAT.get("interest_rate_forecast", True)
+    def rate_sig(ctry):
+        if use_fc: return rate_forecast_signal(rfc, ctry)
+        return sig.get((ctry, "Interest rate"), 0), ""
     for cat in (G, I, J):
         if not FEAT[{"Growth": "economic_growth", "Inflation": "inflation", "Jobs": "jobs"}[cat]]:
             res[cat] = (0, []); continue
@@ -718,20 +787,27 @@ def econ_score(sym, rel, two_y):
             A, B = CCY_COUNTRY[sym[:3]], CCY_COUNTRY[sym[3:]]
             labels = [l for c, l, *_ in ECON_MAP["US"] if c == cat]
             for lab in labels:
+                if lab == "Interest rate" and use_fc:
+                    (a, ta), (b, tb) = rate_sig(A), rate_sig(B)
+                    rows.append((lab, a - b, "%s %+d (%s), %s %+d (%s)" % (sym[:3], a, ta, sym[3:], b, tb))); continue
                 a, b = sig.get((A, lab), 0), sig.get((B, lab), 0)
                 rows.append((lab, a - b, "%s %+d, %s %+d" % (sym[:3], a, sym[3:], b)))
         else:
             ctry = CCY_COUNTRY[sym[:3]] if k == "ccy" else OTHER[sym][3]
             for c, lab, *_ in ECON_MAP[ctry if ctry in ECON_MAP else "US"]:
                 if c != cat: continue
-                s = sig.get((ctry, lab), 0)
+                s = sig.get((ctry, lab), 0); shown = "%s %+d" % (ctry, s)
+                if lab == "Interest rate" and use_fc:
+                    if k == "gold" and ctry == "US":  # EdgeFinder scores gold on the 2-year yield, like the US indexes
+                        rows.append(("2-year yield trend (21-day avg)", -two_y, "rising = hawkish" if two_y > 0 else "falling")); continue
+                    s, why = rate_sig(ctry); shown = "%s %+d (%s)" % (ctry, s, why)
                 if k in RISK_KINDS and cat == I:
                     if lab == "Interest rate":
                         if ctry == "US":
                             rows.append(("2-year yield trend (21-day avg)", -two_y, "rising = hawkish" if two_y > 0 else "falling")); continue
-                    s = -s  # hotter inflation is bad for risk assets
+                    s = -s  # hotter inflation (or a higher rate forecast) is bad for risk assets
                 if k == "gold": s = -s  # strong US data is bad for gold
-                rows.append((lab, s, "%s %+d" % (ctry, sig.get((ctry, lab), 0))))
+                rows.append((lab, s, shown))
         res[cat] = (int(sum(r[1] for r in rows)), rows)
     return res
 
@@ -985,6 +1061,7 @@ HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simpl
         ("Crowd", "What retail traders hold. Most of them lose, so the score leans the other way. 60% or more long scores -1, 40% or less long scores +1, in between scores 0. A currency index uses that currency against the US dollar. A grey 0 marked no retail data means no free source had a reading for that market."),
         ("Where the crowd numbers come from", "We check free public pages every hour, with no login. First IG client sentiment: the share of IG client accounts that are long each market (the same numbers DailyFX used to show). If IG has no number for a market, we use the Myfxbook community outlook, which Myfxbook offers free for other websites to show. A Myfxbook login is tried last, only if one is saved. If no source answers this hour, a reading up to 6 hours old is kept and marked saved. After that the market shows no retail data. If no retail source covers an index or commodity, the CBOE put/call ratio is used when that switch is on. Each source can be turned on or off in config.json, under retail_sources. The source and time are shown on the Retail sentiment page, on each scorecard, and under Top setups."),
         ("Growth / Inflation / Jobs", "Latest release beat the forecast = +1, missed = -1, for each country. For a pair the second currency is subtracted."),
+        ("Interest rates", "Scored like EdgeFinder: we compare each central bank's policy rate today with the forecast for the end of this quarter. Forecast higher = +1, lower = -1, the same = 0. For a pair the second currency is subtracted, so GBPJPY is +1 when the Bank of England is expected to hike and the Bank of Japan is expected to hold. The forecasts come from the free Trading Economics forecast page and are checked every hour. If the page does not load, the last saved copy is used for up to 14 days. You can switch this off in config.json (interest_rate_forecast). Then the score goes back to the rate decision against its consensus, which is almost always 0 because banks rarely surprise."),
         ("News risk", "A high-impact event for either currency in the next 24 hours. Times are Pacific Time (PT)."),
         ("Data delay", "COT is out Fridays for the prior Tuesday. Prices are end of day plus the latest hourly snapshot.")]
 
@@ -1072,8 +1149,8 @@ MACRO_COVERAGE = [
     ("CPI YoY", "CPI y/y", "Nasdaq economic calendar, actual versus forecast", ""),
     ("PPI YoY", "PPI y/y", "Nasdaq economic calendar, actual versus forecast", "New Zealand uses PPI output."),
     ("PCE YoY", "PCE y/y", "Nasdaq economic calendar, actual versus forecast", "PCE is a United States series. Every other country is 0."),
-    ("Interest Rates", "Interest rate", "Nasdaq economic calendar for policy rates. US indexes, the 10-year note, metals, oil, gas and crypto use the FRED 2-year yield (DGS2).",
-     "US stock indexes, the 10-year note, gold, silver, platinum, copper, oil, natural gas, bitcoin and ether use the 2-year yield trend instead of the Fed decision. A rising yield scores against those markets. Gold flips the sign of every US line."),
+    ("Interest Rates", "Interest rate", "Central bank rate forecasts from the free Trading Economics forecast page. US indexes, the 10-year note, metals, oil, gas and crypto use the FRED 2-year yield (DGS2).",
+     "Each currency gets +1 if the forecast for the end of this quarter is above today's policy rate, -1 if below, and 0 if the same. For a pair the second currency is subtracted. Stock indexes outside the US take the opposite sign of their own currency. US stock indexes, the 10-year note, gold, silver, platinum, copper, oil, natural gas, bitcoin and ether use the 2-year yield trend instead. A rising yield scores against those markets. Gold flips the sign of every US line. With the interest rate forecast switch off, the score goes back to the rate decision against its consensus."),
     ("NFP", "Employment change", "Nasdaq economic calendar, actual versus forecast", "The United States print is Nonfarm Payrolls. Japan uses the jobs-to-applications ratio. China has no free employment-change series."),
     ("Unemploy. Rate", "Unemployment rate", "Nasdaq economic calendar, actual versus forecast", "A lower unemployment rate scores positive."),
     ("Unemploy. Claims", "Jobless claims", "Nasdaq economic calendar, actual versus forecast", "The United States is initial jobless claims. The United Kingdom is the claimant count. A higher print scores negative."),
@@ -1087,6 +1164,7 @@ def _join_names(names):
     if len(names) == 1: return names[0]
     return ", ".join(names[:-1]) + " and " + names[-1]
 
+RATE_STATE = {}  # set by main(): the central bank rate forecasts of this run, for the rates page
 RETAIL_STATE = {}  # set by main(): the retail readings of this run, for the coverage table
 
 def crowd_coverage():
@@ -1267,6 +1345,8 @@ def main():
     cal = load_calendar()
     rel = latest_releases(cal)
     two_y, two_y_lvl = two_year_trend()
+    rfc = load_rate_forecasts() if FEAT.get("interest_rate_forecast", True) else None
+    RATE_STATE["rfc"] = rfc
     ev = load_ff_week()
     top, det, risk_rows = [], [], []
     for s in SYMBOLS:
@@ -1280,7 +1360,7 @@ def main():
         tech, td = technicals(s, close, asof) if FEAT["technicals"] and trend_on else (0, {})
         cs, cd = cot_score(s, cot) if FEAT["cot"] and trend_on else (0, {})
         ss, sd = sentiment_score(s, mfx, pcr) if trend_on else (0, {})
-        ec = econ_score(s, rel, two_y)
+        ec = econ_score(s, rel, two_y, rfc)
         if not macro_on: ec = {G: (0, []), I: (0, []), J: (0, [])}
         hi, med = news_risk(s, ev, cal)
         total = tech + cs + ss + sum(v[0] for v in ec.values())
@@ -1325,6 +1405,15 @@ def main():
         cpi = {r.country: num(r.actual) for r in rel.itertuples() if r.indicator == "CPI y/y" and r.status != "no data"}
         T["rates"]["cpi_yoy"] = T["rates"].currency.map(lambda c: cpi.get(CCY_COUNTRY[c], np.nan))
         T["rates"]["real_rate"] = T["rates"].rate - T["rates"].cpi_yoy
+        rfc = RATE_STATE.get("rfc")
+        if rfc is not None:  # central bank policy rate and its forecast (what the Interest rate score uses)
+            col = int(SC.get("interest_rate_forecast_column", 1))
+            get_ = lambda c, f: rfc.loc[CCY_COUNTRY[c]].get(f) if CCY_COUNTRY[c] in rfc.index else np.nan
+            T["rates"]["policy_rate"] = T["rates"].currency.map(lambda c: get_(c, "current"))
+            T["rates"]["forecast_quarter"] = T["rates"].currency.map(lambda c: get_(c, "q%d" % col))
+            T["rates"]["policy_rate_forecast"] = T["rates"].currency.map(lambda c: get_(c, "q%d_rate" % col))
+            T["rates"]["rate_score"] = T["rates"].currency.map(lambda c: rate_forecast_signal(rfc, CCY_COUNTRY[c])[0])
+            T["rates"]["forecast_source"] = "Trading Economics forecast, checked " + str(rfc.fetched_pt.iloc[0]) + " PT"
     es = rel[rel.status == "ok"].groupby(["country", "category"]).signal.sum().unstack(fill_value=0).reset_index()
     T["econ_strength"] = es
     T["retail_sentiment"] = retail

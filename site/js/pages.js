@@ -1426,6 +1426,8 @@
       "feature.top_setups_macro_only": "Top setups (Macro only) page",
       "feature.top_setups_indicator": "Top setups indicator page",
       "feature.trade_ideas": "Trade ideas page",
+      "feature.interest_rate_forecast": "Interest rate score uses the central bank forecast (EdgeFinder rule)",
+      "scoring.interest_rate_forecast_column": "Interest rate forecast quarter (1 = end of this quarter)",
       "scoring.trade_ideas_bullish_at": "Trade ideas: bullish at",
       "scoring.trade_ideas_bearish_at": "Trade ideas: bearish at",
       "scoring.trade_ideas_min_each_side": "Trade ideas: at least this many each side",

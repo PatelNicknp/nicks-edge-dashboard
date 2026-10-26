@@ -327,6 +327,53 @@ def test_offline_run_shows_crowd_source():
     assert hp.plain_english.str.contains("IG client sentiment").any()
     print("offline crowd source OK")
 
+RATE_PAGE = """<table><thead><tr><th>Country</th><th>Last</th><th></th><th><span>Q4/26</span></th><th><span>Q1/27</span></th></tr></thead>
+<tbody>""" + "".join("<tr><td><a href='/x'>%s</a></td><td> %s </td><td>Sep/26</td><td>%s</td><td>%s</td><td></td></tr>" % r for r in [
+    ("United States", "4.00", "4.25", "4.25"), ("Euro Area", "2.65", "2.90", "3.15"), ("United Kingdom", "3.75", "4.00", "4.25"),
+    ("Japan", "1.25", "1.25", "1.50"), ("Switzerland", "0.00", "0.00", "0.25"), ("Canada", "2.25", "2.50", "2.50"),
+    ("Australia", "4.60", "4.85", "4.85"), ("New Zealand", "2.75", "3.00", "3.50"), ("Albania", "2.50", "2.50", "2.50")]) + "</tbody></table>"
+
+def test_interest_rate_forecast_rule_unit():
+    ej = _ej()
+    df = ej.parse_rate_forecasts(RATE_PAGE)
+    assert len(df) == 8 and "Albania" not in set(df.country_name)
+    rfc = df.assign(fetched_pt="2026-10-25 20:00").set_index("country")
+    assert ej.rate_forecast_signal(rfc, "UK")[0] == 1 and ej.rate_forecast_signal(rfc, "JP")[0] == 0
+    assert ej.rate_forecast_signal(rfc, "CN") == (0, "no forecast")
+    rel = pd.DataFrame(columns=["country", "indicator", "signal", "status"])
+    rate = lambda sym: dict((l, s) for l, s, _ in ej.econ_score(sym, rel, 1, rfc)[ej.I][1])
+    assert rate("GBPJPY")["Interest rate"] == 1      # BoE expected to hike, BoJ to hold
+    assert rate("EURUSD")["Interest rate"] == 0      # both expected to hike
+    assert rate("USDJPY")["Interest rate"] == 1 and rate("CHFJPY")["Interest rate"] == 0
+    assert rate("EURCHF")["Interest rate"] == 1 and rate("AUDUSD")["Interest rate"] == 0
+    assert rate("GBP Index")["Interest rate"] == 1 and rate("JPY Index")["Interest rate"] == 0
+    assert rate("UK100")["Interest rate"] == -1      # a hike is bad for that country's stocks
+    assert rate("SPX500")["2-year yield trend (21-day avg)"] == -1 and rate("GOLD")["2-year yield trend (21-day avg)"] == -1
+    # without forecasts the old rule (decision against consensus) is used
+    assert ej.econ_score("GBPJPY", rel, 1, None)[ej.I][1][-1][1] == 0
+    print("interest rate forecast rule OK")
+
+def test_offline_run_scores_interest_rates():
+    tmp, out = run_copy()
+    top = read(tmp, "top_setups").set_index("symbol")
+    fx = top[top.kind == "fx"]
+    assert (fx.f_rates != 0).any(), "every pair scored 0 on interest rates"
+    rates = read(tmp, "rates")
+    assert {"policy_rate", "policy_rate_forecast", "forecast_quarter", "rate_score", "forecast_source"} <= set(rates.columns)
+    assert rates.policy_rate.notna().sum() == 8
+    det = read(tmp, "scorecard_details")
+    line = det[(det.symbol == "GBPJPY") & (det["item"] == "Interest rate")]
+    assert len(line) == 1 and "forecast" in line.value.iloc[0]
+    assert read(tmp, "settings").setting.str.contains("interest_rate_forecast").any()
+    assert read(tmp, "help").topic.str.contains("Interest rates").any()
+    assert not read(tmp, "help").plain_english.str.contains("\u2014").any()   # no em-dashes on the Help page
+    tmp2, _ = run_copy(config_changes={"interest_rate_forecast": False})
+    off = read(tmp2, "top_setups").set_index("symbol")
+    assert "policy_rate" not in read(tmp2, "rates").columns
+    det2 = read(tmp2, "scorecard_details")
+    assert not det2[det2["item"] == "Interest rate"].value.str.contains("forecast").any()
+    print("offline interest rate scores OK")
+
 if __name__ == "__main__":
     test_news_risk_rules_unit()
     test_retail_parsers_unit()
@@ -341,4 +388,6 @@ if __name__ == "__main__":
     test_new_switches()
     test_failed_download_retries_then_uses_cache_unit()
     test_missing_ticker_is_skipped_not_fatal()
+    test_interest_rate_forecast_rule_unit()
+    test_offline_run_scores_interest_rates()
     print("ALL TESTS PASSED")
