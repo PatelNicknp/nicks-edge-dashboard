@@ -30,10 +30,13 @@ def log(source, status, latest="", note=""):
     LOG.append(dict(source=source, status=status, latest=str(latest), note=note, checked_pt=NOW.strftime("%Y-%m-%d %H:%M")))
     print("[%s] %s %s %s" % (status, source, latest, note))
 
-# FRED (rates, yields, spreads): retry a slow read, then stop asking after a few failures and use the cache
-FRED_TIMEOUT, FRED_MAX_FAILS = 45, 4
-FRED_TRIES, FRED_RETRY_PAUSE = 3, 2
-FRED_STATE = {"ok": 0, "cached": 0, "fails": 0, "err": ""}
+# FRED (rates, yields, spreads): retry a slow read, then stop asking after a few failures and use the cache.
+# FRED's bot filter never answers a "Mozilla/5.0 (...)" user agent that is not a real browser (the request just hangs
+# until it times out), so FRED gets a plain user agent of its own. That is why every runner read failed before Oct 26.
+FRED_UA = {"User-Agent": "NicksEdgeDashboard/1.0 (+https://github.com/PatelNicknp/nicks-edge-dashboard)", "Accept": "text/csv,*/*"}
+FRED_TIMEOUT, FRED_MAX_FAILS = 20, 3
+FRED_TRIES, FRED_RETRY_PAUSE = 2, 2
+FRED_STATE = {"ok": 0, "cached": 0, "fails": 0, "err": "", "alt": {}}
 def _fred_plain(e):
     msg = str(e)
     if "timed out" in msg.lower() or "timeout" in msg.lower() or "not answering" in msg.lower():
@@ -44,15 +47,95 @@ def _fred_fail(e):
     if not OFFLINE and "not answering" not in str(e): FRED_STATE["fails"] += 1; FRED_STATE["err"] = _fred_plain(e)
 def fred_text(url):
     """Fetch one FRED file. A read timeout is retried before the series is marked cached."""
+    if OFFLINE: raise RuntimeError("offline mode")
     last = None
-    tries = 1 if OFFLINE else FRED_TRIES
-    for attempt in range(tries):
-        try: return get(url, timeout=FRED_TIMEOUT).text
+    for attempt in range(FRED_TRIES):
+        try:
+            r = requests.get(url, headers=FRED_UA, timeout=FRED_TIMEOUT); r.raise_for_status(); return r.text
         except Exception as e:
             last = e
-            if OFFLINE or attempt + 1 >= tries: raise
+            if attempt + 1 >= FRED_TRIES: raise
             time.sleep(FRED_RETRY_PAUSE * (attempt + 1))
     raise last
+
+# Free backup sources (no key) for the FRED series that have one. Used when FRED fails, and to add days that
+# FRED has not posted yet (the Treasury posts each day's yields the same afternoon, FRED a day later).
+TREASURY_URL = ("https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/"
+                "{y}/all?type={t}&field_tdr_date_value={y}&page&_format=csv")
+_ALT_CACHE = {}
+def _treasury(kind_):
+    """Treasury daily par yield curve (nominal or real), this year and last year, newest last."""
+    if kind_ in _ALT_CACHE: return _ALT_CACHE[kind_]
+    frames = []
+    for y in (NOW.year - 1, NOW.year):
+        r = requests.get(TREASURY_URL.format(y=y, t=kind_), headers=FRED_UA, timeout=30); r.raise_for_status()
+        frames.append(pd.read_csv(io.StringIO(r.text)))
+    d = pd.concat(frames); d.index = pd.to_datetime(d.pop("Date"), format="%m/%d/%Y")
+    d.columns = [c.strip().upper() for c in d.columns]
+    _ALT_CACHE[kind_] = d = d.sort_index()
+    return d
+def _alt_treasury(col, real=False):
+    return pd.to_numeric(_treasury("daily_treasury_real_yield_curve" if real else "daily_treasury_yield_curve")[col], errors="coerce").dropna()
+def _alt_breakeven():  # FRED's T10YIE is the 10-year nominal yield minus the 10-year real (TIPS) yield
+    n, r = _alt_treasury("10 YR"), _alt_treasury("10 YR", real=True)
+    return (n - r).dropna().round(2)
+def _alt_effr():
+    j = requests.get("https://markets.newyorkfed.org/api/rates/unsecured/effr/last/90.json", headers=FRED_UA, timeout=30).json()
+    return pd.Series({pd.Timestamp(x["effectiveDate"]): float(x["percentRate"]) for x in j["refRates"]}).sort_index()
+def _alt_ecb_dfr():
+    start = (NOW - pd.Timedelta(days=120)).strftime("%Y-%m-%d")
+    r = requests.get("https://data-api.ecb.europa.eu/service/data/FM/D.U2.EUR.4F.KR.DFR.LEV?format=csvdata&startPeriod=" + start,
+                     headers=FRED_UA, timeout=30); r.raise_for_status()
+    d = pd.read_csv(io.StringIO(r.text))
+    s = pd.Series(pd.to_numeric(d.OBS_VALUE, errors="coerce").values, index=pd.to_datetime(d.TIME_PERIOD)).dropna()
+    return s[s.index <= NOW.tz_localize(None).normalize()].sort_index()  # the ECB file runs to today, keep no future days
+def _alt_sonia():
+    start = (NOW - pd.Timedelta(days=120)).strftime("%d/%b/%Y")
+    r = requests.get("https://www.bankofengland.co.uk/boeapps/database/_iadb-fromshowcolumns.asp?csv.x=yes&Datefrom=%s"
+                     "&Dateto=now&SeriesCodes=IUDSOIA&CSVF=TN&UsingCodes=Y" % start, headers=FRED_UA, timeout=30); r.raise_for_status()
+    d = pd.read_csv(io.StringIO(r.text))
+    return pd.Series(pd.to_numeric(d.iloc[:, 1], errors="coerce").values, index=pd.to_datetime(d.iloc[:, 0], format="%d %b %Y")).dropna().sort_index()
+FRED_ALT = {  # FRED series: (backup source name, function that returns a dated series)
+    "DGS2": ("US Treasury yield curve", lambda: _alt_treasury("2 YR")),
+    "DGS10": ("US Treasury yield curve", lambda: _alt_treasury("10 YR")),
+    "DFII10": ("US Treasury real yield curve", lambda: _alt_treasury("10 YR", real=True)),
+    "T10YIE": ("US Treasury yield curves", _alt_breakeven),
+    "DFF": ("New York Fed", _alt_effr),
+    "ECBDFR": ("ECB data portal", _alt_ecb_dfr),
+    "IUDSOIA": ("Bank of England", _alt_sonia),
+}
+
+def fred_series(sid, cache_file):
+    """One FRED series as a dated Series. FRED first, then the free backup source (also adds days FRED is missing),
+    then the saved copy. Returns (series, how) where how is "fred", the backup name, or "cached"."""
+    def read_saved():
+        d = pd.read_csv(cache_file); d.columns = ["date", "v"]
+        s = pd.to_numeric(d.v, errors="coerce"); s.index = pd.to_datetime(d.date); return s.dropna()
+    base, how = None, "cached"
+    try:
+        if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
+        t = fred_text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid)
+        d = pd.read_csv(io.StringIO(t)); d.columns = ["date", "v"]  # check it is a real data file before using it
+        base = pd.to_numeric(d.v, errors="coerce"); base.index = pd.to_datetime(d.date); base = base.dropna()
+        if len(base) == 0: raise ValueError("FRED file for %s had no numbers" % sid)
+        FRED_STATE["ok"] += 1; how = "fred"
+    except Exception as e:
+        _fred_fail(e)
+        base = read_saved() if os.path.exists(cache_file) else pd.Series(dtype=float)
+    if sid in FRED_ALT and not OFFLINE:
+        name, fn = FRED_ALT[sid]
+        try:
+            alt = fn()
+            new = alt[alt.index > (base.index.max() if len(base) else pd.Timestamp("1900-01-01"))]
+            if len(new):
+                base = pd.concat([base, new]).sort_index()
+                FRED_STATE["alt"][name] = FRED_STATE["alt"].get(name, 0) + 1
+                if how == "cached": how = name
+        except Exception as e:
+            print("[note] backup source %s for %s failed: %s" % (name, sid, str(e)[:100]))
+    if how != "cached":
+        pd.DataFrame({"date": base.index.strftime("%Y-%m-%d"), "v": base.values}).rename(columns={"v": sid}).to_csv(cache_file, index=False)
+    return base, how
 
 def get(url, timeout=40, **kw):
     if OFFLINE: raise RuntimeError("offline mode")
@@ -696,15 +779,38 @@ def latest_releases(cal):
                             status="ok" if basis == "forecast" and not np.isnan(fc) else "no forecast"))
     return pd.DataFrame(out)
 
+TWO_Y_LABEL_7D, TWO_Y_LABEL_21D = "2-year yield vs 7-day avg", "2-year yield trend (21-day avg)"
+def two_year_rule_7day(): return bool(FEAT.get("two_year_yield_7day", True))
+def two_year_label(): return TWO_Y_LABEL_7D if two_year_rule_7day() else TWO_Y_LABEL_21D
+def two_year_signal(v):
+    """+1 if the US 2-year yield is rising, -1 if falling, 0 if flat.
+    EdgeFinder rule (switch two_year_yield_7day on): latest yield against its average over the last 7 trading days.
+    Old rule (switch off): the 21-day average now against the 21-day average 5 days ago."""
+    v = pd.to_numeric(pd.Series(v), errors="coerce").dropna()
+    if two_year_rule_7day():
+        n = int(SC.get("two_year_avg_days", 7))
+        if len(v) < n: return 0
+        return sgn(v.iloc[-1] - v.tail(n).mean(), 1e-9)
+    sma = v.rolling(21).mean()
+    return sgn(sma.iloc[-1] - sma.iloc[-6])
+
 def two_year_trend():
-    try:
-        if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
-        s = pd.read_csv(io.StringIO(fred_text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=DGS2")))
-        s.columns = ["date", "v"]; s.to_csv(os.path.join(CACHE, "dgs2.csv"), index=False); FRED_STATE["ok"] += 1
-    except Exception as e:
-        _fred_fail(e); s = pd.read_csv(os.path.join(CACHE, "dgs2.csv"))
-    v = pd.to_numeric(s.v, errors="coerce").dropna(); sma = v.rolling(21).mean()
-    return sgn(sma.iloc[-1] - sma.iloc[-6]), v.iloc[-1]
+    s, how = fred_series("DGS2", os.path.join(CACHE, "dgs2.csv"))
+    TWO_Y_STATE.update(how=how, as_of=str(s.index[-1].date()) if len(s) else "", series=s)
+    src = {"fred": "FRED DGS2"}.get(how, how if how == "cached" else "FRED DGS2 plus " + how)
+    if how == "fred" and FRED_STATE["alt"].get("US Treasury yield curve"): src = "FRED DGS2 plus US Treasury yield curve"
+    rule = ("latest vs %d-day avg" % int(SC.get("two_year_avg_days", 7))) if two_year_rule_7day() else "21-day avg trend"
+    log("US 2-year yield", "CACHED" if how == "cached" else "OK", TWO_Y_STATE["as_of"], "%s; rule: %s" % (src, rule))
+    return two_year_signal(s), (s.iloc[-1] if len(s) else np.nan)
+TWO_Y_STATE = {}
+def two_year_text(two_y):
+    st = TWO_Y_STATE.get("series")
+    if st is not None and len(st) and two_year_rule_7day():
+        n = int(SC.get("two_year_avg_days", 7))
+        base = "%.2f%% on %s vs %.2f%% %d-day avg" % (st.iloc[-1], st.index[-1].date(), st.tail(n).mean(), n)
+    elif two_year_rule_7day(): base = "latest vs 7-day avg"
+    else: base = "21-day avg trend"
+    return base + ("; rising = hawkish" if two_y > 0 else "; falling" if two_y < 0 else "; flat")
 
 # Central bank rate forecasts, the way EdgeFinder scores interest rates for currencies:
 # current policy rate against the forecast for the end of the quarter. Forecast higher = +1, lower = -1, same = 0.
@@ -799,12 +905,14 @@ def econ_score(sym, rel, two_y, rfc=None):
                 s = sig.get((ctry, lab), 0); shown = "%s %+d" % (ctry, s)
                 if lab == "Interest rate" and use_fc:
                     if k == "gold" and ctry == "US":  # EdgeFinder scores gold on the 2-year yield, like the US indexes
-                        rows.append(("2-year yield trend (21-day avg)", -two_y, "rising = hawkish" if two_y > 0 else "falling")); continue
+                        rows.append((two_year_label(), -two_y, two_year_text(two_y))); continue
+                    if k == "ccy" and ctry == "US" and two_year_rule_7day():  # EdgeFinder's USD Index uses the 2-year yield too
+                        rows.append((two_year_label(), two_y, two_year_text(two_y) + "; a rising yield is good for the dollar")); continue
                     s, why = rate_sig(ctry); shown = "%s %+d (%s)" % (ctry, s, why)
                 if k in RISK_KINDS and cat == I:
                     if lab == "Interest rate":
                         if ctry == "US":
-                            rows.append(("2-year yield trend (21-day avg)", -two_y, "rising = hawkish" if two_y > 0 else "falling")); continue
+                            rows.append((two_year_label(), -two_y, two_year_text(two_y))); continue
                     s = -s  # hotter inflation (or a higher rate forecast) is bad for risk assets
                 if k == "gold": s = -s  # strong US data is bad for gold
                 rows.append((lab, s, shown))
@@ -820,7 +928,7 @@ FACTOR_COLS = ["f_trend", "f_seasonality", "f_cot", "f_crowd", "f_gdp", "f_mpmi"
                "f_conf", "f_cpi", "f_ppi", "f_pce", "f_rates", "f_nfp", "f_unemp", "f_claims", "f_adp", "f_jolts"]
 FACTOR_LABEL = {"GDP": "f_gdp", "Manufacturing PMI": "f_mpmi", "Services PMI": "f_spmi", "Retail sales": "f_retail",
                 "Consumer confidence": "f_conf", "CPI y/y": "f_cpi", "PPI y/y": "f_ppi", "PCE y/y": "f_pce",
-                "Interest rate": "f_rates", "2-year yield trend (21-day avg)": "f_rates",
+                "Interest rate": "f_rates", TWO_Y_LABEL_21D: "f_rates", TWO_Y_LABEL_7D: "f_rates",
                 "Employment change": "f_nfp", "Unemployment rate": "f_unemp", "Jobless claims": "f_claims",
                 "ADP": "f_adp", "JOLTS": "f_jolts"}
 
@@ -892,15 +1000,30 @@ FRED_RATES = {"USD": "DFF", "EUR": "ECBDFR", "GBP": "IUDSOIA", "JPY": "IRSTCI01J
               "AUD": "IRSTCI01AUM156N", "NZD": "IR3TIB01NZM156N", "CHF": "IR3TIB01CHM156N"}
 FRED_EXTRA = ["DFII10", "T10YIE", "BAMLH0A0HYM2", "BAMLC0A0CM", "DGS10"]
 def fred(sid):
-    f = os.path.join(CACHE, "fred_%s.csv" % sid)
-    try:
-        if FRED_STATE["fails"] >= FRED_MAX_FAILS: raise RuntimeError("FRED not answering this run")
-        t = fred_text("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + sid)
-        pd.read_csv(io.StringIO(t)).iloc[:, 1]  # check it is a real data file before saving it
-        open(f, "w").write(t); FRED_STATE["ok"] += 1
-    except Exception as e: _fred_fail(e); t = open(f).read()
-    d = pd.read_csv(io.StringIO(t)); d.columns = ["date", "v"]
-    s = pd.to_numeric(d.v, errors="coerce"); s.index = pd.to_datetime(d.date); return s.dropna()
+    s, how = fred_series(sid, os.path.join(CACHE, "fred_%s.csv" % sid))
+    return s
+
+def policy_rates(fred_rates):
+    """The rate used for carry and real yields, per currency.
+    Switch carry_policy_rates on: the central bank policy rate from the Trading Economics forecast page (the same
+    numbers the Interest rate score uses), for every currency. A currency the page has no number for, or the switch
+    off, uses the FRED series (overnight rates for USD, EUR and GBP, monthly OECD short rates for the rest)."""
+    rfc = RATE_STATE.get("rfc")
+    if FEAT.get("carry_policy_rates", True) and rfc is None:
+        rfc = load_rate_forecasts()  # the Interest rate score is off, but carry still wants the policy rates
+    out, used = {}, {}
+    for c, s in fred_rates.items():
+        fb = dict(fallback_rate=s.iloc[-1], fallback_as_of=s.index[-1].date())
+        ctry = CCY_COUNTRY[c]
+        if FEAT.get("carry_policy_rates", True) and rfc is not None and ctry in rfc.index and not pd.isna(rfc.loc[ctry].current):
+            r = rfc.loc[ctry]
+            out[c] = dict(rate=float(r.current), as_of=pd.Timestamp(str(r.fetched_pt)).date(),
+                          series="last change %s" % r.last_decision,
+                          source="Trading Economics policy rate", **fb)
+        else:
+            out[c] = dict(rate=s.iloc[-1], as_of=s.index[-1].date(), series=FRED_RATES[c], source="FRED", **fb)
+        used[out[c]["source"]] = used.get(out[c]["source"], 0) + 1
+    return out, used
 
 FEEDS = {"Federal Reserve": "https://www.federalreserve.gov/feeds/press_all.xml",
          "Bank of England": "https://www.bankofengland.co.uk/rss/news",
@@ -984,14 +1107,17 @@ def page_tables(close, high, low, cot, ev, cal):
     T["cot_report"] = last[["asset", "date", "long", "short", "net", "net_chg", "long_pct", "long_pct_chg", "oi", "index_1y"]]
     T["cot_history"] = cot[cot.date > cot.date.max() - pd.Timedelta(days=3 * 365)][["asset", "date", "long", "short", "net", "net_chg", "long_pct"]]
     # rates, carry, real yields, spreads
-    rates = {c: fred(i) for c, i in FRED_RATES.items()}
+    fred_rates = {c: fred(i) for c, i in FRED_RATES.items()}
     ex = {i: fred(i) for i in FRED_EXTRA}
     n = FRED_STATE["ok"] + FRED_STATE["cached"]
-    log("Rates, yields and spreads (FRED)", "OK" if not FRED_STATE["cached"] else "CACHED", rates["USD"].index[-1].date(),
-        "%d of %d series refreshed%s" % (FRED_STATE["ok"], n, ("; " + FRED_STATE["err"]) if FRED_STATE["err"] else ""))
+    alt = FRED_STATE["alt"]
+    alt_note = ("; backup sources added newer days to %d series (%s)" % (sum(alt.values()), ", ".join(sorted(alt)))) if alt else ""
+    log("Rates, yields and spreads (FRED)", "OK" if not FRED_STATE["cached"] else "CACHED", fred_rates["USD"].index[-1].date(),
+        "%d of %d series refreshed from FRED%s%s" % (FRED_STATE["ok"], n, alt_note, ("; " + FRED_STATE["err"]) if FRED_STATE["err"] else ""))
+    rates, rate_src = policy_rates(fred_rates)
     car = []
     for s in PAIRS:
-        rb, rq = rates[s[:3]].iloc[-1], rates[s[3:]].iloc[-1]; p = close[s].dropna()
+        rb, rq = rates[s[:3]]["rate"], rates[s[3:]]["rate"]; p = close[s].dropna()
         if len(p) < 64: continue  # prices missing this run (already noted in updates_log)
         vol = p.pct_change().tail(63).std() * np.sqrt(252) * 100
         car.append(dict(symbol=s, base_rate=rb, quote_rate=rq, carry_pct=rb - rq, carry_to_vol=(rb - rq) / vol,
@@ -1005,7 +1131,8 @@ def page_tables(close, high, low, cot, ev, cal):
         s = ex[sid]; s = s[s.index > NOW.tz_localize(None) - pd.Timedelta(days=3 * 365)]
         for d, v in s.items(): sp.append(dict(series=nm, date=d, value=v))
     T["spreads"] = pd.DataFrame(sp)
-    T["rates"] = pd.DataFrame([dict(currency=c, rate=s.iloc[-1], as_of=s.index[-1].date(), series=FRED_RATES[c]) for c, s in rates.items()])
+    T["rates"] = pd.DataFrame([dict(currency=c, rate=r["rate"], as_of=r["as_of"], series=r["series"], rate_source=r["source"],
+                                    fallback_rate=r["fallback_rate"], fallback_as_of=r["fallback_as_of"]) for c, r in rates.items()])
     # calendar page: this week (Forex Factory) plus next 7 days of key releases (daily calendar)
     cw = ev[ev.impact.isin(["High", "Medium", "Low"])].copy()
     cw = pd.DataFrame(dict(time_pt=cw.time_pt.dt.strftime("%Y-%m-%d %H:%M"), currency=cw.country, impact=cw.impact, event=cw.title,
@@ -1062,6 +1189,10 @@ HELP = [("What this is", "Nick's Edge Dashboard. " + LABEL + " It sums six simpl
         ("Where the crowd numbers come from", "We check free public pages every hour, with no login. First IG client sentiment: the share of IG client accounts that are long each market (the same numbers DailyFX used to show). If IG has no number for a market, we use the Myfxbook community outlook, which Myfxbook offers free for other websites to show. A Myfxbook login is tried last, only if one is saved. If no source answers this hour, a reading up to 6 hours old is kept and marked saved. After that the market shows no retail data. If no retail source covers an index or commodity, the CBOE put/call ratio is used when that switch is on. Each source can be turned on or off in config.json, under retail_sources. The source and time are shown on the Retail sentiment page, on each scorecard, and under Top setups."),
         ("Growth / Inflation / Jobs", "Latest release beat the forecast = +1, missed = -1, for each country. For a pair the second currency is subtracted."),
         ("Interest rates", "Scored like EdgeFinder: we compare each central bank's policy rate today with the forecast for the end of this quarter. Forecast higher = +1, lower = -1, the same = 0. For a pair the second currency is subtracted, so GBPJPY is +1 when the Bank of England is expected to hike and the Bank of Japan is expected to hold. The forecasts come from the free Trading Economics forecast page and are checked every hour. If the page does not load, the last saved copy is used for up to 14 days. You can switch this off in config.json (interest_rate_forecast). Then the score goes back to the rate decision against its consensus, which is almost always 0 because banks rarely surprise."),
+        ("US 2-year yield", "US stock indexes, the 10-year note, gold, silver, platinum, copper, oil, gas, bitcoin, ether and the USD Index use the US 2-year Treasury yield for their Interest rate cell, like EdgeFinder. We compare the latest yield with its average over the last 7 trading days. If the yield is above its average it is rising. A rising yield is bad for stocks, bonds, metals, oil and crypto, so they get -1, and good for the US dollar, so the USD Index gets +1. A falling yield gives the opposite. The same number gives the same answer. The yield comes from FRED (DGS2). The US Treasury's daily yield file is the backup, and it also adds the latest day when FRED is a day behind. You can switch this rule off in config.json (two_year_yield_7day). Then the old rule is used: the 21-day average today against 5 days ago, and the USD Index goes back to the Fed forecast."),
+        ("Carry and real yields", "Carry is what you earn for holding a pair: the first currency's interest rate minus the second one's. The rate for every currency is its central bank policy rate, from the same free Trading Economics page the Interest rate score uses. The real yield is that rate minus the latest yearly inflation (CPI). If the page has no number for a currency, the FRED rate is used instead and the Carry page says so. You can switch this off in config.json (carry_policy_rates)."),
+        ("Where the rate and yield numbers come from", "FRED (the St. Louis Fed) for the US 2-year and 10-year yields, the US real yield and breakeven inflation, and credit spreads. Each one has a free backup if FRED does not answer: the US Treasury for yields, the New York Fed for the US overnight rate, the ECB for the euro deposit rate, and the Bank of England for SONIA. Credit spreads have no free backup, so the last saved values are shown. The Updates log says which source was used each hour."),
+        ("USDZAR interest rate", "USDZAR can differ from EdgeFinder on interest rates. Both the Fed and the South African Reserve Bank have a higher forecast than today's rate on the free Trading Economics page (US 4.00% to 4.25%, South Africa 7.25% to 7.50% by the end of this quarter), so here they cancel out to 0. EdgeFinder showed +1 on Oct 24, so its South Africa forecast was likely flat. This is a difference in the data source, not in the rule."),
         ("News risk", "A high-impact event for either currency in the next 24 hours. Times are Pacific Time (PT)."),
         ("Data delay", "COT is out Fridays for the prior Tuesday. Prices are end of day plus the latest hourly snapshot.")]
 
@@ -1149,8 +1280,8 @@ MACRO_COVERAGE = [
     ("CPI YoY", "CPI y/y", "Nasdaq economic calendar, actual versus forecast", ""),
     ("PPI YoY", "PPI y/y", "Nasdaq economic calendar, actual versus forecast", "New Zealand uses PPI output."),
     ("PCE YoY", "PCE y/y", "Nasdaq economic calendar, actual versus forecast", "PCE is a United States series. Every other country is 0."),
-    ("Interest Rates", "Interest rate", "Central bank rate forecasts from the free Trading Economics forecast page. US indexes, the 10-year note, metals, oil, gas and crypto use the FRED 2-year yield (DGS2).",
-     "Each currency gets +1 if the forecast for the end of this quarter is above today's policy rate, -1 if below, and 0 if the same. For a pair the second currency is subtracted. Stock indexes outside the US take the opposite sign of their own currency. US stock indexes, the 10-year note, gold, silver, platinum, copper, oil, natural gas, bitcoin and ether use the 2-year yield trend instead. A rising yield scores against those markets. Gold flips the sign of every US line. With the interest rate forecast switch off, the score goes back to the rate decision against its consensus."),
+    ("Interest Rates", "Interest rate", "Central bank rate forecasts from the free Trading Economics forecast page. US indexes, the 10-year note, metals, oil, gas, crypto and the USD Index use the US 2-year yield (FRED DGS2, with the US Treasury yield file as backup).",
+     "Each currency gets +1 if the forecast for the end of this quarter is above today's policy rate, -1 if below, and 0 if the same. For a pair the second currency is subtracted. Stock indexes outside the US take the opposite sign of their own currency. US stock indexes, the 10-year note, gold, silver, platinum, copper, oil, natural gas, bitcoin, ether and the USD Index use the 2-year yield instead: the latest yield against its 7-day average. A rising yield scores -1 for those markets and +1 for the USD Index. Gold flips the sign of every US line. With the interest rate forecast switch off, the score goes back to the rate decision against its consensus."),
     ("NFP", "Employment change", "Nasdaq economic calendar, actual versus forecast", "The United States print is Nonfarm Payrolls. Japan uses the jobs-to-applications ratio. China has no free employment-change series."),
     ("Unemploy. Rate", "Unemployment rate", "Nasdaq economic calendar, actual versus forecast", "A lower unemployment rate scores positive."),
     ("Unemploy. Claims", "Jobless claims", "Nasdaq economic calendar, actual versus forecast", "The United States is initial jobless claims. The United Kingdom is the claimant count. A higher print scores negative."),
