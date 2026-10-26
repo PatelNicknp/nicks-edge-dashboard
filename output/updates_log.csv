@@ -1,13 +1,14 @@
 source,status,latest,note,checked_pt,checked_pt_sort
-Prices (Yahoo Finance),OK,Mon 2026-10-26,,Sun 2026-10-25 08:36 PM PT,202610252036
-COT (CFTC legacy futures),OK,Tue 2026-10-20,,Sun 2026-10-25 08:36 PM PT,202610252036
-Retail sentiment (IG client sentiment),OK,Sun 2026-10-25 08:36 PM PT,45 markets,Sun 2026-10-25 08:36 PM PT,202610252036
-Retail sentiment (Myfxbook community outlook),OK,Sun 2026-10-25 08:36 PM PT,Backup source. Filled 0 of the 1 markets still missing,Sun 2026-10-25 08:36 PM PT,202610252036
-Retail sentiment,OK,Sun 2026-10-25 08:36 PM PT,45 of 46 markets live,Sun 2026-10-25 08:36 PM PT,202610252036
-Options put/call (CBOE),OK,Fri 2026-10-23,,Sun 2026-10-25 08:36 PM PT,202610252036
-Economic calendar actual vs forecast (Nasdaq),OK,Fri 2026-10-23,11 days refreshed,Sun 2026-10-25 08:36 PM PT,202610252036
-Central bank rate forecasts (Trading Economics),OK,Sun 2026-10-25 08:36 PM PT,,Sun 2026-10-25 08:36 PM PT,202610252036
-Calendar this week (Forex Factory feed),OK,Fri 2026-10-30,,Sun 2026-10-25 08:36 PM PT,202610252036
-"Rates, yields and spreads (FRED)",CACHED,Wed 2026-10-21,0 of 14 series refreshed; FRED didn't answer. Showing the last saved values.,Sun 2026-10-25 08:36 PM PT,202610252036
-News feed (public RSS),OK,Sun 2026-10-25 08:36 PM PT,81 headlines,Sun 2026-10-25 08:36 PM PT,202610252036
-Score history,OK,Sun 2026-10-25,"368 days, 2025-10-23 to 2026-10-25",Sun 2026-10-25 08:36 PM PT,202610252036
+Prices (Yahoo Finance),OK,Mon 2026-10-26,,Sun 2026-10-25 09:18 PM PT,202610252118
+COT (CFTC legacy futures),OK,Tue 2026-10-20,,Sun 2026-10-25 09:18 PM PT,202610252118
+Retail sentiment (IG client sentiment),OK,Sun 2026-10-25 09:18 PM PT,45 markets,Sun 2026-10-25 09:18 PM PT,202610252118
+Retail sentiment (Myfxbook community outlook),OK,Sun 2026-10-25 09:18 PM PT,Backup source. Filled 0 of the 1 markets still missing,Sun 2026-10-25 09:18 PM PT,202610252118
+Retail sentiment,OK,Sun 2026-10-25 09:18 PM PT,45 of 46 markets live,Sun 2026-10-25 09:18 PM PT,202610252118
+Options put/call (CBOE),OK,Fri 2026-10-23,,Sun 2026-10-25 09:18 PM PT,202610252118
+Economic calendar actual vs forecast (Nasdaq),OK,Fri 2026-10-23,11 days refreshed,Sun 2026-10-25 09:18 PM PT,202610252118
+US 2-year yield,OK,Fri 2026-10-23,FRED DGS2 plus US Treasury yield curve; rule: latest vs 7-day avg,Sun 2026-10-25 09:18 PM PT,202610252118
+Central bank rate forecasts (Trading Economics),OK,Sun 2026-10-25 09:18 PM PT,,Sun 2026-10-25 09:18 PM PT,202610252118
+Calendar this week (Forex Factory feed),OK,Fri 2026-10-30,,Sun 2026-10-25 09:18 PM PT,202610252118
+"Rates, yields and spreads (FRED)",OK,Thu 2026-10-22,"14 of 14 series refreshed from FRED; backup sources added newer days to 4 series (ECB data portal, US Treasury real yield curve, US Treasury yield curve)",Sun 2026-10-25 09:18 PM PT,202610252118
+News feed (public RSS),OK,Sun 2026-10-25 09:18 PM PT,81 headlines,Sun 2026-10-25 09:18 PM PT,202610252118
+Score history,OK,Sun 2026-10-25,"368 days, 2025-10-23 to 2026-10-25",Sun 2026-10-25 09:18 PM PT,202610252118

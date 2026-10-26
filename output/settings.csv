@@ -25,6 +25,8 @@ feature.top_setups_macro_only,True
 feature.top_setups_indicator,True
 feature.trade_ideas,True
 feature.interest_rate_forecast,True
+feature.two_year_yield_7day,True
+feature.carry_policy_rates,True
 scoring.seasonality_points_fx,1
 scoring.seasonality_points_other,1
 scoring.retail_long_bearish_at,60
@@ -39,6 +41,7 @@ scoring.trade_ideas_bullish_at,7
 scoring.trade_ideas_bearish_at,-7
 scoring.trade_ideas_min_each_side,5
 scoring.interest_rate_forecast_column,1
+scoring.two_year_avg_days,7
 source.ig_client_sentiment,True
 source.myfxbook_widget,True
 source.myfxbook_login,True
