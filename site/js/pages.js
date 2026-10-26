@@ -882,10 +882,11 @@
       '<div class="psub">US 10-year inflation-protected yield. The bars below are the latest real yield for each currency.</div></div></div>' +
       '<div class="pbody"><div class="chart-box"><canvas id="tips"></canvas></div></div></section>' +
       '<section class="panel"><div class="phead"><div><div class="ptitle">Latest real yield by currency</div>' +
-      '<div class="psub">Policy or short rate minus CPI inflation, in percent.</div></div></div>' +
-      '<div class="pbody"><div class="chart-box short"><canvas id="realnow"></canvas></div></div></section></div>' +
+      '<div class="psub">Central bank policy rate minus CPI inflation, in percent.</div></div></div>' +
+      '<div class="pbody"><div class="chart-box short"><canvas id="realnow"></canvas></div></div></section>' +
+      '<section class="panel" id="rates-used"></section></div>' +
       '<div id="carry-table"></div></div>' +
-      foot("Carry is the base rate minus the quote rate, in percent per year. Carry / vol divides that by recent volatility. A green 1-month or 3-month move means the pair rose. Japan and Switzerland use the latest free rate on file, which can be a few weeks old.");
+      foot("Carry is the base rate minus the quote rate, in percent per year. Carry / vol divides that by recent volatility. A green 1-month or 3-month move means the pair rose. The rates are each central bank's policy rate from the free Trading Economics page, checked every hour. If that page has no number for a currency, the FRED rate is used instead, and the Source column says so.");
     const host = ctx.page.querySelector("#carry-table");
     host.className = "panel";
     D.drawTable(host, {
@@ -902,6 +903,16 @@
         { key: "move_3m", label: "3 month", numeric: true, heat: true, render: (r) => D.fill(D.esc(D.pct(r.move_3m, 2) || "–"), D.heatBg(r.move_3m, cap3)) },
       ],
     });
+    const used = ctx.page.querySelector("#rates-used");
+    if (used && rates.length) {
+      used.innerHTML = '<div class="phead"><div><div class="ptitle">Rates used</div>' +
+        '<div class="psub">The rate behind carry and real yield for each currency</div></div></div>' +
+        '<div class="scroll"><table><thead><tr><th>Currency</th><th class="num">Rate</th><th class="num">CPI y/y</th><th class="num">Real</th><th>Source</th></tr></thead><tbody>' +
+        rates.map((r) => "<tr><td>" + D.esc(r.currency) + '</td><td class="num">' + D.esc(D.fmt(r.rate, 2) || "–") +
+          '</td><td class="num">' + D.esc(D.fmt(r.cpi_yoy, 1) || "–") + '</td><td class="num">' + D.esc(D.signed(r.real_rate, 2) || "–") +
+          "</td><td>" + D.esc((r.rate_source || r.series || "") + (r.series && r.rate_source ? ", " + r.series : "")) + "</td></tr>").join("") +
+        "</tbody></table></div>";
+    }
     const tipsCanvas = ctx.page.querySelector("#tips");
     if (tipsCanvas && tips3.length) {
       D.lineChart(tipsCanvas, tips3.map((p) => p.iso), [{ label: "US TIPS", data: tips3.map((p) => p.v), color: "#E8EAED" }], {});
@@ -1428,6 +1439,9 @@
       "feature.trade_ideas": "Trade ideas page",
       "feature.interest_rate_forecast": "Interest rate score uses the central bank forecast (EdgeFinder rule)",
       "scoring.interest_rate_forecast_column": "Interest rate forecast quarter (1 = end of this quarter)",
+      "feature.two_year_yield_7day": "US 2-year yield: latest vs its 7-day average (EdgeFinder rule)",
+      "scoring.two_year_avg_days": "US 2-year yield average length, in trading days",
+      "feature.carry_policy_rates": "Carry and real yields use central bank policy rates",
       "scoring.trade_ideas_bullish_at": "Trade ideas: bullish at",
       "scoring.trade_ideas_bearish_at": "Trade ideas: bearish at",
       "scoring.trade_ideas_min_each_side": "Trade ideas: at least this many each side",

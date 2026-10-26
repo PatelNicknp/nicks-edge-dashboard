@@ -12,7 +12,7 @@ What is point in time:
   Technicals  prices up to that day (trend) and earlier years only (seasonality), exactly like the live job.
   COT         only reports released by that day (Tuesday report date + 3 days = Friday release).
   Growth / Inflation / Jobs   releases dated on or before that day, from the last 150 days (live job window);
-              2-year yield trend uses FRED DGS2 values before that day.
+              2-year yield rule uses saved DGS2 values before that day.
   Crowd       every market: 0 for retail (IG and Myfxbook retail sentiment have no free history), except the last
               --recent-crowd-days days, which use the saved retail reading (data/retail_latest.csv) the live job uses. That keeps the
               1 Day Change honest: a rebuilt day and a live day count the crowd the same way.
@@ -88,7 +88,7 @@ def main():
         keep = pcr_dates[pcr_dates <= str(D.date())][-260:]
         pcr_d = pcr[pcr.date.isin(keep)]
         rel = E.latest_releases(cal[(cal_d <= D) & (cal_d >= D - lookback)])
-        v = dgs2[dgs2.date < D].v; sma = v.rolling(21).mean(); two_y = E.sgn(sma.iloc[-1] - sma.iloc[-6])
+        two_y = E.two_year_signal(dgs2[dgs2.date < D].v)  # same 2-year rule as the live job (config switch two_year_yield_7day)
         for sym in E.SYMBOLS:
             if close[sym].dropna().loc[:asof].shape[0] < 30: continue
             tech, _ = E.technicals(sym, close, asof) if E.FEAT["technicals"] else (0, {})

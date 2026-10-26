@@ -348,7 +348,14 @@ def test_interest_rate_forecast_rule_unit():
     assert rate("EURCHF")["Interest rate"] == 1 and rate("AUDUSD")["Interest rate"] == 0
     assert rate("GBP Index")["Interest rate"] == 1 and rate("JPY Index")["Interest rate"] == 0
     assert rate("UK100")["Interest rate"] == -1      # a hike is bad for that country's stocks
-    assert rate("SPX500")["2-year yield trend (21-day avg)"] == -1 and rate("GOLD")["2-year yield trend (21-day avg)"] == -1
+    y = ej.TWO_Y_LABEL_7D
+    assert rate("SPX500")[y] == -1 and rate("GOLD")[y] == -1 and rate("DOW")[y] == -1   # a rising yield is bad for these
+    assert rate("USD Index")[y] == 1 and "Interest rate" not in rate("USD Index")      # and good for the dollar
+    ej.FEAT["two_year_yield_7day"] = False
+    try:
+        old = ej.TWO_Y_LABEL_21D
+        assert rate("SPX500")[old] == -1 and rate("USD Index")["Interest rate"] == 1     # old rule: USD Index on the Fed forecast
+    finally: ej.FEAT["two_year_yield_7day"] = True
     # without forecasts the old rule (decision against consensus) is used
     assert ej.econ_score("GBPJPY", rel, 1, None)[ej.I][1][-1][1] == 0
     print("interest rate forecast rule OK")
@@ -374,7 +381,64 @@ def test_offline_run_scores_interest_rates():
     assert not det2[det2["item"] == "Interest rate"].value.str.contains("forecast").any()
     print("offline interest rate scores OK")
 
+def test_two_year_yield_rule_unit():
+    ej = _ej()
+    # Oct 2026 closes: the latest yield (4.69) is under its 7-day average (4.75), so the yield is falling
+    v = [4.79, 4.82, 4.77, 4.74, 4.77, 4.79, 4.81, 4.65, 4.69]
+    assert ej.two_year_signal(v) == -1
+    assert ej.two_year_signal(v[:-2] + [4.90]) == 1
+    assert ej.two_year_signal([4.5] * 10) == 0 and ej.two_year_signal([4.5, 4.6]) == 0   # flat, or too short
+    ej.FEAT["two_year_yield_7day"] = False
+    try:
+        up = [4.0 + i * 0.01 for i in range(40)]
+        assert ej.two_year_signal(up) == 1 and ej.two_year_signal(up[::-1]) == -1      # old 21-day rule still works
+    finally: ej.FEAT["two_year_yield_7day"] = True
+    print("two-year yield rule OK")
+
+def test_fred_user_agent_and_backups_unit():
+    ej = _ej()
+    # FRED's filter never answers a fake "Mozilla/5.0 (...)" browser agent, so FRED must get a plain one
+    assert not ej.FRED_UA["User-Agent"].startswith("Mozilla")
+    assert {"DGS2", "DGS10", "DFII10", "T10YIE", "DFF", "ECBDFR", "IUDSOIA"} <= set(ej.FRED_ALT)
+    # a backup source only adds days after the last saved day
+    tmp = tempfile.mkdtemp(prefix="edge_fred_")
+    f = os.path.join(tmp, "x.csv")
+    pd.DataFrame({"date": ["2026-10-20", "2026-10-21"], "v": [4.79, 4.81]}).to_csv(f, index=False)
+    ej.FRED_ALT["TESTSID"] = ("Test backup", lambda: pd.Series([9.9, 4.65, 4.69], index=pd.to_datetime(["2026-10-21", "2026-10-22", "2026-10-23"])))
+    ej.OFFLINE = False
+    real_text = ej.fred_text
+    ej.fred_text = lambda url: (_ for _ in ()).throw(RuntimeError("FRED not answering this run"))
+    try:
+        s, how = ej.fred_series("TESTSID", f)
+    finally:
+        ej.OFFLINE = True; ej.fred_text = real_text; ej.FRED_ALT.pop("TESTSID")
+    assert how == "Test backup" and list(s.round(2)) == [4.79, 4.81, 4.65, 4.69]
+    saved = pd.read_csv(f)
+    assert len(saved) == 4 and saved.iloc[-1, 0] == "2026-10-23"
+    print("FRED user agent and backups OK")
+
+def test_carry_uses_policy_rates():
+    tmp, out = run_copy()
+    rates = read(tmp, "rates").set_index("currency")
+    assert (rates.rate_source == "Trading Economics policy rate").all(), rates.rate_source
+    assert (rates.rate == rates.policy_rate).all()
+    assert (rates.real_rate.round(4) == (rates.rate - rates.cpi_yoy).round(4)).all()
+    assert rates.fallback_rate.notna().all()
+    carry = read(tmp, "carry").set_index("symbol")
+    assert round(carry.loc["AUDJPY", "base_rate"], 4) == round(rates.loc["AUD", "rate"], 4)
+    assert round(carry.loc["AUDJPY", "quote_rate"], 4) == round(rates.loc["JPY", "rate"], 4)
+    tmp2, _ = run_copy(config_changes={"carry_policy_rates": False})
+    r2 = read(tmp2, "rates").set_index("currency")
+    assert (r2.rate_source == "FRED").all() and r2.loc["USD", "series"] == "DFF"
+    help_ = read(tmp, "help")
+    assert help_.topic.str.contains("Carry").any() and help_.topic.str.contains("2-year").any()
+    assert not help_.plain_english.str.contains("\u2014").any()
+    print("carry policy rates OK")
+
 if __name__ == "__main__":
+    test_two_year_yield_rule_unit()
+    test_fred_user_agent_and_backups_unit()
+    test_carry_uses_policy_rates()
     test_news_risk_rules_unit()
     test_retail_parsers_unit()
     test_retail_fallback_order_unit()
