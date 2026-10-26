@@ -139,7 +139,7 @@ EURJPY,Jobs,Jobless claims,"EUR +0, JPY +0",0
 EURJPY,Jobs,JOLTS,"EUR +0, JPY +0",0
 EURJPY,Jobs,ADP,"EUR +0, JPY +0",0
 EURJPY,News risk,High impact next 24h,none,0
-GBPAUD,Technicals,Trend score,above; up,2
+GBPAUD,Technicals,Trend score,below; up,-1
 GBPAUD,Technicals,Seasonality (10-year avg this month),"+0.28%, up 60% of years",1
 GBPAUD,COT,Net positioning,"GBP -80,420 / AUD -127,292",0
 GBPAUD,COT,Latest weekly change,GBP +6.09 / AUD -0.96,2
@@ -239,7 +239,7 @@ GBPCHF,Jobs,Jobless claims,"GBP -1, CHF +0",-1
 GBPCHF,Jobs,JOLTS,"GBP +0, CHF +0",0
 GBPCHF,Jobs,ADP,"GBP +0, CHF +0",0
 GBPCHF,News risk,High impact next 24h,none,0
-GBPJPY,Technicals,Trend score,above; up,2
+GBPJPY,Technicals,Trend score,below; up,-1
 GBPJPY,Technicals,Seasonality (10-year avg this month),"+1.38%, up 50% of years",1
 GBPJPY,COT,Net positioning,"GBP -80,420 / JPY +69,878",-2
 GBPJPY,COT,Latest weekly change,GBP +6.09 / JPY +3.02,0
@@ -339,7 +339,7 @@ AUDCHF,Jobs,Jobless claims,"AUD +0, CHF +0",0
 AUDCHF,Jobs,JOLTS,"AUD +0, CHF +0",0
 AUDCHF,Jobs,ADP,"AUD +0, CHF +0",0
 AUDCHF,News risk,High impact next 24h,none,0
-AUDJPY,Technicals,Trend score,above; down or flat,1
+AUDJPY,Technicals,Trend score,below; down or flat,-2
 AUDJPY,Technicals,Seasonality (10-year avg this month),"+1.12%, up 60% of years",1
 AUDJPY,COT,Net positioning,"AUD -127,292 / JPY +69,878",-2
 AUDJPY,COT,Latest weekly change,AUD -0.96 / JPY +3.02,-2
@@ -379,7 +379,7 @@ NZDUSD,Jobs,Jobless claims,"NZD +0, USD +1",-1
 NZDUSD,Jobs,JOLTS,"NZD +0, USD -1",1
 NZDUSD,Jobs,ADP,"NZD +0, USD +1",-1
 NZDUSD,News risk,High impact next 24h,none,0
-NZDCAD,Technicals,Trend score,above; down or flat,1
+NZDCAD,Technicals,Trend score,below; down or flat,-2
 NZDCAD,Technicals,Seasonality (10-year avg this month),"-0.10%, up 50% of years",-1
 NZDCAD,COT,Net positioning,"NZD -58,149 / CAD -74,709",0
 NZDCAD,COT,Latest weekly change,NZD -4.20 / CAD +3.81,-2
@@ -419,7 +419,7 @@ NZDCHF,Jobs,Jobless claims,"NZD +0, CHF +0",0
 NZDCHF,Jobs,JOLTS,"NZD +0, CHF +0",0
 NZDCHF,Jobs,ADP,"NZD +0, CHF +0",0
 NZDCHF,News risk,High impact next 24h,none,0
-NZDJPY,Technicals,Trend score,above; up,2
+NZDJPY,Technicals,Trend score,below; up,-1
 NZDJPY,Technicals,Seasonality (10-year avg this month),"+1.02%, up 60% of years",1
 NZDJPY,COT,Net positioning,"NZD -58,149 / JPY +69,878",-2
 NZDJPY,COT,Latest weekly change,NZD -4.20 / JPY +3.02,-2
@@ -559,7 +559,7 @@ CHFJPY,Jobs,Jobless claims,"CHF +0, JPY +0",0
 CHFJPY,Jobs,JOLTS,"CHF +0, JPY +0",0
 CHFJPY,Jobs,ADP,"CHF +0, JPY +0",0
 CHFJPY,News risk,High impact next 24h,none,0
-USDZAR,Technicals,Trend score,below; down or flat,-2
+USDZAR,Technicals,Trend score,above; up,2
 USDZAR,Technicals,Seasonality (10-year avg this month),"+0.54%, up 50% of years",1
 USDZAR,COT,Net positioning,"USD +15,044 / ZAR +12,928",0
 USDZAR,COT,Latest weekly change,USD +2.75 / ZAR -0.04,2
