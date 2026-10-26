@@ -1823,7 +1823,7 @@ Bitcoin / Gold ratio,20261022,20.0256
 Bitcoin / Gold ratio,20261023,20.2286
 Bitcoin / Gold ratio,20261024,20.1579
 Bitcoin / Gold ratio,20261025,19.9666
-Bitcoin / Gold ratio,20261026,19.8682
+Bitcoin / Gold ratio,20261026,19.8637
 High yield spread,20231030,4.5
 High yield spread,20231031,4.42
 High yield spread,20231101,4.47
@@ -4135,6 +4135,7 @@ US 10y real yield (TIPS),20261020,2.77
 US 10y real yield (TIPS),20261021,2.76
 US 10y real yield (TIPS),20261022,2.64
 US 10y real yield (TIPS),20261023,2.66
+US 10y real yield (TIPS),20261026,2.66
 US 10y breakeven inflation,20231030,2.44
 US 10y breakeven inflation,20231031,2.42
 US 10y breakeven inflation,20231101,2.41
@@ -4881,3 +4882,4 @@ US 10y breakeven inflation,20261020,2.35
 US 10y breakeven inflation,20261021,2.37
 US 10y breakeven inflation,20261022,2.32
 US 10y breakeven inflation,20261023,2.34
+US 10y breakeven inflation,20261026,2.34
