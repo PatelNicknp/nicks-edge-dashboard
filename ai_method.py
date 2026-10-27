@@ -365,15 +365,15 @@ def verdict(total, f1, f2, f4, enabled):
     trio = [v for k, v in (("policy", f1), ("yield_gap", f2), ("risk_mood", f4)) if enabled.get(k)]
     aligned_up = len(trio) >= 2 and all(v > 0 for v in trio)
     aligned_dn = len(trio) >= 2 and all(v < 0 for v in trio)
-    if total >= 4 and aligned_up: v = "Strong Bullish"
+    if total >= 4 and aligned_up: v = "Very Bullish"
     elif total >= 3: v = "Bullish"
-    elif total <= -4 and aligned_dn: v = "Strong Bearish"
+    elif total <= -4 and aligned_dn: v = "Very Bearish"
     elif total <= -3: v = "Bearish"
-    else: v = "No trade"
+    else: v = "Neutral"
     return v, ("Yes" if (aligned_up or aligned_dn) else "")
 
 
-VERDICT_RANK = {"Strong Bullish": 5, "Bullish": 4, "No trade": 3, "Bearish": 2, "Strong Bearish": 1}
+VERDICT_RANK = {"Very Bullish": 5, "Bullish": 4, "Neutral": 3, "Bearish": 2, "Very Bearish": 1}  # same labels as Top setups
 
 
 def build(ctx):
@@ -481,6 +481,6 @@ def build(ctx):
             ("prices_as_of", str(ctx["close"].dropna(how="all").index[-1].date()) if len(ctx["close"]) else "")]
     for k, *_ in FACTORS: info.append(("switch_" + k, "true" if on[k] else "false"))
     log("AI method page", "OK", now.strftime("%Y-%m-%d %H:%M"),
-        "%d pairs; mood %s; %d no trade" % (len(t), mood, int((t.verdict == "No trade").sum())))
+        "%d pairs; mood %s; %d neutral (no trade)" % (len(t), mood, int((t.verdict == "Neutral").sum())))
     sources = ys if len(ys) else pd.DataFrame(columns=["currency", "kind", "level", "change_4w", "as_of", "compared_with", "source", "status", "note"])
     return t, sources, pd.DataFrame(info, columns=["key", "value"])

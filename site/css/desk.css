@@ -363,3 +363,11 @@ table.aim-srct td{font-size:13px}
 .aim-srccell b{display:block;font-size:13px}
 .aim-srccell span{display:block;font-size:12px;line-height:16px;color:#8B949E}
 table.aim-srct td{vertical-align:top;padding-top:8px;padding-bottom:8px}
+table.aim td.bias{text-align:center;padding:0 10px;min-width:96px;white-space:nowrap;font-size:12px}
+table.aim.solid td.bias.band{color:#FFFFFF;font-weight:700}
+table.aim tr.aimban th{height:28px;padding:0 8px;font-size:11px;letter-spacing:.03em;text-transform:uppercase;text-align:center;color:#F4F7FB;cursor:default}
+table.aim tr.aimban th.sum{background:#232838;color:#8B949E}
+table.aim tr.aimban th.chk{background:#1E4E86}
+table.aim td.score{font-weight:700;text-align:center;min-width:52px;font-variant-numeric:tabular-nums}
+table.aim.solid td.score.band{color:#FFFFFF}
+table.aim thead tr:nth-child(2) th{top:28px}

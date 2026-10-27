@@ -1730,16 +1730,14 @@
     ["structure", "f_struct", "Chart", "Chart structure"],
     ["commodities", "f_cmdty", "Cmdty", "Commodities"],
   ];
-  const AIM_RANK = { "Strong Bullish": 5, "Bullish": 4, "No trade": 3, "Bearish": 2, "Strong Bearish": 1 };
+  const AIM_RANK = { "Very Bullish": 5, "Bullish": 4, "Neutral": 3, "Bearish": 2, "Very Bearish": 1 };
   function aimOn(ctx, key) {
     const row = (ctx.settings || []).find(function (r) { return r.setting === "ai_method." + key; });
     if (!row) return key !== "commodities";
     return String(row.value).toLowerCase() === "true";
   }
   function aimVerdictCls(v) {
-    if (/strong bull/i.test(v)) return "sbull";
     if (/bull/i.test(v)) return "bull";
-    if (/strong bear/i.test(v)) return "sbear";
     if (/bear/i.test(v)) return "bear";
     return "none";
   }
@@ -1752,7 +1750,7 @@
     const counts = { bull: 0, bear: 0, none: 0 };
     all.forEach(function (r) {
       const c = aimVerdictCls(r.verdict);
-      if (c === "none") counts.none++; else if (/bull/.test(c)) counts.bull++; else counts.bear++;
+      counts[c]++;
     });
     const updated = all.length ? all[0].updated_pt : "";
     ctx.page.insertAdjacentHTML("beforeend",
@@ -1768,19 +1766,19 @@
       "<li><b>COT</b>: big speculators in futures. If everyone is already on our side, there is less fuel left, so it counts against. If they are not stretched, or just turned our way, it counts for.</li>" +
       "<li><b>Chart</b>: is the price above this week's open and making higher highs and higher lows (or the mirror for down)?</li>" +
       (aimOn(ctx, "commodities") ? "<li><b>Cmdty</b>: oil for CAD, copper for AUD, gold for ZAR. NZD has no free dairy price, so it is 0.</li>" : "") +
-      "<li>Add them up. <b>+3 or more</b> is Bullish, <b>−3 or less</b> is Bearish, anything in between is <b>No trade</b>. Strong and High conviction mean Policy, 2Y gap and Risk all point the same way.</li>" +
+      "<li>Add them up. <b>+3 or more</b> is Bullish, <b>−3 or less</b> is Bearish, anything in between is <b>Neutral</b>, which means no trade. <b>+4 or more</b> with Policy, 2Y gap and Risk all pointing up is Very Bullish, and <b>−4 or less</b> with all three pointing down is Very Bearish. The labels and colours are the same as on Top setups. High conviction means Policy, 2Y gap and Risk all point the same way.</li>" +
       "</ul><p class=\"aim-warn\">This is a checklist, not a proven signal. Research only. It sends no alerts.</p></div></section>");
     ctx.page.insertAdjacentHTML("beforeend",
       '<div class="aim-stats">' +
       '<div class="aim-stat"><span>Risk mood</span><b>' + D.esc(info.risk_mood || "n/a") + "</b></div>" +
       '<div class="aim-stat"><span>Bullish</span><b class="up">' + counts.bull + "</b></div>" +
       '<div class="aim-stat"><span>Bearish</span><b class="dn">' + counts.bear + "</b></div>" +
-      '<div class="aim-stat"><span>No trade</span><b>' + counts.none + "</b></div></div>");
+      '<div class="aim-stat"><span>Neutral (no trade)</span><b>' + counts.none + "</b></div></div>");
     const box = document.createElement("div");
     box.className = "ctrls";
     box.innerHTML =
       '<label class="ctl"><span class="lab">Pair</span><input data-filter="q" type="search" placeholder="Search" autocomplete="off"></label>' +
-      D.selectHtml("verdict", "Verdict", ["Strong Bullish", "Bullish", "No trade", "Bearish", "Strong Bearish"], "", true) +
+      D.selectHtml("verdict", "Verdict", ["Very Bullish", "Bullish", "Neutral", "Bearish", "Very Bearish"], "", true) +
       '<label class="check"><input type="checkbox" data-filter="hc"> High conviction only</label>';
     const host = document.createElement("div");
     host.className = "panel";
@@ -1802,6 +1800,15 @@
       return '<td class="aimf ' + cls + '" title="' + D.esc(f[3] + ": " + why) + '" data-why="' + D.esc(f[3] + ": " + why) + '" data-sym="' + D.esc(r.symbol) + '">' +
         (nodata ? "0<i>no free data</i>" : D.esc(D.signed(n) || "0")) + "</td>";
     }
+    // the same Bias badge as Top setups: a solid band cell (or a filled pill with solid cells off), coloured by the label
+    function biasCellFor(label) {
+      if (!D.solidOn()) return '<td class="bias">' + D.biasFill(label) + "</td>";
+      return '<td class="bias band" style="background:' + D.biasBg(label) + '">' + D.esc(label) + "</td>";
+    }
+    function totalCellFor(t, label) {
+      if (!D.solidOn()) return '<td class="aimt ' + (t > 0 ? "pos" : t < 0 ? "neg" : "zero") + '">' + D.esc(D.signed(t) || "0") + "</td>";
+      return '<td class="score band" style="background:' + D.biasBg(label) + '">' + D.esc(D.signed(t) || "0") + "</td>";
+    }
     function draw() {
       const q = D.fieldVal(box, "q").trim().toLowerCase();
       const v = D.fieldVal(box, "verdict");
@@ -1812,20 +1819,22 @@
         if (hc && !r.high_conviction) return false;
         return true;
       }), state, val);
-      const head = sortHead(state, "symbol", "Pair", "sym") + sortHead(state, "total", "Total", "c") +
-        sortHead(state, "verdict", "Verdict", "c") + sortHead(state, "high_conviction", "High<br>conviction", "c") +
+      // same layout as Top setups: a banner row, then Symbol, Bias (Verdict) and Score (Total) sharing one coloured band, then the factors
+      const ban = '<th class="ban sum" colspan="4">Score</th>' +
+        (cols.length ? '<th class="ban chk" colspan="' + cols.length + '">Bias checklist</th>' : "");
+      const head = sortHead(state, "symbol", "Symbol", "sym") + sortHead(state, "verdict", "Verdict", "bias") +
+        sortHead(state, "total", "Total", "score") + sortHead(state, "high_conviction", "High<br>conviction", "c") +
         cols.map(function (f) { return sortHead(state, f[1], D.esc(f[2]), "c"); }).join("");
       const body = rows.map(function (r) {
         const t = intOf(r.total);
-        return '<tr><td class="sym">' + D.esc(r.symbol) + '</td><td class="aimt ' + (t > 0 ? "pos" : t < 0 ? "neg" : "zero") + '">' + D.esc(D.signed(t) || "0") + "</td>" +
-          '<td class="c"><span class="aimv ' + aimVerdictCls(r.verdict) + '">' + D.esc(r.verdict) + "</span></td>" +
+        return '<tr><td class="sym">' + D.esc(r.symbol) + "</td>" + biasCellFor(r.verdict) + totalCellFor(t, r.verdict) +
           '<td class="c">' + (r.high_conviction ? '<span class="aimhc">High conviction</span>' : '<span class="mut">–</span>') + "</td>" +
           cols.map(function (f) { return cellHtml(r, f); }).join("") + "</tr>";
       }).join("");
-      host.innerHTML = '<div class="aim-tip" hidden></div><div class="scroll"><table class="aim"><thead><tr>' + head + "</tr></thead><tbody>" + body +
+      host.innerHTML = '<div class="aim-tip" hidden></div><div class="scroll"><table class="aim' + (D.solidOn() ? " solid" : "") + '"><thead><tr class="aimban">' + ban + "</tr><tr>" + head + "</tr></thead><tbody>" + body +
         "</tbody></table></div>" + (rows.length ? "" : '<div class="empty">No pairs match these filters.</div>') +
         '<div class="swipe-count">' + rows.length + (rows.length === 1 ? " pair" : " pairs") + ". Tap or hover a coloured cell to see why.</div>";
-      bindSort(host, state, draw);
+      bindSort(host, state, draw, "thead tr:nth-child(2) th[data-k]");
       D.markScroll(host);
       const tipEl = host.querySelector(".aim-tip");
       host.querySelectorAll("td.aimf").forEach(function (td) {
