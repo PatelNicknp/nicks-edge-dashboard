@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-10-26 04:50 PM PT,202610261650,JPY,Low,SPPI y/y,3.7%,3.7%
 Mon 2026-10-26 05:01 PM PT,202610261701,GBP,Low,BRC Shop Price Index y/y,1.6%,1.4%
 Mon 2026-10-26 10:00 PM PT,202610262200,JPY,Low,BOJ Core CPI y/y,1.9%,1.8%
 Tue 2026-10-27 01:00 AM PT,202610270100,EUR,Low,Spanish Unemployment Rate,9.9%,9.9%
@@ -11,8 +10,8 @@ Tue 2026-10-27 05:30 AM PT,202610270530,USD,Low,Durable Goods Orders m/m,2.0%,0.
 Tue 2026-10-27 06:00 AM PT,202610270600,USD,Low,HPI m/m,0.2%,0.3%
 Tue 2026-10-27 06:00 AM PT,202610270600,USD,Low,S&P/CS Composite-20 HPI y/y,2.6%,2.5%
 Tue 2026-10-27 07:00 AM PT,202610270700,USD,Low,Richmond Manufacturing Index,0,-2
-Tue 2026-10-27 07:00 AM PT,202610270700,USD,Medium,CB Consumer Confidence,81.2,81.9
 Tue 2026-10-27 07:00 AM PT,202610270700,USD,Low,New Home Sales,651K,684K
+Tue 2026-10-27 07:00 AM PT,202610270700,USD,Medium,CB Consumer Confidence,81.2,81.9
 Tue 2026-10-27 01:30 PM PT,202610271330,USD,Low,API Weekly Statistical Bulletin,,
 Tue 2026-10-27 05:15 PM PT,202610271715,AUD,Medium,RBA Gov Bullock Speaks,,
 Tue 2026-10-27 05:30 PM PT,202610271730,AUD,High,CPI m/m,0.7%,0.4%

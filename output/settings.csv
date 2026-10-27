@@ -27,6 +27,7 @@ feature.trade_ideas,True
 feature.interest_rate_forecast,True
 feature.two_year_yield_7day,True
 feature.carry_policy_rates,True
+feature.ai_method_page,True
 scoring.seasonality_points_fx,1
 scoring.seasonality_points_other,1
 scoring.retail_long_bearish_at,60
@@ -46,3 +47,12 @@ source.ig_client_sentiment,True
 source.myfxbook_widget,True
 source.myfxbook_login,True
 news_risk_hours,24
+ai_method.policy,True
+ai_method.yield_gap,True
+ai_method.data_momentum,True
+ai_method.risk_mood,True
+ai_method.positioning,True
+ai_method.structure,True
+ai_method.commodities,False
+ai_method.yield_gap_band_bp,5
+ai_method.yield_gap_days,28
