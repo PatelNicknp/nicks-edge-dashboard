@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-10-26 05:01 PM PT,202610261701,GBP,Low,BRC Shop Price Index y/y,1.6%,1.4%
 Mon 2026-10-26 10:00 PM PT,202610262200,JPY,Low,BOJ Core CPI y/y,1.9%,1.8%
 Tue 2026-10-27 01:00 AM PT,202610270100,EUR,Low,Spanish Unemployment Rate,9.9%,9.9%
 Tue 2026-10-27 02:00 AM PT,202610270200,EUR,Low,M3 Money Supply y/y,3.5%,3.5%
@@ -9,9 +8,9 @@ Tue 2026-10-27 05:30 AM PT,202610270530,USD,Low,Core Durable Goods Orders m/m,0.
 Tue 2026-10-27 05:30 AM PT,202610270530,USD,Low,Durable Goods Orders m/m,2.0%,0.0%
 Tue 2026-10-27 06:00 AM PT,202610270600,USD,Low,HPI m/m,0.2%,0.3%
 Tue 2026-10-27 06:00 AM PT,202610270600,USD,Low,S&P/CS Composite-20 HPI y/y,2.6%,2.5%
-Tue 2026-10-27 07:00 AM PT,202610270700,USD,Low,Richmond Manufacturing Index,0,-2
-Tue 2026-10-27 07:00 AM PT,202610270700,USD,Low,New Home Sales,651K,684K
 Tue 2026-10-27 07:00 AM PT,202610270700,USD,Medium,CB Consumer Confidence,81.2,81.9
+Tue 2026-10-27 07:00 AM PT,202610270700,USD,Low,New Home Sales,651K,684K
+Tue 2026-10-27 07:00 AM PT,202610270700,USD,Low,Richmond Manufacturing Index,0,-2
 Tue 2026-10-27 01:30 PM PT,202610271330,USD,Low,API Weekly Statistical Bulletin,,
 Tue 2026-10-27 05:15 PM PT,202610271715,AUD,Medium,RBA Gov Bullock Speaks,,
 Tue 2026-10-27 05:30 PM PT,202610271730,AUD,High,CPI m/m,0.7%,0.4%
@@ -23,10 +22,10 @@ Tue 2026-10-27 07:00 PM PT,202610271900,NZD,High,RBNZ Press Conference,,
 Wed 2026-10-28 12:00 AM PT,202610280000,EUR,Low,German GfK Consumer Climate,-30.1,-30.6
 Wed 2026-10-28 02:00 AM PT,202610280200,CHF,Low,UBS Economic Expectations,,2.6
 Wed 2026-10-28 02:42 AM PT,202610280242,EUR,Low,German 10-y Bond Auction,,3.58|1.2
+Wed 2026-10-28 05:30 AM PT,202610280530,USD,Low,Prelim Wholesale Inventories m/m,0.5%,0.7%
+Wed 2026-10-28 05:30 AM PT,202610280530,USD,Low,Goods Trade Balance,-130.4B,-132.6B
 Wed 2026-10-28 05:30 AM PT,202610280530,GBP,High,Annual Budget Release,,
 Wed 2026-10-28 05:30 AM PT,202610280530,GBP,Medium,Autumn Forecast Statement,,
-Wed 2026-10-28 05:30 AM PT,202610280530,USD,Low,Goods Trade Balance,-130.4B,-132.6B
-Wed 2026-10-28 05:30 AM PT,202610280530,USD,Low,Prelim Wholesale Inventories m/m,0.5%,0.7%
 Wed 2026-10-28 06:00 AM PT,202610280600,CNY,Low,CB Leading Index m/m,,-0.2%
 Wed 2026-10-28 06:45 AM PT,202610280645,CAD,High,BOC Monetary Policy Report,,
 Wed 2026-10-28 06:45 AM PT,202610280645,CAD,High,BOC Rate Statement,,
@@ -47,9 +46,9 @@ Thu 2026-10-29 02:33 AM PT,202610290233,EUR,Low,Italian 10-y Bond Auction,,4.58|
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Low,Personal Income m/m,0.3%,0.2%
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Low,Personal Spending m/m,0.6%,0.9%
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Medium,Unemployment Claims,198K,194K
-Thu 2026-10-29 05:30 AM PT,202610290530,USD,High,Advance GDP q/q,3.2%,1.5%
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,High,Core PCE Price Index m/m,0.3%,0.2%
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Medium,Advance GDP Price Index q/q,3.3%,6.2%
+Thu 2026-10-29 05:30 AM PT,202610290530,USD,High,Advance GDP q/q,3.2%,1.5%
 Thu 2026-10-29 05:50 AM PT,202610290550,CAD,Low,Gov Council Member Gravelle Speaks,,
 Thu 2026-10-29 06:15 AM PT,202610290615,EUR,High,Main Refinancing Rate,2.65%,2.65%
 Thu 2026-10-29 06:15 AM PT,202610290615,EUR,High,Monetary Policy Statement,,

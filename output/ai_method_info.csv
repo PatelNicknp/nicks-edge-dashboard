@@ -4,7 +4,7 @@ risk_detail,VIX 18.4 (0% in 5 days); S&P 500 below its 50-day average (7677 vs 7
 risk_votes,"vix +0, spx -1, credit -1"
 yield_band_pct,0.05
 cot_report,2026-10-20
-rate_forecast_checked,2026-10-26 17:00
+rate_forecast_checked,2026-10-26 17:10
 prices_as_of,2026-10-27
 switch_policy,true
 switch_yield_gap,true
