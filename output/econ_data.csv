@@ -14,8 +14,8 @@ US,Jobs,Jobless claims,Initial Jobless Claims,20261022,194K,200K,200K,-6000.0,1,
 US,Jobs,JOLTS,JOLTS Job Openings,20260929,7.079M,7.230M,7.335M,-151000.0,-1,higher,ok
 US,Jobs,ADP,ADP Nonfarm Employment Change,20260930,90K,73K,36K,17000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20260907,0.6%,0.4%,-0.2%,0.2,1,higher,ok
-EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261023,52.4,52.7,52.9,-0.3,-1,higher,ok
-EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261023,51.7,52.6,53.0,-0.9,-1,higher,ok
+EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261001,52.9,52.7,52.7,0.2,1,higher,ok
+EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261005,53.0,53.0,51.6,0.0,0,higher,ok
 EZ,Growth,Retail sales,Retail Sales,20261006,0.1%,0.2%,-0.6%,-0.1,-1,higher,ok
 EZ,Growth,Consumer confidence,Consumer Confidence,20261022,-17.9,-17.0,-16.8,-0.9,-1,higher,ok
 EZ,Inflation,CPI y/y,CPI,20261016,3.8%,3.8%,3.2%,0.0,0,higher,ok
@@ -24,9 +24,9 @@ EZ,Inflation,Interest rate,Deposit Facility Rate,20260910,2.50%,2.50%,2.25%,0.0,
 EZ,Jobs,Employment change,Employment Change,20260907,0.1%,0.1%,0.1%,0.0,0,higher,ok
 EZ,Jobs,Unemployment rate,Unemployment Rate,20261001,6.4%,6.4%,6.4%,0.0,0,lower,ok
 UK,Growth,GDP,GDP,20261015,0.1%,-0.1%,0.4%,0.2,1,higher,ok
-UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261023,52.8,51.8,51.9,1.0,1,higher,ok
-UK,Growth,Services PMI,S&P Global Services PMI,20261023,53.1,51.8,52.1,1.3,1,higher,ok
-UK,Growth,Retail sales,Retail Sales,20261023,-0.4%,-0.1%,0.7%,-0.3,-1,higher,ok
+UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261001,51.9,52.0,51.7,-0.1,-1,higher,ok
+UK,Growth,Services PMI,S&P Global Services PMI,20261005,52.1,51.7,52.5,0.4,1,higher,ok
+UK,Growth,Retail sales,Retail Sales,20260918,0.5%,-0.2%,-0.5%,0.7,1,higher,ok
 UK,Growth,Consumer confidence,GfK Consumer Confidence,20261022,-24,-14,-13,-10.0,-1,higher,ok
 UK,Inflation,CPI y/y,CPI,20261021,3.5%,3.4%,3.1%,0.1,1,higher,ok
 UK,Inflation,PPI y/y,PPI Output,20261021,4.6%,4.3%,3.8%,0.3,1,higher,ok
@@ -56,7 +56,7 @@ CH,Jobs,Unemployment rate,Unemployment Rate s.a.,20261006,3.1%,3.1%,3.1%,0.0,0,l
 CA,Growth,GDP,GDP,20260929,0.0%,0.0%,0.3%,0.0,0,higher,ok
 CA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261001,51.5,,53.0,,0,higher,no forecast
 CA,Growth,Services PMI,S&P Global Services PMI,20261005,48.30,,49.10,,0,higher,no forecast
-CA,Growth,Retail sales,Retail Sales,20261023,1.2%,1.3%,-0.7%,-0.1,-1,higher,ok
+CA,Growth,Retail sales,Retail Sales,20260924,-0.7%,-0.8%,0.6%,0.1,1,higher,ok
 CA,Inflation,CPI y/y,CPI,20261019,3.1%,3.2%,3.0%,-0.1,-1,higher,ok
 CA,Inflation,PPI y/y,IPPI,20261022,2.0%,0.9%,1.2%,1.1,1,higher,ok
 CA,Inflation,Interest rate,BoC Interest Rate Decision,20260902,2.25%,2.25%,2.25%,0.0,0,higher,ok

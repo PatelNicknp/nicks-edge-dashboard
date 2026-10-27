@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-EURAUD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-EURNZD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-EURUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-EURCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-GBPAUD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-GBPNZD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-GBPUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-GBPCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-AUDNZD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+4 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+4 more),Mon 2026-10-26 09:55 PM PT,202610262155
-AUDUSD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),USD CB Consumer Confidence Tue 7:00 AM PT | AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-AUDCAD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-AUDCHF,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-AUDJPY,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-NZDUSD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),USD CB Consumer Confidence Tue 7:00 AM PT,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-NZDCAD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-NZDCHF,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-NZDJPY,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-USDCAD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-USDCHF,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-USDJPY,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-USDZAR,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-AUD Index,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-NZD Index,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 09:55 PM PT,202610262155
-USD Index,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 09:55 PM PT,202610262155
-SPX500,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-NAS100,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-DOW,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-CHINA50,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-GER40,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-UK100,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-JPN225,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-GOLD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-SILVER,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-USOIL,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-BTCUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-US10T,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-RUSSELL,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-PLATINUM,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-COPPER,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-NATGAS,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
-ETHUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 09:55 PM PT,202610262155
+EURGBP,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+EURAUD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+EURNZD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+EURUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+EURCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+GBPAUD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+GBPNZD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+GBPUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+GBPCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+AUDNZD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+4 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+4 more),Mon 2026-10-26 11:48 PM PT,202610262348
+AUDUSD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),USD CB Consumer Confidence Tue 7:00 AM PT | AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+AUDCAD,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+AUDCHF,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+AUDJPY,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+NZDUSD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),USD CB Consumer Confidence Tue 7:00 AM PT,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+NZDCAD,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+NZDCHF,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+NZDJPY,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+USDCAD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+USDCHF,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+USDJPY,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+USDZAR,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+AUD Index,HIGH,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,News risk: AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+NZD Index,HIGH,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),,News risk: NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),Mon 2026-10-26 11:48 PM PT,202610262348
+USD Index,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-10-26 11:48 PM PT,202610262348
+SPX500,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+NAS100,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+DOW,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+CHINA50,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+GER40,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+UK100,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+JPN225,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+GOLD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+SILVER,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+USOIL,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+BTCUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+US10T,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+RUSSELL,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+PLATINUM,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+COPPER,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+NATGAS,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
+ETHUSD,medium,None in the next 24 hours,USD CB Consumer Confidence Tue 7:00 AM PT,Lighter news risk: USD CB Consumer Confidence Tue 7:00 AM PT,Mon 2026-10-26 11:48 PM PT,202610262348
