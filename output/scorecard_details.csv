@@ -3,7 +3,7 @@ EURGBP,Technicals,Trend score,below; down or flat,-2
 EURGBP,Technicals,Seasonality (10-year avg this month),"-0.17%, up 60% of years",-1
 EURGBP,COT,Net positioning,"EUR -134,524 / GBP -80,420",0
 EURGBP,COT,Latest weekly change,EUR +0.34 / GBP +6.09,0
-EURGBP,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+EURGBP,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 EURGBP,Growth,GDP,"EUR +1, GBP +1",0
 EURGBP,Growth,Manufacturing PMI,"EUR +1, GBP -1",2
 EURGBP,Growth,Services PMI,"EUR +0, GBP +1",-1
@@ -24,7 +24,7 @@ EURAUD,Technicals,Trend score,below; down or flat,-2
 EURAUD,Technicals,Seasonality (10-year avg this month),"+0.07%, up 50% of years",1
 EURAUD,COT,Net positioning,"EUR -134,524 / AUD -127,292",0
 EURAUD,COT,Latest weekly change,EUR +0.34 / AUD -0.96,2
-EURAUD,Crowd,Sentiment,"retail long %: 69; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+EURAUD,Crowd,Sentiment,"retail long %: 69; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 EURAUD,Growth,GDP,"EUR +1, AUD +1",0
 EURAUD,Growth,Manufacturing PMI,"EUR +1, AUD +0",1
 EURAUD,Growth,Services PMI,"EUR +0, AUD +0",0
@@ -45,7 +45,7 @@ EURNZD,Technicals,Trend score,below; down or flat,-2
 EURNZD,Technicals,Seasonality (10-year avg this month),"+0.19%, up 40% of years",1
 EURNZD,COT,Net positioning,"EUR -134,524 / NZD -58,149",0
 EURNZD,COT,Latest weekly change,EUR +0.34 / NZD -4.20,2
-EURNZD,Crowd,Sentiment,"retail long %: 41; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+EURNZD,Crowd,Sentiment,"retail long %: 42; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 EURNZD,Growth,GDP,"EUR +1, NZD +1",0
 EURNZD,Growth,Manufacturing PMI,"EUR +1, NZD +0",1
 EURNZD,Growth,Services PMI,"EUR +0, NZD +0",0
@@ -65,7 +65,7 @@ EURUSD,Technicals,Trend score,below; down or flat,-2
 EURUSD,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EURUSD,COT,Net positioning,"EUR -134,524 / USD +15,044",-2
 EURUSD,COT,Latest weekly change,EUR +0.34 / USD +2.75,0
-EURUSD,Crowd,Sentiment,"retail long %: 65; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+EURUSD,Crowd,Sentiment,"retail long %: 65; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 EURUSD,Growth,GDP,"EUR +1, USD +1",0
 EURUSD,Growth,Manufacturing PMI,"EUR +1, USD -1",2
 EURUSD,Growth,Services PMI,"EUR +0, USD -1",1
@@ -81,12 +81,11 @@ EURUSD,Jobs,Jobless claims,"EUR +0, USD +1",-1
 EURUSD,Jobs,JOLTS,"EUR +0, USD -1",1
 EURUSD,Jobs,ADP,"EUR +0, USD +1",-1
 EURUSD,News risk,High impact next 24h,none,0
-EURUSD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 EURCAD,Technicals,Trend score,below; down or flat,-2
 EURCAD,Technicals,Seasonality (10-year avg this month),"+0.07%, up 50% of years",1
 EURCAD,COT,Net positioning,"EUR -134,524 / CAD -74,709",0
 EURCAD,COT,Latest weekly change,EUR +0.34 / CAD +3.81,0
-EURCAD,Crowd,Sentiment,"retail long %: 63; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+EURCAD,Crowd,Sentiment,"retail long %: 62; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 EURCAD,Growth,GDP,"EUR +1, CAD +0",1
 EURCAD,Growth,Manufacturing PMI,"EUR +1, CAD +0",1
 EURCAD,Growth,Services PMI,"EUR +0, CAD +0",0
@@ -101,12 +100,12 @@ EURCAD,Jobs,Unemployment rate,"EUR +0, CAD +0",0
 EURCAD,Jobs,Jobless claims,"EUR +0, CAD +0",0
 EURCAD,Jobs,JOLTS,"EUR +0, CAD +0",0
 EURCAD,Jobs,ADP,"EUR +0, CAD +0",0
-EURCAD,News risk,High impact next 24h,none,0
+EURCAD,News risk,High impact next 24h,CAD BOC Monetary Policy Report Wed 6:45 AM PT | CAD BOC Rate Statement Wed 6:45 AM PT (+2 more),0
 EURCHF,Technicals,Trend score,below; down or flat,-2
 EURCHF,Technicals,Seasonality (10-year avg this month),"+0.27%, up 60% of years",1
 EURCHF,COT,Net positioning,"EUR -134,524 / CHF -18,150",0
 EURCHF,COT,Latest weekly change,EUR +0.34 / CHF +2.71,0
-EURCHF,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+EURCHF,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 EURCHF,Growth,GDP,"EUR +1, CHF +1",0
 EURCHF,Growth,Manufacturing PMI,"EUR +1, CHF -1",2
 EURCHF,Growth,Services PMI,"EUR +0, CHF +0",0
@@ -126,7 +125,7 @@ EURJPY,Technicals,Trend score,below; down or flat,-2
 EURJPY,Technicals,Seasonality (10-year avg this month),"+1.16%, up 70% of years",1
 EURJPY,COT,Net positioning,"EUR -134,524 / JPY +69,878",-2
 EURJPY,COT,Latest weekly change,EUR +0.34 / JPY +3.02,0
-EURJPY,Crowd,Sentiment,"retail long %: 45; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+EURJPY,Crowd,Sentiment,"retail long %: 47; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 EURJPY,Growth,GDP,"EUR +1, JPY +1",0
 EURJPY,Growth,Manufacturing PMI,"EUR +1, JPY -1",2
 EURJPY,Growth,Services PMI,"EUR +0, JPY +0",0
@@ -146,7 +145,7 @@ GBPAUD,Technicals,Trend score,below; down or flat,-2
 GBPAUD,Technicals,Seasonality (10-year avg this month),"+0.28%, up 60% of years",1
 GBPAUD,COT,Net positioning,"GBP -80,420 / AUD -127,292",0
 GBPAUD,COT,Latest weekly change,GBP +6.09 / AUD -0.96,2
-GBPAUD,Crowd,Sentiment,"retail long %: 59; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+GBPAUD,Crowd,Sentiment,"retail long %: 60; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 GBPAUD,Growth,GDP,"GBP +1, AUD +1",0
 GBPAUD,Growth,Manufacturing PMI,"GBP -1, AUD +0",-1
 GBPAUD,Growth,Services PMI,"GBP +1, AUD +0",1
@@ -167,7 +166,7 @@ GBPNZD,Technicals,Trend score,below; down or flat,-2
 GBPNZD,Technicals,Seasonality (10-year avg this month),"+0.38%, up 60% of years",1
 GBPNZD,COT,Net positioning,"GBP -80,420 / NZD -58,149",0
 GBPNZD,COT,Latest weekly change,GBP +6.09 / NZD -4.20,2
-GBPNZD,Crowd,Sentiment,"retail long %: 34; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+GBPNZD,Crowd,Sentiment,"retail long %: 31; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 GBPNZD,Growth,GDP,"GBP +1, NZD +1",0
 GBPNZD,Growth,Manufacturing PMI,"GBP -1, NZD +0",-1
 GBPNZD,Growth,Services PMI,"GBP +1, NZD +0",1
@@ -188,7 +187,7 @@ GBPUSD,Technicals,Trend score,above; up,2
 GBPUSD,Technicals,Seasonality (10-year avg this month),"-0.37%, up 40% of years",-1
 GBPUSD,COT,Net positioning,"GBP -80,420 / USD +15,044",-2
 GBPUSD,COT,Latest weekly change,GBP +6.09 / USD +2.75,0
-GBPUSD,Crowd,Sentiment,"retail long %: 56; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+GBPUSD,Crowd,Sentiment,"retail long %: 55; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 GBPUSD,Growth,GDP,"GBP +1, USD +1",0
 GBPUSD,Growth,Manufacturing PMI,"GBP -1, USD -1",0
 GBPUSD,Growth,Services PMI,"GBP +1, USD -1",2
@@ -204,12 +203,12 @@ GBPUSD,Jobs,Jobless claims,"GBP -1, USD +1",-2
 GBPUSD,Jobs,JOLTS,"GBP +0, USD -1",1
 GBPUSD,Jobs,ADP,"GBP +0, USD +1",-1
 GBPUSD,News risk,High impact next 24h,GBP Annual Budget Release Wed 5:30 AM PT,0
-GBPUSD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT | GBP Autumn Forecast Statement Wed 5:30 AM PT,0
+GBPUSD,News risk,Medium impact next 24h,GBP Autumn Forecast Statement Wed 5:30 AM PT,0
 GBPCAD,Technicals,Trend score,below; down or flat,-2
 GBPCAD,Technicals,Seasonality (10-year avg this month),"+0.27%, up 40% of years",1
 GBPCAD,COT,Net positioning,"GBP -80,420 / CAD -74,709",0
 GBPCAD,COT,Latest weekly change,GBP +6.09 / CAD +3.81,0
-GBPCAD,Crowd,Sentiment,"retail long %: 44; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+GBPCAD,Crowd,Sentiment,"retail long %: 48; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 GBPCAD,Growth,GDP,"GBP +1, CAD +0",1
 GBPCAD,Growth,Manufacturing PMI,"GBP -1, CAD +0",-1
 GBPCAD,Growth,Services PMI,"GBP +1, CAD +0",1
@@ -224,13 +223,13 @@ GBPCAD,Jobs,Unemployment rate,"GBP +1, CAD +0",1
 GBPCAD,Jobs,Jobless claims,"GBP -1, CAD +0",-1
 GBPCAD,Jobs,JOLTS,"GBP +0, CAD +0",0
 GBPCAD,Jobs,ADP,"GBP +0, CAD +0",0
-GBPCAD,News risk,High impact next 24h,GBP Annual Budget Release Wed 5:30 AM PT,0
+GBPCAD,News risk,High impact next 24h,GBP Annual Budget Release Wed 5:30 AM PT | CAD BOC Monetary Policy Report Wed 6:45 AM PT (+3 more),0
 GBPCAD,News risk,Medium impact next 24h,GBP Autumn Forecast Statement Wed 5:30 AM PT,0
 GBPCHF,Technicals,Trend score,above; up,2
 GBPCHF,Technicals,Seasonality (10-year avg this month),"+0.49%, up 50% of years",1
 GBPCHF,COT,Net positioning,"GBP -80,420 / CHF -18,150",0
 GBPCHF,COT,Latest weekly change,GBP +6.09 / CHF +2.71,0
-GBPCHF,Crowd,Sentiment,"retail long %: 71; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+GBPCHF,Crowd,Sentiment,"retail long %: 71; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 GBPCHF,Growth,GDP,"GBP +1, CHF +1",0
 GBPCHF,Growth,Manufacturing PMI,"GBP -1, CHF -1",0
 GBPCHF,Growth,Services PMI,"GBP +1, CHF +0",1
@@ -251,7 +250,7 @@ GBPJPY,Technicals,Trend score,below; up,-1
 GBPJPY,Technicals,Seasonality (10-year avg this month),"+1.38%, up 50% of years",1
 GBPJPY,COT,Net positioning,"GBP -80,420 / JPY +69,878",-2
 GBPJPY,COT,Latest weekly change,GBP +6.09 / JPY +3.02,0
-GBPJPY,Crowd,Sentiment,"retail long %: 58; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+GBPJPY,Crowd,Sentiment,"retail long %: 58; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 GBPJPY,Growth,GDP,"GBP +1, JPY +1",0
 GBPJPY,Growth,Manufacturing PMI,"GBP -1, JPY -1",0
 GBPJPY,Growth,Services PMI,"GBP +1, JPY +0",1
@@ -268,11 +267,11 @@ GBPJPY,Jobs,JOLTS,"GBP +0, JPY +0",0
 GBPJPY,Jobs,ADP,"GBP +0, JPY +0",0
 GBPJPY,News risk,High impact next 24h,GBP Annual Budget Release Wed 5:30 AM PT,0
 GBPJPY,News risk,Medium impact next 24h,GBP Autumn Forecast Statement Wed 5:30 AM PT,0
-AUDNZD,Technicals,Trend score,below; down or flat,-2
+AUDNZD,Technicals,Trend score,above; down or flat,1
 AUDNZD,Technicals,Seasonality (10-year avg this month),"+0.12%, up 70% of years",1
 AUDNZD,COT,Net positioning,"AUD -127,292 / NZD -58,149",0
 AUDNZD,COT,Latest weekly change,AUD -0.96 / NZD -4.20,0
-AUDNZD,Crowd,Sentiment,"retail long %: 27; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+AUDNZD,Crowd,Sentiment,"retail long %: 27; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 AUDNZD,Growth,GDP,"AUD +1, NZD +1",0
 AUDNZD,Growth,Manufacturing PMI,"AUD +0, NZD +0",0
 AUDNZD,Growth,Services PMI,"AUD +0, NZD +0",0
@@ -293,7 +292,7 @@ AUDUSD,Technicals,Trend score,above; up,2
 AUDUSD,Technicals,Seasonality (10-year avg this month),"-0.63%, up 20% of years",-1
 AUDUSD,COT,Net positioning,"AUD -127,292 / USD +15,044",-2
 AUDUSD,COT,Latest weekly change,AUD -0.96 / USD +2.75,-2
-AUDUSD,Crowd,Sentiment,"retail long %: 51; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+AUDUSD,Crowd,Sentiment,"retail long %: 51; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 AUDUSD,Growth,GDP,"AUD +1, USD +1",0
 AUDUSD,Growth,Manufacturing PMI,"AUD +0, USD -1",1
 AUDUSD,Growth,Services PMI,"AUD +0, USD -1",1
@@ -309,12 +308,12 @@ AUDUSD,Jobs,Jobless claims,"AUD +0, USD +1",-1
 AUDUSD,Jobs,JOLTS,"AUD +0, USD -1",1
 AUDUSD,Jobs,ADP,"AUD +0, USD +1",-1
 AUDUSD,News risk,High impact next 24h,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),0
-AUDUSD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT | AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,0
+AUDUSD,News risk,Medium impact next 24h,AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,0
 AUDCAD,Technicals,Trend score,below; down or flat,-2
 AUDCAD,Technicals,Seasonality (10-year avg this month),"+0.02%, up 60% of years",1
 AUDCAD,COT,Net positioning,"AUD -127,292 / CAD -74,709",0
 AUDCAD,COT,Latest weekly change,AUD -0.96 / CAD +3.81,-2
-AUDCAD,Crowd,Sentiment,"retail long %: 40; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+AUDCAD,Crowd,Sentiment,"retail long %: 39; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 AUDCAD,Growth,GDP,"AUD +1, CAD +0",1
 AUDCAD,Growth,Manufacturing PMI,"AUD +0, CAD +0",0
 AUDCAD,Growth,Services PMI,"AUD +0, CAD +0",0
@@ -329,13 +328,13 @@ AUDCAD,Jobs,Unemployment rate,"AUD -1, CAD +0",-1
 AUDCAD,Jobs,Jobless claims,"AUD +0, CAD +0",0
 AUDCAD,Jobs,JOLTS,"AUD +0, CAD +0",0
 AUDCAD,Jobs,ADP,"AUD +0, CAD +0",0
-AUDCAD,News risk,High impact next 24h,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+1 more),0
+AUDCAD,News risk,High impact next 24h,AUD CPI m/m Tue 5:30 PM PT | AUD CPI y/y Tue 5:30 PM PT (+5 more),0
 AUDCAD,News risk,Medium impact next 24h,AUD RBA Gov Bullock Speaks Tue 5:15 PM PT,0
 AUDCHF,Technicals,Trend score,above; up,2
 AUDCHF,Technicals,Seasonality (10-year avg this month),"+0.23%, up 70% of years",1
 AUDCHF,COT,Net positioning,"AUD -127,292 / CHF -18,150",0
 AUDCHF,COT,Latest weekly change,AUD -0.96 / CHF +2.71,-2
-AUDCHF,Crowd,Sentiment,"retail long %: 69; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+AUDCHF,Crowd,Sentiment,"retail long %: 68; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 AUDCHF,Growth,GDP,"AUD +1, CHF +1",0
 AUDCHF,Growth,Manufacturing PMI,"AUD +0, CHF -1",1
 AUDCHF,Growth,Services PMI,"AUD +0, CHF +0",0
@@ -356,7 +355,7 @@ AUDJPY,Technicals,Trend score,above; up,2
 AUDJPY,Technicals,Seasonality (10-year avg this month),"+1.12%, up 60% of years",1
 AUDJPY,COT,Net positioning,"AUD -127,292 / JPY +69,878",-2
 AUDJPY,COT,Latest weekly change,AUD -0.96 / JPY +3.02,-2
-AUDJPY,Crowd,Sentiment,"retail long %: 50; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+AUDJPY,Crowd,Sentiment,"retail long %: 47; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 AUDJPY,Growth,GDP,"AUD +1, JPY +1",0
 AUDJPY,Growth,Manufacturing PMI,"AUD +0, JPY -1",1
 AUDJPY,Growth,Services PMI,"AUD +0, JPY +0",0
@@ -377,7 +376,7 @@ NZDUSD,Technicals,Trend score,above; up,2
 NZDUSD,Technicals,Seasonality (10-year avg this month),"-0.72%, up 40% of years",-1
 NZDUSD,COT,Net positioning,"NZD -58,149 / USD +15,044",-2
 NZDUSD,COT,Latest weekly change,NZD -4.20 / USD +2.75,-2
-NZDUSD,Crowd,Sentiment,"retail long %: 76; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NZDUSD,Crowd,Sentiment,"retail long %: 77; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NZDUSD,Growth,GDP,"NZD +1, USD +1",0
 NZDUSD,Growth,Manufacturing PMI,"NZD +0, USD -1",1
 NZDUSD,Growth,Services PMI,"NZD +0, USD -1",1
@@ -393,12 +392,11 @@ NZDUSD,Jobs,Jobless claims,"NZD +0, USD +1",-1
 NZDUSD,Jobs,JOLTS,"NZD +0, USD -1",1
 NZDUSD,Jobs,ADP,"NZD +0, USD +1",-1
 NZDUSD,News risk,High impact next 24h,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),0
-NZDUSD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
-NZDCAD,Technicals,Trend score,above; up,2
+NZDCAD,Technicals,Trend score,below; up,-1
 NZDCAD,Technicals,Seasonality (10-year avg this month),"-0.10%, up 50% of years",-1
 NZDCAD,COT,Net positioning,"NZD -58,149 / CAD -74,709",0
 NZDCAD,COT,Latest weekly change,NZD -4.20 / CAD +3.81,-2
-NZDCAD,Crowd,Sentiment,"retail long %: 78; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NZDCAD,Crowd,Sentiment,"retail long %: 77; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NZDCAD,Growth,GDP,"NZD +1, CAD +0",1
 NZDCAD,Growth,Manufacturing PMI,"NZD +0, CAD +0",0
 NZDCAD,Growth,Services PMI,"NZD +0, CAD +0",0
@@ -413,12 +411,12 @@ NZDCAD,Jobs,Unemployment rate,"NZD -1, CAD +0",-1
 NZDCAD,Jobs,Jobless claims,"NZD +0, CAD +0",0
 NZDCAD,Jobs,JOLTS,"NZD +0, CAD +0",0
 NZDCAD,Jobs,ADP,"NZD +0, CAD +0",0
-NZDCAD,News risk,High impact next 24h,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+1 more),0
+NZDCAD,News risk,High impact next 24h,NZD Official Cash Rate Tue 6:00 PM PT | NZD RBNZ Rate Statement Tue 6:00 PM PT (+5 more),0
 NZDCHF,Technicals,Trend score,above; up,2
 NZDCHF,Technicals,Seasonality (10-year avg this month),"+0.13%, up 50% of years",1
 NZDCHF,COT,Net positioning,"NZD -58,149 / CHF -18,150",0
 NZDCHF,COT,Latest weekly change,NZD -4.20 / CHF +2.71,-2
-NZDCHF,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NZDCHF,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NZDCHF,Growth,GDP,"NZD +1, CHF +1",0
 NZDCHF,Growth,Manufacturing PMI,"NZD +0, CHF -1",1
 NZDCHF,Growth,Services PMI,"NZD +0, CHF +0",0
@@ -438,7 +436,7 @@ NZDJPY,Technicals,Trend score,above; up,2
 NZDJPY,Technicals,Seasonality (10-year avg this month),"+1.02%, up 60% of years",1
 NZDJPY,COT,Net positioning,"NZD -58,149 / JPY +69,878",-2
 NZDJPY,COT,Latest weekly change,NZD -4.20 / JPY +3.02,-2
-NZDJPY,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NZDJPY,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NZDJPY,Growth,GDP,"NZD +1, JPY +1",0
 NZDJPY,Growth,Manufacturing PMI,"NZD +0, JPY -1",1
 NZDJPY,Growth,Services PMI,"NZD +0, JPY +0",0
@@ -458,7 +456,7 @@ USDCAD,Technicals,Trend score,below; down or flat,-2
 USDCAD,Technicals,Seasonality (10-year avg this month),"+0.68%, up 60% of years",1
 USDCAD,COT,Net positioning,"USD +15,044 / CAD -74,709",2
 USDCAD,COT,Latest weekly change,USD +2.75 / CAD +3.81,0
-USDCAD,Crowd,Sentiment,"retail long %: 49; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+USDCAD,Crowd,Sentiment,"retail long %: 49; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 USDCAD,Growth,GDP,"USD +1, CAD +0",1
 USDCAD,Growth,Manufacturing PMI,"USD -1, CAD +0",-1
 USDCAD,Growth,Services PMI,"USD -1, CAD +0",-1
@@ -473,13 +471,12 @@ USDCAD,Jobs,Unemployment rate,"USD -1, CAD +0",-1
 USDCAD,Jobs,Jobless claims,"USD +1, CAD +0",1
 USDCAD,Jobs,JOLTS,"USD -1, CAD +0",-1
 USDCAD,Jobs,ADP,"USD +1, CAD +0",1
-USDCAD,News risk,High impact next 24h,none,0
-USDCAD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
+USDCAD,News risk,High impact next 24h,CAD BOC Monetary Policy Report Wed 6:45 AM PT | CAD BOC Rate Statement Wed 6:45 AM PT (+2 more),0
 USDCHF,Technicals,Trend score,below; down or flat,-2
 USDCHF,Technicals,Seasonality (10-year avg this month),"+0.89%, up 60% of years",1
 USDCHF,COT,Net positioning,"USD +15,044 / CHF -18,150",2
 USDCHF,COT,Latest weekly change,USD +2.75 / CHF +2.71,0
-USDCHF,Crowd,Sentiment,"retail long %: 80; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+USDCHF,Crowd,Sentiment,"retail long %: 80; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 USDCHF,Growth,GDP,"USD +1, CHF +1",0
 USDCHF,Growth,Manufacturing PMI,"USD -1, CHF -1",0
 USDCHF,Growth,Services PMI,"USD -1, CHF +0",-1
@@ -495,12 +492,11 @@ USDCHF,Jobs,Jobless claims,"USD +1, CHF +0",1
 USDCHF,Jobs,JOLTS,"USD -1, CHF +0",-1
 USDCHF,Jobs,ADP,"USD +1, CHF +0",1
 USDCHF,News risk,High impact next 24h,none,0
-USDCHF,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 USDJPY,Technicals,Trend score,below; down or flat,-2
 USDJPY,Technicals,Seasonality (10-year avg this month),"+1.78%, up 70% of years",1
 USDJPY,COT,Net positioning,"USD +15,044 / JPY +69,878",0
 USDJPY,COT,Latest weekly change,USD +2.75 / JPY +3.02,0
-USDJPY,Crowd,Sentiment,"retail long %: 41; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+USDJPY,Crowd,Sentiment,"retail long %: 41; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 USDJPY,Growth,GDP,"USD +1, JPY +1",0
 USDJPY,Growth,Manufacturing PMI,"USD -1, JPY -1",0
 USDJPY,Growth,Services PMI,"USD -1, JPY +0",-1
@@ -516,12 +512,11 @@ USDJPY,Jobs,Jobless claims,"USD +1, JPY +0",1
 USDJPY,Jobs,JOLTS,"USD -1, JPY +0",-1
 USDJPY,Jobs,ADP,"USD +1, JPY +0",1
 USDJPY,News risk,High impact next 24h,none,0
-USDJPY,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 CADCHF,Technicals,Trend score,above; up,2
 CADCHF,Technicals,Seasonality (10-year avg this month),"+0.23%, up 80% of years",1
 CADCHF,COT,Net positioning,"CAD -74,709 / CHF -18,150",0
 CADCHF,COT,Latest weekly change,CAD +3.81 / CHF +2.71,0
-CADCHF,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+CADCHF,Crowd,Sentiment,"retail long %: 71; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 CADCHF,Growth,GDP,"CAD +0, CHF +1",-1
 CADCHF,Growth,Manufacturing PMI,"CAD +0, CHF -1",1
 CADCHF,Growth,Services PMI,"CAD +0, CHF +0",0
@@ -536,12 +531,12 @@ CADCHF,Jobs,Unemployment rate,"CAD +0, CHF +0",0
 CADCHF,Jobs,Jobless claims,"CAD +0, CHF +0",0
 CADCHF,Jobs,JOLTS,"CAD +0, CHF +0",0
 CADCHF,Jobs,ADP,"CAD +0, CHF +0",0
-CADCHF,News risk,High impact next 24h,none,0
+CADCHF,News risk,High impact next 24h,CAD BOC Monetary Policy Report Wed 6:45 AM PT | CAD BOC Rate Statement Wed 6:45 AM PT (+2 more),0
 CADJPY,Technicals,Trend score,above; up,2
 CADJPY,Technicals,Seasonality (10-year avg this month),"+1.12%, up 60% of years",1
 CADJPY,COT,Net positioning,"CAD -74,709 / JPY +69,878",-2
 CADJPY,COT,Latest weekly change,CAD +3.81 / JPY +3.02,0
-CADJPY,Crowd,Sentiment,"retail long %: 56; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+CADJPY,Crowd,Sentiment,"retail long %: 54; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 CADJPY,Growth,GDP,"CAD +0, JPY +1",-1
 CADJPY,Growth,Manufacturing PMI,"CAD +0, JPY -1",1
 CADJPY,Growth,Services PMI,"CAD +0, JPY +0",0
@@ -556,12 +551,12 @@ CADJPY,Jobs,Unemployment rate,"CAD +0, JPY -1",1
 CADJPY,Jobs,Jobless claims,"CAD +0, JPY +0",0
 CADJPY,Jobs,JOLTS,"CAD +0, JPY +0",0
 CADJPY,Jobs,ADP,"CAD +0, JPY +0",0
-CADJPY,News risk,High impact next 24h,none,0
+CADJPY,News risk,High impact next 24h,CAD BOC Monetary Policy Report Wed 6:45 AM PT | CAD BOC Rate Statement Wed 6:45 AM PT (+2 more),0
 CHFJPY,Technicals,Trend score,below; up,-1
 CHFJPY,Technicals,Seasonality (10-year avg this month),"+0.90%, up 70% of years",1
 CHFJPY,COT,Net positioning,"CHF -18,150 / JPY +69,878",-2
 CHFJPY,COT,Latest weekly change,CHF +2.71 / JPY +3.02,0
-CHFJPY,Crowd,Sentiment,"retail long %: 33; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+CHFJPY,Crowd,Sentiment,"retail long %: 33; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 CHFJPY,Growth,GDP,"CHF +1, JPY +1",0
 CHFJPY,Growth,Manufacturing PMI,"CHF -1, JPY -1",0
 CHFJPY,Growth,Services PMI,"CHF +0, JPY +0",0
@@ -581,7 +576,7 @@ USDZAR,Technicals,Trend score,above; up,2
 USDZAR,Technicals,Seasonality (10-year avg this month),"+0.54%, up 50% of years",1
 USDZAR,COT,Net positioning,"USD +15,044 / ZAR +12,928",0
 USDZAR,COT,Latest weekly change,USD +2.75 / ZAR -0.04,2
-USDZAR,Crowd,Sentiment,"retail long %: 37; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+USDZAR,Crowd,Sentiment,"retail long %: 36; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 USDZAR,Growth,GDP,"USD +1, ZAR +0",1
 USDZAR,Growth,Manufacturing PMI,"USD -1, ZAR +0",-1
 USDZAR,Growth,Services PMI,"USD -1, ZAR +0",-1
@@ -597,12 +592,11 @@ USDZAR,Jobs,Jobless claims,"USD +1, ZAR +0",1
 USDZAR,Jobs,JOLTS,"USD -1, ZAR +0",-1
 USDZAR,Jobs,ADP,"USD +1, ZAR +0",1
 USDZAR,News risk,High impact next 24h,none,0
-USDZAR,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 EUR Index,Technicals,Trend score,below; down or flat,-2
 EUR Index,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EUR Index,COT,Net positioning,38.55,-1
 EUR Index,COT,Latest weekly change,+0.34,1
-EUR Index,Crowd,Sentiment,"retail long % (vs US dollar): 65; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+EUR Index,Crowd,Sentiment,"retail long % (vs US dollar): 65; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 EUR Index,Growth,GDP,EZ +1,1
 EUR Index,Growth,Manufacturing PMI,EZ +1,1
 EUR Index,Growth,Services PMI,EZ +0,0
@@ -618,7 +612,7 @@ GBP Index,Technicals,Trend score,above; up,2
 GBP Index,Technicals,Seasonality (10-year avg this month),"-0.37%, up 40% of years",-1
 GBP Index,COT,Net positioning,28.71,-1
 GBP Index,COT,Latest weekly change,+6.09,1
-GBP Index,Crowd,Sentiment,"retail long % (vs US dollar): 56; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+GBP Index,Crowd,Sentiment,"retail long % (vs US dollar): 55; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 GBP Index,Growth,GDP,UK +1,1
 GBP Index,Growth,Manufacturing PMI,UK -1,-1
 GBP Index,Growth,Services PMI,UK +1,1
@@ -636,7 +630,7 @@ AUD Index,Technicals,Trend score,above; up,2
 AUD Index,Technicals,Seasonality (10-year avg this month),"-0.63%, up 20% of years",-1
 AUD Index,COT,Net positioning,30.36,-1
 AUD Index,COT,Latest weekly change,-0.96,-1
-AUD Index,Crowd,Sentiment,"retail long % (vs US dollar): 51; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+AUD Index,Crowd,Sentiment,"retail long % (vs US dollar): 51; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 AUD Index,Growth,GDP,AU +1,1
 AUD Index,Growth,Manufacturing PMI,AU +0,0
 AUD Index,Growth,Services PMI,AU +0,0
@@ -652,7 +646,7 @@ NZD Index,Technicals,Trend score,above; up,2
 NZD Index,Technicals,Seasonality (10-year avg this month),"-0.72%, up 40% of years",-1
 NZD Index,COT,Net positioning,21.38,-1
 NZD Index,COT,Latest weekly change,-4.20,-1
-NZD Index,Crowd,Sentiment,"retail long % (vs US dollar): 76; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NZD Index,Crowd,Sentiment,"retail long % (vs US dollar): 77; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NZD Index,Growth,GDP,NZ +1,1
 NZD Index,Growth,Manufacturing PMI,NZ +0,0
 NZD Index,Growth,Services PMI,NZ +0,0
@@ -668,7 +662,7 @@ USD Index,Technicals,Trend score,above; up,2
 USD Index,Technicals,Seasonality (10-year avg this month),"+0.99%, up 70% of years",1
 USD Index,COT,Net positioning,65.10,1
 USD Index,COT,Latest weekly change,+2.75,1
-USD Index,Crowd,Sentiment,"retail long % (vs US dollar): 46; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+USD Index,Crowd,Sentiment,"retail long % (vs US dollar): 46; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 USD Index,Growth,GDP,US +1,1
 USD Index,Growth,Manufacturing PMI,US -1,-1
 USD Index,Growth,Services PMI,US -1,-1
@@ -684,12 +678,11 @@ USD Index,Jobs,Jobless claims,US +1,1
 USD Index,Jobs,JOLTS,US -1,-1
 USD Index,Jobs,ADP,US +1,1
 USD Index,News risk,High impact next 24h,none,0
-USD Index,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 CAD Index,Technicals,Trend score,above; up,2
 CAD Index,Technicals,Seasonality (10-year avg this month),"-0.64%, up 40% of years",-1
 CAD Index,COT,Net positioning,36.56,-1
 CAD Index,COT,Latest weekly change,+3.81,1
-CAD Index,Crowd,Sentiment,"retail long % (vs US dollar): 51; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+CAD Index,Crowd,Sentiment,"retail long % (vs US dollar): 51; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 CAD Index,Growth,GDP,CA +0,0
 CAD Index,Growth,Manufacturing PMI,CA +0,0
 CAD Index,Growth,Services PMI,CA +0,0
@@ -699,12 +692,12 @@ CAD Index,Inflation,PPI y/y,CA +1,1
 CAD Index,Inflation,Interest rate,"CA +1 (2.25% now, Q4/26 forecast 2.50%)",1
 CAD Index,Jobs,Employment change,CA -1,-1
 CAD Index,Jobs,Unemployment rate,CA +0,0
-CAD Index,News risk,High impact next 24h,none,0
+CAD Index,News risk,High impact next 24h,CAD BOC Monetary Policy Report Wed 6:45 AM PT | CAD BOC Rate Statement Wed 6:45 AM PT (+2 more),0
 CHF Index,Technicals,Trend score,above; up,2
 CHF Index,Technicals,Seasonality (10-year avg this month),"-0.85%, up 40% of years",-1
 CHF Index,COT,Net positioning,38.37,-1
 CHF Index,COT,Latest weekly change,+2.71,1
-CHF Index,Crowd,Sentiment,"retail long % (vs US dollar): 20; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+CHF Index,Crowd,Sentiment,"retail long % (vs US dollar): 20; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 CHF Index,Growth,GDP,CH +1,1
 CHF Index,Growth,Manufacturing PMI,CH -1,-1
 CHF Index,Growth,Retail sales,CH +1,1
@@ -719,7 +712,7 @@ JPY Index,Technicals,Trend score,above; up,2
 JPY Index,Technicals,Seasonality (10-year avg this month),"-1.70%, up 30% of years",-1
 JPY Index,COT,Net positioning,60.57,1
 JPY Index,COT,Latest weekly change,+3.02,1
-JPY Index,Crowd,Sentiment,"retail long % (vs US dollar): 59; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+JPY Index,Crowd,Sentiment,"retail long % (vs US dollar): 59; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 JPY Index,Growth,GDP,JP +1,1
 JPY Index,Growth,Manufacturing PMI,JP -1,-1
 JPY Index,Growth,Services PMI,JP +0,0
@@ -735,7 +728,7 @@ SPX500,Technicals,Trend score,below; down or flat,-2
 SPX500,Technicals,Seasonality (10-year avg this month),"+0.66%, up 50% of years",1
 SPX500,COT,Net positioning,37.58,-1
 SPX500,COT,Latest weekly change,-0.48,-1
-SPX500,Crowd,Sentiment,"retail long %: 49; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+SPX500,Crowd,Sentiment,"retail long %: 49; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 SPX500,Growth,GDP,US +1,1
 SPX500,Growth,Manufacturing PMI,US -1,-1
 SPX500,Growth,Services PMI,US -1,-1
@@ -751,12 +744,11 @@ SPX500,Jobs,Jobless claims,US +1,1
 SPX500,Jobs,JOLTS,US -1,-1
 SPX500,Jobs,ADP,US +1,1
 SPX500,News risk,High impact next 24h,none,0
-SPX500,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 NAS100,Technicals,Trend score,below; down or flat,-2
 NAS100,Technicals,Seasonality (10-year avg this month),"+0.91%, up 50% of years",1
 NAS100,COT,Net positioning,70.88,1
 NAS100,COT,Latest weekly change,+0.41,1
-NAS100,Crowd,Sentiment,"retail long %: 65; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NAS100,Crowd,Sentiment,"retail long %: 64; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NAS100,Growth,GDP,US +1,1
 NAS100,Growth,Manufacturing PMI,US -1,-1
 NAS100,Growth,Services PMI,US -1,-1
@@ -772,12 +764,11 @@ NAS100,Jobs,Jobless claims,US +1,1
 NAS100,Jobs,JOLTS,US -1,-1
 NAS100,Jobs,ADP,US +1,1
 NAS100,News risk,High impact next 24h,none,0
-NAS100,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 DOW,Technicals,Trend score,above; up,2
 DOW,Technicals,Seasonality (10-year avg this month),"+1.38%, up 50% of years",1
 DOW,COT,Net positioning,59.75,1
 DOW,COT,Latest weekly change,-3.54,-1
-DOW,Crowd,Sentiment,"retail long %: 54; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+DOW,Crowd,Sentiment,"retail long %: 56; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 DOW,Growth,GDP,US +1,1
 DOW,Growth,Manufacturing PMI,US -1,-1
 DOW,Growth,Services PMI,US -1,-1
@@ -793,7 +784,6 @@ DOW,Jobs,Jobless claims,US +1,1
 DOW,Jobs,JOLTS,US -1,-1
 DOW,Jobs,ADP,US +1,1
 DOW,News risk,High impact next 24h,none,0
-DOW,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 CHINA50,Technicals,Trend score,below; down or flat,-2
 CHINA50,Technicals,Seasonality (10-year avg this month),"-3.16%, up 50% of years",-1
 CHINA50,COT,Net positioning,,0
@@ -808,12 +798,11 @@ CHINA50,Inflation,PPI y/y,CN +1,-1
 CHINA50,Inflation,Interest rate,"CN +0 (3.00% now, Q4/26 forecast 3.00%)",0
 CHINA50,Jobs,Unemployment rate,CN +1,1
 CHINA50,News risk,High impact next 24h,none,0
-CHINA50,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 GER40,Technicals,Trend score,below; up,-1
 GER40,Technicals,Seasonality (10-year avg this month),"-0.03%, up 60% of years",-1
 GER40,COT,Net positioning,,0
 GER40,COT,Latest weekly change,,0
-GER40,Crowd,Sentiment,"retail long %: 56; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+GER40,Crowd,Sentiment,"retail long %: 54; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 GER40,Growth,GDP,EZ +1,1
 GER40,Growth,Manufacturing PMI,EZ +1,1
 GER40,Growth,Services PMI,EZ +0,0
@@ -825,12 +814,11 @@ GER40,Inflation,Interest rate,"EZ +1 (2.65% now, Q4/26 forecast 2.90%)",-1
 GER40,Jobs,Employment change,EZ +0,0
 GER40,Jobs,Unemployment rate,EZ +0,0
 GER40,News risk,High impact next 24h,none,0
-GER40,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 UK100,Technicals,Trend score,below; up,-1
 UK100,Technicals,Seasonality (10-year avg this month),"-0.61%, up 50% of years",-1
 UK100,COT,Net positioning,,0
 UK100,COT,Latest weekly change,,0
-UK100,Crowd,Sentiment,"retail long %: 51; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",0
+UK100,Crowd,Sentiment,"retail long %: 52; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",0
 UK100,Growth,GDP,UK +1,1
 UK100,Growth,Manufacturing PMI,UK -1,-1
 UK100,Growth,Services PMI,UK +1,1
@@ -843,12 +831,12 @@ UK100,Jobs,Employment change,UK +1,1
 UK100,Jobs,Unemployment rate,UK +1,1
 UK100,Jobs,Jobless claims,UK -1,-1
 UK100,News risk,High impact next 24h,GBP Annual Budget Release Wed 5:30 AM PT,0
-UK100,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT | GBP Autumn Forecast Statement Wed 5:30 AM PT,0
+UK100,News risk,Medium impact next 24h,GBP Autumn Forecast Statement Wed 5:30 AM PT,0
 JPN225,Technicals,Trend score,below; down or flat,-2
 JPN225,Technicals,Seasonality (10-year avg this month),"+3.05%, up 60% of years",1
 JPN225,COT,Net positioning,,0
 JPN225,COT,Latest weekly change,,0
-JPN225,Crowd,Sentiment,"retail long %: 76; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+JPN225,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 JPN225,Growth,GDP,JP +1,1
 JPN225,Growth,Manufacturing PMI,JP -1,-1
 JPN225,Growth,Services PMI,JP +0,0
@@ -860,12 +848,11 @@ JPN225,Inflation,Interest rate,"JP +0 (1.25% now, Q4/26 forecast 1.25%)",0
 JPN225,Jobs,Employment change,JP +0,0
 JPN225,Jobs,Unemployment rate,JP -1,-1
 JPN225,News risk,High impact next 24h,none,0
-JPN225,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 GOLD,Technicals,Trend score,below; down or flat,-2
 GOLD,Technicals,Seasonality (10-year avg this month),"+1.28%, up 60% of years",1
 GOLD,COT,Net positioning,86.42,1
 GOLD,COT,Latest weekly change,-0.35,-1
-GOLD,Crowd,Sentiment,"retail long %: 84; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+GOLD,Crowd,Sentiment,"retail long %: 83; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 GOLD,Growth,GDP,US +1,-1
 GOLD,Growth,Manufacturing PMI,US -1,1
 GOLD,Growth,Services PMI,US -1,1
@@ -881,12 +868,11 @@ GOLD,Jobs,Jobless claims,US +1,-1
 GOLD,Jobs,JOLTS,US -1,1
 GOLD,Jobs,ADP,US +1,-1
 GOLD,News risk,High impact next 24h,none,0
-GOLD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 SILVER,Technicals,Trend score,below; down or flat,-2
 SILVER,Technicals,Seasonality (10-year avg this month),"+1.86%, up 80% of years",1
 SILVER,COT,Net positioning,70.05,1
 SILVER,COT,Latest weekly change,-4.46,-1
-SILVER,Crowd,Sentiment,"retail long %: 90; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+SILVER,Crowd,Sentiment,"retail long %: 90; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 SILVER,Growth,GDP,US +1,1
 SILVER,Growth,Manufacturing PMI,US -1,-1
 SILVER,Growth,Services PMI,US -1,-1
@@ -902,12 +888,11 @@ SILVER,Jobs,Jobless claims,US +1,1
 SILVER,Jobs,JOLTS,US -1,-1
 SILVER,Jobs,ADP,US +1,1
 SILVER,News risk,High impact next 24h,none,0
-SILVER,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 USOIL,Technicals,Trend score,above; up,2
 USOIL,Technicals,Seasonality (10-year avg this month),"-1.04%, up 50% of years",-1
 USOIL,COT,Net positioning,57.69,1
 USOIL,COT,Latest weekly change,-0.83,-1
-USOIL,Crowd,Sentiment,"retail long %: 35; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",1
+USOIL,Crowd,Sentiment,"retail long %: 36; crowd: mostly short; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",1
 USOIL,Growth,GDP,US +1,1
 USOIL,Growth,Manufacturing PMI,US -1,-1
 USOIL,Growth,Services PMI,US -1,-1
@@ -923,12 +908,11 @@ USOIL,Jobs,Jobless claims,US +1,1
 USOIL,Jobs,JOLTS,US -1,-1
 USOIL,Jobs,ADP,US +1,1
 USOIL,News risk,High impact next 24h,none,0
-USOIL,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 BTCUSD,Technicals,Trend score,below; down or flat,-2
 BTCUSD,Technicals,Seasonality (10-year avg this month),"+17.91%, up 80% of years",1
 BTCUSD,COT,Net positioning,53.84,1
 BTCUSD,COT,Latest weekly change,-0.11,-1
-BTCUSD,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+BTCUSD,Crowd,Sentiment,"retail long %: 82; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 BTCUSD,Growth,GDP,US +1,1
 BTCUSD,Growth,Manufacturing PMI,US -1,-1
 BTCUSD,Growth,Services PMI,US -1,-1
@@ -944,12 +928,11 @@ BTCUSD,Jobs,Jobless claims,US +1,1
 BTCUSD,Jobs,JOLTS,US -1,-1
 BTCUSD,Jobs,ADP,US +1,1
 BTCUSD,News risk,High impact next 24h,none,0
-BTCUSD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 US10T,Technicals,Trend score,above; up,2
 US10T,Technicals,Seasonality (10-year avg this month),"-0.96%, up 10% of years",-1
 US10T,COT,Net positioning,29.97,-1
 US10T,COT,Latest weekly change,+1.58,1
-US10T,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+US10T,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 US10T,Growth,GDP,US +1,1
 US10T,Growth,Manufacturing PMI,US -1,-1
 US10T,Growth,Services PMI,US -1,-1
@@ -965,12 +948,11 @@ US10T,Jobs,Jobless claims,US +1,1
 US10T,Jobs,JOLTS,US -1,-1
 US10T,Jobs,ADP,US +1,1
 US10T,News risk,High impact next 24h,none,0
-US10T,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
-RUSSELL,Technicals,Trend score,above; down or flat,1
+RUSSELL,Technicals,Trend score,above; up,2
 RUSSELL,Technicals,Seasonality (10-year avg this month),"-0.18%, up 60% of years",-1
 RUSSELL,COT,Net positioning,42.34,-1
 RUSSELL,COT,Latest weekly change,+3.03,1
-RUSSELL,Crowd,Sentiment,"retail long %: 70; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+RUSSELL,Crowd,Sentiment,"retail long %: 70; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 RUSSELL,Growth,GDP,US +1,1
 RUSSELL,Growth,Manufacturing PMI,US -1,-1
 RUSSELL,Growth,Services PMI,US -1,-1
@@ -986,12 +968,11 @@ RUSSELL,Jobs,Jobless claims,US +1,1
 RUSSELL,Jobs,JOLTS,US -1,-1
 RUSSELL,Jobs,ADP,US +1,1
 RUSSELL,News risk,High impact next 24h,none,0
-RUSSELL,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 PLATINUM,Technicals,Trend score,below; down or flat,-2
 PLATINUM,Technicals,Seasonality (10-year avg this month),"+1.47%, up 70% of years",1
 PLATINUM,COT,Net positioning,65.99,1
 PLATINUM,COT,Latest weekly change,+0.04,1
-PLATINUM,Crowd,Sentiment,"retail long %: 87; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+PLATINUM,Crowd,Sentiment,"retail long %: 89; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 PLATINUM,Growth,GDP,US +1,1
 PLATINUM,Growth,Manufacturing PMI,US -1,-1
 PLATINUM,Growth,Services PMI,US -1,-1
@@ -1007,12 +988,11 @@ PLATINUM,Jobs,Jobless claims,US +1,1
 PLATINUM,Jobs,JOLTS,US -1,-1
 PLATINUM,Jobs,ADP,US +1,1
 PLATINUM,News risk,High impact next 24h,none,0
-PLATINUM,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 COPPER,Technicals,Trend score,above; down or flat,1
 COPPER,Technicals,Seasonality (10-year avg this month),"+0.92%, up 50% of years",1
 COPPER,COT,Net positioning,70.55,1
 COPPER,COT,Latest weekly change,-2.82,-1
-COPPER,Crowd,Sentiment,"retail long %: 67; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+COPPER,Crowd,Sentiment,"retail long %: 68; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 COPPER,Growth,GDP,US +1,1
 COPPER,Growth,Manufacturing PMI,US -1,-1
 COPPER,Growth,Services PMI,US -1,-1
@@ -1028,12 +1008,11 @@ COPPER,Jobs,Jobless claims,US +1,1
 COPPER,Jobs,JOLTS,US -1,-1
 COPPER,Jobs,ADP,US +1,1
 COPPER,News risk,High impact next 24h,none,0
-COPPER,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 NATGAS,Technicals,Trend score,below; down or flat,-2
 NATGAS,Technicals,Seasonality (10-year avg this month),"+8.05%, up 60% of years",1
 NATGAS,COT,Net positioning,34.34,-1
 NATGAS,COT,Latest weekly change,-0.85,-1
-NATGAS,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+NATGAS,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 NATGAS,Growth,GDP,US +1,1
 NATGAS,Growth,Manufacturing PMI,US -1,-1
 NATGAS,Growth,Services PMI,US -1,-1
@@ -1049,12 +1028,11 @@ NATGAS,Jobs,Jobless claims,US +1,1
 NATGAS,Jobs,JOLTS,US -1,-1
 NATGAS,Jobs,ADP,US +1,1
 NATGAS,News risk,High impact next 24h,none,0
-NATGAS,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
 ETHUSD,Technicals,Trend score,below; down or flat,-2
 ETHUSD,Technicals,Seasonality (10-year avg this month),"+6.73%, up 62% of years",1
 ETHUSD,COT,Net positioning,52.29,1
 ETHUSD,COT,Latest weekly change,-0.50,-1
-ETHUSD,Crowd,Sentiment,"retail long %: 86; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 5:46 AM PT",-1
+ETHUSD,Crowd,Sentiment,"retail long %: 87; crowd: mostly long; source: IG client sentiment, Tue Oct 27, 9:32 AM PT",-1
 ETHUSD,Growth,GDP,US +1,1
 ETHUSD,Growth,Manufacturing PMI,US -1,-1
 ETHUSD,Growth,Services PMI,US -1,-1
@@ -1070,4 +1048,3 @@ ETHUSD,Jobs,Jobless claims,US +1,1
 ETHUSD,Jobs,JOLTS,US -1,-1
 ETHUSD,Jobs,ADP,US +1,1
 ETHUSD,News risk,High impact next 24h,none,0
-ETHUSD,News risk,Medium impact next 24h,USD CB Consumer Confidence Tue 7:00 AM PT,0
