@@ -446,13 +446,13 @@ def test_ai_method_rules_unit():
     s = am.settings({})
     assert s["commodities"] is False and all(s[k] for k in ("policy", "yield_gap", "data_momentum", "risk_mood", "positioning", "structure"))
     on = {k: True for k in ("policy", "yield_gap", "risk_mood")}
-    assert am.verdict(4, 1, 1, 1, on) == ("Strong Bullish", "Yes")
+    assert am.verdict(4, 1, 1, 1, on) == ("Very Bullish", "Yes")
     assert am.verdict(4, 1, 0, 1, on) == ("Bullish", "")
     assert am.verdict(3, 0, 0, 0, on) == ("Bullish", "")
-    assert am.verdict(2, 1, 1, 1, on) == ("No trade", "Yes")      # aligned but not enough points
-    assert am.verdict(-2, 0, 0, 0, on) == ("No trade", "")
+    assert am.verdict(2, 1, 1, 1, on) == ("Neutral", "Yes")      # aligned but not enough points
+    assert am.verdict(-2, 0, 0, 0, on) == ("Neutral", "")
     assert am.verdict(-3, 0, 0, 0, on) == ("Bearish", "")
-    assert am.verdict(-5, -1, -1, -1, on) == ("Strong Bearish", "Yes")
+    assert am.verdict(-5, -1, -1, -1, on) == ("Very Bearish", "Yes")
     pc = {"EUR": (95, 1000, ""), "USD": (50, 0, ""), "JPY": (5, -10, ""), "GBP": (80, -5, ""), "CHF": (60, 10, "")}
     assert am.positioning_score("EURUSD", 1, pc)[0] == -1          # base above the 90th percentile: crowded long
     assert am.positioning_score("USDJPY", 1, pc)[0] == -1          # quote below the 10th percentile: crowded
@@ -484,8 +484,10 @@ def test_ai_method_page_offline():
     assert (t[AI_COLS].sum(axis=1) == t.total).all()
     assert list(t.total) == sorted(t.total, reverse=True)
     for _, r in t.iterrows():
-        exp = "Bullish" if r.total >= 3 else "Bearish" if r.total <= -3 else "No trade"
-        assert r.verdict.endswith(exp) or (exp == "No trade" and r.verdict == "No trade"), (r.symbol, r.total, r.verdict)
+        exp = "Bullish" if r.total >= 3 else "Bearish" if r.total <= -3 else "Neutral"
+        assert r.verdict in (exp, "Very " + exp), (r.symbol, r.total, r.verdict)
+        if r.verdict.startswith("Very"): assert abs(r.total) >= 4 and r.high_conviction == "Yes", r.symbol
+    assert set(t.verdict) <= {"Very Bullish", "Bullish", "Neutral", "Bearish", "Very Bearish"}   # the Top setups labels
     src = read(tmp, "ai_method_sources")
     assert set(src.currency) == {"USD", "EUR", "GBP", "JPY", "CHF", "CAD", "AUD", "NZD", "ZAR"}
     assert set(src.kind) <= {"2y", "proxy", "missing"}
@@ -495,6 +497,8 @@ def test_ai_method_page_offline():
         assert "\u2014" not in open(os.path.join(tmp, "output", name + ".csv"), encoding="utf-8").read(), "em dash in " + name
     help_ = read(tmp, "help")
     assert help_.plain_english.str.contains("Bias picks the direction, the chart picks the entry. Mixed signals means no trade.").any()
+    assert help_.plain_english.str.contains("Neutral, which means no trade").any()
+    assert not help_.plain_english.str.contains("Strong Bull|Strong Bear|No trade").any()
     # the Top setups score is untouched by this page
     top = read(tmp, "top_setups")
     assert (top[FACTORS].sum(axis=1) == top.score).all()
