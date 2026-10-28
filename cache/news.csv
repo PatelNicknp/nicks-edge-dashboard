@@ -9,6 +9,7 @@ Federal Reserve,2026-10-02 13:45,Federal Reserve Board announces approval of app
 Federal Reserve,2026-10-02 13:00,"Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm
 Federal Reserve,2026-10-02 08:00,"Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm
 Federal Reserve,2026-09-30 06:00,Federal Reserve Board finalizes changes to enhance the transparency and public accountability of its stress test and reduce volatility in its stress test-related capital requirements,https://www.federalreserve.gov/newsevents/pressreleases/bcreg20260930a.htm
+Bank of England,2026-10-28 07:16,Remit for the Monetary Policy Committee - October 2026,https://www.bankofengland.co.uk/letter/2026/mpc-remit-2026
 Bank of England,2026-10-22 13:00,Regulators unveil plans to simplify Senior Manager and Certification Regime,https://www.bankofengland.co.uk/news/2026/october/regulators-unveil-plans-to-simplify-senior-manager-and-certification-regime
 Bank of England,2026-10-22 08:35,Minutes of the Securities Lending Committee meeting - September 2026,https://www.bankofengland.co.uk/minutes/2026/september/securities-lending-committee-meeting-september-2026
 Bank of England,2026-10-16 04:00,Banknote imagery advisory group minutes - 15 July 2026,https://www.bankofengland.co.uk/minutes/2026/july/banknote-advisory-minutes-15-july
@@ -18,7 +19,6 @@ Bank of England,2026-10-13 08:04,Minutes of the Money Market Committee meeting -
 Bank of England,2026-10-09 02:00,CMORG holds sector-wide cloud outage simulation exercise,https://www.bankofengland.co.uk/news/2026/october/cmorg-holds-sector-wide-cloud-outage-simulation-exercise
 Bank of England,2026-10-07 16:01,Bank of England announces the four animals that will feature on our next series of banknotes,https://www.bankofengland.co.uk/news/2026/october/boe-announces-the-four-animals-that-will-feature-on-next-series-of-banknotes
 Bank of England,2026-10-07 06:36,Minutes of the London FXJSC Legal Sub Committee Meeting - 16 June 2026,https://www.bankofengland.co.uk/minutes/2026/june/fxjsc-legal-sub-committee-meeting-16-june-26
-Bank of England,2026-10-07 02:49,Minutes of the London FXJSC Operations Sub-Committee Meeting - 16 June 2026,https://www.bankofengland.co.uk/minutes/2026/june/fxjsc-operations-sub-committee-meeting-16-june-2026
 Bank of Canada,2026-10-28 02:47,Bank of Canada raises the policy rate by 25 basis points to 2½%,https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/
 Bank of Canada,2026-09-10 04:00,Bank of Canada Board launches process to fill external Deputy Governor position,https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/
 Bank of Canada,2026-09-03 06:20,Bank of Canada unveils new vertical $20 bank note,https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/
@@ -40,16 +40,16 @@ Reserve Bank of NZ,2026-09-30 04:00,Consultation finds strong support for access
 Reserve Bank of NZ,2026-09-24 05:00,New Monetary Policy Committee member appointed,https://www.rbnz.govt.nz/news-and-events/news/2026/09/new-monetary-policy-committee-member-appointed
 Reserve Bank of NZ,2026-09-24 05:00,Reserve Bank requests TSB to commission independent report,https://www.rbnz.govt.nz/news-and-events/news/2026/09/reserve-bank-requests-tsb-to-commission-independent-report
 Reserve Bank of NZ,2026-09-21 05:00,RBNZ leaders visit Dunedin to understand how the local economy is evolving,https://www.rbnz.govt.nz/news-and-events/news/2026/09/rbnz-leaders-visit-dunedin-to-understand-how-the-local-economy-is-evolving
-Bank of Japan,2026-10-26 22:00,Indicators for Core CPI,https://www.boj.or.jp/en/research/research_data/cpi/index.htm
-Bank of Japan,2026-10-26 16:50,Services Producer Price Index (Sept.),https://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf
-Bank of Japan,2026-10-22 23:00,Financial System Report (October 2026),https://www.boj.or.jp/en/research/brp/fsr/fsr261023.htm
-Bank of Japan,2026-10-22 01:00,Japanese Government Bonds Held by the Bank of Japan,https://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei261020.xlsx
-Bank of Japan,2026-10-22 00:00,Developments in Real Exports and Real Imports,https://www.boj.or.jp/en/research/research_data/reri/index.htm
-Bank of Japan,2026-10-21 18:00,Bank of Japan Accounts (October 20),https://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261020.htm
-Bank of Japan,2026-10-21 16:50,Senior Loan Officer Opinion Survey (Oct.),https://www.boj.or.jp/en/statistics/dl/loan/loos/release/loos2610.pdf
-Bank of Japan,2026-10-21 16:50,Statistics on Securities Financing Transactions in Japan,https://www.boj.or.jp/en/statistics/bis/repo/index.htm
-Bank of Japan,2026-10-16 01:00,BOJ Current Account Balances by Sector (Sept.),https://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx
-Bank of Japan,2026-10-14 18:00,"Summary of the ""Meeting on Market Operations"" (October 2026)",https://www.boj.or.jp/en/paym/market/mkt261015a.pdf
+Bank of Japan,2026-10-26 22:00,Indicators for Core CPI,http://www.boj.or.jp/en/research/research_data/cpi/index.htm
+Bank of Japan,2026-10-26 16:50,Services Producer Price Index (Sept.),http://www.boj.or.jp/en/statistics/pi/cspi_release/sppi2609.pdf
+Bank of Japan,2026-10-22 23:00,Financial System Report (October 2026),http://www.boj.or.jp/en/research/brp/fsr/fsr261023.htm
+Bank of Japan,2026-10-22 01:00,Japanese Government Bonds Held by the Bank of Japan,http://www.boj.or.jp/en/statistics/boj/other/mei/release/2026/mei261020.xlsx
+Bank of Japan,2026-10-22 00:00,Developments in Real Exports and Real Imports,http://www.boj.or.jp/en/research/research_data/reri/index.htm
+Bank of Japan,2026-10-21 18:00,Bank of Japan Accounts (October 20),http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261020.htm
+Bank of Japan,2026-10-21 16:50,Senior Loan Officer Opinion Survey (Oct.),http://www.boj.or.jp/en/statistics/dl/loan/loos/release/loos2610.pdf
+Bank of Japan,2026-10-21 16:50,Statistics on Securities Financing Transactions in Japan,http://www.boj.or.jp/en/statistics/bis/repo/index.htm
+Bank of Japan,2026-10-16 01:00,BOJ Current Account Balances by Sector (Sept.),http://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx
+Bank of Japan,2026-10-14 18:00,"Summary of the ""Meeting on Market Operations"" (October 2026)",http://www.boj.or.jp/en/paym/market/mkt261015a.pdf
 Investing.com Forex,2026-10-28 06:22,"Sterling steadies, gilts tick up following Healey’s UK Budget",https://www.investing.com/news/forex-news/sterling-today-pound-slips-as-ai-fears-ebb--uk-budget-fed-in-focus-4978200
 Investing.com Forex,2026-10-28 05:45,"Treasury yields nudge toward one-week highs; Fed decision, Big Tech earnings loom",https://www.investing.com/news/forex-news/eurozone-yields-push-higher-as-french-spread-relief-fades-fed-ecb-eyed-4977652
 Investing.com Forex,2026-10-28 04:39,Polish zloty falls to weakest level since November 2023,https://www.investing.com/news/forex-news/polish-zloty-falls-to-weakest-level-since-november-2023-93CH-4978728
@@ -70,13 +70,13 @@ CNBC Markets,2026-10-17 08:11,Software’s new consolidator gets big vote of con
 CNBC Markets,2026-10-16 09:46,"U.S. presses China on Mastercard, Citigroup market access in bilateral Bangkok talks, official says",https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html
 CNBC Markets,2026-10-15 16:00,People in China are spending nearly as much of their income as Americans on healthcare,https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html
 CNBC Markets,2026-10-15 12:53,"Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html
-BBC Business,2026-10-28 07:29,"Your pay, energy bills and savings: How the Budget affects you",https://www.bbc.co.uk/news/articles/cr0j05vxlwjzo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-28 04:30,"I get £4,062 a year and am trying my best - here's what I want from the Budget",https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-28 06:48,Budget 2026: Key points at a glance,https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-28 03:42,You may get the right to find out what your colleagues earn - here's why,https://www.bbc.co.uk/news/articles/cmq8nwvj92jdo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-28 08:32,"Your pay, energy bills and savings: How the Budget affects you",https://www.bbc.co.uk/news/articles/cr0j05vxlwjzo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-28 08:48,The one thing that didn't change that will affect your pay the most,https://www.bbc.co.uk/news/articles/clydn7r5pn1o?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-28 08:37,Budget 2026: Key points at a glance,https://www.bbc.co.uk/news/articles/c6x2zrjl7kjno?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-28 07:53,How much is the minimum wage going up by?,https://www.bbc.co.uk/news/articles/cy7e8mpdxpro?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-27 17:01,'An annoying buzz': The search for stealthier drones,https://www.bbc.co.uk/news/articles/ck1exgejq3xvo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-28 03:42,You may get the right to find out what your colleagues earn - here's why,https://www.bbc.co.uk/news/articles/cmq8nwvj92jdo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-26 23:01,Donald Trump's biggest economic problem looks strangely familiar,https://www.bbc.co.uk/news/articles/cwvg0ddz1z77o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-28 03:31,Luxury cruise passengers stranded in Cambodia due to soaring fuel costs,https://www.bbc.co.uk/news/articles/cwj342k62exyo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-27 16:16,China's families are now supporting more old people than kids,https://www.bbc.co.uk/news/articles/cr20wzwyzl1qo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-26 23:01,Donald Trump's biggest economic problem looks strangely familiar,https://www.bbc.co.uk/news/articles/cwvg0ddz1z77o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-26 23:33,"Rise in sales of radios and tinned foods, say retailers, after call to stock up",https://www.bbc.co.uk/news/articles/c5rmy84np001o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-27 13:54,"Landline switchover could cut people off in emergency, minister warned",https://www.bbc.co.uk/news/articles/c6x29g1nlr51o?at_medium=RSS&at_campaign=rss
