@@ -24,7 +24,7 @@ Tue 2026-10-27 05:30 PM PT,202610271730,AUD,High,Trimmed Mean CPI m/m,0.3%,0.2%,
 Tue 2026-10-27 06:00 PM PT,202610271800,NZD,High,Official Cash Rate,3.00%,2.75%,released,Forex Factory weekly feed
 Tue 2026-10-27 06:00 PM PT,202610271800,NZD,High,RBNZ Rate Statement,,,released,Forex Factory weekly feed
 Tue 2026-10-27 07:00 PM PT,202610271900,NZD,High,RBNZ Press Conference,,,released,Forex Factory weekly feed
-Wed 2026-10-28 12:00 AM PT,202610280000,EUR,Low,German GfK Consumer Climate,-30.1,-30.6,upcoming,Forex Factory weekly feed
+Wed 2026-10-28 12:00 AM PT,202610280000,EUR,Low,German GfK Consumer Climate,-30.1,-30.6,released,Forex Factory weekly feed
 Wed 2026-10-28 02:00 AM PT,202610280200,CHF,Low,UBS Economic Expectations,,2.6,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 02:42 AM PT,202610280242,EUR,Low,German 10-y Bond Auction,,3.58|1.2,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 05:30 AM PT,202610280530,GBP,High,Annual Budget Release,,,upcoming,Forex Factory weekly feed
@@ -36,7 +36,7 @@ Wed 2026-10-28 06:45 AM PT,202610280645,CAD,High,BOC Monetary Policy Report,,,up
 Wed 2026-10-28 06:45 AM PT,202610280645,CAD,High,BOC Rate Statement,,,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 06:45 AM PT,202610280645,CAD,High,Overnight Rate,2.50%,2.25%,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 07:30 AM PT,202610280730,CAD,High,BOC Press Conference,,,upcoming,Forex Factory weekly feed
-Wed 2026-10-28 07:30 AM PT,202610280730,USD,Low,Crude Oil Inventories,-0.1M,-3.1M,upcoming,Forex Factory weekly feed
+Wed 2026-10-28 07:30 AM PT,202610280730,USD,Low,Crude Oil Inventories,0.1M,-3.1M,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 11:00 AM PT,202610281100,USD,High,Federal Funds Rate,4.00%,4.00%,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 11:00 AM PT,202610281100,USD,High,FOMC Statement,,,upcoming,Forex Factory weekly feed
 Wed 2026-10-28 11:30 AM PT,202610281130,USD,High,FOMC Press Conference,,,upcoming,Forex Factory weekly feed
@@ -50,7 +50,7 @@ Thu 2026-10-29 02:30 AM PT,202610290230,GBP,Low,Net Lending to Individuals m/m,6
 Thu 2026-10-29 02:33 AM PT,202610290233,EUR,Low,Italian 10-y Bond Auction,,4.58|1.6,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,High,Advance GDP q/q,3.2%,1.5%,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,High,Core PCE Price Index m/m,0.3%,0.2%,upcoming,Forex Factory weekly feed
-Thu 2026-10-29 05:30 AM PT,202610290530,USD,Medium,Advance GDP Price Index q/q,3.3%,6.2%,upcoming,Forex Factory weekly feed
+Thu 2026-10-29 05:30 AM PT,202610290530,USD,Medium,Advance GDP Price Index q/q,3.2%,6.2%,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Medium,Unemployment Claims,198K,194K,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Low,Personal Income m/m,0.3%,0.2%,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 05:30 AM PT,202610290530,USD,Low,Personal Spending m/m,0.6%,0.9%,upcoming,Forex Factory weekly feed
@@ -58,7 +58,7 @@ Thu 2026-10-29 05:50 AM PT,202610290550,CAD,Low,Gov Council Member Gravelle Spea
 Thu 2026-10-29 06:15 AM PT,202610290615,EUR,High,Main Refinancing Rate,2.65%,2.65%,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 06:15 AM PT,202610290615,EUR,High,Monetary Policy Statement,,,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 06:45 AM PT,202610290645,EUR,High,ECB Press Conference,,,upcoming,Forex Factory weekly feed
-Thu 2026-10-29 07:30 AM PT,202610290730,USD,Low,Natural Gas Storage,,77B,upcoming,Forex Factory weekly feed
+Thu 2026-10-29 07:30 AM PT,202610290730,USD,Low,Natural Gas Storage,75B,77B,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 08:30 AM PT,202610290830,CAD,Low,Gov Council Member Vincent Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 10:30 AM PT,202610291030,CHF,Low,Gov Board Member Tschudin Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 04:30 PM PT,202610291630,JPY,Medium,Tokyo Core CPI y/y,2.6%,2.7%,upcoming,Forex Factory weekly feed
@@ -75,7 +75,7 @@ Thu 2026-10-29 10:30 PM PT,202610292230,JPY,High,BOJ Press Conference,,,upcoming
 Thu 2026-10-29 11:30 PM PT,202610292330,EUR,Low,French Consumer Spending m/m,0.1%,-0.5%,upcoming,Forex Factory weekly feed
 Thu 2026-10-29 11:30 PM PT,202610292330,EUR,Low,French Flash GDP q/q,0.1%,0.2%,upcoming,Forex Factory weekly feed
 Fri 2026-10-30 12:00 AM PT,202610300000,EUR,Low,German Import Prices m/m,1.9%,1.0%,upcoming,Forex Factory weekly feed
-Fri 2026-10-30 12:00 AM PT,202610300000,GBP,Low,Nationwide HPI m/m,-0.1%,-0.2%,upcoming,Forex Factory weekly feed
+Fri 2026-10-30 12:00 AM PT,202610300000,GBP,Low,Nationwide HPI m/m,-0.2%,-0.2%,upcoming,Forex Factory weekly feed
 Fri 2026-10-30 12:29 AM PT,202610300029,EUR,Medium,German Prelim CPI m/m,0.1%,0.6%,upcoming,Forex Factory weekly feed
 Fri 2026-10-30 12:45 AM PT,202610300045,EUR,Low,French Prelim CPI m/m,0.2%,-0.3%,upcoming,Forex Factory weekly feed
 Fri 2026-10-30 12:45 AM PT,202610300045,EUR,Low,French Prelim Private Payrolls q/q,-0.1%,-0.1%,upcoming,Forex Factory weekly feed
