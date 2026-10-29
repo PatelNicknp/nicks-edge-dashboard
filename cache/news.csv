@@ -9,6 +9,7 @@ Federal Reserve,2026-10-05 13:30,Federal Reserve Board announces approval of app
 Federal Reserve,2026-10-02 13:45,Federal Reserve Board announces approval of application by Fleur Capital Corporation,https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm
 Federal Reserve,2026-10-02 13:00,"Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm
 Federal Reserve,2026-10-02 08:00,"Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261002a.htm
+Bank of England,2026-10-29 07:00,Minutes of the Meeting of the Court of Directors held on 17 September 2026,https://www.bankofengland.co.uk/minutes/2026/september/court-minutes-17-september-2026
 Bank of England,2026-10-29 03:00,Bank of England sets out approach to tokenised collateral in central clearing,https://www.bankofengland.co.uk/news/2026/october/bank-of-england-sets-out-approach-to-tokenised-collateral-in-central-clearing
 Bank of England,2026-10-28 07:16,Remit for the Monetary Policy Committee - October 2026,https://www.bankofengland.co.uk/letter/2026/mpc-remit-2026
 Bank of England,2026-10-22 13:00,Regulators unveil plans to simplify Senior Manager and Certification Regime,https://www.bankofengland.co.uk/news/2026/october/regulators-unveil-plans-to-simplify-senior-manager-and-certification-regime
@@ -18,7 +19,6 @@ Bank of England,2026-10-15 02:52,David Roberts CV and questionnaire for the Trea
 Bank of England,2026-10-15 01:27,Minutes of the SONIA Stakeholder Advisory Group - 25 September 2026,https://www.bankofengland.co.uk/minutes/2026/september/sonia-stakeholder-advisory-group-25-september-2026
 Bank of England,2026-10-13 08:04,Minutes of the Money Market Committee meeting - September 2026,https://www.bankofengland.co.uk/minutes/2026/september/money-markets-committee-minutes-september-2026
 Bank of England,2026-10-09 02:00,CMORG holds sector-wide cloud outage simulation exercise,https://www.bankofengland.co.uk/news/2026/october/cmorg-holds-sector-wide-cloud-outage-simulation-exercise
-Bank of England,2026-10-07 16:01,Bank of England announces the four animals that will feature on our next series of banknotes,https://www.bankofengland.co.uk/news/2026/october/boe-announces-the-four-animals-that-will-feature-on-next-series-of-banknotes
 Bank of Canada,2026-10-28 02:47,Bank of Canada raises the policy rate by 25 basis points to 2½%,https://www.bankofcanada.ca/2026/10/fad-press-release-2026-10-28/
 Bank of Canada,2026-09-10 04:00,Bank of Canada Board launches process to fill external Deputy Governor position,https://www.bankofcanada.ca/2026/09/bank-canada-board-launches-process-fill-external-deputy-governor-position/
 Bank of Canada,2026-09-03 06:20,Bank of Canada unveils new vertical $20 bank note,https://www.bankofcanada.ca/2026/09/bank-canada-unveils-new-vertical-20-bank-note/
@@ -50,9 +50,9 @@ Bank of Japan,2026-10-21 16:50,Senior Loan Officer Opinion Survey (Oct.),http://
 Bank of Japan,2026-10-21 16:50,Statistics on Securities Financing Transactions in Japan,http://www.boj.or.jp/en/statistics/bis/repo/index.htm
 Bank of Japan,2026-10-16 01:00,BOJ Current Account Balances by Sector (Sept.),http://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx
 Bank of Japan,2026-10-14 18:00,"Summary of the ""Meeting on Market Operations"" (October 2026)",http://www.boj.or.jp/en/paym/market/mkt261015a.pdf
+Investing.com Forex,2026-10-29 06:55,Sterling hits 17-Month high vs Euro as ECB holds rates,https://www.investing.com/news/forex-news/sterling-today-pound-edges-lower-as-dollar-firms-ahead-of-us-pce-gdp-data-4982788
 Investing.com Forex,2026-10-29 05:52,Dollar edges higher as strong U.S. growth data offsets Fed uncertainty,https://www.investing.com/news/forex-news/asian-currencies-mixed-as-dollar-steadies-after-fed-hold-pce-eyed-4981446
 Investing.com Forex,2026-10-29 05:49,U.S. yields steady on PCE lands in-line; Europe awaits ECb,https://www.investing.com/news/forex-news/bund-yields-slip-ahead-of-ecb-feds-hold-keeps-us-yields-steepening-4981797
-Investing.com Forex,2026-10-29 05:02,"Sterling today: Pound edges lower as dollar firms ahead of U.S. PCE, GDP data",https://www.investing.com/news/forex-news/sterling-today-pound-edges-lower-as-dollar-firms-ahead-of-us-pce-gdp-data-4982788
 Investing.com Forex,2026-10-28 14:02,Canadian dollar holds gains after Bank of Canada delivers rate hike,https://www.investing.com/news/forex-news/canadian-dollar-holds-gains-after-bank-of-canada-delivers-rate-hike-4980887
 Investing.com Forex,2026-10-28 06:22,"Sterling steadies, gilts tick up following Healey’s UK Budget",https://www.investing.com/news/forex-news/sterling-today-pound-slips-as-ai-fears-ebb--uk-budget-fed-in-focus-4978200
 Investing.com Forex,2026-10-28 05:45,"Treasury yields nudge toward one-week highs; Fed decision, Big Tech earnings loom",https://www.investing.com/news/forex-news/eurozone-yields-push-higher-as-french-spread-relief-fades-fed-ecb-eyed-4977652
@@ -70,13 +70,13 @@ CNBC Markets,2026-10-17 08:11,Software’s new consolidator gets big vote of con
 CNBC Markets,2026-10-16 09:46,"U.S. presses China on Mastercard, Citigroup market access in bilateral Bangkok talks, official says",https://www.cnbc.com/2026/10/16/us-china-mastercard-citigroup-market-access.html
 CNBC Markets,2026-10-15 16:00,People in China are spending nearly as much of their income as Americans on healthcare,https://www.cnbc.com/2026/10/15/chinese-spending-nearly-as-much-of-income-as-americans-on-healthcare.html
 CNBC Markets,2026-10-15 12:53,"Harvard’s endowment jumps 27% in fiscal 2026, lifted by SpaceX as top holding",https://www.cnbc.com/2026/10/15/harvards-endowment-jumps-27percent-with-spacex-as-top-holding.html
-BBC Business,2026-10-29 05:09,Poundland's future hangs in the balance as chain edges towards collapse,https://www.bbc.co.uk/news/articles/cqrky1p4dlm7o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-29 05:50,"'Painful' years head, think tanks warn, as living standards set to fall",https://www.bbc.co.uk/news/articles/c6z7x8214np7o?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-29 06:27,Poundland's future hangs in the balance as chain edges towards collapse,https://www.bbc.co.uk/news/articles/cqrky1p4dlm7o?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-29 06:19,"'Painful' years ahead, think tanks warn, as living standards set to fall",https://www.bbc.co.uk/news/articles/c6z7x8214np7o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-29 04:52,"I earn £30,000. I'm angry there was no fuel duty cut in the Budget",https://www.bbc.co.uk/news/articles/cmx235r9wr3yo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-28 13:08,What we now know about the UK economy in four charts,https://www.bbc.co.uk/news/articles/c9x28350ly07o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-28 13:02,What the Budget offers for under 25s - and what it leaves out,https://www.bbc.co.uk/news/articles/c60e05yn3w9zo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-29 02:30,'I live with a ghost' - inside the haunted homes attracting bargain hunters,https://www.bbc.co.uk/news/articles/cqwy78elyrlzo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-28 09:43,"Your pay, energy bills and savings: How the Budget affects you",https://www.bbc.co.uk/news/articles/cr0j05vxlwjzo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-28 11:45,Healey unveils £100 for energy bills and bank tax in first Budget,https://www.bbc.co.uk/news/articles/cqpvgxz3y49go?at_medium=RSS&at_campaign=rss
-BBC Business,2026-10-28 12:51,"Dharshini David: Healey buys himself some time, but big questions still unanswered",https://www.bbc.co.uk/news/articles/cqe9l4px0yzxo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-10-28 12:51,Healey provides some breathing space but things still set to get worse for most,https://www.bbc.co.uk/news/articles/cqe9l4px0yzxo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-10-28 18:27,Microsoft profits soar days after announcing thousands of layoffs,https://www.bbc.co.uk/news/articles/c6m24klyjr8no?at_medium=RSS&at_campaign=rss
