@@ -20,7 +20,7 @@ EZ,Growth,Retail sales,Retail Sales,20261006,0.1%,0.2%,-0.6%,-0.1,-1,higher,ok
 EZ,Growth,Consumer confidence,Consumer Confidence,20261029,-17.9,-17.9,-16.5,0.0,0,higher,ok
 EZ,Inflation,CPI y/y,CPI,20261016,3.8%,3.8%,3.2%,0.0,0,higher,ok
 EZ,Inflation,PPI y/y,PPI,20261005,8.2%,8.1%,5.8%,0.1,1,higher,ok
-EZ,Inflation,Interest rate,Deposit Facility Rate,20260910,2.50%,2.50%,2.25%,0.0,0,higher,ok
+EZ,Inflation,Interest rate,Deposit Facility Rate,20261029,2.50%,2.50%,2.50%,0.0,0,higher,ok
 EZ,Jobs,Employment change,Employment Change,20260907,0.1%,0.1%,0.1%,0.0,0,higher,ok
 EZ,Jobs,Unemployment rate,Unemployment Rate,20261001,6.4%,6.4%,6.4%,0.0,0,lower,ok
 UK,Growth,GDP,GDP,20261015,0.1%,-0.1%,0.4%,0.2,1,higher,ok
