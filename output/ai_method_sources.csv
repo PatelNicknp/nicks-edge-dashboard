@@ -1,10 +1,10 @@
 currency,kind,level,change_4w,as_of,compared_with,source,status,note
 EUR,2y,3.06,0.04,2026-10-30,2026-10-02,"Bundesbank, German 2-year Bund yield",OK,
-GBP,2y,4.87,0.23,2026-10-30,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,
+GBP,2y,4.88,0.24,2026-10-30,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,
 AUD,2y,4.951,0.009,2026-10-28,2026-09-30,"Reserve Bank of Australia, 2-year government bond yield",OK,
 NZD,2y,3.75,-0.17,2026-10-30,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,
 USD,2y,4.61,-0.17,2026-10-29,2026-10-01,FRED DGS2,OK,
 CAD,2y,3.36,0.09,2026-10-29,2026-10-01,"Bank of Canada, 2-year benchmark bond yield",OK,
-CHF,2y,0.19,-0.04,2026-10-30,one month earlier,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",OK,
+CHF,2y,0.21,-0.02,2026-10-30,one month earlier,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",OK,
 JPY,2y,1.901,-0.038,2026-10-29,2026-10-01,"Japan Ministry of Finance, 2-year JGB yield",OK,
 ZAR,proxy,6.85,0.02,2026-09-01,2026-08-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy",OK,"Monthly 3-month rate, last month against the month before. Not a 2-year yield."

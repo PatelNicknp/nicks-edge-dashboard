@@ -1,10 +1,10 @@
 key,value
 risk_mood,Neutral
-risk_detail,VIX 18.9 (-3% in 5 days); S&P 500 below its 50-day average (7626 vs 7703); high-yield credit spread 3.14% (+0.02 in about 4 weeks)
+risk_detail,VIX 19.7 (+1% in 5 days); S&P 500 below its 50-day average (7599 vs 7703); high-yield credit spread 3.26% (+0.02 in about 4 weeks)
 risk_votes,"vix +0, spx -1, credit +0"
 yield_band_pct,0.05
 cot_report,2026-10-20
-rate_forecast_checked,2026-10-30 07:03
+rate_forecast_checked,2026-10-30 08:51
 prices_as_of,2026-10-30
 switch_policy,true
 switch_yield_gap,true
