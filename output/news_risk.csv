@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-EURAUD,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-EURNZD,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-EURUSD,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT (+1 more),Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT (+1 more),Fri 2026-10-30 12:02 AM PT,202610300002
-EURCAD,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT (+1 more),Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT (+1 more),Fri 2026-10-30 12:02 AM PT,202610300002
-EURCHF,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-EURJPY,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-GBPNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-GBPUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-GBPCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-AUDNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-AUDUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-AUDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-NZDUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-NZDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-USDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-USDCHF,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-USDJPY,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-CADCHF,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-CADJPY,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-USDZAR,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-EUR Index,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-USD Index,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-CAD Index,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 12:02 AM PT,202610300002
-SPX500,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-NAS100,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-DOW,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-CHINA50,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-GER40,medium,None in the next 24 hours,EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT (+1 more),Lighter news risk: EUR German Prelim CPI m/m Fri 12:29 AM PT | EUR German Prelim GDP q/q Fri 2:00 AM PT (+1 more),Fri 2026-10-30 12:02 AM PT,202610300002
-UK100,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-JPN225,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-GOLD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-SILVER,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-USOIL,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-BTCUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-US10T,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-RUSSELL,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-PLATINUM,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-COPPER,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-NATGAS,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
-ETHUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 12:02 AM PT,202610300002
+EURGBP,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURAUD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURNZD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURUSD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURCAD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT | CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT | CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURCHF,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURJPY,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+GBPNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+GBPUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+GBPCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+AUDNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+AUDUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+AUDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+NZDUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+NZDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+USDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+USDCHF,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+USDJPY,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+CADCHF,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+CADJPY,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+USDZAR,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EUR Index,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+USD Index,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+CAD Index,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
+SPX500,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+NAS100,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+DOW,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+CHINA50,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+GER40,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+UK100,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+JPN225,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+GOLD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+SILVER,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+USOIL,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+BTCUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+US10T,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+RUSSELL,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+PLATINUM,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+COPPER,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+NATGAS,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+ETHUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
