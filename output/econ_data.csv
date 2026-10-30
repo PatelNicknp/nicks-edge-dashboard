@@ -13,7 +13,7 @@ US,Jobs,Unemployment rate,Unemployment Rate,20261002,4.2%,4.1%,4.1%,0.1,-1,lower
 US,Jobs,Jobless claims,Initial Jobless Claims,20261029,194K,198K,195K,-4000.0,1,lower,ok
 US,Jobs,JOLTS,JOLTS Job Openings,20260929,7.079M,7.230M,7.335M,-151000.0,-1,higher,ok
 US,Jobs,ADP,ADP Nonfarm Employment Change,20260930,90K,73K,36K,17000.0,1,higher,ok
-EZ,Growth,GDP,GDP,20260907,0.6%,0.4%,-0.2%,0.2,1,higher,ok
+EZ,Growth,GDP,GDP,20261030,0.4%,0.2%,0.6%,0.2,1,higher,ok
 EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261001,52.9,52.7,52.7,0.2,1,higher,ok
 EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261005,53.0,53.0,51.6,0.0,0,higher,ok
 EZ,Growth,Retail sales,Retail Sales,20261006,0.1%,0.2%,-0.6%,-0.1,-1,higher,ok
@@ -22,7 +22,7 @@ EZ,Inflation,CPI y/y,CPI,20261016,3.8%,3.8%,3.2%,0.0,0,higher,ok
 EZ,Inflation,PPI y/y,PPI,20261005,8.2%,8.1%,5.8%,0.1,1,higher,ok
 EZ,Inflation,Interest rate,Deposit Facility Rate,20261029,2.50%,2.50%,2.50%,0.0,0,higher,ok
 EZ,Jobs,Employment change,Employment Change,20260907,0.1%,0.1%,0.1%,0.0,0,higher,ok
-EZ,Jobs,Unemployment rate,Unemployment Rate,20261001,6.4%,6.4%,6.4%,0.0,0,lower,ok
+EZ,Jobs,Unemployment rate,Unemployment Rate,20261030,6.5%,6.4%,6.5%,0.1,-1,lower,ok
 UK,Growth,GDP,GDP,20261015,0.1%,-0.1%,0.4%,0.2,1,higher,ok
 UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261001,51.9,52.0,51.7,-0.1,-1,higher,ok
 UK,Growth,Services PMI,S&P Global Services PMI,20261005,52.1,51.7,52.5,0.4,1,higher,ok
@@ -53,7 +53,7 @@ CH,Inflation,PPI y/y,PPI,20261015,0.3%,0.6%,0.7%,-0.3,-1,higher,ok
 CH,Inflation,Interest rate,SNB Interest Rate Decision,20260924,0.00%,0.00%,0.00%,0.0,0,higher,ok
 CH,Jobs,Employment change,Employment Level,20260827,5.698M,,5.537M,,0,higher,no forecast
 CH,Jobs,Unemployment rate,Unemployment Rate s.a.,20261006,3.1%,3.1%,3.1%,0.0,0,lower,ok
-CA,Growth,GDP,GDP,20260929,0.0%,0.0%,0.3%,0.0,0,higher,ok
+CA,Growth,GDP,GDP,20261030,0.0%,0.2%,0.0%,-0.2,-1,higher,ok
 CA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261001,51.5,,53.0,,0,higher,no forecast
 CA,Growth,Services PMI,S&P Global Services PMI,20261005,48.30,,49.10,,0,higher,no forecast
 CA,Growth,Retail sales,Retail Sales,20260924,-0.7%,-0.8%,0.6%,0.1,1,higher,ok

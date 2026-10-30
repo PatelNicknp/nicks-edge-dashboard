@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EURAUD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EURNZD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EURUSD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EURCAD,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT | CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT | CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EURCHF,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EURJPY,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-GBPNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-GBPUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-GBPCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-AUDNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-AUDUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-AUDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-NZDUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-NZDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-USDCAD,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-USDCHF,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-USDJPY,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-CADCHF,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-CADJPY,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-USDZAR,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-EUR Index,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-USD Index,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-CAD Index,medium,None in the next 24 hours,CAD GDP m/m Fri 5:30 AM PT,Lighter news risk: CAD GDP m/m Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 01:57 AM PT,202610300157
-SPX500,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-NAS100,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-DOW,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-CHINA50,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-GER40,medium,None in the next 24 hours,EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: EUR German Prelim GDP q/q Fri 2:00 AM PT | USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-UK100,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-JPN225,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-GOLD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-SILVER,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-USOIL,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-BTCUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-US10T,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-RUSSELL,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-PLATINUM,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-COPPER,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-NATGAS,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
-ETHUSD,medium,None in the next 24 hours,USD Employment Cost Index q/q Fri 5:30 AM PT,Lighter news risk: USD Employment Cost Index q/q Fri 5:30 AM PT,Fri 2026-10-30 01:57 AM PT,202610300157
+EURGBP,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EURAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EURNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EURUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EURCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBPNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBPUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBPCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+AUDNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+AUDUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+AUDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NZDUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NZDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+USDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+USDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+USDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+USDZAR,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+USD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+SPX500,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NAS100,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+DOW,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+CHINA50,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GER40,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+UK100,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+JPN225,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+GOLD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+SILVER,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+USOIL,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+BTCUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+US10T,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+RUSSELL,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+PLATINUM,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+COPPER,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+NATGAS,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
+ETHUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Fri 2026-10-30 06:27 AM PT,202610300627
