@@ -3,12 +3,12 @@ EURGBP,Technicals,Trend score,below; down or flat,-2
 EURGBP,Technicals,Seasonality (10-year avg this month),"-0.17%, up 60% of years",-1
 EURGBP,COT,Net positioning,"EUR -134,524 / GBP -80,420",0
 EURGBP,COT,Latest weekly change,EUR +0.34 / GBP +6.09,0
-EURGBP,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+EURGBP,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 EURGBP,Growth,GDP,"EUR +1, GBP +1",0
 EURGBP,Growth,Manufacturing PMI,"EUR +1, GBP -1",2
 EURGBP,Growth,Services PMI,"EUR +0, GBP +1",-1
 EURGBP,Growth,Retail sales,"EUR -1, GBP +1",-2
-EURGBP,Growth,Consumer confidence,"EUR +0, GBP -1",1
+EURGBP,Growth,Consumer confidence,"EUR -1, GBP -1",0
 EURGBP,Inflation,CPI y/y,"EUR +0, GBP +1",-1
 EURGBP,Inflation,PPI y/y,"EUR +1, GBP +1",0
 EURGBP,Inflation,PCE y/y,"EUR +0, GBP +0",0
@@ -23,13 +23,13 @@ EURAUD,Technicals,Trend score,below; down or flat,-2
 EURAUD,Technicals,Seasonality (10-year avg this month),"+0.07%, up 50% of years",1
 EURAUD,COT,Net positioning,"EUR -134,524 / AUD -127,292",0
 EURAUD,COT,Latest weekly change,EUR +0.34 / AUD -0.96,2
-EURAUD,Crowd,Sentiment,"retail long %: 68; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+EURAUD,Crowd,Sentiment,"retail long %: 68; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 EURAUD,Growth,GDP,"EUR +1, AUD +1",0
 EURAUD,Growth,Manufacturing PMI,"EUR +1, AUD +0",1
 EURAUD,Growth,Services PMI,"EUR +0, AUD +0",0
 EURAUD,Growth,Retail sales,"EUR -1, AUD +0",-1
-EURAUD,Growth,Consumer confidence,"EUR +0, AUD +0",0
-EURAUD,Inflation,CPI y/y,"EUR +0, AUD +1",-1
+EURAUD,Growth,Consumer confidence,"EUR -1, AUD +0",-1
+EURAUD,Inflation,CPI y/y,"EUR +0, AUD -1",1
 EURAUD,Inflation,PPI y/y,"EUR +1, AUD +1",0
 EURAUD,Inflation,PCE y/y,"EUR +0, AUD +0",0
 EURAUD,Inflation,Interest rate,"EUR +1 (2.65% now, Q4/26 forecast 2.90%), AUD +1 (4.60% now, Q4/26 forecast 4.85%)",0
@@ -43,12 +43,12 @@ EURNZD,Technicals,Trend score,below; down or flat,-2
 EURNZD,Technicals,Seasonality (10-year avg this month),"+0.19%, up 40% of years",1
 EURNZD,COT,Net positioning,"EUR -134,524 / NZD -58,149",0
 EURNZD,COT,Latest weekly change,EUR +0.34 / NZD -4.20,2
-EURNZD,Crowd,Sentiment,"retail long %: 42; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+EURNZD,Crowd,Sentiment,"retail long %: 44; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 EURNZD,Growth,GDP,"EUR +1, NZD +1",0
 EURNZD,Growth,Manufacturing PMI,"EUR +1, NZD +0",1
 EURNZD,Growth,Services PMI,"EUR +0, NZD +0",0
 EURNZD,Growth,Retail sales,"EUR -1, NZD -1",0
-EURNZD,Growth,Consumer confidence,"EUR +0, NZD +0",0
+EURNZD,Growth,Consumer confidence,"EUR -1, NZD +0",-1
 EURNZD,Inflation,CPI y/y,"EUR +0, NZD -1",1
 EURNZD,Inflation,PPI y/y,"EUR +1, NZD +1",0
 EURNZD,Inflation,PCE y/y,"EUR +0, NZD +0",0
@@ -63,15 +63,15 @@ EURUSD,Technicals,Trend score,below; down or flat,-2
 EURUSD,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EURUSD,COT,Net positioning,"EUR -134,524 / USD +15,044",-2
 EURUSD,COT,Latest weekly change,EUR +0.34 / USD +2.75,0
-EURUSD,Crowd,Sentiment,"retail long %: 63; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+EURUSD,Crowd,Sentiment,"retail long %: 63; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 EURUSD,Growth,GDP,"EUR +1, USD +1",0
 EURUSD,Growth,Manufacturing PMI,"EUR +1, USD -1",2
 EURUSD,Growth,Services PMI,"EUR +0, USD -1",1
 EURUSD,Growth,Retail sales,"EUR -1, USD +1",-2
-EURUSD,Growth,Consumer confidence,"EUR +0, USD +1",-1
+EURUSD,Growth,Consumer confidence,"EUR -1, USD -1",0
 EURUSD,Inflation,CPI y/y,"EUR +0, USD +1",-1
 EURUSD,Inflation,PPI y/y,"EUR +1, USD +1",0
-EURUSD,Inflation,PCE y/y,"EUR +0, USD +0",0
+EURUSD,Inflation,PCE y/y,"EUR +0, USD -1",1
 EURUSD,Inflation,Interest rate,"EUR +1 (2.65% now, Q4/26 forecast 2.90%), USD +1 (4.00% now, Q4/26 forecast 4.25%)",0
 EURUSD,Jobs,Employment change,"EUR +0, USD -1",1
 EURUSD,Jobs,Unemployment rate,"EUR -1, USD -1",0
@@ -83,12 +83,12 @@ EURCAD,Technicals,Trend score,below; down or flat,-2
 EURCAD,Technicals,Seasonality (10-year avg this month),"+0.07%, up 50% of years",1
 EURCAD,COT,Net positioning,"EUR -134,524 / CAD -74,709",0
 EURCAD,COT,Latest weekly change,EUR +0.34 / CAD +3.81,0
-EURCAD,Crowd,Sentiment,"retail long %: 62; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+EURCAD,Crowd,Sentiment,"retail long %: 58; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 EURCAD,Growth,GDP,"EUR +1, CAD -1",2
 EURCAD,Growth,Manufacturing PMI,"EUR +1, CAD +0",1
 EURCAD,Growth,Services PMI,"EUR +0, CAD +0",0
 EURCAD,Growth,Retail sales,"EUR -1, CAD +1",-2
-EURCAD,Growth,Consumer confidence,"EUR +0, CAD +0",0
+EURCAD,Growth,Consumer confidence,"EUR -1, CAD +0",-1
 EURCAD,Inflation,CPI y/y,"EUR +0, CAD -1",1
 EURCAD,Inflation,PPI y/y,"EUR +1, CAD +1",0
 EURCAD,Inflation,PCE y/y,"EUR +0, CAD +0",0
@@ -103,12 +103,12 @@ EURCHF,Technicals,Trend score,below; down or flat,-2
 EURCHF,Technicals,Seasonality (10-year avg this month),"+0.27%, up 60% of years",1
 EURCHF,COT,Net positioning,"EUR -134,524 / CHF -18,150",0
 EURCHF,COT,Latest weekly change,EUR +0.34 / CHF +2.71,0
-EURCHF,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+EURCHF,Crowd,Sentiment,"retail long %: 74; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 EURCHF,Growth,GDP,"EUR +1, CHF +1",0
 EURCHF,Growth,Manufacturing PMI,"EUR +1, CHF -1",2
 EURCHF,Growth,Services PMI,"EUR +0, CHF +0",0
 EURCHF,Growth,Retail sales,"EUR -1, CHF +1",-2
-EURCHF,Growth,Consumer confidence,"EUR +0, CHF -1",1
+EURCHF,Growth,Consumer confidence,"EUR -1, CHF -1",0
 EURCHF,Inflation,CPI y/y,"EUR +0, CHF +0",0
 EURCHF,Inflation,PPI y/y,"EUR +1, CHF -1",2
 EURCHF,Inflation,PCE y/y,"EUR +0, CHF +0",0
@@ -123,18 +123,18 @@ EURJPY,Technicals,Trend score,below; down or flat,-2
 EURJPY,Technicals,Seasonality (10-year avg this month),"+1.16%, up 70% of years",1
 EURJPY,COT,Net positioning,"EUR -134,524 / JPY +69,878",-2
 EURJPY,COT,Latest weekly change,EUR +0.34 / JPY +3.02,0
-EURJPY,Crowd,Sentiment,"retail long %: 46; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+EURJPY,Crowd,Sentiment,"retail long %: 46; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 EURJPY,Growth,GDP,"EUR +1, JPY +1",0
 EURJPY,Growth,Manufacturing PMI,"EUR +1, JPY -1",2
 EURJPY,Growth,Services PMI,"EUR +0, JPY +0",0
 EURJPY,Growth,Retail sales,"EUR -1, JPY -1",0
-EURJPY,Growth,Consumer confidence,"EUR +0, JPY -1",1
+EURJPY,Growth,Consumer confidence,"EUR -1, JPY +1",-2
 EURJPY,Inflation,CPI y/y,"EUR +0, JPY +0",0
 EURJPY,Inflation,PPI y/y,"EUR +1, JPY -1",2
 EURJPY,Inflation,PCE y/y,"EUR +0, JPY +0",0
 EURJPY,Inflation,Interest rate,"EUR +1 (2.65% now, Q4/26 forecast 2.90%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",1
-EURJPY,Jobs,Employment change,"EUR +0, JPY +1",-1
-EURJPY,Jobs,Unemployment rate,"EUR -1, JPY +1",-2
+EURJPY,Jobs,Employment change,"EUR +0, JPY +0",0
+EURJPY,Jobs,Unemployment rate,"EUR -1, JPY -1",0
 EURJPY,Jobs,Jobless claims,"EUR +0, JPY +0",0
 EURJPY,Jobs,JOLTS,"EUR +0, JPY +0",0
 EURJPY,Jobs,ADP,"EUR +0, JPY +0",0
@@ -143,13 +143,13 @@ GBPAUD,Technicals,Trend score,below; down or flat,-2
 GBPAUD,Technicals,Seasonality (10-year avg this month),"+0.28%, up 60% of years",1
 GBPAUD,COT,Net positioning,"GBP -80,420 / AUD -127,292",0
 GBPAUD,COT,Latest weekly change,GBP +6.09 / AUD -0.96,2
-GBPAUD,Crowd,Sentiment,"retail long %: 56; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+GBPAUD,Crowd,Sentiment,"retail long %: 56; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 GBPAUD,Growth,GDP,"GBP +1, AUD +1",0
 GBPAUD,Growth,Manufacturing PMI,"GBP -1, AUD +0",-1
 GBPAUD,Growth,Services PMI,"GBP +1, AUD +0",1
 GBPAUD,Growth,Retail sales,"GBP +1, AUD +0",1
 GBPAUD,Growth,Consumer confidence,"GBP -1, AUD +0",-1
-GBPAUD,Inflation,CPI y/y,"GBP +1, AUD +1",0
+GBPAUD,Inflation,CPI y/y,"GBP +1, AUD -1",2
 GBPAUD,Inflation,PPI y/y,"GBP +1, AUD +1",0
 GBPAUD,Inflation,PCE y/y,"GBP +0, AUD +0",0
 GBPAUD,Inflation,Interest rate,"GBP +1 (3.75% now, Q4/26 forecast 4.00%), AUD +1 (4.60% now, Q4/26 forecast 4.85%)",0
@@ -163,7 +163,7 @@ GBPNZD,Technicals,Trend score,above; up,2
 GBPNZD,Technicals,Seasonality (10-year avg this month),"+0.38%, up 60% of years",1
 GBPNZD,COT,Net positioning,"GBP -80,420 / NZD -58,149",0
 GBPNZD,COT,Latest weekly change,GBP +6.09 / NZD -4.20,2
-GBPNZD,Crowd,Sentiment,"retail long %: 36; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+GBPNZD,Crowd,Sentiment,"retail long %: 33; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",1
 GBPNZD,Growth,GDP,"GBP +1, NZD +1",0
 GBPNZD,Growth,Manufacturing PMI,"GBP -1, NZD +0",-1
 GBPNZD,Growth,Services PMI,"GBP +1, NZD +0",1
@@ -183,15 +183,15 @@ GBPUSD,Technicals,Trend score,below; up,-1
 GBPUSD,Technicals,Seasonality (10-year avg this month),"-0.37%, up 40% of years",-1
 GBPUSD,COT,Net positioning,"GBP -80,420 / USD +15,044",-2
 GBPUSD,COT,Latest weekly change,GBP +6.09 / USD +2.75,0
-GBPUSD,Crowd,Sentiment,"retail long %: 55; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+GBPUSD,Crowd,Sentiment,"retail long %: 54; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 GBPUSD,Growth,GDP,"GBP +1, USD +1",0
 GBPUSD,Growth,Manufacturing PMI,"GBP -1, USD -1",0
 GBPUSD,Growth,Services PMI,"GBP +1, USD -1",2
 GBPUSD,Growth,Retail sales,"GBP +1, USD +1",0
-GBPUSD,Growth,Consumer confidence,"GBP -1, USD +1",-2
+GBPUSD,Growth,Consumer confidence,"GBP -1, USD -1",0
 GBPUSD,Inflation,CPI y/y,"GBP +1, USD +1",0
 GBPUSD,Inflation,PPI y/y,"GBP +1, USD +1",0
-GBPUSD,Inflation,PCE y/y,"GBP +0, USD +0",0
+GBPUSD,Inflation,PCE y/y,"GBP +0, USD -1",1
 GBPUSD,Inflation,Interest rate,"GBP +1 (3.75% now, Q4/26 forecast 4.00%), USD +1 (4.00% now, Q4/26 forecast 4.25%)",0
 GBPUSD,Jobs,Employment change,"GBP +1, USD -1",2
 GBPUSD,Jobs,Unemployment rate,"GBP +1, USD -1",2
@@ -203,7 +203,7 @@ GBPCAD,Technicals,Trend score,below; down or flat,-2
 GBPCAD,Technicals,Seasonality (10-year avg this month),"+0.27%, up 40% of years",1
 GBPCAD,COT,Net positioning,"GBP -80,420 / CAD -74,709",0
 GBPCAD,COT,Latest weekly change,GBP +6.09 / CAD +3.81,0
-GBPCAD,Crowd,Sentiment,"retail long %: 44; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+GBPCAD,Crowd,Sentiment,"retail long %: 48; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 GBPCAD,Growth,GDP,"GBP +1, CAD -1",2
 GBPCAD,Growth,Manufacturing PMI,"GBP -1, CAD +0",-1
 GBPCAD,Growth,Services PMI,"GBP +1, CAD +0",1
@@ -223,7 +223,7 @@ GBPCHF,Technicals,Trend score,above; up,2
 GBPCHF,Technicals,Seasonality (10-year avg this month),"+0.49%, up 50% of years",1
 GBPCHF,COT,Net positioning,"GBP -80,420 / CHF -18,150",0
 GBPCHF,COT,Latest weekly change,GBP +6.09 / CHF +2.71,0
-GBPCHF,Crowd,Sentiment,"retail long %: 71; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+GBPCHF,Crowd,Sentiment,"retail long %: 71; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 GBPCHF,Growth,GDP,"GBP +1, CHF +1",0
 GBPCHF,Growth,Manufacturing PMI,"GBP -1, CHF -1",0
 GBPCHF,Growth,Services PMI,"GBP +1, CHF +0",1
@@ -239,22 +239,22 @@ GBPCHF,Jobs,Jobless claims,"GBP -1, CHF +0",-1
 GBPCHF,Jobs,JOLTS,"GBP +0, CHF +0",0
 GBPCHF,Jobs,ADP,"GBP +0, CHF +0",0
 GBPCHF,News risk,High impact next 24h,none,0
-GBPJPY,Technicals,Trend score,above; up,2
+GBPJPY,Technicals,Trend score,below; up,-1
 GBPJPY,Technicals,Seasonality (10-year avg this month),"+1.38%, up 50% of years",1
 GBPJPY,COT,Net positioning,"GBP -80,420 / JPY +69,878",-2
 GBPJPY,COT,Latest weekly change,GBP +6.09 / JPY +3.02,0
-GBPJPY,Crowd,Sentiment,"retail long %: 57; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+GBPJPY,Crowd,Sentiment,"retail long %: 57; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 GBPJPY,Growth,GDP,"GBP +1, JPY +1",0
 GBPJPY,Growth,Manufacturing PMI,"GBP -1, JPY -1",0
 GBPJPY,Growth,Services PMI,"GBP +1, JPY +0",1
 GBPJPY,Growth,Retail sales,"GBP +1, JPY -1",2
-GBPJPY,Growth,Consumer confidence,"GBP -1, JPY -1",0
+GBPJPY,Growth,Consumer confidence,"GBP -1, JPY +1",-2
 GBPJPY,Inflation,CPI y/y,"GBP +1, JPY +0",1
 GBPJPY,Inflation,PPI y/y,"GBP +1, JPY -1",2
 GBPJPY,Inflation,PCE y/y,"GBP +0, JPY +0",0
 GBPJPY,Inflation,Interest rate,"GBP +1 (3.75% now, Q4/26 forecast 4.00%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",1
-GBPJPY,Jobs,Employment change,"GBP +1, JPY +1",0
-GBPJPY,Jobs,Unemployment rate,"GBP +1, JPY +1",0
+GBPJPY,Jobs,Employment change,"GBP +1, JPY +0",1
+GBPJPY,Jobs,Unemployment rate,"GBP +1, JPY -1",2
 GBPJPY,Jobs,Jobless claims,"GBP -1, JPY +0",-1
 GBPJPY,Jobs,JOLTS,"GBP +0, JPY +0",0
 GBPJPY,Jobs,ADP,"GBP +0, JPY +0",0
@@ -263,13 +263,13 @@ AUDNZD,Technicals,Trend score,above; up,2
 AUDNZD,Technicals,Seasonality (10-year avg this month),"+0.12%, up 70% of years",1
 AUDNZD,COT,Net positioning,"AUD -127,292 / NZD -58,149",0
 AUDNZD,COT,Latest weekly change,AUD -0.96 / NZD -4.20,0
-AUDNZD,Crowd,Sentiment,"retail long %: 30; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+AUDNZD,Crowd,Sentiment,"retail long %: 27; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",1
 AUDNZD,Growth,GDP,"AUD +1, NZD +1",0
 AUDNZD,Growth,Manufacturing PMI,"AUD +0, NZD +0",0
 AUDNZD,Growth,Services PMI,"AUD +0, NZD +0",0
 AUDNZD,Growth,Retail sales,"AUD +0, NZD -1",1
 AUDNZD,Growth,Consumer confidence,"AUD +0, NZD +0",0
-AUDNZD,Inflation,CPI y/y,"AUD +1, NZD -1",2
+AUDNZD,Inflation,CPI y/y,"AUD -1, NZD -1",0
 AUDNZD,Inflation,PPI y/y,"AUD +1, NZD +1",0
 AUDNZD,Inflation,PCE y/y,"AUD +0, NZD +0",0
 AUDNZD,Inflation,Interest rate,"AUD +1 (4.60% now, Q4/26 forecast 4.85%), NZD +1 (2.75% now, Q4/26 forecast 3.00%)",0
@@ -283,15 +283,15 @@ AUDUSD,Technicals,Trend score,above; up,2
 AUDUSD,Technicals,Seasonality (10-year avg this month),"-0.63%, up 20% of years",-1
 AUDUSD,COT,Net positioning,"AUD -127,292 / USD +15,044",-2
 AUDUSD,COT,Latest weekly change,AUD -0.96 / USD +2.75,-2
-AUDUSD,Crowd,Sentiment,"retail long %: 54; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+AUDUSD,Crowd,Sentiment,"retail long %: 53; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 AUDUSD,Growth,GDP,"AUD +1, USD +1",0
 AUDUSD,Growth,Manufacturing PMI,"AUD +0, USD -1",1
 AUDUSD,Growth,Services PMI,"AUD +0, USD -1",1
 AUDUSD,Growth,Retail sales,"AUD +0, USD +1",-1
-AUDUSD,Growth,Consumer confidence,"AUD +0, USD +1",-1
-AUDUSD,Inflation,CPI y/y,"AUD +1, USD +1",0
+AUDUSD,Growth,Consumer confidence,"AUD +0, USD -1",1
+AUDUSD,Inflation,CPI y/y,"AUD -1, USD +1",-2
 AUDUSD,Inflation,PPI y/y,"AUD +1, USD +1",0
-AUDUSD,Inflation,PCE y/y,"AUD +0, USD +0",0
+AUDUSD,Inflation,PCE y/y,"AUD +0, USD -1",1
 AUDUSD,Inflation,Interest rate,"AUD +1 (4.60% now, Q4/26 forecast 4.85%), USD +1 (4.00% now, Q4/26 forecast 4.25%)",0
 AUDUSD,Jobs,Employment change,"AUD -1, USD -1",0
 AUDUSD,Jobs,Unemployment rate,"AUD -1, USD -1",0
@@ -303,13 +303,13 @@ AUDCAD,Technicals,Trend score,above; down or flat,1
 AUDCAD,Technicals,Seasonality (10-year avg this month),"+0.02%, up 60% of years",1
 AUDCAD,COT,Net positioning,"AUD -127,292 / CAD -74,709",0
 AUDCAD,COT,Latest weekly change,AUD -0.96 / CAD +3.81,-2
-AUDCAD,Crowd,Sentiment,"retail long %: 41; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+AUDCAD,Crowd,Sentiment,"retail long %: 41; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 AUDCAD,Growth,GDP,"AUD +1, CAD -1",2
 AUDCAD,Growth,Manufacturing PMI,"AUD +0, CAD +0",0
 AUDCAD,Growth,Services PMI,"AUD +0, CAD +0",0
 AUDCAD,Growth,Retail sales,"AUD +0, CAD +1",-1
 AUDCAD,Growth,Consumer confidence,"AUD +0, CAD +0",0
-AUDCAD,Inflation,CPI y/y,"AUD +1, CAD -1",2
+AUDCAD,Inflation,CPI y/y,"AUD -1, CAD -1",0
 AUDCAD,Inflation,PPI y/y,"AUD +1, CAD +1",0
 AUDCAD,Inflation,PCE y/y,"AUD +0, CAD +0",0
 AUDCAD,Inflation,Interest rate,"AUD +1 (4.60% now, Q4/26 forecast 4.85%), CAD +1 (2.50% now, Q4/26 forecast 2.75%)",0
@@ -323,13 +323,13 @@ AUDCHF,Technicals,Trend score,above; up,2
 AUDCHF,Technicals,Seasonality (10-year avg this month),"+0.23%, up 70% of years",1
 AUDCHF,COT,Net positioning,"AUD -127,292 / CHF -18,150",0
 AUDCHF,COT,Latest weekly change,AUD -0.96 / CHF +2.71,-2
-AUDCHF,Crowd,Sentiment,"retail long %: 70; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+AUDCHF,Crowd,Sentiment,"retail long %: 67; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 AUDCHF,Growth,GDP,"AUD +1, CHF +1",0
 AUDCHF,Growth,Manufacturing PMI,"AUD +0, CHF -1",1
 AUDCHF,Growth,Services PMI,"AUD +0, CHF +0",0
 AUDCHF,Growth,Retail sales,"AUD +0, CHF +1",-1
 AUDCHF,Growth,Consumer confidence,"AUD +0, CHF -1",1
-AUDCHF,Inflation,CPI y/y,"AUD +1, CHF +0",1
+AUDCHF,Inflation,CPI y/y,"AUD -1, CHF +0",-1
 AUDCHF,Inflation,PPI y/y,"AUD +1, CHF -1",2
 AUDCHF,Inflation,PCE y/y,"AUD +0, CHF +0",0
 AUDCHF,Inflation,Interest rate,"AUD +1 (4.60% now, Q4/26 forecast 4.85%), CHF +0 (0.00% now, Q4/26 forecast 0.00%)",1
@@ -343,18 +343,18 @@ AUDJPY,Technicals,Trend score,above; up,2
 AUDJPY,Technicals,Seasonality (10-year avg this month),"+1.12%, up 60% of years",1
 AUDJPY,COT,Net positioning,"AUD -127,292 / JPY +69,878",-2
 AUDJPY,COT,Latest weekly change,AUD -0.96 / JPY +3.02,-2
-AUDJPY,Crowd,Sentiment,"retail long %: 47; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+AUDJPY,Crowd,Sentiment,"retail long %: 47; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 AUDJPY,Growth,GDP,"AUD +1, JPY +1",0
 AUDJPY,Growth,Manufacturing PMI,"AUD +0, JPY -1",1
 AUDJPY,Growth,Services PMI,"AUD +0, JPY +0",0
 AUDJPY,Growth,Retail sales,"AUD +0, JPY -1",1
-AUDJPY,Growth,Consumer confidence,"AUD +0, JPY -1",1
-AUDJPY,Inflation,CPI y/y,"AUD +1, JPY +0",1
+AUDJPY,Growth,Consumer confidence,"AUD +0, JPY +1",-1
+AUDJPY,Inflation,CPI y/y,"AUD -1, JPY +0",-1
 AUDJPY,Inflation,PPI y/y,"AUD +1, JPY -1",2
 AUDJPY,Inflation,PCE y/y,"AUD +0, JPY +0",0
 AUDJPY,Inflation,Interest rate,"AUD +1 (4.60% now, Q4/26 forecast 4.85%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",1
-AUDJPY,Jobs,Employment change,"AUD -1, JPY +1",-2
-AUDJPY,Jobs,Unemployment rate,"AUD -1, JPY +1",-2
+AUDJPY,Jobs,Employment change,"AUD -1, JPY +0",-1
+AUDJPY,Jobs,Unemployment rate,"AUD -1, JPY -1",0
 AUDJPY,Jobs,Jobless claims,"AUD +0, JPY +0",0
 AUDJPY,Jobs,JOLTS,"AUD +0, JPY +0",0
 AUDJPY,Jobs,ADP,"AUD +0, JPY +0",0
@@ -363,15 +363,15 @@ NZDUSD,Technicals,Trend score,below; up,-1
 NZDUSD,Technicals,Seasonality (10-year avg this month),"-0.72%, up 40% of years",-1
 NZDUSD,COT,Net positioning,"NZD -58,149 / USD +15,044",-2
 NZDUSD,COT,Latest weekly change,NZD -4.20 / USD +2.75,-2
-NZDUSD,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NZDUSD,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NZDUSD,Growth,GDP,"NZD +1, USD +1",0
 NZDUSD,Growth,Manufacturing PMI,"NZD +0, USD -1",1
 NZDUSD,Growth,Services PMI,"NZD +0, USD -1",1
 NZDUSD,Growth,Retail sales,"NZD -1, USD +1",-2
-NZDUSD,Growth,Consumer confidence,"NZD +0, USD +1",-1
+NZDUSD,Growth,Consumer confidence,"NZD +0, USD -1",1
 NZDUSD,Inflation,CPI y/y,"NZD -1, USD +1",-2
 NZDUSD,Inflation,PPI y/y,"NZD +1, USD +1",0
-NZDUSD,Inflation,PCE y/y,"NZD +0, USD +0",0
+NZDUSD,Inflation,PCE y/y,"NZD +0, USD -1",1
 NZDUSD,Inflation,Interest rate,"NZD +1 (2.75% now, Q4/26 forecast 3.00%), USD +1 (4.00% now, Q4/26 forecast 4.25%)",0
 NZDUSD,Jobs,Employment change,"NZD +1, USD -1",2
 NZDUSD,Jobs,Unemployment rate,"NZD -1, USD -1",0
@@ -383,7 +383,7 @@ NZDCAD,Technicals,Trend score,below; down or flat,-2
 NZDCAD,Technicals,Seasonality (10-year avg this month),"-0.10%, up 50% of years",-1
 NZDCAD,COT,Net positioning,"NZD -58,149 / CAD -74,709",0
 NZDCAD,COT,Latest weekly change,NZD -4.20 / CAD +3.81,-2
-NZDCAD,Crowd,Sentiment,"retail long %: 76; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NZDCAD,Crowd,Sentiment,"retail long %: 77; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NZDCAD,Growth,GDP,"NZD +1, CAD -1",2
 NZDCAD,Growth,Manufacturing PMI,"NZD +0, CAD +0",0
 NZDCAD,Growth,Services PMI,"NZD +0, CAD +0",0
@@ -403,7 +403,7 @@ NZDCHF,Technicals,Trend score,below; down or flat,-2
 NZDCHF,Technicals,Seasonality (10-year avg this month),"+0.13%, up 50% of years",1
 NZDCHF,COT,Net positioning,"NZD -58,149 / CHF -18,150",0
 NZDCHF,COT,Latest weekly change,NZD -4.20 / CHF +2.71,-2
-NZDCHF,Crowd,Sentiment,"retail long %: 86; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NZDCHF,Crowd,Sentiment,"retail long %: 85; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NZDCHF,Growth,GDP,"NZD +1, CHF +1",0
 NZDCHF,Growth,Manufacturing PMI,"NZD +0, CHF -1",1
 NZDCHF,Growth,Services PMI,"NZD +0, CHF +0",0
@@ -423,18 +423,18 @@ NZDJPY,Technicals,Trend score,below; down or flat,-2
 NZDJPY,Technicals,Seasonality (10-year avg this month),"+1.02%, up 60% of years",1
 NZDJPY,COT,Net positioning,"NZD -58,149 / JPY +69,878",-2
 NZDJPY,COT,Latest weekly change,NZD -4.20 / JPY +3.02,-2
-NZDJPY,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NZDJPY,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NZDJPY,Growth,GDP,"NZD +1, JPY +1",0
 NZDJPY,Growth,Manufacturing PMI,"NZD +0, JPY -1",1
 NZDJPY,Growth,Services PMI,"NZD +0, JPY +0",0
 NZDJPY,Growth,Retail sales,"NZD -1, JPY -1",0
-NZDJPY,Growth,Consumer confidence,"NZD +0, JPY -1",1
+NZDJPY,Growth,Consumer confidence,"NZD +0, JPY +1",-1
 NZDJPY,Inflation,CPI y/y,"NZD -1, JPY +0",-1
 NZDJPY,Inflation,PPI y/y,"NZD +1, JPY -1",2
 NZDJPY,Inflation,PCE y/y,"NZD +0, JPY +0",0
 NZDJPY,Inflation,Interest rate,"NZD +1 (2.75% now, Q4/26 forecast 3.00%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",1
-NZDJPY,Jobs,Employment change,"NZD +1, JPY +1",0
-NZDJPY,Jobs,Unemployment rate,"NZD -1, JPY +1",-2
+NZDJPY,Jobs,Employment change,"NZD +1, JPY +0",1
+NZDJPY,Jobs,Unemployment rate,"NZD -1, JPY -1",0
 NZDJPY,Jobs,Jobless claims,"NZD +0, JPY +0",0
 NZDJPY,Jobs,JOLTS,"NZD +0, JPY +0",0
 NZDJPY,Jobs,ADP,"NZD +0, JPY +0",0
@@ -443,15 +443,15 @@ USDCAD,Technicals,Trend score,below; down or flat,-2
 USDCAD,Technicals,Seasonality (10-year avg this month),"+0.68%, up 60% of years",1
 USDCAD,COT,Net positioning,"USD +15,044 / CAD -74,709",2
 USDCAD,COT,Latest weekly change,USD +2.75 / CAD +3.81,0
-USDCAD,Crowd,Sentiment,"retail long %: 52; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+USDCAD,Crowd,Sentiment,"retail long %: 52; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 USDCAD,Growth,GDP,"USD +1, CAD -1",2
 USDCAD,Growth,Manufacturing PMI,"USD -1, CAD +0",-1
 USDCAD,Growth,Services PMI,"USD -1, CAD +0",-1
 USDCAD,Growth,Retail sales,"USD +1, CAD +1",0
-USDCAD,Growth,Consumer confidence,"USD +1, CAD +0",1
+USDCAD,Growth,Consumer confidence,"USD -1, CAD +0",-1
 USDCAD,Inflation,CPI y/y,"USD +1, CAD -1",2
 USDCAD,Inflation,PPI y/y,"USD +1, CAD +1",0
-USDCAD,Inflation,PCE y/y,"USD +0, CAD +0",0
+USDCAD,Inflation,PCE y/y,"USD -1, CAD +0",-1
 USDCAD,Inflation,Interest rate,"USD +1 (4.00% now, Q4/26 forecast 4.25%), CAD +1 (2.50% now, Q4/26 forecast 2.75%)",0
 USDCAD,Jobs,Employment change,"USD -1, CAD -1",0
 USDCAD,Jobs,Unemployment rate,"USD -1, CAD +0",-1
@@ -463,15 +463,15 @@ USDCHF,Technicals,Trend score,above; down or flat,1
 USDCHF,Technicals,Seasonality (10-year avg this month),"+0.89%, up 60% of years",1
 USDCHF,COT,Net positioning,"USD +15,044 / CHF -18,150",2
 USDCHF,COT,Latest weekly change,USD +2.75 / CHF +2.71,0
-USDCHF,Crowd,Sentiment,"retail long %: 77; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+USDCHF,Crowd,Sentiment,"retail long %: 76; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 USDCHF,Growth,GDP,"USD +1, CHF +1",0
 USDCHF,Growth,Manufacturing PMI,"USD -1, CHF -1",0
 USDCHF,Growth,Services PMI,"USD -1, CHF +0",-1
 USDCHF,Growth,Retail sales,"USD +1, CHF +1",0
-USDCHF,Growth,Consumer confidence,"USD +1, CHF -1",2
+USDCHF,Growth,Consumer confidence,"USD -1, CHF -1",0
 USDCHF,Inflation,CPI y/y,"USD +1, CHF +0",1
 USDCHF,Inflation,PPI y/y,"USD +1, CHF -1",2
-USDCHF,Inflation,PCE y/y,"USD +0, CHF +0",0
+USDCHF,Inflation,PCE y/y,"USD -1, CHF +0",-1
 USDCHF,Inflation,Interest rate,"USD +1 (4.00% now, Q4/26 forecast 4.25%), CHF +0 (0.00% now, Q4/26 forecast 0.00%)",1
 USDCHF,Jobs,Employment change,"USD -1, CHF +0",-1
 USDCHF,Jobs,Unemployment rate,"USD -1, CHF +0",-1
@@ -483,18 +483,18 @@ USDJPY,Technicals,Trend score,above; down or flat,1
 USDJPY,Technicals,Seasonality (10-year avg this month),"+1.78%, up 70% of years",1
 USDJPY,COT,Net positioning,"USD +15,044 / JPY +69,878",0
 USDJPY,COT,Latest weekly change,USD +2.75 / JPY +3.02,0
-USDJPY,Crowd,Sentiment,"retail long %: 40; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+USDJPY,Crowd,Sentiment,"retail long %: 41; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 USDJPY,Growth,GDP,"USD +1, JPY +1",0
 USDJPY,Growth,Manufacturing PMI,"USD -1, JPY -1",0
 USDJPY,Growth,Services PMI,"USD -1, JPY +0",-1
 USDJPY,Growth,Retail sales,"USD +1, JPY -1",2
-USDJPY,Growth,Consumer confidence,"USD +1, JPY -1",2
+USDJPY,Growth,Consumer confidence,"USD -1, JPY +1",-2
 USDJPY,Inflation,CPI y/y,"USD +1, JPY +0",1
 USDJPY,Inflation,PPI y/y,"USD +1, JPY -1",2
-USDJPY,Inflation,PCE y/y,"USD +0, JPY +0",0
+USDJPY,Inflation,PCE y/y,"USD -1, JPY +0",-1
 USDJPY,Inflation,Interest rate,"USD +1 (4.00% now, Q4/26 forecast 4.25%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",1
-USDJPY,Jobs,Employment change,"USD -1, JPY +1",-2
-USDJPY,Jobs,Unemployment rate,"USD -1, JPY +1",-2
+USDJPY,Jobs,Employment change,"USD -1, JPY +0",-1
+USDJPY,Jobs,Unemployment rate,"USD -1, JPY -1",0
 USDJPY,Jobs,Jobless claims,"USD +1, JPY +0",1
 USDJPY,Jobs,JOLTS,"USD -1, JPY +0",-1
 USDJPY,Jobs,ADP,"USD +1, JPY +0",1
@@ -503,7 +503,7 @@ CADCHF,Technicals,Trend score,above; up,2
 CADCHF,Technicals,Seasonality (10-year avg this month),"+0.23%, up 80% of years",1
 CADCHF,COT,Net positioning,"CAD -74,709 / CHF -18,150",0
 CADCHF,COT,Latest weekly change,CAD +3.81 / CHF +2.71,0
-CADCHF,Crowd,Sentiment,"retail long %: 75; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+CADCHF,Crowd,Sentiment,"retail long %: 71; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 CADCHF,Growth,GDP,"CAD -1, CHF +1",-2
 CADCHF,Growth,Manufacturing PMI,"CAD +0, CHF -1",1
 CADCHF,Growth,Services PMI,"CAD +0, CHF +0",0
@@ -523,18 +523,18 @@ CADJPY,Technicals,Trend score,above; up,2
 CADJPY,Technicals,Seasonality (10-year avg this month),"+1.12%, up 60% of years",1
 CADJPY,COT,Net positioning,"CAD -74,709 / JPY +69,878",-2
 CADJPY,COT,Latest weekly change,CAD +3.81 / JPY +3.02,0
-CADJPY,Crowd,Sentiment,"retail long %: 54; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+CADJPY,Crowd,Sentiment,"retail long %: 55; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 CADJPY,Growth,GDP,"CAD -1, JPY +1",-2
 CADJPY,Growth,Manufacturing PMI,"CAD +0, JPY -1",1
 CADJPY,Growth,Services PMI,"CAD +0, JPY +0",0
 CADJPY,Growth,Retail sales,"CAD +1, JPY -1",2
-CADJPY,Growth,Consumer confidence,"CAD +0, JPY -1",1
+CADJPY,Growth,Consumer confidence,"CAD +0, JPY +1",-1
 CADJPY,Inflation,CPI y/y,"CAD -1, JPY +0",-1
 CADJPY,Inflation,PPI y/y,"CAD +1, JPY -1",2
 CADJPY,Inflation,PCE y/y,"CAD +0, JPY +0",0
 CADJPY,Inflation,Interest rate,"CAD +1 (2.50% now, Q4/26 forecast 2.75%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",1
-CADJPY,Jobs,Employment change,"CAD -1, JPY +1",-2
-CADJPY,Jobs,Unemployment rate,"CAD +0, JPY +1",-1
+CADJPY,Jobs,Employment change,"CAD -1, JPY +0",-1
+CADJPY,Jobs,Unemployment rate,"CAD +0, JPY -1",1
 CADJPY,Jobs,Jobless claims,"CAD +0, JPY +0",0
 CADJPY,Jobs,JOLTS,"CAD +0, JPY +0",0
 CADJPY,Jobs,ADP,"CAD +0, JPY +0",0
@@ -543,18 +543,18 @@ CHFJPY,Technicals,Trend score,below; down or flat,-2
 CHFJPY,Technicals,Seasonality (10-year avg this month),"+0.90%, up 70% of years",1
 CHFJPY,COT,Net positioning,"CHF -18,150 / JPY +69,878",-2
 CHFJPY,COT,Latest weekly change,CHF +2.71 / JPY +3.02,0
-CHFJPY,Crowd,Sentiment,"retail long %: 30; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+CHFJPY,Crowd,Sentiment,"retail long %: 35; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",1
 CHFJPY,Growth,GDP,"CHF +1, JPY +1",0
 CHFJPY,Growth,Manufacturing PMI,"CHF -1, JPY -1",0
 CHFJPY,Growth,Services PMI,"CHF +0, JPY +0",0
 CHFJPY,Growth,Retail sales,"CHF +1, JPY -1",2
-CHFJPY,Growth,Consumer confidence,"CHF -1, JPY -1",0
+CHFJPY,Growth,Consumer confidence,"CHF -1, JPY +1",-2
 CHFJPY,Inflation,CPI y/y,"CHF +0, JPY +0",0
 CHFJPY,Inflation,PPI y/y,"CHF -1, JPY -1",0
 CHFJPY,Inflation,PCE y/y,"CHF +0, JPY +0",0
 CHFJPY,Inflation,Interest rate,"CHF +0 (0.00% now, Q4/26 forecast 0.00%), JPY +0 (1.25% now, Q4/26 forecast 1.25%)",0
-CHFJPY,Jobs,Employment change,"CHF +0, JPY +1",-1
-CHFJPY,Jobs,Unemployment rate,"CHF +0, JPY +1",-1
+CHFJPY,Jobs,Employment change,"CHF +0, JPY +0",0
+CHFJPY,Jobs,Unemployment rate,"CHF +0, JPY -1",1
 CHFJPY,Jobs,Jobless claims,"CHF +0, JPY +0",0
 CHFJPY,Jobs,JOLTS,"CHF +0, JPY +0",0
 CHFJPY,Jobs,ADP,"CHF +0, JPY +0",0
@@ -563,15 +563,15 @@ USDZAR,Technicals,Trend score,above; up,2
 USDZAR,Technicals,Seasonality (10-year avg this month),"+0.54%, up 50% of years",1
 USDZAR,COT,Net positioning,"USD +15,044 / ZAR +12,928",0
 USDZAR,COT,Latest weekly change,USD +2.75 / ZAR -0.04,2
-USDZAR,Crowd,Sentiment,"retail long %: 38; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+USDZAR,Crowd,Sentiment,"retail long %: 38; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",1
 USDZAR,Growth,GDP,"USD +1, ZAR +0",1
 USDZAR,Growth,Manufacturing PMI,"USD -1, ZAR +0",-1
 USDZAR,Growth,Services PMI,"USD -1, ZAR +0",-1
 USDZAR,Growth,Retail sales,"USD +1, ZAR +1",0
-USDZAR,Growth,Consumer confidence,"USD +1, ZAR +0",1
+USDZAR,Growth,Consumer confidence,"USD -1, ZAR +0",-1
 USDZAR,Inflation,CPI y/y,"USD +1, ZAR -1",2
 USDZAR,Inflation,PPI y/y,"USD +1, ZAR +0",1
-USDZAR,Inflation,PCE y/y,"USD +0, ZAR +0",0
+USDZAR,Inflation,PCE y/y,"USD -1, ZAR +0",-1
 USDZAR,Inflation,Interest rate,"USD +1 (4.00% now, Q4/26 forecast 4.25%), ZAR +1 (7.25% now, Q4/26 forecast 7.50%)",0
 USDZAR,Jobs,Employment change,"USD -1, ZAR +0",-1
 USDZAR,Jobs,Unemployment rate,"USD -1, ZAR +0",-1
@@ -583,12 +583,12 @@ EUR Index,Technicals,Trend score,below; down or flat,-2
 EUR Index,Technicals,Seasonality (10-year avg this month),"-0.59%, up 40% of years",-1
 EUR Index,COT,Net positioning,38.55,-1
 EUR Index,COT,Latest weekly change,+0.34,1
-EUR Index,Crowd,Sentiment,"retail long % (vs US dollar): 63; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+EUR Index,Crowd,Sentiment,"retail long % (vs US dollar): 63; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 EUR Index,Growth,GDP,EZ +1,1
 EUR Index,Growth,Manufacturing PMI,EZ +1,1
 EUR Index,Growth,Services PMI,EZ +0,0
 EUR Index,Growth,Retail sales,EZ -1,-1
-EUR Index,Growth,Consumer confidence,EZ +0,0
+EUR Index,Growth,Consumer confidence,EZ -1,-1
 EUR Index,Inflation,CPI y/y,EZ +0,0
 EUR Index,Inflation,PPI y/y,EZ +1,1
 EUR Index,Inflation,Interest rate,"EZ +1 (2.65% now, Q4/26 forecast 2.90%)",1
@@ -599,7 +599,7 @@ GBP Index,Technicals,Trend score,below; up,-1
 GBP Index,Technicals,Seasonality (10-year avg this month),"-0.37%, up 40% of years",-1
 GBP Index,COT,Net positioning,28.71,-1
 GBP Index,COT,Latest weekly change,+6.09,1
-GBP Index,Crowd,Sentiment,"retail long % (vs US dollar): 55; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+GBP Index,Crowd,Sentiment,"retail long % (vs US dollar): 54; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 GBP Index,Growth,GDP,UK +1,1
 GBP Index,Growth,Manufacturing PMI,UK -1,-1
 GBP Index,Growth,Services PMI,UK +1,1
@@ -616,12 +616,12 @@ AUD Index,Technicals,Trend score,above; up,2
 AUD Index,Technicals,Seasonality (10-year avg this month),"-0.63%, up 20% of years",-1
 AUD Index,COT,Net positioning,30.36,-1
 AUD Index,COT,Latest weekly change,-0.96,-1
-AUD Index,Crowd,Sentiment,"retail long % (vs US dollar): 54; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+AUD Index,Crowd,Sentiment,"retail long % (vs US dollar): 53; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 AUD Index,Growth,GDP,AU +1,1
 AUD Index,Growth,Manufacturing PMI,AU +0,0
 AUD Index,Growth,Services PMI,AU +0,0
 AUD Index,Growth,Consumer confidence,AU +0,0
-AUD Index,Inflation,CPI y/y,AU +1,1
+AUD Index,Inflation,CPI y/y,AU -1,-1
 AUD Index,Inflation,PPI y/y,AU +1,1
 AUD Index,Inflation,Interest rate,"AU +1 (4.60% now, Q4/26 forecast 4.85%)",1
 AUD Index,Jobs,Employment change,AU -1,-1
@@ -631,7 +631,7 @@ NZD Index,Technicals,Trend score,below; up,-1
 NZD Index,Technicals,Seasonality (10-year avg this month),"-0.72%, up 40% of years",-1
 NZD Index,COT,Net positioning,21.38,-1
 NZD Index,COT,Latest weekly change,-4.20,-1
-NZD Index,Crowd,Sentiment,"retail long % (vs US dollar): 75; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NZD Index,Crowd,Sentiment,"retail long % (vs US dollar): 75; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NZD Index,Growth,GDP,NZ +1,1
 NZD Index,Growth,Manufacturing PMI,NZ +0,0
 NZD Index,Growth,Services PMI,NZ +0,0
@@ -647,15 +647,15 @@ USD Index,Technicals,Trend score,above; up,2
 USD Index,Technicals,Seasonality (10-year avg this month),"+0.99%, up 70% of years",1
 USD Index,COT,Net positioning,65.10,1
 USD Index,COT,Latest weekly change,+2.75,1
-USD Index,Crowd,Sentiment,"retail long % (vs US dollar): 46; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+USD Index,Crowd,Sentiment,"retail long % (vs US dollar): 46; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 USD Index,Growth,GDP,US +1,1
 USD Index,Growth,Manufacturing PMI,US -1,-1
 USD Index,Growth,Services PMI,US -1,-1
 USD Index,Growth,Retail sales,US +1,1
-USD Index,Growth,Consumer confidence,US +1,1
+USD Index,Growth,Consumer confidence,US -1,-1
 USD Index,Inflation,CPI y/y,US +1,1
 USD Index,Inflation,PPI y/y,US +1,1
-USD Index,Inflation,PCE y/y,US +0,0
+USD Index,Inflation,PCE y/y,US -1,-1
 USD Index,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling; a rising yield is good for the dollar,-1
 USD Index,Jobs,Employment change,US -1,-1
 USD Index,Jobs,Unemployment rate,US -1,-1
@@ -667,7 +667,7 @@ CAD Index,Technicals,Trend score,above; up,2
 CAD Index,Technicals,Seasonality (10-year avg this month),"-0.64%, up 40% of years",-1
 CAD Index,COT,Net positioning,36.56,-1
 CAD Index,COT,Latest weekly change,+3.81,1
-CAD Index,Crowd,Sentiment,"retail long % (vs US dollar): 48; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+CAD Index,Crowd,Sentiment,"retail long % (vs US dollar): 48; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 CAD Index,Growth,GDP,CA -1,-1
 CAD Index,Growth,Manufacturing PMI,CA +0,0
 CAD Index,Growth,Services PMI,CA +0,0
@@ -682,7 +682,7 @@ CHF Index,Technicals,Trend score,below; up,-1
 CHF Index,Technicals,Seasonality (10-year avg this month),"-0.85%, up 40% of years",-1
 CHF Index,COT,Net positioning,38.37,-1
 CHF Index,COT,Latest weekly change,+2.71,1
-CHF Index,Crowd,Sentiment,"retail long % (vs US dollar): 23; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+CHF Index,Crowd,Sentiment,"retail long % (vs US dollar): 24; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",1
 CHF Index,Growth,GDP,CH +1,1
 CHF Index,Growth,Manufacturing PMI,CH -1,-1
 CHF Index,Growth,Retail sales,CH +1,1
@@ -697,31 +697,31 @@ JPY Index,Technicals,Trend score,below; up,-1
 JPY Index,Technicals,Seasonality (10-year avg this month),"-1.70%, up 30% of years",-1
 JPY Index,COT,Net positioning,60.57,1
 JPY Index,COT,Latest weekly change,+3.02,1
-JPY Index,Crowd,Sentiment,"retail long % (vs US dollar): 60; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+JPY Index,Crowd,Sentiment,"retail long % (vs US dollar): 59; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 JPY Index,Growth,GDP,JP +1,1
 JPY Index,Growth,Manufacturing PMI,JP -1,-1
 JPY Index,Growth,Services PMI,JP +0,0
 JPY Index,Growth,Retail sales,JP -1,-1
-JPY Index,Growth,Consumer confidence,JP -1,-1
+JPY Index,Growth,Consumer confidence,JP +1,1
 JPY Index,Inflation,CPI y/y,JP +0,0
 JPY Index,Inflation,PPI y/y,JP -1,-1
 JPY Index,Inflation,Interest rate,"JP +0 (1.25% now, Q4/26 forecast 1.25%)",0
-JPY Index,Jobs,Employment change,JP +1,1
-JPY Index,Jobs,Unemployment rate,JP +1,1
+JPY Index,Jobs,Employment change,JP +0,0
+JPY Index,Jobs,Unemployment rate,JP -1,-1
 JPY Index,News risk,High impact next 24h,none,0
 SPX500,Technicals,Trend score,above; down or flat,1
 SPX500,Technicals,Seasonality (10-year avg this month),"+0.66%, up 50% of years",1
 SPX500,COT,Net positioning,37.58,-1
 SPX500,COT,Latest weekly change,-0.48,-1
-SPX500,Crowd,Sentiment,"retail long %: 50; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+SPX500,Crowd,Sentiment,"retail long %: 50; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 SPX500,Growth,GDP,US +1,1
 SPX500,Growth,Manufacturing PMI,US -1,-1
 SPX500,Growth,Services PMI,US -1,-1
 SPX500,Growth,Retail sales,US +1,1
-SPX500,Growth,Consumer confidence,US +1,1
+SPX500,Growth,Consumer confidence,US -1,-1
 SPX500,Inflation,CPI y/y,US +1,-1
 SPX500,Inflation,PPI y/y,US +1,-1
-SPX500,Inflation,PCE y/y,US +0,0
+SPX500,Inflation,PCE y/y,US -1,1
 SPX500,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 SPX500,Jobs,Employment change,US -1,-1
 SPX500,Jobs,Unemployment rate,US -1,-1
@@ -733,15 +733,15 @@ NAS100,Technicals,Trend score,above; down or flat,1
 NAS100,Technicals,Seasonality (10-year avg this month),"+0.91%, up 50% of years",1
 NAS100,COT,Net positioning,70.88,1
 NAS100,COT,Latest weekly change,+0.41,1
-NAS100,Crowd,Sentiment,"retail long %: 65; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NAS100,Crowd,Sentiment,"retail long %: 66; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NAS100,Growth,GDP,US +1,1
 NAS100,Growth,Manufacturing PMI,US -1,-1
 NAS100,Growth,Services PMI,US -1,-1
 NAS100,Growth,Retail sales,US +1,1
-NAS100,Growth,Consumer confidence,US +1,1
+NAS100,Growth,Consumer confidence,US -1,-1
 NAS100,Inflation,CPI y/y,US +1,-1
 NAS100,Inflation,PPI y/y,US +1,-1
-NAS100,Inflation,PCE y/y,US +0,0
+NAS100,Inflation,PCE y/y,US -1,1
 NAS100,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 NAS100,Jobs,Employment change,US -1,-1
 NAS100,Jobs,Unemployment rate,US -1,-1
@@ -749,19 +749,19 @@ NAS100,Jobs,Jobless claims,US +1,1
 NAS100,Jobs,JOLTS,US -1,-1
 NAS100,Jobs,ADP,US +1,1
 NAS100,News risk,High impact next 24h,none,0
-DOW,Technicals,Trend score,above; up,2
+DOW,Technicals,Trend score,below; up,-1
 DOW,Technicals,Seasonality (10-year avg this month),"+1.38%, up 50% of years",1
 DOW,COT,Net positioning,59.75,1
 DOW,COT,Latest weekly change,-3.54,-1
-DOW,Crowd,Sentiment,"retail long %: 57; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+DOW,Crowd,Sentiment,"retail long %: 57; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 DOW,Growth,GDP,US +1,1
 DOW,Growth,Manufacturing PMI,US -1,-1
 DOW,Growth,Services PMI,US -1,-1
 DOW,Growth,Retail sales,US +1,1
-DOW,Growth,Consumer confidence,US +1,1
+DOW,Growth,Consumer confidence,US -1,-1
 DOW,Inflation,CPI y/y,US +1,-1
 DOW,Inflation,PPI y/y,US +1,-1
-DOW,Inflation,PCE y/y,US +0,0
+DOW,Inflation,PCE y/y,US -1,1
 DOW,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 DOW,Jobs,Employment change,US -1,-1
 DOW,Jobs,Unemployment rate,US -1,-1
@@ -787,12 +787,12 @@ GER40,Technicals,Trend score,above; up,2
 GER40,Technicals,Seasonality (10-year avg this month),"-0.03%, up 60% of years",-1
 GER40,COT,Net positioning,,0
 GER40,COT,Latest weekly change,,0
-GER40,Crowd,Sentiment,"retail long %: 50; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+GER40,Crowd,Sentiment,"retail long %: 50; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 GER40,Growth,GDP,EZ +1,1
 GER40,Growth,Manufacturing PMI,EZ +1,1
 GER40,Growth,Services PMI,EZ +0,0
 GER40,Growth,Retail sales,EZ -1,-1
-GER40,Growth,Consumer confidence,EZ +0,0
+GER40,Growth,Consumer confidence,EZ -1,-1
 GER40,Inflation,CPI y/y,EZ +0,0
 GER40,Inflation,PPI y/y,EZ +1,-1
 GER40,Inflation,Interest rate,"EZ +1 (2.65% now, Q4/26 forecast 2.90%)",-1
@@ -803,7 +803,7 @@ UK100,Technicals,Trend score,below; down or flat,-2
 UK100,Technicals,Seasonality (10-year avg this month),"-0.61%, up 50% of years",-1
 UK100,COT,Net positioning,,0
 UK100,COT,Latest weekly change,,0
-UK100,Crowd,Sentiment,"retail long %: 51; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",0
+UK100,Crowd,Sentiment,"retail long %: 50; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",0
 UK100,Growth,GDP,UK +1,1
 UK100,Growth,Manufacturing PMI,UK -1,-1
 UK100,Growth,Services PMI,UK +1,1
@@ -820,31 +820,31 @@ JPN225,Technicals,Trend score,above; down or flat,1
 JPN225,Technicals,Seasonality (10-year avg this month),"+3.05%, up 60% of years",1
 JPN225,COT,Net positioning,,0
 JPN225,COT,Latest weekly change,,0
-JPN225,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+JPN225,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 JPN225,Growth,GDP,JP +1,1
 JPN225,Growth,Manufacturing PMI,JP -1,-1
 JPN225,Growth,Services PMI,JP +0,0
 JPN225,Growth,Retail sales,JP -1,-1
-JPN225,Growth,Consumer confidence,JP -1,-1
+JPN225,Growth,Consumer confidence,JP +1,1
 JPN225,Inflation,CPI y/y,JP +0,0
 JPN225,Inflation,PPI y/y,JP -1,1
 JPN225,Inflation,Interest rate,"JP +0 (1.25% now, Q4/26 forecast 1.25%)",0
-JPN225,Jobs,Employment change,JP +1,1
-JPN225,Jobs,Unemployment rate,JP +1,1
+JPN225,Jobs,Employment change,JP +0,0
+JPN225,Jobs,Unemployment rate,JP -1,-1
 JPN225,News risk,High impact next 24h,none,0
 GOLD,Technicals,Trend score,below; down or flat,-2
 GOLD,Technicals,Seasonality (10-year avg this month),"+1.28%, up 60% of years",1
 GOLD,COT,Net positioning,86.42,1
 GOLD,COT,Latest weekly change,-0.35,-1
-GOLD,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+GOLD,Crowd,Sentiment,"retail long %: 81; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 GOLD,Growth,GDP,US +1,-1
 GOLD,Growth,Manufacturing PMI,US -1,1
 GOLD,Growth,Services PMI,US -1,1
 GOLD,Growth,Retail sales,US +1,-1
-GOLD,Growth,Consumer confidence,US +1,-1
+GOLD,Growth,Consumer confidence,US -1,1
 GOLD,Inflation,CPI y/y,US +1,-1
 GOLD,Inflation,PPI y/y,US +1,-1
-GOLD,Inflation,PCE y/y,US +0,0
+GOLD,Inflation,PCE y/y,US -1,1
 GOLD,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 GOLD,Jobs,Employment change,US -1,1
 GOLD,Jobs,Unemployment rate,US -1,1
@@ -856,15 +856,15 @@ SILVER,Technicals,Trend score,below; down or flat,-2
 SILVER,Technicals,Seasonality (10-year avg this month),"+1.86%, up 80% of years",1
 SILVER,COT,Net positioning,70.05,1
 SILVER,COT,Latest weekly change,-4.46,-1
-SILVER,Crowd,Sentiment,"retail long %: 89; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+SILVER,Crowd,Sentiment,"retail long %: 89; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 SILVER,Growth,GDP,US +1,1
 SILVER,Growth,Manufacturing PMI,US -1,-1
 SILVER,Growth,Services PMI,US -1,-1
 SILVER,Growth,Retail sales,US +1,1
-SILVER,Growth,Consumer confidence,US +1,1
+SILVER,Growth,Consumer confidence,US -1,-1
 SILVER,Inflation,CPI y/y,US +1,-1
 SILVER,Inflation,PPI y/y,US +1,-1
-SILVER,Inflation,PCE y/y,US +0,0
+SILVER,Inflation,PCE y/y,US -1,1
 SILVER,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 SILVER,Jobs,Employment change,US -1,-1
 SILVER,Jobs,Unemployment rate,US -1,-1
@@ -876,15 +876,15 @@ USOIL,Technicals,Trend score,above; up,2
 USOIL,Technicals,Seasonality (10-year avg this month),"-1.04%, up 50% of years",-1
 USOIL,COT,Net positioning,57.69,1
 USOIL,COT,Latest weekly change,-0.83,-1
-USOIL,Crowd,Sentiment,"retail long %: 37; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",1
+USOIL,Crowd,Sentiment,"retail long %: 37; crowd: mostly short; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",1
 USOIL,Growth,GDP,US +1,1
 USOIL,Growth,Manufacturing PMI,US -1,-1
 USOIL,Growth,Services PMI,US -1,-1
 USOIL,Growth,Retail sales,US +1,1
-USOIL,Growth,Consumer confidence,US +1,1
+USOIL,Growth,Consumer confidence,US -1,-1
 USOIL,Inflation,CPI y/y,US +1,-1
 USOIL,Inflation,PPI y/y,US +1,-1
-USOIL,Inflation,PCE y/y,US +0,0
+USOIL,Inflation,PCE y/y,US -1,1
 USOIL,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 USOIL,Jobs,Employment change,US -1,-1
 USOIL,Jobs,Unemployment rate,US -1,-1
@@ -896,15 +896,15 @@ BTCUSD,Technicals,Trend score,below; down or flat,-2
 BTCUSD,Technicals,Seasonality (10-year avg this month),"+17.91%, up 80% of years",1
 BTCUSD,COT,Net positioning,53.84,1
 BTCUSD,COT,Latest weekly change,-0.11,-1
-BTCUSD,Crowd,Sentiment,"retail long %: 80; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+BTCUSD,Crowd,Sentiment,"retail long %: 80; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 BTCUSD,Growth,GDP,US +1,1
 BTCUSD,Growth,Manufacturing PMI,US -1,-1
 BTCUSD,Growth,Services PMI,US -1,-1
 BTCUSD,Growth,Retail sales,US +1,1
-BTCUSD,Growth,Consumer confidence,US +1,1
+BTCUSD,Growth,Consumer confidence,US -1,-1
 BTCUSD,Inflation,CPI y/y,US +1,-1
 BTCUSD,Inflation,PPI y/y,US +1,-1
-BTCUSD,Inflation,PCE y/y,US +0,0
+BTCUSD,Inflation,PCE y/y,US -1,1
 BTCUSD,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 BTCUSD,Jobs,Employment change,US -1,-1
 BTCUSD,Jobs,Unemployment rate,US -1,-1
@@ -916,15 +916,15 @@ US10T,Technicals,Trend score,above; up,2
 US10T,Technicals,Seasonality (10-year avg this month),"-0.96%, up 10% of years",-1
 US10T,COT,Net positioning,29.97,-1
 US10T,COT,Latest weekly change,+1.58,1
-US10T,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+US10T,Crowd,Sentiment,"retail long %: 73; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 US10T,Growth,GDP,US +1,1
 US10T,Growth,Manufacturing PMI,US -1,-1
 US10T,Growth,Services PMI,US -1,-1
 US10T,Growth,Retail sales,US +1,1
-US10T,Growth,Consumer confidence,US +1,1
+US10T,Growth,Consumer confidence,US -1,-1
 US10T,Inflation,CPI y/y,US +1,-1
 US10T,Inflation,PPI y/y,US +1,-1
-US10T,Inflation,PCE y/y,US +0,0
+US10T,Inflation,PCE y/y,US -1,1
 US10T,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 US10T,Jobs,Employment change,US -1,-1
 US10T,Jobs,Unemployment rate,US -1,-1
@@ -936,15 +936,15 @@ RUSSELL,Technicals,Trend score,above; up,2
 RUSSELL,Technicals,Seasonality (10-year avg this month),"-0.18%, up 60% of years",-1
 RUSSELL,COT,Net positioning,42.34,-1
 RUSSELL,COT,Latest weekly change,+3.03,1
-RUSSELL,Crowd,Sentiment,"retail long %: 69; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+RUSSELL,Crowd,Sentiment,"retail long %: 69; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 RUSSELL,Growth,GDP,US +1,1
 RUSSELL,Growth,Manufacturing PMI,US -1,-1
 RUSSELL,Growth,Services PMI,US -1,-1
 RUSSELL,Growth,Retail sales,US +1,1
-RUSSELL,Growth,Consumer confidence,US +1,1
+RUSSELL,Growth,Consumer confidence,US -1,-1
 RUSSELL,Inflation,CPI y/y,US +1,-1
 RUSSELL,Inflation,PPI y/y,US +1,-1
-RUSSELL,Inflation,PCE y/y,US +0,0
+RUSSELL,Inflation,PCE y/y,US -1,1
 RUSSELL,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 RUSSELL,Jobs,Employment change,US -1,-1
 RUSSELL,Jobs,Unemployment rate,US -1,-1
@@ -956,15 +956,15 @@ PLATINUM,Technicals,Trend score,below; down or flat,-2
 PLATINUM,Technicals,Seasonality (10-year avg this month),"+1.47%, up 70% of years",1
 PLATINUM,COT,Net positioning,65.99,1
 PLATINUM,COT,Latest weekly change,+0.04,1
-PLATINUM,Crowd,Sentiment,"retail long %: 86; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+PLATINUM,Crowd,Sentiment,"retail long %: 86; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 PLATINUM,Growth,GDP,US +1,1
 PLATINUM,Growth,Manufacturing PMI,US -1,-1
 PLATINUM,Growth,Services PMI,US -1,-1
 PLATINUM,Growth,Retail sales,US +1,1
-PLATINUM,Growth,Consumer confidence,US +1,1
+PLATINUM,Growth,Consumer confidence,US -1,-1
 PLATINUM,Inflation,CPI y/y,US +1,-1
 PLATINUM,Inflation,PPI y/y,US +1,-1
-PLATINUM,Inflation,PCE y/y,US +0,0
+PLATINUM,Inflation,PCE y/y,US -1,1
 PLATINUM,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 PLATINUM,Jobs,Employment change,US -1,-1
 PLATINUM,Jobs,Unemployment rate,US -1,-1
@@ -976,15 +976,15 @@ COPPER,Technicals,Trend score,above; down or flat,1
 COPPER,Technicals,Seasonality (10-year avg this month),"+0.92%, up 50% of years",1
 COPPER,COT,Net positioning,70.55,1
 COPPER,COT,Latest weekly change,-2.82,-1
-COPPER,Crowd,Sentiment,"retail long %: 65; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+COPPER,Crowd,Sentiment,"retail long %: 65; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 COPPER,Growth,GDP,US +1,1
 COPPER,Growth,Manufacturing PMI,US -1,-1
 COPPER,Growth,Services PMI,US -1,-1
 COPPER,Growth,Retail sales,US +1,1
-COPPER,Growth,Consumer confidence,US +1,1
+COPPER,Growth,Consumer confidence,US -1,-1
 COPPER,Inflation,CPI y/y,US +1,-1
 COPPER,Inflation,PPI y/y,US +1,-1
-COPPER,Inflation,PCE y/y,US +0,0
+COPPER,Inflation,PCE y/y,US -1,1
 COPPER,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 COPPER,Jobs,Employment change,US -1,-1
 COPPER,Jobs,Unemployment rate,US -1,-1
@@ -996,15 +996,15 @@ NATGAS,Technicals,Trend score,above; down or flat,1
 NATGAS,Technicals,Seasonality (10-year avg this month),"+8.05%, up 60% of years",1
 NATGAS,COT,Net positioning,34.34,-1
 NATGAS,COT,Latest weekly change,-0.85,-1
-NATGAS,Crowd,Sentiment,"retail long %: 80; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+NATGAS,Crowd,Sentiment,"retail long %: 80; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 NATGAS,Growth,GDP,US +1,1
 NATGAS,Growth,Manufacturing PMI,US -1,-1
 NATGAS,Growth,Services PMI,US -1,-1
 NATGAS,Growth,Retail sales,US +1,1
-NATGAS,Growth,Consumer confidence,US +1,1
+NATGAS,Growth,Consumer confidence,US -1,-1
 NATGAS,Inflation,CPI y/y,US +1,-1
 NATGAS,Inflation,PPI y/y,US +1,-1
-NATGAS,Inflation,PCE y/y,US +0,0
+NATGAS,Inflation,PCE y/y,US -1,1
 NATGAS,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 NATGAS,Jobs,Employment change,US -1,-1
 NATGAS,Jobs,Unemployment rate,US -1,-1
@@ -1016,15 +1016,15 @@ ETHUSD,Technicals,Trend score,below; down or flat,-2
 ETHUSD,Technicals,Seasonality (10-year avg this month),"+6.73%, up 62% of years",1
 ETHUSD,COT,Net positioning,52.29,1
 ETHUSD,COT,Latest weekly change,-0.50,-1
-ETHUSD,Crowd,Sentiment,"retail long %: 86; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 6:27 AM PT",-1
+ETHUSD,Crowd,Sentiment,"retail long %: 86; crowd: mostly long; source: IG client sentiment, Fri Oct 30, 7:03 AM PT",-1
 ETHUSD,Growth,GDP,US +1,1
 ETHUSD,Growth,Manufacturing PMI,US -1,-1
 ETHUSD,Growth,Services PMI,US -1,-1
 ETHUSD,Growth,Retail sales,US +1,1
-ETHUSD,Growth,Consumer confidence,US +1,1
+ETHUSD,Growth,Consumer confidence,US -1,-1
 ETHUSD,Inflation,CPI y/y,US +1,-1
 ETHUSD,Inflation,PPI y/y,US +1,-1
-ETHUSD,Inflation,PCE y/y,US +0,0
+ETHUSD,Inflation,PCE y/y,US -1,1
 ETHUSD,Inflation,2-year yield vs 7-day avg,4.61% on 2026-10-29 vs 4.69% 7-day avg; falling,1
 ETHUSD,Jobs,Employment change,US -1,-1
 ETHUSD,Jobs,Unemployment rate,US -1,-1
