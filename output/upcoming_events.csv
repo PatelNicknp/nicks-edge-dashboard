@@ -1,7 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Thu 2026-10-29 07:30 PM PT,202610291930,JPY,High,BOJ Policy Rate,<1.25%,<1.25%
-Thu 2026-10-29 07:30 PM PT,202610291930,JPY,High,Monetary Policy Statement,,
-Thu 2026-10-29 07:31 PM PT,202610291931,JPY,High,BOJ Outlook Report,,
 Thu 2026-10-29 10:00 PM PT,202610292200,JPY,Low,Housing Starts y/y,2.7%,6.1%
 Thu 2026-10-29 10:30 PM PT,202610292230,JPY,High,BOJ Press Conference,,
 Thu 2026-10-29 11:30 PM PT,202610292330,EUR,Low,French Consumer Spending m/m,0.1%,-0.5%
@@ -11,9 +8,9 @@ Fri 2026-10-30 12:00 AM PT,202610300000,GBP,Low,Nationwide HPI m/m,-0.2%,-0.2%
 Fri 2026-10-30 12:29 AM PT,202610300029,EUR,Medium,German Prelim CPI m/m,0.1%,0.6%
 Fri 2026-10-30 12:45 AM PT,202610300045,EUR,Low,French Prelim CPI m/m,0.2%,-0.3%
 Fri 2026-10-30 12:45 AM PT,202610300045,EUR,Low,French Prelim Private Payrolls q/q,-0.1%,-0.1%
-Fri 2026-10-30 01:00 AM PT,202610300100,EUR,Low,Spanish Flash GDP q/q,0.6%,0.7%
-Fri 2026-10-30 01:00 AM PT,202610300100,EUR,Low,Spanish Flash CPI y/y,4.9%,4.9%
 Fri 2026-10-30 01:00 AM PT,202610300100,CHF,Low,KOF Economic Barometer,108.1,109.1
+Fri 2026-10-30 01:00 AM PT,202610300100,EUR,Low,Spanish Flash CPI y/y,4.9%,4.9%
+Fri 2026-10-30 01:00 AM PT,202610300100,EUR,Low,Spanish Flash GDP q/q,0.6%,0.7%
 Fri 2026-10-30 01:55 AM PT,202610300155,EUR,Low,German Unemployment Change,5K,12K
 Fri 2026-10-30 02:00 AM PT,202610300200,EUR,Medium,German Prelim GDP q/q,0.1%,0.2%
 Fri 2026-10-30 02:00 AM PT,202610300200,EUR,Low,Italian Prelim GDP q/q,0.1%,0.2%
