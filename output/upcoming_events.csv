@@ -1,6 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Sun 2026-11-01 12:00 AM PT,202611010000,CAD,Holiday,Daylight Saving Time Shift,,
-Sun 2026-11-01 12:00 AM PT,202611010000,USD,Holiday,Daylight Saving Time Shift,,
 Sun 2026-11-01 04:00 PM PT,202611011600,AUD,Low,MI Inflation Gauge m/m,,0.3%
 Sun 2026-11-01 04:30 PM PT,202611011630,AUD,Low,Building Approvals m/m,1.8%,-6.1%
 Sun 2026-11-01 04:30 PM PT,202611011630,JPY,Low,Final Manufacturing PMI,53.3,53.3
@@ -25,9 +23,9 @@ Mon 2026-11-02 07:00 AM PT,202611020700,USD,Low,ISM Manufacturing Prices,77.2,77
 Mon 2026-11-02 11:03 AM PT,202611021103,USD,Low,Loan Officer Survey,,
 Mon 2026-11-02 01:45 PM PT,202611021345,NZD,Low,Building Consents m/m,,5.6%
 Mon 2026-11-02 04:00 PM PT,202611021600,JPY,Holiday,Bank Holiday,,
-Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,RBA Rate Statement,,
-Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,RBA Monetary Policy Statement,,
 Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,Cash Rate,4.85%,4.60%
+Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,RBA Monetary Policy Statement,,
+Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,RBA Rate Statement,,
 Mon 2026-11-02 08:30 PM PT,202611022030,AUD,High,RBA Press Conference,,
 Mon 2026-11-02 11:30 PM PT,202611022330,CHF,Medium,CPI m/m,0.0%,0.0%
 Mon 2026-11-02 11:45 PM PT,202611022345,EUR,Low,French Gov Budget Balance,,-159.6B
@@ -41,9 +39,9 @@ Tue 2026-11-03 07:50 AM PT,202611030750,NZD,Low,GDT Price Index,,2.5%
 Tue 2026-11-03 08:00 AM PT,202611030800,CAD,Medium,BOC Gov Macklem Speaks,,
 Tue 2026-11-03 09:00 AM PT,202611030900,EUR,Low,German Buba President Nagel Speaks,,
 Tue 2026-11-03 01:30 PM PT,202611031330,USD,Low,API Weekly Statistical Bulletin,,
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
+Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
+Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%
 Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%
 Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%
 Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%
@@ -55,8 +53,8 @@ Wed 2026-11-04 12:50 AM PT,202611040050,EUR,Low,French Final Services PMI,48.4,4
 Wed 2026-11-04 12:55 AM PT,202611040055,EUR,Low,German Final Services PMI,51.7,51.7
 Wed 2026-11-04 01:00 AM PT,202611040100,EUR,Low,Final Services PMI,51.7,51.7
 Wed 2026-11-04 01:30 AM PT,202611040130,GBP,Low,Final Services PMI,53.1,53.1
-Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,CPI Flash Estimate y/y,4.0%,3.8%
 Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,Core CPI Flash Estimate y/y,2.5%,2.5%
+Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,CPI Flash Estimate y/y,4.0%,3.8%
 Wed 2026-11-04 05:15 AM PT,202611040515,USD,Low,ADP Non-Farm Employment Change,68K,90K
 Wed 2026-11-04 05:30 AM PT,202611040530,CAD,Low,Trade Balance,3.8B,4.2B
 Wed 2026-11-04 05:30 AM PT,202611040530,USD,Low,Trade Balance,-107.9B,-105.6B
