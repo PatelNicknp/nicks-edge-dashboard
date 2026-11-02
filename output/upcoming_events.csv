@@ -1,9 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Sun 2026-11-01 04:00 PM PT,202611011600,AUD,Low,MI Inflation Gauge m/m,,0.3%
-Sun 2026-11-01 04:30 PM PT,202611011630,AUD,Low,Building Approvals m/m,1.8%,-6.1%
-Sun 2026-11-01 04:30 PM PT,202611011630,JPY,Low,Final Manufacturing PMI,53.3,53.3
-Sun 2026-11-01 04:45 PM PT,202611011645,AUD,Low,ANZ Job Advertisements m/m,,2.2%
-Sun 2026-11-01 05:45 PM PT,202611011745,CNY,Low,RatingDog Manufacturing PMI,52.0,52.1
 Sun 2026-11-01 09:30 PM PT,202611012130,AUD,Low,Commodity Prices y/y,,15.5%
 Sun 2026-11-01 11:00 PM PT,202611012300,EUR,Low,German Retail Sales m/m,0.4%,1.3%
 Sun 2026-11-01 11:30 PM PT,202611012330,CHF,Low,Retail Sales y/y,3.0%,3.2%
@@ -17,9 +12,9 @@ Mon 2026-11-02 01:30 AM PT,202611020130,GBP,Low,Final Manufacturing PMI,52.8,52.
 Mon 2026-11-02 04:00 AM PT,202611020400,EUR,Low,German Buba President Nagel Speaks,,
 Mon 2026-11-02 06:30 AM PT,202611020630,CAD,Low,Manufacturing PMI,,51.5
 Mon 2026-11-02 06:45 AM PT,202611020645,USD,Low,Final Manufacturing PMI,56.0,56.0
-Mon 2026-11-02 07:00 AM PT,202611020700,USD,Medium,ISM Manufacturing PMI,54.7,54.5
-Mon 2026-11-02 07:00 AM PT,202611020700,USD,Low,Construction Spending m/m,0.3%,0.9%
 Mon 2026-11-02 07:00 AM PT,202611020700,USD,Low,ISM Manufacturing Prices,77.2,77.9
+Mon 2026-11-02 07:00 AM PT,202611020700,USD,Medium,ISM Manufacturing PMI,54.5,54.5
+Mon 2026-11-02 07:00 AM PT,202611020700,USD,Low,Construction Spending m/m,0.4%,0.9%
 Mon 2026-11-02 11:03 AM PT,202611021103,USD,Low,Loan Officer Survey,,
 Mon 2026-11-02 01:45 PM PT,202611021345,NZD,Low,Building Consents m/m,,5.6%
 Mon 2026-11-02 04:00 PM PT,202611021600,JPY,Holiday,Bank Holiday,,
@@ -30,8 +25,8 @@ Mon 2026-11-02 08:30 PM PT,202611022030,AUD,High,RBA Press Conference,,
 Mon 2026-11-02 11:30 PM PT,202611022330,CHF,Medium,CPI m/m,0.0%,0.0%
 Mon 2026-11-02 11:45 PM PT,202611022345,EUR,Low,French Gov Budget Balance,,-159.6B
 Tue 2026-11-03 02:33 AM PT,202611030233,GBP,Low,10-y Bond Auction,,5.42|3.6
-Tue 2026-11-03 07:00 AM PT,202611030700,USD,Medium,JOLTS Job Openings,7.11M,7.08M
 Tue 2026-11-03 07:00 AM PT,202611030700,USD,Low,Factory Orders m/m,1.2%,0.1%
+Tue 2026-11-03 07:00 AM PT,202611030700,USD,Medium,JOLTS Job Openings,7.11M,7.08M
 Tue 2026-11-03 07:10 AM PT,202611030710,USD,Low,RCM/TIPP Economic Optimism,46.2,46.8
 Tue 2026-11-03 07:15 AM PT,202611030715,USD,Low,Omdia Total Vehicle Sales,15.9M,16.0M
 Tue 2026-11-03 07:16 AM PT,202611030716,USD,High,Congressional Elections,,
@@ -39,9 +34,9 @@ Tue 2026-11-03 07:50 AM PT,202611030750,NZD,Low,GDT Price Index,,2.5%
 Tue 2026-11-03 08:00 AM PT,202611030800,CAD,Medium,BOC Gov Macklem Speaks,,
 Tue 2026-11-03 09:00 AM PT,202611030900,EUR,Low,German Buba President Nagel Speaks,,
 Tue 2026-11-03 01:30 PM PT,202611031330,USD,Low,API Weekly Statistical Bulletin,,
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%
+Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
+Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
 Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%
 Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%
 Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%
@@ -85,8 +80,8 @@ Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Nonfarm Productivity q/q,
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Unit Labor Costs q/q,0.3%,1.3%
 Thu 2026-11-05 05:50 AM PT,202611050550,USD,Low,FOMC Member Hammack Speaks,,
 Thu 2026-11-05 06:10 AM PT,202611050610,USD,Low,FOMC Member Barkin Speaks,,
-Thu 2026-11-05 07:30 AM PT,202611050730,CAD,Medium,BOC Gov Macklem Speaks,,
 Thu 2026-11-05 07:30 AM PT,202611050730,USD,Low,Natural Gas Storage,,80B
+Thu 2026-11-05 07:30 AM PT,202611050730,CAD,Medium,BOC Gov Macklem Speaks,,
 Thu 2026-11-05 09:45 AM PT,202611050945,EUR,Low,German Buba President Nagel Speaks,,
 Thu 2026-11-05 10:00 AM PT,202611051000,EUR,Medium,ECB President Lagarde Speaks,,
 Thu 2026-11-05 01:00 PM PT,202611051300,CAD,Medium,Annual Budget Release,,

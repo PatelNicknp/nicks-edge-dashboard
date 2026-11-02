@@ -63,7 +63,7 @@ CA,Inflation,Interest rate,BoC Interest Rate Decision,20261028,2.50%,2.50%,2.25%
 CA,Jobs,Employment change,Employment Change,20261009,-68.3K,6.1K,-41.7K,-74400.0,-1,higher,ok
 CA,Jobs,Unemployment rate,Unemployment Rate,20261009,6.5%,6.5%,6.4%,0.0,0,lower,ok
 AU,Growth,GDP,GDP,20260901,0.4%,0.3%,0.3%,0.1,1,higher,ok
-AU,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261022,49.7,,49.6,,0,higher,no forecast
+AU,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261101,49.6,49.7,49.6,-0.1,-1,higher,ok
 AU,Growth,Services PMI,S&P Global Services PMI,20261022,47.8,,51.9,,0,higher,no forecast
 AU,Growth,Consumer confidence,Westpac Consumer Sentiment,20261005,-4.7%,,-5.2%,,0,higher,no forecast
 AU,Inflation,CPI y/y,Monthly CPI Indicator,20261027,4.30%,4.20%,4.00%,0.1,1,higher,ok
