@@ -1,16 +1,13 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-03 07:00 AM PT,202611030700,USD,Medium,JOLTS Job Openings,7.15M,7.08M
-Tue 2026-11-03 07:00 AM PT,202611030700,USD,Low,Factory Orders m/m,1.2%,0.1%
-Tue 2026-11-03 07:10 AM PT,202611030710,USD,Low,RCM/TIPP Economic Optimism,46.2,46.8
 Tue 2026-11-03 07:15 AM PT,202611030715,USD,Low,Omdia Total Vehicle Sales,15.8M,16.0M
 Tue 2026-11-03 07:16 AM PT,202611030716,USD,High,Congressional Elections,,
-Tue 2026-11-03 07:50 AM PT,202611030750,NZD,Low,GDT Price Index,,2.5%
+Tue 2026-11-03 07:51 AM PT,202611030751,NZD,Low,GDT Price Index,,2.5%
 Tue 2026-11-03 08:00 AM PT,202611030800,CAD,Medium,BOC Gov Macklem Speaks,,
 Tue 2026-11-03 09:00 AM PT,202611030900,EUR,Low,German Buba President Nagel Speaks,,
 Tue 2026-11-03 01:30 PM PT,202611031330,USD,Low,API Weekly Statistical Bulletin,,
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
+Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
 Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%
 Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%
 Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%
@@ -29,7 +26,7 @@ Wed 2026-11-04 05:30 AM PT,202611040530,CAD,Low,Trade Balance,4.8B,4.2B
 Wed 2026-11-04 05:30 AM PT,202611040530,USD,Low,Trade Balance,-107.9B,-105.6B
 Wed 2026-11-04 06:45 AM PT,202611040645,USD,Low,Final Services PMI,57.9,57.9
 Wed 2026-11-04 07:00 AM PT,202611040700,USD,Medium,ISM Services PMI,54.8,54.9
-Wed 2026-11-04 07:30 AM PT,202611040730,USD,Low,Crude Oil Inventories,,-1.9M
+Wed 2026-11-04 07:30 AM PT,202611040730,USD,Low,Crude Oil Inventories,-0.1M,-1.9M
 Wed 2026-11-04 03:50 PM PT,202611041550,JPY,Low,Monetary Policy Meeting Minutes,,
 Wed 2026-11-04 04:30 PM PT,202611041630,AUD,Low,Goods Trade Balance,0.94B,0.50B
 Wed 2026-11-04 07:35 PM PT,202611041935,JPY,Low,10-y Bond Auction,,3.10|3.8
