@@ -11,7 +11,7 @@ US,Inflation,Interest rate,Fed Interest Rate Decision,20261028,4.00%,4.00%,4.00%
 US,Jobs,Employment change,Nonfarm Payrolls,20261002,29K,89K,133K,-60000.0,-1,higher,ok
 US,Jobs,Unemployment rate,Unemployment Rate,20261002,4.2%,4.1%,4.1%,0.1,-1,lower,ok
 US,Jobs,Jobless claims,Initial Jobless Claims,20261029,194K,198K,195K,-4000.0,1,lower,ok
-US,Jobs,JOLTS,JOLTS Job Openings,20260929,7.079M,7.230M,7.335M,-151000.0,-1,higher,ok
+US,Jobs,JOLTS,JOLTS Job Openings,20261103,7.523M,7.150M,7.190M,373000.0,1,higher,ok
 US,Jobs,ADP,ADP Nonfarm Employment Change,20260930,90K,73K,36K,17000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20261030,0.4%,0.2%,0.6%,0.2,1,higher,ok
 EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261102,52.7,52.4,52.9,0.3,1,higher,ok

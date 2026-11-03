@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-EURAUD,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-EURNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-EURUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-EURCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Tue 2026-11-03 07:02 AM PT,202611030702
-EURCHF,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-EURJPY,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-GBPNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GBPUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GBPCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-AUDNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-AUDUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-AUDCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-NZDUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT | NZD Employment Change q/q Tue 1:45 PM PT (+1 more),USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT | NZD Employment Change q/q Tue 1:45 PM PT (+1 more),Tue 2026-11-03 07:02 AM PT,202611030702
-NZDCAD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-NZDCHF,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-NZDJPY,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-USDCAD,HIGH,USD Congressional Elections Tue 7:16 AM PT,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-USDCHF,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-USDJPY,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-CADCHF,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-CADJPY,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-USDZAR,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-EUR Index,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-NZD Index,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-USD Index,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-CAD Index,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 07:02 AM PT,202611030702
-SPX500,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-NAS100,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-DOW,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-CHINA50,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GER40,HIGH,USD Congressional Elections Tue 7:16 AM PT,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-UK100,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-JPN225,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-GOLD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-SILVER,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-USOIL,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-BTCUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-US10T,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-RUSSELL,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-PLATINUM,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-COPPER,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-NATGAS,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
-ETHUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 07:02 AM PT,202611030702
+EURGBP,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+EURAUD,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+EURNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+EURUSD,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Tue 2026-11-03 09:45 AM PT,202611030945
+EURCAD,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+EURCHF,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+EURJPY,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+GBPNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+GBPUSD,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+GBPCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+AUDNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+AUDUSD,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+AUDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+NZDUSD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,USD ISM Services PMI Wed 7:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+NZDCAD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+NZDCHF,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+NZDJPY,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+USDCAD,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+USDCHF,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+USDJPY,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+USDZAR,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+EUR Index,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+NZD Index,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+USD Index,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 09:45 AM PT,202611030945
+SPX500,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+NAS100,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+DOW,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+CHINA50,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+GER40,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Tue 2026-11-03 09:45 AM PT,202611030945
+UK100,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+JPN225,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+GOLD,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+SILVER,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+USOIL,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+BTCUSD,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+US10T,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+RUSSELL,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+PLATINUM,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+COPPER,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+NATGAS,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945
+ETHUSD,medium,None in the next 24 hours,USD ISM Services PMI Wed 7:00 AM PT,Lighter news risk: USD ISM Services PMI Wed 7:00 AM PT,Tue 2026-11-03 09:45 AM PT,202611030945

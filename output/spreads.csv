@@ -1823,7 +1823,7 @@ Bitcoin / Gold ratio,20261030,19.8
 Bitcoin / Gold ratio,20261031,19.8607
 Bitcoin / Gold ratio,20261101,20.0694
 Bitcoin / Gold ratio,20261102,19.3161
-Bitcoin / Gold ratio,20261103,19.5082
+Bitcoin / Gold ratio,20261103,19.7038
 High yield spread,20231106,4.0
 High yield spread,20231107,4.08
 High yield spread,20231108,4.08
@@ -2607,6 +2607,7 @@ High yield spread,20261027,3.18
 High yield spread,20261028,3.14
 High yield spread,20261029,3.26
 High yield spread,20261030,3.44
+High yield spread,20261102,3.43
 Investment grade spread,20231106,1.28
 Investment grade spread,20231107,1.29
 Investment grade spread,20231108,1.28
@@ -3389,6 +3390,7 @@ Investment grade spread,20261027,0.88
 Investment grade spread,20261028,0.86
 Investment grade spread,20261029,0.89
 Investment grade spread,20261030,0.94
+Investment grade spread,20261102,0.94
 US 10y real yield (TIPS),20231106,2.25
 US 10y real yield (TIPS),20231107,2.19
 US 10y real yield (TIPS),20231108,2.15
