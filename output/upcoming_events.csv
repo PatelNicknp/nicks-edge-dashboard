@@ -1,7 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,Cash Rate,4.85%,4.60%
-Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,RBA Monetary Policy Statement,,
-Mon 2026-11-02 07:30 PM PT,202611021930,AUD,High,RBA Rate Statement,,
 Mon 2026-11-02 08:30 PM PT,202611022030,AUD,High,RBA Press Conference,,
 Mon 2026-11-02 11:30 PM PT,202611022330,CHF,Medium,CPI m/m,0.0%,0.0%
 Mon 2026-11-02 11:45 PM PT,202611022345,EUR,Low,French Gov Budget Balance,,-159.6B
@@ -56,9 +53,9 @@ Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,MPC Official Bank Rate Votes,7-
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Official Bank Rate,4.00%,3.75%
 Thu 2026-11-05 04:30 AM PT,202611050430,GBP,High,BOE Gov Bailey Speaks,,
 Thu 2026-11-05 04:40 AM PT,202611050440,CHF,Medium,SNB Chairman Schlegel Speaks,,
+Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Unit Labor Costs q/q,0.3%,1.3%
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Nonfarm Productivity q/q,2.8%,1.4%
-Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Unit Labor Costs q/q,0.3%,1.3%
 Thu 2026-11-05 05:50 AM PT,202611050550,USD,Low,FOMC Member Hammack Speaks,,
 Thu 2026-11-05 06:10 AM PT,202611050610,USD,Low,FOMC Member Barkin Speaks,,
 Thu 2026-11-05 07:30 AM PT,202611050730,CAD,Medium,BOC Gov Macklem Speaks,,
@@ -67,8 +64,8 @@ Thu 2026-11-05 09:45 AM PT,202611050945,EUR,Low,German Buba President Nagel Spea
 Thu 2026-11-05 10:00 AM PT,202611051000,EUR,Medium,ECB President Lagarde Speaks,,
 Thu 2026-11-05 01:00 PM PT,202611051300,CAD,Medium,Annual Budget Release,,
 Thu 2026-11-05 03:30 PM PT,202611051530,JPY,Low,Average Cash Earnings y/y,3.8%,3.8%
-Thu 2026-11-05 11:00 PM PT,202611052300,EUR,Low,German Industrial Production m/m,0.0%,2.0%
 Thu 2026-11-05 11:00 PM PT,202611052300,GBP,Low,Lloyds HPI m/m,0.0%,0.0%
+Thu 2026-11-05 11:00 PM PT,202611052300,EUR,Low,German Industrial Production m/m,0.0%,2.0%
 Thu 2026-11-05 11:45 PM PT,202611052345,EUR,Low,French Trade Balance,-5.8B,-6.1B
 Fri 2026-11-06 12:00 AM PT,202611060000,CHF,Low,Foreign Currency Reserves,,770B
 Fri 2026-11-06 12:00 AM PT,202611060000,CHF,Low,SECO Consumer Climate,-35,-36
@@ -78,9 +75,9 @@ Fri 2026-11-06 03:00 AM PT,202611060300,CHF,Low,Gov Board Member Tschudin Speaks
 Fri 2026-11-06 04:15 AM PT,202611060415,GBP,Low,MPC Member Pill Speaks,,
 Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Unemployment Rate,4.2%,4.2%
 Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Non-Farm Employment Change,65K,29K
+Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Average Hourly Earnings m/m,0.3%,0.1%
 Fri 2026-11-06 05:30 AM PT,202611060530,CAD,High,Unemployment Rate,6.5%,6.5%
 Fri 2026-11-06 05:30 AM PT,202611060530,CAD,High,Employment Change,14.6K,-68.3K
-Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Average Hourly Earnings m/m,0.3%,0.1%
 Fri 2026-11-06 06:10 AM PT,202611060610,USD,Low,FOMC Member Musalem Speaks,,
 Fri 2026-11-06 07:00 AM PT,202611060700,CAD,Medium,Ivey PMI,57.7,58.2
 Fri 2026-11-06 07:00 AM PT,202611060700,USD,Medium,Prelim UoM Consumer Sentiment,48.1,46.3
