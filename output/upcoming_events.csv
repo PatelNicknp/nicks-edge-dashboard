@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-03 02:33 AM PT,202611030233,GBP,Low,10-y Bond Auction,,5.42|3.6
 Tue 2026-11-03 07:00 AM PT,202611030700,USD,Medium,JOLTS Job Openings,7.15M,7.08M
 Tue 2026-11-03 07:00 AM PT,202611030700,USD,Low,Factory Orders m/m,1.2%,0.1%
 Tue 2026-11-03 07:10 AM PT,202611030710,USD,Low,RCM/TIPP Economic Optimism,46.2,46.8
@@ -9,9 +8,9 @@ Tue 2026-11-03 07:50 AM PT,202611030750,NZD,Low,GDT Price Index,,2.5%
 Tue 2026-11-03 08:00 AM PT,202611030800,CAD,Medium,BOC Gov Macklem Speaks,,
 Tue 2026-11-03 09:00 AM PT,202611030900,EUR,Low,German Buba President Nagel Speaks,,
 Tue 2026-11-03 01:30 PM PT,202611031330,USD,Low,API Weekly Statistical Bulletin,,
+Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
 Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%
 Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%
 Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%
@@ -70,9 +69,9 @@ Fri 2026-11-06 01:30 AM PT,202611060130,USD,Low,FOMC Member Williams Speaks,,
 Fri 2026-11-06 02:00 AM PT,202611060200,EUR,Low,Retail Sales m/m,-0.1%,0.1%
 Fri 2026-11-06 03:00 AM PT,202611060300,CHF,Low,Gov Board Member Tschudin Speaks,,
 Fri 2026-11-06 04:15 AM PT,202611060415,GBP,Low,MPC Member Pill Speaks,,
+Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Average Hourly Earnings m/m,0.3%,0.1%
 Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Unemployment Rate,4.2%,4.2%
 Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Non-Farm Employment Change,65K,29K
-Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Average Hourly Earnings m/m,0.3%,0.1%
 Fri 2026-11-06 05:30 AM PT,202611060530,CAD,High,Unemployment Rate,6.5%,6.5%
 Fri 2026-11-06 05:30 AM PT,202611060530,CAD,High,Employment Change,14.6K,-68.3K
 Fri 2026-11-06 06:10 AM PT,202611060610,USD,Low,FOMC Member Musalem Speaks,,

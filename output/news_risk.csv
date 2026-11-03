@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-EURAUD,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-EURNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-EURUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-EURCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Tue 2026-11-03 02:02 AM PT,202611030202
-EURCHF,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-EURJPY,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-GBPNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GBPUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GBPCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-AUDNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-AUDUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-AUDCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-NZDUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT | NZD Employment Change q/q Tue 1:45 PM PT (+1 more),USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT | NZD Employment Change q/q Tue 1:45 PM PT (+1 more),Tue 2026-11-03 02:02 AM PT,202611030202
-NZDCAD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-NZDCHF,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-NZDJPY,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-USDCAD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT | CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-USDCHF,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-USDJPY,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-CADCHF,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-CADJPY,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-USDZAR,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-EUR Index,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-NZD Index,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-USD Index,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-CAD Index,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 02:02 AM PT,202611030202
-SPX500,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-NAS100,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-DOW,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-CHINA50,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GER40,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-UK100,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-JPN225,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-GOLD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-SILVER,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-USOIL,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-BTCUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-US10T,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-RUSSELL,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-PLATINUM,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-COPPER,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-NATGAS,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
-ETHUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 02:02 AM PT,202611030202
+EURGBP,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+EURAUD,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+EURNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+EURUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+EURCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),Tue 2026-11-03 03:59 AM PT,202611030359
+EURCHF,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+EURJPY,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+GBPNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GBPUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GBPCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+AUDNZD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+AUDUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+AUDCAD,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+NZDUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT | NZD Employment Change q/q Tue 1:45 PM PT (+1 more),USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT | NZD Employment Change q/q Tue 1:45 PM PT (+1 more),Tue 2026-11-03 03:59 AM PT,202611030359
+NZDCAD,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+NZDCHF,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+NZDJPY,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+USDCAD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT | CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+USDCHF,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+USDJPY,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+CADCHF,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+CADJPY,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+USDZAR,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+EUR Index,medium,None in the next 24 hours,EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Lighter news risk: EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT | EUR CPI Flash Estimate y/y Wed 2:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+NZD Index,HIGH,NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,,News risk: NZD Employment Change q/q Tue 1:45 PM PT | NZD Unemployment Rate Tue 1:45 PM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+USD Index,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+CAD Index,medium,None in the next 24 hours,CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Lighter news risk: CAD BOC Gov Macklem Speaks Tue 8:00 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-03 03:59 AM PT,202611030359
+SPX500,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+NAS100,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+DOW,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+CHINA50,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GER40,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT | EUR Core CPI Flash Estimate y/y Wed 2:00 AM PT (+1 more),News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+UK100,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+JPN225,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+GOLD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+SILVER,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+USOIL,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+BTCUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+US10T,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+RUSSELL,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+PLATINUM,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+COPPER,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+NATGAS,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
+ETHUSD,HIGH,USD Congressional Elections Tue 7:16 AM PT,USD JOLTS Job Openings Tue 7:00 AM PT,News risk: USD Congressional Elections Tue 7:16 AM PT,Tue 2026-11-03 03:59 AM PT,202611030359
