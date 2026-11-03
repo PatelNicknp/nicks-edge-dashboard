@@ -1,6 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-02 11:30 PM PT,202611022330,CHF,Medium,CPI m/m,0.0%,0.0%
-Mon 2026-11-02 11:45 PM PT,202611022345,EUR,Low,French Gov Budget Balance,,-159.6B
 Tue 2026-11-03 02:33 AM PT,202611030233,GBP,Low,10-y Bond Auction,,5.42|3.6
 Tue 2026-11-03 07:00 AM PT,202611030700,USD,Medium,JOLTS Job Openings,7.15M,7.08M
 Tue 2026-11-03 07:00 AM PT,202611030700,USD,Low,Factory Orders m/m,1.2%,0.1%
@@ -53,8 +51,8 @@ Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Official Bank Rate,4.00%,3.75%
 Thu 2026-11-05 04:30 AM PT,202611050430,GBP,High,BOE Gov Bailey Speaks,,
 Thu 2026-11-05 04:40 AM PT,202611050440,CHF,Medium,SNB Chairman Schlegel Speaks,,
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Unit Labor Costs q/q,0.3%,1.3%
-Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Nonfarm Productivity q/q,2.8%,1.4%
+Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
 Thu 2026-11-05 05:50 AM PT,202611050550,USD,Low,FOMC Member Hammack Speaks,,
 Thu 2026-11-05 06:10 AM PT,202611050610,USD,Low,FOMC Member Barkin Speaks,,
 Thu 2026-11-05 07:30 AM PT,202611050730,CAD,Medium,BOC Gov Macklem Speaks,,
