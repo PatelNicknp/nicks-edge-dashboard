@@ -1,8 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-03 01:30 PM PT,202611031330,USD,Low,API Weekly Statistical Bulletin,,
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%
-Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%
 Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%
 Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%
 Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%
@@ -17,8 +13,8 @@ Wed 2026-11-04 01:30 AM PT,202611040130,GBP,Low,Final Services PMI,53.1,53.1
 Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,Core CPI Flash Estimate y/y,2.5%,2.5%
 Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,CPI Flash Estimate y/y,4.0%,3.8%
 Wed 2026-11-04 05:15 AM PT,202611040515,USD,Low,ADP Non-Farm Employment Change,67K,90K
-Wed 2026-11-04 05:30 AM PT,202611040530,USD,Low,Trade Balance,-107.9B,-105.6B
 Wed 2026-11-04 05:30 AM PT,202611040530,CAD,Low,Trade Balance,4.8B,4.2B
+Wed 2026-11-04 05:30 AM PT,202611040530,USD,Low,Trade Balance,-107.9B,-105.6B
 Wed 2026-11-04 06:45 AM PT,202611040645,USD,Low,Final Services PMI,57.9,57.9
 Wed 2026-11-04 07:00 AM PT,202611040700,USD,Medium,ISM Services PMI,54.8,54.9
 Wed 2026-11-04 07:30 AM PT,202611040730,USD,Low,Crude Oil Inventories,-0.1M,-1.9M
@@ -35,10 +31,10 @@ Thu 2026-11-05 02:00 AM PT,202611050200,EUR,Low,PPI m/m,2.5%,1.9%
 Thu 2026-11-05 02:03 AM PT,202611050203,EUR,Low,Spanish 10-y Bond Auction,,4.18|1.6
 Thu 2026-11-05 02:18 AM PT,202611050218,EUR,Low,French 10-y Bond Auction,,4.93|2.0
 Thu 2026-11-05 02:30 AM PT,202611050230,USD,Low,Challenger Job Cuts y/y,,-19.9%
-Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Official Bank Rate,4.00%,3.75%
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,MPC Official Bank Rate Votes,7-0-2,3-0-6
-Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Monetary Policy Summary,,
+Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Official Bank Rate,4.00%,3.75%
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,BOE Monetary Policy Report,,
+Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Monetary Policy Summary,,
 Thu 2026-11-05 04:30 AM PT,202611050430,GBP,High,BOE Gov Bailey Speaks,,
 Thu 2026-11-05 04:40 AM PT,202611050440,CHF,Medium,SNB Chairman Schlegel Speaks,,
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
