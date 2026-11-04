@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-03 05:45 PM PT,202611031745,CNY,Low,RatingDog Services PMI,51.7,51.6
 Wed 2026-11-04 12:00 AM PT,202611040000,EUR,Low,Spanish Unemployment Change,18.7K,23.6K
 Wed 2026-11-04 12:15 AM PT,202611040015,EUR,Low,Spanish Services PMI,57.6,58.3
 Wed 2026-11-04 12:45 AM PT,202611040045,EUR,Low,Italian Services PMI,51.4,51.7
@@ -48,16 +47,16 @@ Thu 2026-11-05 03:30 PM PT,202611051530,JPY,Low,Average Cash Earnings y/y,3.8%,3
 Thu 2026-11-05 11:00 PM PT,202611052300,EUR,Low,German Industrial Production m/m,0.0%,2.0%
 Thu 2026-11-05 11:00 PM PT,202611052300,GBP,Low,Lloyds HPI m/m,0.0%,0.0%
 Thu 2026-11-05 11:45 PM PT,202611052345,EUR,Low,French Trade Balance,-5.8B,-6.1B
-Fri 2026-11-06 12:00 AM PT,202611060000,CHF,Low,SECO Consumer Climate,-35,-36
 Fri 2026-11-06 12:00 AM PT,202611060000,CHF,Low,Foreign Currency Reserves,,770B
+Fri 2026-11-06 12:00 AM PT,202611060000,CHF,Low,SECO Consumer Climate,-35,-36
 Fri 2026-11-06 01:30 AM PT,202611060130,USD,Low,FOMC Member Williams Speaks,,
 Fri 2026-11-06 02:00 AM PT,202611060200,EUR,Low,Retail Sales m/m,-0.1%,0.1%
 Fri 2026-11-06 03:00 AM PT,202611060300,CHF,Low,Gov Board Member Tschudin Speaks,,
 Fri 2026-11-06 04:15 AM PT,202611060415,GBP,Low,MPC Member Pill Speaks,,
-Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Non-Farm Employment Change,65K,29K
 Fri 2026-11-06 05:30 AM PT,202611060530,CAD,High,Employment Change,14.6K,-68.3K
 Fri 2026-11-06 05:30 AM PT,202611060530,CAD,High,Unemployment Rate,6.5%,6.5%
 Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Average Hourly Earnings m/m,0.3%,0.1%
+Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Non-Farm Employment Change,65K,29K
 Fri 2026-11-06 05:30 AM PT,202611060530,USD,High,Unemployment Rate,4.2%,4.2%
 Fri 2026-11-06 06:10 AM PT,202611060610,USD,Low,FOMC Member Musalem Speaks,,
 Fri 2026-11-06 07:00 AM PT,202611060700,CAD,Medium,Ivey PMI,57.7,58.2
