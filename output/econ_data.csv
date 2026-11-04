@@ -15,17 +15,17 @@ US,Jobs,JOLTS,JOLTS Job Openings,20261103,7.523M,7.150M,7.190M,373000.0,1,higher
 US,Jobs,ADP,ADP Nonfarm Employment Change,20260930,90K,73K,36K,17000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20261030,0.4%,0.2%,0.6%,0.2,1,higher,ok
 EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261102,52.7,52.4,52.9,0.3,1,higher,ok
-EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261005,53.0,53.0,51.6,0.0,0,higher,ok
+EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261104,51.4,51.7,53.0,-0.3,-1,higher,ok
 EZ,Growth,Retail sales,Retail Sales,20261006,0.1%,0.2%,-0.6%,-0.1,-1,higher,ok
 EZ,Growth,Consumer confidence,Consumer Confidence,20261029,-17.9,-17.9,-16.5,0.0,0,higher,ok
-EZ,Inflation,CPI y/y,CPI,20261016,3.8%,3.8%,3.2%,0.0,0,higher,ok
+EZ,Inflation,CPI y/y,CPI,20261104,4.0%,4.0%,3.8%,0.0,0,higher,ok
 EZ,Inflation,PPI y/y,PPI,20261005,8.2%,8.1%,5.8%,0.1,1,higher,ok
 EZ,Inflation,Interest rate,Deposit Facility Rate,20261029,2.50%,2.50%,2.50%,0.0,0,higher,ok
 EZ,Jobs,Employment change,Employment Change,20260907,0.1%,0.1%,0.1%,0.0,0,higher,ok
 EZ,Jobs,Unemployment rate,Unemployment Rate,20261030,6.5%,6.4%,6.5%,0.1,-1,lower,ok
 UK,Growth,GDP,GDP,20261015,0.1%,-0.1%,0.4%,0.2,1,higher,ok
 UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261102,52.8,52.8,51.9,0.0,0,higher,ok
-UK,Growth,Services PMI,S&P Global Services PMI,20261005,52.1,51.7,52.5,0.4,1,higher,ok
+UK,Growth,Services PMI,S&P Global Services PMI,20261104,52.8,53.1,52.1,-0.3,-1,higher,ok
 UK,Growth,Retail sales,Retail Sales,20260918,0.5%,-0.2%,-0.5%,0.7,1,higher,ok
 UK,Growth,Consumer confidence,GfK Consumer Confidence,20261022,-24,-14,-13,-10.0,-1,higher,ok
 UK,Inflation,CPI y/y,CPI,20261021,3.5%,3.4%,3.1%,0.1,1,higher,ok
