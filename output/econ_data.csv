@@ -12,7 +12,7 @@ US,Jobs,Employment change,Nonfarm Payrolls,20261002,29K,89K,133K,-60000.0,-1,hig
 US,Jobs,Unemployment rate,Unemployment Rate,20261002,4.2%,4.1%,4.1%,0.1,-1,lower,ok
 US,Jobs,Jobless claims,Initial Jobless Claims,20261029,194K,198K,195K,-4000.0,1,lower,ok
 US,Jobs,JOLTS,JOLTS Job Openings,20261103,7.523M,7.150M,7.190M,373000.0,1,higher,ok
-US,Jobs,ADP,ADP Nonfarm Employment Change,20260930,90K,73K,36K,17000.0,1,higher,ok
+US,Jobs,ADP,ADP Nonfarm Employment Change,20261104,86K,67K,86K,19000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20261030,0.4%,0.2%,0.6%,0.2,1,higher,ok
 EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261102,52.7,52.4,52.9,0.3,1,higher,ok
 EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261104,51.4,51.7,53.0,-0.3,-1,higher,ok
