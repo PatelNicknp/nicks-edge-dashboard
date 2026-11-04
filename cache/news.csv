@@ -1,14 +1,4 @@
 source,published_pt,headline,link
-Federal Reserve,2026-10-29 13:30,Federal Reserve Board announces approval of application by The Bank of Nova Scotia,https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm
-Federal Reserve,2026-10-28 11:00,Federal Reserve issues FOMC statement,https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm
-Federal Reserve,2026-10-16 08:00,"Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm
-Federal Reserve,2026-10-13 11:00,"Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm
-Federal Reserve,2026-10-09 07:00,"Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm
-Federal Reserve,2026-10-08 13:30,"Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm
-Federal Reserve,2026-10-07 11:00,"Minutes of the Federal Open Market Committee, September 15-16, 2026",https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm
-Federal Reserve,2026-10-05 13:30,Federal Reserve Board announces approval of application by Isabella Bank Corporation,https://www.federalreserve.gov/newsevents/pressreleases/orders20261005a.htm
-Federal Reserve,2026-10-02 13:45,Federal Reserve Board announces approval of application by Fleur Capital Corporation,https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm
-Federal Reserve,2026-10-02 13:00,"Federal Reserve Board announces it will extend, until November 4, the comment period on its proposal to modernize Regulation O",https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261002a.htm
 Bank of England,2026-11-03 02:00,"Regulators explore credit union reforms to support growth, innovation and better outcomes for members",https://www.bankofengland.co.uk/news/2026/november/regulators-explore-credit-union-reforms-to-support-growth-innovation-and-better-outcomes-for-members
 Bank of England,2026-10-29 07:00,Minutes of the Meeting of the Court of Directors held on 17 September 2026,https://www.bankofengland.co.uk/minutes/2026/september/court-minutes-17-september-2026
 Bank of England,2026-10-29 03:00,Bank of England sets out approach to tokenised collateral in central clearing,https://www.bankofengland.co.uk/news/2026/october/bank-of-england-sets-out-approach-to-tokenised-collateral-in-central-clearing
@@ -40,6 +30,7 @@ Reserve Bank of NZ,2026-10-07 04:00,Recruitment for two new Assistant Governors 
 Reserve Bank of NZ,2026-10-05 04:00,Updates to the October Monetary Policy Review and November Financial Stability Report,https://www.rbnz.govt.nz/news-and-events/news/2026/10/updates-to-the-october-mpr-and-november-fsr
 Reserve Bank of NZ,2026-09-30 04:00,Consultation finds strong support for access to cash services,https://www.rbnz.govt.nz/news-and-events/news/2026/10/consultation-finds-strong-support-for-access-to-cash
 Reserve Bank of NZ,2026-09-24 05:00,New Monetary Policy Committee member appointed,https://www.rbnz.govt.nz/news-and-events/news/2026/09/new-monetary-policy-committee-member-appointed
+Bank of Japan,2026-11-03 15:50,Monetary Base (Oct.),http://www.boj.or.jp/en/statistics/boj/other/mb/mb.htm
 Bank of Japan,2026-11-01 21:00,"Outlook for Economic Activity and Prices (October 2026, full text)",http://www.boj.or.jp/en/mopo/outlook/gor2610b.pdf
 Bank of Japan,2026-11-01 20:00,Sources of Changes in Current Account Balances and Market Operations (Oct.),http://www.boj.or.jp/en/statistics/boj/fm/juqf/juqf10.xlsx
 Bank of Japan,2026-10-30 01:00,Quarterly Schedule of Outright Purchases of Japanese Government Bonds (Competitive Auction Method) (October-December 2026) (Schedule Updates),http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/mpr261030c.pdf
@@ -49,7 +40,6 @@ Bank of Japan,2026-10-29 21:00,"Outlook for Economic Activity and Prices (Octobe
 Bank of Japan,2026-10-29 21:00,Statement on Monetary Policy,http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030a.pdf
 Bank of Japan,2026-10-29 20:02,(Reference) Decisions regarding a Change in the Pace of Sales of ETFs (October 2026),http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030c.pdf
 Bank of Japan,2026-10-29 20:02,(Reference) Outlook Report and Indicators Related to Underlying Inflation,http://www.boj.or.jp/en/mopo/mpmdeci/mpr_2026/k261030b.pdf
-Bank of Japan,2026-10-29 19:00,Payment and Settlement Statistics (Sept.),http://www.boj.or.jp/en/statistics/set/kess/release/2026/kess2609.pdf
 Investing.com Forex,2026-11-03 14:22,Dollar ticks up with eyes on U.S. midterm elections; Aussie slips despite RBA hike,https://www.investing.com/news/forex-news/asian-currencies-mixed-as-yuan-slides-after-pboc-move-won-rebounds-4993468
 Investing.com Forex,2026-11-03 05:24,"Treasury yields edge up as Election Day meets JOLTS, refunding",https://www.investing.com/news/forex-news/german-yields-hover-near-august-lows-on-tech-rout-4993710
 Investing.com Forex,2026-11-03 02:12,"Sterling today: Pound edges up as dollar eases, BoE hike in view",https://www.investing.com/news/forex-news/sterling-today-pound-edges-up-as-dollar-eases-boe-hike-in-view-4994180
@@ -70,13 +60,13 @@ CNBC Markets,2026-10-29 14:38,"Coinbase net income surges 66% in third quarter, 
 CNBC Markets,2026-10-30 13:18,Some Polymarket user funds stolen by hackers; exchange referring matter to U.K. authorities,https://www.cnbc.com/2026/10/29/polymarket-reports-outage-on-international-exchange-halts-trading.html
 CNBC Markets,2026-10-29 13:12,Aon CEO warns AI data center insurance risks could threaten financing,https://www.cnbc.com/2026/10/29/aon-ai-data-center-insurance-financing.html
 CNBC Markets,2026-10-29 05:05,Kalshi valuation jumps to $40 billion in latest funding round,https://www.cnbc.com/2026/10/29/kalshi-40-billion-valuation-funding-round.html
+BBC Business,2026-11-03 16:03,Poundland supplier 'will lose millions' if retailer collapses,https://www.bbc.co.uk/news/articles/ck240mm3e42do?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-03 12:53,UK and EU agree draft deal to scrap Brexit red tape over food exports,https://www.bbc.co.uk/news/articles/cmp3grwre9xdo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-03 08:19,Binance says fake job interviews used as part of $6.3bn crypto hack,https://www.bbc.co.uk/news/articles/ck5ynwz9gy67o?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-03 16:09,Canva announces major job cuts after 'our hardest year yet',https://www.bbc.co.uk/news/articles/cw77pg7neydmo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-03 03:56,Drivers may get compensation offers before car finance saga ends,https://www.bbc.co.uk/news/articles/cqrky5nxxn4po?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-03 07:05,Mining giant joins fight to stop killer toad march across Australia,https://www.bbc.co.uk/news/articles/c3dxw8p99ervo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-03 16:04,Graduates are managing AI - but are they learning much else?,https://www.bbc.co.uk/news/articles/c820vz6wyp65o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-03 07:12,Asda hires ex-Morrisons boss in bid to grow firm,https://www.bbc.co.uk/news/articles/c6vg0xzd0ln4o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-03 03:15,'Quiet quitting' could be hitting the economy - here's why,https://www.bbc.co.uk/news/articles/cw23d5z87drpo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-03 07:05,Mining giant joins fight to stop killer toad march across Australia,https://www.bbc.co.uk/news/articles/c3dxw8p99ervo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-02 23:50,From scooters to shampoo - the people saving hundreds from dumpster diving,https://www.bbc.co.uk/news/articles/cm86zdp2ygqno?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-02 09:38,Shop freezers in seven European countries hit by cyber-attack,https://www.bbc.co.uk/news/articles/cq1kd1nee80eo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-03 00:33,North Korea denies being behind record $6.3bn Binance hack,https://www.bbc.co.uk/news/articles/c6rey4v53exgo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-03 03:10,Apple unsure when it will get more foldable iPhones ahead of Christmas,https://www.bbc.co.uk/news/articles/c6n8dn457ypko?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-02 18:27,Christmas 2026 stamps unveiled by Royal Mail,https://www.bbc.co.uk/news/articles/cw62yeq7958ro?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-03 03:15,'Quiet quitting' could be hitting the economy - here's why,https://www.bbc.co.uk/news/articles/cw23d5z87drpo?at_medium=RSS&at_campaign=rss

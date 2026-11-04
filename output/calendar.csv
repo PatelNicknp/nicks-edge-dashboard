@@ -40,9 +40,9 @@ Tue 2026-11-03 01:30 PM PT,202611031330,USD,Low,API Weekly Statistical Bulletin,
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Employment Change q/q,0.4%,0.5%,released,Forex Factory weekly feed
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,High,Unemployment Rate,5.5%,5.6%,released,Forex Factory weekly feed
 Tue 2026-11-03 01:45 PM PT,202611031345,NZD,Low,Labor Cost Index q/q,0.5%,0.7%,released,Forex Factory weekly feed
-Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%,upcoming,Forex Factory weekly feed
-Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%,upcoming,Forex Factory weekly feed
-Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%,upcoming,Forex Factory weekly feed
+Tue 2026-11-03 03:50 PM PT,202611031550,JPY,Low,Monetary Base y/y,-14.0%,-15.2%,released,Forex Factory weekly feed
+Tue 2026-11-03 04:00 PM PT,202611031600,NZD,Low,ANZ Commodity Prices m/m,,0.6%,released,Forex Factory weekly feed
+Tue 2026-11-03 04:30 PM PT,202611031630,AUD,Low,Household Spending m/m,0.2%,0.0%,released,Forex Factory weekly feed
 Tue 2026-11-03 05:45 PM PT,202611031745,CNY,Low,RatingDog Services PMI,51.7,51.6,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 12:00 AM PT,202611040000,EUR,Low,Spanish Unemployment Change,18.7K,23.6K,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 12:15 AM PT,202611040015,EUR,Low,Spanish Services PMI,57.6,58.3,upcoming,Forex Factory weekly feed
@@ -58,7 +58,7 @@ Wed 2026-11-04 05:30 AM PT,202611040530,CAD,Low,Trade Balance,4.8B,4.2B,upcoming
 Wed 2026-11-04 05:30 AM PT,202611040530,USD,Low,Trade Balance,-107.9B,-105.6B,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 06:45 AM PT,202611040645,USD,Low,Final Services PMI,57.9,57.9,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 07:00 AM PT,202611040700,USD,Medium,ISM Services PMI,54.8,54.9,upcoming,Forex Factory weekly feed
-Wed 2026-11-04 07:30 AM PT,202611040730,USD,Low,Crude Oil Inventories,-0.1M,-1.9M,upcoming,Forex Factory weekly feed
+Wed 2026-11-04 07:30 AM PT,202611040730,USD,Low,Crude Oil Inventories,-1.7M,-1.9M,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 03:50 PM PT,202611041550,JPY,Low,Monetary Policy Meeting Minutes,,,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 04:30 PM PT,202611041630,AUD,Low,Goods Trade Balance,0.94B,0.50B,upcoming,Forex Factory weekly feed
 Wed 2026-11-04 07:35 PM PT,202611041935,JPY,Low,10-y Bond Auction,,3.10|3.8,upcoming,Forex Factory weekly feed
@@ -84,7 +84,7 @@ Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Unit Labor Costs q/q,0.3%
 Thu 2026-11-05 05:50 AM PT,202611050550,USD,Low,FOMC Member Hammack Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-05 06:10 AM PT,202611050610,USD,Low,FOMC Member Barkin Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-05 07:30 AM PT,202611050730,CAD,Medium,BOC Gov Macklem Speaks,,,upcoming,Forex Factory weekly feed
-Thu 2026-11-05 07:30 AM PT,202611050730,USD,Low,Natural Gas Storage,,80B,upcoming,Forex Factory weekly feed
+Thu 2026-11-05 07:30 AM PT,202611050730,USD,Low,Natural Gas Storage,81B,80B,upcoming,Forex Factory weekly feed
 Thu 2026-11-05 09:45 AM PT,202611050945,EUR,Low,German Buba President Nagel Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-05 10:00 AM PT,202611051000,EUR,Medium,ECB President Lagarde Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-05 01:00 PM PT,202611051300,CAD,Medium,Annual Budget Release,,,upcoming,Forex Factory weekly feed
