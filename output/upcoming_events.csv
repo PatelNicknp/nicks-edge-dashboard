@@ -1,10 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Wed 2026-11-04 12:00 AM PT,202611040000,EUR,Low,Spanish Unemployment Change,18.7K,23.6K
-Wed 2026-11-04 12:15 AM PT,202611040015,EUR,Low,Spanish Services PMI,57.6,58.3
-Wed 2026-11-04 12:45 AM PT,202611040045,EUR,Low,Italian Services PMI,51.4,51.7
-Wed 2026-11-04 12:50 AM PT,202611040050,EUR,Low,French Final Services PMI,48.4,48.4
-Wed 2026-11-04 12:55 AM PT,202611040055,EUR,Low,German Final Services PMI,51.7,51.7
-Wed 2026-11-04 01:00 AM PT,202611040100,EUR,Low,Final Services PMI,51.7,51.7
 Wed 2026-11-04 01:30 AM PT,202611040130,GBP,Low,Final Services PMI,53.1,53.1
 Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,Core CPI Flash Estimate y/y,2.5%,2.5%
 Wed 2026-11-04 02:00 AM PT,202611040200,EUR,Medium,CPI Flash Estimate y/y,4.0%,3.8%
@@ -33,9 +27,9 @@ Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,MPC Official Bank Rate Votes,7-
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Official Bank Rate,4.00%,3.75%
 Thu 2026-11-05 04:30 AM PT,202611050430,GBP,High,BOE Gov Bailey Speaks,,
 Thu 2026-11-05 04:40 AM PT,202611050440,CHF,Medium,SNB Chairman Schlegel Speaks,,
-Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Nonfarm Productivity q/q,2.8%,1.4%
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Low,Prelim Unit Labor Costs q/q,0.3%,1.3%
+Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
 Thu 2026-11-05 05:50 AM PT,202611050550,USD,Low,FOMC Member Hammack Speaks,,
 Thu 2026-11-05 06:10 AM PT,202611050610,USD,Low,FOMC Member Barkin Speaks,,
 Thu 2026-11-05 07:30 AM PT,202611050730,CAD,Medium,BOC Gov Macklem Speaks,,
