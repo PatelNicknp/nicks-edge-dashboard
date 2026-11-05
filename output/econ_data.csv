@@ -36,7 +36,7 @@ UK,Jobs,Unemployment rate,Unemployment Rate,20261020,4.7%,4.9%,4.9%,-0.2,1,lower
 UK,Jobs,Jobless claims,Claimant Count Change,20261020,30.3K,19.4K,7.0K,10900.0,-1,lower,ok
 JP,Growth,GDP,GDP,20260907,0.4%,0.3%,0.5%,0.1,1,higher,ok
 JP,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261101,53.3,53.3,54.1,0.0,0,higher,ok
-JP,Growth,Services PMI,S&P Global Services PMI,20261022,52.0,,51.3,,0,higher,no forecast
+JP,Growth,Services PMI,S&P Global Services PMI,20261104,51.7,52.0,51.3,-0.3,-1,higher,ok
 JP,Growth,Retail sales,Retail Sales,20261029,2.3%,3.3%,2.9%,-1.0,-1,higher,ok
 JP,Growth,Consumer confidence,Household Confidence,20261029,35.0,35.1,35.4,-0.1,-1,higher,ok
 JP,Inflation,CPI y/y,National Core CPI,20261022,2.1%,2.1%,1.7%,0.0,0,higher,ok
