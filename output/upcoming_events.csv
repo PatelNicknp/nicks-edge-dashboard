@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Wed 2026-11-04 07:35 PM PT,202611041935,JPY,Low,10-y Bond Auction,,3.10|3.8
 Wed 2026-11-04 10:45 PM PT,202611042245,AUD,Low,RBA Deputy Gov Hauser Speaks,,
 Wed 2026-11-04 11:00 PM PT,202611042300,EUR,Low,German Factory Orders m/m,4.6%,-10.6%
 Wed 2026-11-04 11:45 PM PT,202611042345,EUR,Low,French Industrial Production m/m,0.3%,-0.3%
@@ -12,8 +11,8 @@ Thu 2026-11-05 02:18 AM PT,202611050218,EUR,Low,French 10-y Bond Auction,,4.93|2
 Thu 2026-11-05 02:30 AM PT,202611050230,USD,Low,Challenger Job Cuts y/y,,-19.9%
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Official Bank Rate,4.00%,3.75%
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,MPC Official Bank Rate Votes,7-0-2,3-0-6
-Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,BOE Monetary Policy Report,,
 Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,Monetary Policy Summary,,
+Thu 2026-11-05 04:00 AM PT,202611050400,GBP,High,BOE Monetary Policy Report,,
 Thu 2026-11-05 04:30 AM PT,202611050430,GBP,High,BOE Gov Bailey Speaks,,
 Thu 2026-11-05 04:40 AM PT,202611050440,CHF,Medium,SNB Chairman Schlegel Speaks,,
 Thu 2026-11-05 05:30 AM PT,202611050530,USD,Medium,Unemployment Claims,197K,194K
