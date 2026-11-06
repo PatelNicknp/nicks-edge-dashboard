@@ -2,9 +2,9 @@ currency,kind,level,change_4w,as_of,compared_with,source,status,note
 EUR,2y,3.01,-0.07,2026-11-05,2026-10-08,"Bundesbank, German 2-year Bund yield",OK,
 GBP,2y,4.75,0.07,2026-11-05,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,
 AUD,2y,4.951,0.009,2026-10-28,2026-09-30,"Reserve Bank of Australia, 2-year government bond yield",OK,
-NZD,2y,3.8,-0.11,2026-11-05,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,
+NZD,2y,3.83,-0.08,2026-11-06,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,
 USD,2y,4.46,-0.29,2026-11-05,2026-10-08,FRED DGS2,OK,
 CAD,2y,3.22,-0.01,2026-11-04,2026-10-07,"Bank of Canada, 2-year benchmark bond yield",OK,
 CHF,2y,0.2,0.02,2026-11-05,one month earlier,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",OK,
-JPY,2y,1.891,-0.06,2026-11-04,2026-10-07,"Japan Ministry of Finance, 2-year JGB yield (saved copy)",CACHED,Japan Ministry of Finance: 404 Client Error: Not Found for url: https://www.mof.go.jp/english/policy/jgbs/r
+JPY,2y,1.86,-0.076,2026-11-05,2026-10-08,"Japan Ministry of Finance, 2-year JGB yield",OK,
 ZAR,proxy,6.85,0.02,2026-09-01,2026-08-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy",OK,"Monthly 3-month rate, last month against the month before. Not a 2-year yield."
