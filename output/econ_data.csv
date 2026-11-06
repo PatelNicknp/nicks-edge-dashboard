@@ -8,15 +8,15 @@ US,Inflation,CPI y/y,CPI,20261014,3.7%,3.6%,3.4%,0.1,1,higher,ok
 US,Inflation,PPI y/y,PPI,20261015,6.3%,5.3%,5.6%,1.0,1,higher,ok
 US,Inflation,PCE y/y,PCE Price index,20261029,3.6%,3.6%,3.4%,0.0,0,higher,ok
 US,Inflation,Interest rate,Fed Interest Rate Decision,20261028,4.00%,4.00%,4.00%,0.0,0,higher,ok
-US,Jobs,Employment change,Nonfarm Payrolls,20261002,29K,89K,133K,-60000.0,-1,higher,ok
-US,Jobs,Unemployment rate,Unemployment Rate,20261002,4.2%,4.1%,4.1%,0.1,-1,lower,ok
+US,Jobs,Employment change,Nonfarm Payrolls,20261106,165K,65K,60K,100000.0,1,higher,ok
+US,Jobs,Unemployment rate,Unemployment Rate,20261106,4.1%,4.2%,4.2%,-0.1,1,lower,ok
 US,Jobs,Jobless claims,Initial Jobless Claims,20261105,189K,197K,195K,-8000.0,1,lower,ok
 US,Jobs,JOLTS,JOLTS Job Openings,20261103,7.523M,7.150M,7.190M,373000.0,1,higher,ok
 US,Jobs,ADP,ADP Nonfarm Employment Change,20261104,86K,67K,86K,19000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20261030,0.4%,0.2%,0.6%,0.2,1,higher,ok
 EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261102,52.7,52.4,52.9,0.3,1,higher,ok
 EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261104,51.4,51.7,53.0,-0.3,-1,higher,ok
-EZ,Growth,Retail sales,Retail Sales,20261006,0.1%,0.2%,-0.6%,-0.1,-1,higher,ok
+EZ,Growth,Retail sales,Retail Sales,20261106,-0.7%,-0.1%,0.4%,-0.6,-1,higher,ok
 EZ,Growth,Consumer confidence,Consumer Confidence,20261029,-17.9,-17.9,-16.5,0.0,0,higher,ok
 EZ,Inflation,CPI y/y,CPI,20261104,4.0%,4.0%,3.8%,0.0,0,higher,ok
 EZ,Inflation,PPI y/y,PPI,20261105,11.1%,10.9%,8.3%,0.2,1,higher,ok
@@ -60,8 +60,8 @@ CA,Growth,Retail sales,Retail Sales,20260924,-0.7%,-0.8%,0.6%,0.1,1,higher,ok
 CA,Inflation,CPI y/y,CPI,20261019,3.1%,3.2%,3.0%,-0.1,-1,higher,ok
 CA,Inflation,PPI y/y,IPPI,20261022,2.0%,0.9%,1.2%,1.1,1,higher,ok
 CA,Inflation,Interest rate,BoC Interest Rate Decision,20261028,2.50%,2.50%,2.25%,0.0,0,higher,ok
-CA,Jobs,Employment change,Employment Change,20261009,-68.3K,6.1K,-41.7K,-74400.0,-1,higher,ok
-CA,Jobs,Unemployment rate,Unemployment Rate,20261009,6.5%,6.5%,6.4%,0.0,0,lower,ok
+CA,Jobs,Employment change,Employment Change,20261106,-4.7K,14.6K,-68.3K,-19300.0,-1,higher,ok
+CA,Jobs,Unemployment rate,Unemployment Rate,20261106,6.7%,6.5%,6.5%,0.2,-1,lower,ok
 AU,Growth,GDP,GDP,20260901,0.4%,0.3%,0.3%,0.1,1,higher,ok
 AU,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261101,49.6,49.7,49.6,-0.1,-1,higher,ok
 AU,Growth,Services PMI,S&P Global Services PMI,20261103,48.5,47.8,51.9,0.7,1,higher,ok
