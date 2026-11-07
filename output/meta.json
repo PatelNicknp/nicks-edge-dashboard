@@ -6,14 +6,13 @@
    "Myfxbook (login)"
   ],
   "used": {
-   "IG client sentiment": 34,
-   "Myfxbook community outlook": 11
+   "IG client sentiment": 45
   },
   "markets_with_retail": 45,
   "markets_checked": 46,
-  "checked": "Myfxbook community outlook, Fri Nov 6, 4:19 PM PT"
+  "checked": "IG client sentiment, Fri Nov 6, 6:20 PM PT"
  },
- "updated_pt": "2026-11-06 16:19 PT",
+ "updated_pt": "2026-11-06 18:20 PT",
  "prices_as_of": "2026-11-06",
  "label": "Research screen, not a trade signal.",
  "tabs": [
