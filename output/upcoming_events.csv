@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-09 09:25 AM PT,202611090925,GBP,Medium,BOE Gov Bailey Speaks,,
 Mon 2026-11-09 03:30 PM PT,202611091530,AUD,Low,Westpac Consumer Sentiment,,-4.7%
 Mon 2026-11-09 03:30 PM PT,202611091530,JPY,Low,Household Spending y/y,-3.1%,-3.1%
 Mon 2026-11-09 03:50 PM PT,202611091550,JPY,Low,Bank Lending y/y,5.4%,5.3%
@@ -15,6 +14,7 @@ Tue 2026-11-10 12:30 AM PT,202611100030,GBP,Low,MPC Member Breeden Speaks,,
 Tue 2026-11-10 01:00 AM PT,202611100100,USD,Medium,FOMC Member Waller Speaks,,
 Tue 2026-11-10 01:03 AM PT,202611100103,CNY,Low,M2 Money Supply y/y,7.3%,7.2%
 Tue 2026-11-10 01:03 AM PT,202611100103,CNY,Low,New Loans,80B,1080B
+Tue 2026-11-10 01:45 AM PT,202611100145,All,Low,G7 Meetings,,
 Tue 2026-11-10 03:00 AM PT,202611100300,USD,Low,NFIB Small Business Index,97.7,97.9
 Tue 2026-11-10 03:32 AM PT,202611100332,GBP,Low,30-y Bond Auction,,5.52|3.8
 Tue 2026-11-10 04:30 AM PT,202611100430,GBP,Low,MPC Member Lombardelli Speaks,,
@@ -37,6 +37,7 @@ Tue 2026-11-10 11:00 PM PT,202611102300,EUR,Low,German Final CPI m/m,-0.2%,-0.2%
 Tue 2026-11-10 11:01 PM PT,202611102301,EUR,Holiday,French Bank Holiday,,
 Wed 2026-11-11 12:20 AM PT,202611110020,EUR,Low,German Buba President Nagel Speaks,,
 Wed 2026-11-11 01:00 AM PT,202611110100,EUR,Low,Italian Industrial Production m/m,0.7%,-1.3%
+Wed 2026-11-11 01:45 AM PT,202611110145,EUR,Medium,ECB President Lagarde Speaks,,
 Wed 2026-11-11 02:34 AM PT,202611110234,EUR,Low,German 30-y Bond Auction,,3.80|1.4
 Wed 2026-11-11 05:00 AM PT,202611110500,CAD,Holiday,Bank Holiday,,
 Wed 2026-11-11 05:00 AM PT,202611110500,USD,Holiday,Bank Holiday,,
@@ -54,8 +55,8 @@ Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Manufacturing Production m/m,-0.
 Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Prelim Business Investment q/q,-0.3%,1.7%
 Thu 2026-11-12 01:00 AM PT,202611120100,EUR,Low,ECB Economic Bulletin,,
 Thu 2026-11-12 02:00 AM PT,202611120200,EUR,Low,EU Economic Forecasts,,
-Thu 2026-11-12 05:30 AM PT,202611120530,USD,Medium,Unemployment Claims,194K,189K
 Thu 2026-11-12 05:30 AM PT,202611120530,CAD,Low,Building Permits m/m,-3.9%,8.8%
+Thu 2026-11-12 05:30 AM PT,202611120530,USD,Medium,Unemployment Claims,194K,189K
 Thu 2026-11-12 06:00 AM PT,202611120600,USD,Low,FOMC Member Hammack Speaks,,
 Thu 2026-11-12 07:00 AM PT,202611120700,USD,Low,Existing Home Sales,3.86M,3.99M
 Thu 2026-11-12 07:00 AM PT,202611120700,USD,Low,FOMC Member Barr Speaks,,
