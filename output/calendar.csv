@@ -4,14 +4,12 @@ Sun 2026-11-08 05:30 PM PT,202611081730,CNY,Low,CPI y/y,0.8%,0.9%,released,Forex
 Sun 2026-11-08 05:30 PM PT,202611081730,CNY,Low,PPI y/y,5.3%,5.0%,released,Forex Factory weekly feed
 Sun 2026-11-08 09:00 PM PT,202611082100,JPY,Low,Leading Indicators,116.7%,118.0%,released,Forex Factory weekly feed
 Sun 2026-11-08 11:00 PM PT,202611082300,EUR,Low,German Trade Balance,19.2B,19.5B,released,Forex Factory weekly feed
-Mon 2026-11-09 01:03 AM PT,202611090103,CNY,Low,M2 Money Supply y/y,7.3%,7.2%,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 01:03 AM PT,202611090103,CNY,Low,New Loans,80B,1080B,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 01:30 AM PT,202611090130,EUR,Low,Sentix Investor Confidence,2.1,2.7,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 02:15 AM PT,202611090215,EUR,Low,ECOFIN Meetings,,,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 02:15 AM PT,202611090215,EUR,Low,Eurogroup Meetings,,,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 05:40 AM PT,202611090540,USD,Low,FOMC Member Bowman Speaks,,,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 07:00 AM PT,202611090700,USD,Low,Final Wholesale Inventories m/m,0.6%,0.6%,upcoming,Forex Factory weekly feed
-Mon 2026-11-09 07:00 AM PT,202611090700,USD,Low,FOMC Member Goolsbee Speaks,,,upcoming,Forex Factory weekly feed
+Mon 2026-11-09 01:30 AM PT,202611090130,EUR,Low,Sentix Investor Confidence,2.1,2.7,released,Forex Factory weekly feed
+Mon 2026-11-09 02:15 AM PT,202611090215,EUR,Low,ECOFIN Meetings,,,released,Forex Factory weekly feed
+Mon 2026-11-09 02:15 AM PT,202611090215,EUR,Low,Eurogroup Meetings,,,released,Forex Factory weekly feed
+Mon 2026-11-09 05:40 AM PT,202611090540,USD,Low,FOMC Member Bowman Speaks,,,released,Forex Factory weekly feed
+Mon 2026-11-09 07:00 AM PT,202611090700,USD,Low,Final Wholesale Inventories m/m,0.6%,0.6%,released,Forex Factory weekly feed
+Mon 2026-11-09 07:00 AM PT,202611090700,USD,Low,FOMC Member Goolsbee Speaks,,,released,Forex Factory weekly feed
 Mon 2026-11-09 09:15 AM PT,202611090915,USD,Low,FOMC Member Barkin Speaks,,,upcoming,Forex Factory weekly feed
 Mon 2026-11-09 09:25 AM PT,202611090925,GBP,Medium,BOE Gov Bailey Speaks,,,upcoming,Forex Factory weekly feed
 Mon 2026-11-09 03:30 PM PT,202611091530,AUD,Low,Westpac Consumer Sentiment,,-4.7%,upcoming,Forex Factory weekly feed
@@ -27,6 +25,8 @@ Mon 2026-11-09 07:35 PM PT,202611091935,JPY,Low,30-y Bond Auction,,4.11|3.9,upco
 Mon 2026-11-09 09:00 PM PT,202611092100,JPY,Low,Economy Watchers Sentiment,46.9,47.0,upcoming,Forex Factory weekly feed
 Tue 2026-11-10 12:30 AM PT,202611100030,GBP,Low,MPC Member Breeden Speaks,,,upcoming,Forex Factory weekly feed
 Tue 2026-11-10 01:00 AM PT,202611100100,USD,Medium,FOMC Member Waller Speaks,,,upcoming,Forex Factory weekly feed
+Tue 2026-11-10 01:03 AM PT,202611100103,CNY,Low,M2 Money Supply y/y,7.3%,7.2%,upcoming,Forex Factory weekly feed
+Tue 2026-11-10 01:03 AM PT,202611100103,CNY,Low,New Loans,80B,1080B,upcoming,Forex Factory weekly feed
 Tue 2026-11-10 03:00 AM PT,202611100300,USD,Low,NFIB Small Business Index,97.7,97.9,upcoming,Forex Factory weekly feed
 Tue 2026-11-10 03:32 AM PT,202611100332,GBP,Low,30-y Bond Auction,,5.52|3.8,upcoming,Forex Factory weekly feed
 Tue 2026-11-10 04:30 AM PT,202611100430,GBP,Low,MPC Member Lombardelli Speaks,,,upcoming,Forex Factory weekly feed
