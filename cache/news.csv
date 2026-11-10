@@ -1,4 +1,5 @@
 source,published_pt,headline,link
+Federal Reserve,2026-11-09 13:00,"Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm
 Federal Reserve,2026-11-05 08:00,"Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm
 Federal Reserve,2026-10-29 13:30,Federal Reserve Board announces approval of application by The Bank of Nova Scotia,https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm
 Federal Reserve,2026-10-28 11:00,Federal Reserve issues FOMC statement,https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm
@@ -8,7 +9,6 @@ Federal Reserve,2026-10-09 07:00,"Federal Reserve Board releases results of the 
 Federal Reserve,2026-10-08 13:30,"Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm
 Federal Reserve,2026-10-07 11:00,"Minutes of the Federal Open Market Committee, September 15-16, 2026",https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm
 Federal Reserve,2026-10-05 13:30,Federal Reserve Board announces approval of application by Isabella Bank Corporation,https://www.federalreserve.gov/newsevents/pressreleases/orders20261005a.htm
-Federal Reserve,2026-10-02 13:45,Federal Reserve Board announces approval of application by Fleur Capital Corporation,https://www.federalreserve.gov/newsevents/pressreleases/orders20261002a.htm
 Bank of England,2026-11-05 04:00,Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026
 Bank of England,2026-11-04 06:51,Summary of the RTGS CHAPS Industry Forum - 13 October 2026,https://www.bankofengland.co.uk/minutes/2026/october/rtgs-chaps-industry-forum-13-october-2026
 Bank of England,2026-11-03 02:00,"Regulators explore credit union reforms to support growth, innovation and better outcomes for members",https://www.bankofengland.co.uk/news/2026/november/regulators-explore-credit-union-reforms-to-support-growth-innovation-and-better-outcomes-for-members
@@ -40,6 +40,8 @@ Reserve Bank of NZ,2026-10-14 04:00,RBNZ and FMA outline supervisory expectation
 Reserve Bank of NZ,2026-10-07 04:00,Recruitment for two new Assistant Governors and Chief of Staff underway,https://www.rbnz.govt.nz/news-and-events/news/2026/10/recruitment-for-two-new-assistant-governors-and-chief-of-staff-underway
 Reserve Bank of NZ,2026-10-05 04:00,Updates to the October Monetary Policy Review and November Financial Stability Report,https://www.rbnz.govt.nz/news-and-events/news/2026/10/updates-to-the-october-mpr-and-november-fsr
 Reserve Bank of NZ,2026-09-30 04:00,Consultation finds strong support for access to cash services,https://www.rbnz.govt.nz/news-and-events/news/2026/10/consultation-finds-strong-support-for-access-to-cash
+Bank of Japan,2026-11-09 15:50,Principal Figures of Financial Institutions (Oct.),http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf
+Bank of Japan,2026-11-09 15:50,"Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf
 Bank of Japan,2026-11-08 22:00,Amounts Outstanding in the Call Money Market (Oct.),http://www.boj.or.jp/en/statistics/market/short/call/call.xlsx
 Bank of Japan,2026-11-08 21:00,Consumption Activity Index,http://www.boj.or.jp/en/research/research_data/cai/index.htm
 Bank of Japan,2026-11-08 15:50,Market Operations by the Bank of Japan (Oct.),http://www.boj.or.jp/en/statistics/boj/fm/ope/m_release/2026/ope2610.xlsx
@@ -48,10 +50,8 @@ Bank of Japan,2026-11-08 15:50,Bank of Japan's Transactions with the Government 
 Bank of Japan,2026-11-06 08:00,"Speech by Governor UEDA at the 2026 Michel Camdessus Central Banking Lecture, International Monetary Fund",http://www.boj.or.jp/en/about/press/koen_2026/ko261107a.htm
 Bank of Japan,2026-11-05 23:00,(IMES Newsletter) 2026 BoC - Philadelphia Fed - BOJ Joint Workshop,http://www.boj.or.jp/en/about/release_2026/rel261106b.htm
 Bank of Japan,2026-11-05 18:00,IMES Discussion Paper Series (2026),http://www.boj.or.jp/en/research/imes/dps/dps26.htm
-Bank of Japan,2026-11-04 23:00,"Holding the Twenty-fifth Round of the ""Bond Market Group"" Meetings",http://www.boj.or.jp/en/paym/bond/mbond_list/mbond261105.pdf
-Bank of Japan,2026-11-04 15:50,Sources of Changes in Current Account Balances (Projections for Nov.),http://www.boj.or.jp/en/statistics/boj/fm/juqp/juqp2611.xlsx
+Investing.com Forex,2026-11-09 14:32,"Dollar slips, taking a breather after last week’s advance a day ahead of CPI test",https://www.investing.com/news/forex-news/asia-fx-gains-as-dollar-steadies-after-strong-us-jobs-data-china-cpi-in-focus-5010449
 Investing.com Forex,2026-11-09 05:21,"U.S. treasuries tread water after jobs shock as CPI, auction gauntlet looms",https://www.investing.com/news/forex-news/eurozone-yields-consolidate-after-us-payrolls-shock-5010731
-Investing.com Forex,2026-11-09 02:08,Dollar retreats from post-jobs spike as traders brace for U.S. CPI test,https://www.investing.com/news/forex-news/asia-fx-gains-as-dollar-steadies-after-strong-us-jobs-data-china-cpi-in-focus-5010449
 Investing.com Forex,2026-11-09 01:38,Sterling today: Pound firms as dollar retreats from Friday rally,https://www.investing.com/news/forex-news/sterling-today-pound-firms-as-dollar-retreats-from-friday-rally-5010899
 Investing.com Forex,2026-11-08 17:18,"US dollar holds onto payrolls gains, NZ dollar rises after election",https://www.investing.com/news/forex-news/us-dollar-holds-onto-payrolls-gains-nz-dollar-rises-after-election-5010398
 Investing.com Forex,2026-11-08 14:18,Cryptocurrencies slide to two-month lows after US midterms,https://www.investing.com/news/forex-news/cryptocurrencies-slide-to-twomonth-lows-after-us-midterms-5010335
@@ -70,13 +70,13 @@ CNBC Markets,2026-11-06 12:42,Nasdaq drops into correction territory - here’s 
 CNBC Markets,2026-11-05 12:17,Top Democrats call to rein in AI buildout after midterms sweep: 'National data center moratorium now',https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html
 CNBC Markets,2026-11-05 08:34,"Barkin sees interest rate hikes ahead, but at a gradual pace",https://www.cnbc.com/2026/11/05/barkin-sees-interest-rate-hikes-ahead-but-at-a-gradual-pace.html
 CNBC Markets,2026-11-05 04:57,What the Democratic midterms sweep changes for U.S.-China relations,https://www.cnbc.com/2026/11/05/what-the-democrat-midterms-sweep-changes-for-us-china-tech-rivalry.html
+BBC Business,2026-11-09 16:34,Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy,https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 11:58,Nvidia shares tumble over investigation into Huang's affair with alleged Chinese spy,https://www.bbc.co.uk/news/articles/c6zxjx01vyleo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-09 13:52,Zoe Kleinman: Nvidia CEO's affair will cause ripples across US and beyond,https://www.bbc.co.uk/news/articles/cj3vqv3nee72o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 09:17,Civil servant who secretly held five jobs found guilty of fraud,https://www.bbc.co.uk/news/articles/cm70pgnx891do?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 10:40,How a civil servant got away with juggling five jobs for so long,https://www.bbc.co.uk/news/articles/cw1m4d8vjvppo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 08:46,Poundland unable to buy new stock as fears over collapse grow,https://www.bbc.co.uk/news/articles/cw1l3lmem165o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-09 07:46,What we know so far about Jensen Huang's affair with suspected Chinese spy,https://www.bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-08 23:10,What do we know about Nvidia CEO’s affair with a suspected Chinese spy?,https://www.bbc.co.uk/news/videos/cq3989nkzn3ko?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-09 15:51,What we know so far about Jensen Huang's affair with suspected Chinese spy,https://www.bbc.co.uk/news/articles/ckgel338xql3o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-08 16:09,Doing these things now will help you save money at Christmas,https://www.bbc.co.uk/news/articles/ck7vppll151mo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-08 23:10,What do we know about Nvidia CEO’s affair with a suspected Chinese spy?,https://www.bbc.co.uk/news/videos/cq3989nkzn3ko?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 04:06,Government's EV targets expected to be reduced this week,https://www.bbc.co.uk/news/articles/cqkg5g2970epo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-08 07:37,Government 'looking seriously' at banning under-16s from Vinted and eBay,https://www.bbc.co.uk/news/articles/cmzxjvpqrjxro?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-06 17:41,'My mortgage is going up £200 a month': How rising interest rates are hitting people's pockets,https://www.bbc.co.uk/news/articles/c617kjqjvk12o?at_medium=RSS&at_campaign=rss
