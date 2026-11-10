@@ -40,16 +40,16 @@ Reserve Bank of NZ,2026-10-14 04:00,RBNZ and FMA outline supervisory expectation
 Reserve Bank of NZ,2026-10-07 04:00,Recruitment for two new Assistant Governors and Chief of Staff underway,https://www.rbnz.govt.nz/news-and-events/news/2026/10/recruitment-for-two-new-assistant-governors-and-chief-of-staff-underway
 Reserve Bank of NZ,2026-10-05 04:00,Updates to the October Monetary Policy Review and November Financial Stability Report,https://www.rbnz.govt.nz/news-and-events/news/2026/10/updates-to-the-october-mpr-and-november-fsr
 Reserve Bank of NZ,2026-09-30 04:00,Consultation finds strong support for access to cash services,https://www.rbnz.govt.nz/news-and-events/news/2026/10/consultation-finds-strong-support-for-access-to-cash
-Bank of Japan,2026-11-09 15:50,Principal Figures of Financial Institutions (Oct.),https://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf
-Bank of Japan,2026-11-09 15:50,"Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",https://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf
-Bank of Japan,2026-11-08 22:00,Amounts Outstanding in the Call Money Market (Oct.),https://www.boj.or.jp/en/statistics/market/short/call/call.xlsx
-Bank of Japan,2026-11-08 21:00,Consumption Activity Index,https://www.boj.or.jp/en/research/research_data/cai/index.htm
-Bank of Japan,2026-11-08 15:50,Market Operations by the Bank of Japan (Oct.),https://www.boj.or.jp/en/statistics/boj/fm/ope/m_release/2026/ope2610.xlsx
-Bank of Japan,2026-11-08 15:50,Monetary Base and the Bank of Japan's Transactions (Oct.),https://www.boj.or.jp/en/statistics/boj/other/mbt/mbt2610.pdf
-Bank of Japan,2026-11-08 15:50,Bank of Japan's Transactions with the Government (Oct.),https://www.boj.or.jp/en/statistics/boj/other/tseifu/release/2026/seifu2610.pdf
-Bank of Japan,2026-11-06 08:00,"Speech by Governor UEDA at the 2026 Michel Camdessus Central Banking Lecture, International Monetary Fund",https://www.boj.or.jp/en/about/press/koen_2026/ko261107a.htm
-Bank of Japan,2026-11-05 23:00,(IMES Newsletter) 2026 BoC - Philadelphia Fed - BOJ Joint Workshop,https://www.boj.or.jp/en/about/release_2026/rel261106b.htm
-Bank of Japan,2026-11-05 18:00,IMES Discussion Paper Series (2026),https://www.boj.or.jp/en/research/imes/dps/dps26.htm
+Bank of Japan,2026-11-09 15:50,Principal Figures of Financial Institutions (Oct.),http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf
+Bank of Japan,2026-11-09 15:50,"Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf
+Bank of Japan,2026-11-08 22:00,Amounts Outstanding in the Call Money Market (Oct.),http://www.boj.or.jp/en/statistics/market/short/call/call.xlsx
+Bank of Japan,2026-11-08 21:00,Consumption Activity Index,http://www.boj.or.jp/en/research/research_data/cai/index.htm
+Bank of Japan,2026-11-08 15:50,Market Operations by the Bank of Japan (Oct.),http://www.boj.or.jp/en/statistics/boj/fm/ope/m_release/2026/ope2610.xlsx
+Bank of Japan,2026-11-08 15:50,Monetary Base and the Bank of Japan's Transactions (Oct.),http://www.boj.or.jp/en/statistics/boj/other/mbt/mbt2610.pdf
+Bank of Japan,2026-11-08 15:50,Bank of Japan's Transactions with the Government (Oct.),http://www.boj.or.jp/en/statistics/boj/other/tseifu/release/2026/seifu2610.pdf
+Bank of Japan,2026-11-06 08:00,"Speech by Governor UEDA at the 2026 Michel Camdessus Central Banking Lecture, International Monetary Fund",http://www.boj.or.jp/en/about/press/koen_2026/ko261107a.htm
+Bank of Japan,2026-11-05 23:00,(IMES Newsletter) 2026 BoC - Philadelphia Fed - BOJ Joint Workshop,http://www.boj.or.jp/en/about/release_2026/rel261106b.htm
+Bank of Japan,2026-11-05 18:00,IMES Discussion Paper Series (2026),http://www.boj.or.jp/en/research/imes/dps/dps26.htm
 Investing.com Forex,2026-11-10 05:42,U.S. Treasury yields spike as hot CPI binds with resilient labor market,https://www.investing.com/news/forex-news/euro-yields-linger--at-1month-lows-as-sinking-oil-calms-inflation-jitters-5014393
 Investing.com Forex,2026-11-10 02:15,Dollar steadies after losses as U.S. inflation data reinforces rate-hike bets,https://www.investing.com/news/forex-news/asia-fx-subdued-dollar-holds-losses-ahead-of-us-inflation-data-5014050
 Investing.com Forex,2026-11-10 01:14,Sterling today: Pound slips as dollar steadies on Fed tightening bets,https://www.investing.com/news/forex-news/sterling-today-pound-slips-as-dollar-steadies-on-fed-tightening-bets-5014423
@@ -60,8 +60,9 @@ Investing.com Forex,2026-11-08 17:18,"US dollar holds onto payrolls gains, NZ do
 Investing.com Forex,2026-11-08 14:18,Cryptocurrencies slide to two-month lows after US midterms,https://www.investing.com/news/forex-news/cryptocurrencies-slide-to-twomonth-lows-after-us-midterms-5010335
 Investing.com Forex,2026-11-06 14:48,US Treasury sanctions Canadian money services firms over Iran-related transactions,https://www.investing.com/news/forex-news/us-treasury-sanctions-canadian-money-services-firms-over-iranrelated-transactions-5009126
 Investing.com Forex,2026-11-06 12:54,"Dollar sees best day since June after stellar jobs report, set for weekly gain",https://www.investing.com/news/forex-news/asian-fx-mixed-as-yen-gains-on-risk-aversion-taiwan-dollar-breaks-33-amid-ai-rout-5006410
+CNBC Markets,2026-11-10 08:29,U.S. gas prices fall below $4 for the first time since July,https://www.cnbc.com/2026/11/10/us-gas-prices-below-four-dollars.html
 CNBC Markets,2026-11-10 05:00,Polymarket says annualized revenue has topped $1.8 billion,https://www.cnbc.com/2026/11/10/polymarket-annualized-revenue-us-growth.html
-CNBC Markets,2026-11-10 01:00,"Fed Governor Waller sees December hike likely, opens door to possible half-point increase",https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html
+CNBC Markets,2026-11-10 09:13,"Fed Governor Waller sees December hike likely, opens door to possible half-point increase",https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html
 CNBC Markets,2026-11-09 10:46,Jensen Huang exit odds are low on prediction markets after Nvidia probe,https://www.cnbc.com/2026/11/09/jensen-huang-nvidia-exit-prediction-markets.html
 CNBC Markets,2026-11-09 10:14,Goldman CEO Solomon says AI financing remains strong despite market jitters,https://www.cnbc.com/2026/11/09/goldman-ceo-ai-financing-market.html
 CNBC Markets,2026-11-07 08:02,Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup,https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html
@@ -69,12 +70,11 @@ CNBC Markets,2026-11-07 07:23,Berkshire Hathaway more than doubles buybacks in t
 CNBC Markets,2026-11-06 11:05,"Americans are on a 'treadmill of high inflation' and more rate hikes are likely, Fed's Daly says",https://www.cnbc.com/2026/11/06/fed-daly-interest-rates-inflation.html
 CNBC Markets,2026-11-06 09:09,The AI ‘credit card’ is getting costlier as CoreWeave bond yield tops 16%,https://www.cnbc.com/2026/11/06/coreweave-bond-yield-tops-16percent-as-ai-credit-stress-rises.html
 CNBC Markets,2026-11-06 12:42,Nasdaq drops into correction territory - here’s what typically happens next,https://www.cnbc.com/2026/11/05/nasdaq-drops-into-correction-territory-heres-what-typically-happens-next.html
-CNBC Markets,2026-11-05 12:17,Top Democrats call to rein in AI buildout after midterms sweep: 'National data center moratorium now',https://www.cnbc.com/2026/11/05/democrats-data-center-restrictions-midterms.html
 BBC Business,2026-11-10 06:46,Anthropic heads for lower than expected $1.3 trillion valuation in stock market debut,https://www.bbc.co.uk/news/articles/crpdgd723x2zo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 07:10,Sales of tinned food and bottled water  jump after 'Be Ready' campaign launch,https://www.bbc.co.uk/news/articles/cqev3vl4ek33o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 00:23,Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy,https://www.bbc.co.uk/news/articles/cqg7x7dpvym8o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 06:45,US inflation higher than expected in October - here's what is happening with prices,https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-10 01:57,Kim Kardashian's Skims offers refunds for $148 advent calendar after backlash,https://www.bbc.co.uk/news/articles/cqp8g8p53x6ko?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-10 09:04,Kim Kardashian's Skims offers refunds for $148 advent calendar after backlash,https://www.bbc.co.uk/news/articles/cqp8g8p53x6ko?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 16:27,I took Vinted to court to get my money back,https://www.bbc.co.uk/news/articles/cm369e3l15lwo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 01:23,Faisal Islam: What the boss of US tech giant Nvidia told me about China and national security,https://www.bbc.co.uk/news/articles/c64g1gzy2vdzo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-09 16:08,The superpower battle over energy - and what it means for your bills,https://www.bbc.co.uk/news/articles/cw62y2z53pg1o?at_medium=RSS&at_campaign=rss
