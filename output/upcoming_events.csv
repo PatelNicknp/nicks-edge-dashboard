@@ -1,6 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-09 07:35 PM PT,202611091935,JPY,Low,30-y Bond Auction,,4.11|3.9
-Mon 2026-11-09 09:00 PM PT,202611092100,JPY,Low,Economy Watchers Sentiment,47.1,47.0
 Tue 2026-11-10 12:30 AM PT,202611100030,GBP,Low,MPC Member Breeden Speaks,,
 Tue 2026-11-10 01:00 AM PT,202611100100,USD,Medium,FOMC Member Waller Speaks,,
 Tue 2026-11-10 01:03 AM PT,202611100103,CNY,Low,M2 Money Supply y/y,7.2%,7.2%
@@ -48,8 +46,8 @@ Thu 2026-11-12 01:00 AM PT,202611120100,EUR,Low,ECB Economic Bulletin,,
 Thu 2026-11-12 05:30 AM PT,202611120530,CAD,Low,Building Permits m/m,-4.0%,8.8%
 Thu 2026-11-12 05:30 AM PT,202611120530,USD,Medium,Unemployment Claims,194K,189K
 Thu 2026-11-12 05:30 AM PT,202611120530,USD,Low,FOMC Member Hammack Speaks,,
-Thu 2026-11-12 07:00 AM PT,202611120700,USD,Low,FOMC Member Barr Speaks,,
 Thu 2026-11-12 07:00 AM PT,202611120700,USD,Low,Mortgage Delinquencies,,4.37%
+Thu 2026-11-12 07:00 AM PT,202611120700,USD,Low,FOMC Member Barr Speaks,,
 Thu 2026-11-12 07:00 AM PT,202611120700,USD,Low,Existing Home Sales,3.89M,3.99M
 Thu 2026-11-12 07:30 AM PT,202611120730,AUD,Low,CB Leading Index m/m,,-0.3%
 Thu 2026-11-12 08:15 AM PT,202611120815,USD,Low,FOMC Member Goolsbee Speaks,,
@@ -71,8 +69,8 @@ Fri 2026-11-13 02:00 AM PT,202611130200,EUR,Low,Flash GDP q/q,0.4%,0.4%
 Fri 2026-11-13 02:00 AM PT,202611130200,EUR,Low,Trade Balance,-4.5B,-6.8B
 Fri 2026-11-13 05:30 AM PT,202611130530,USD,High,PPI m/m,0.4%,1.3%
 Fri 2026-11-13 05:30 AM PT,202611130530,USD,High,Core PPI m/m,0.3%,0.7%
-Fri 2026-11-13 05:30 AM PT,202611130530,CAD,Low,Wholesale Sales m/m,0.5%,-1.6%
 Fri 2026-11-13 05:30 AM PT,202611130530,CAD,Low,Manufacturing Sales m/m,0.1%,1.5%
+Fri 2026-11-13 05:30 AM PT,202611130530,CAD,Low,Wholesale Sales m/m,0.5%,-1.6%
 Fri 2026-11-13 06:10 AM PT,202611130610,USD,Low,FOMC Member Collins Speaks,,
 Fri 2026-11-13 06:30 AM PT,202611130630,GBP,Low,CB Leading Index m/m,,-0.1%
 Fri 2026-11-13 07:30 AM PT,202611130730,USD,Low,Natural Gas Storage,,77B
