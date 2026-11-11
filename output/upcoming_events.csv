@@ -1,19 +1,16 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Wed 2026-11-11 02:34 AM PT,202611110234,EUR,Low,German 30-y Bond Auction,,3.80|1.4
-Wed 2026-11-11 05:00 AM PT,202611110500,CAD,Holiday,Bank Holiday,,
-Wed 2026-11-11 05:00 AM PT,202611110500,USD,Holiday,Bank Holiday,,
 Wed 2026-11-11 01:45 PM PT,202611111345,NZD,Low,Visitor Arrivals m/m,,2.8%
 Wed 2026-11-11 03:50 PM PT,202611111550,JPY,Low,PPI y/y,6.5%,6.8%
 Wed 2026-11-11 04:00 PM PT,202611111600,AUD,Low,MI Inflation Expectations,,5.3%
 Wed 2026-11-11 04:01 PM PT,202611111601,GBP,Low,RICS House Price Balance,-33%,-32%
-Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Prelim Business Investment q/q,0.4%,1.7%
-Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Industrial Production m/m,-0.4%,0.8%
-Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Index of Services 3m/3m,0.9%,0.9%
-Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Manufacturing Production m/m,-0.5%,1.2%
-Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Construction Output m/m,0.0%,-0.2%
-Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Medium,Prelim GDP q/q,0.7%,0.5%
 Wed 2026-11-11 11:00 PM PT,202611112300,GBP,High,GDP m/m,0.0%,0.1%
+Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Medium,Prelim GDP q/q,0.7%,0.5%
+Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Construction Output m/m,0.0%,-0.2%
 Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Goods Trade Balance,-19.2B,-18.0B
+Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Index of Services 3m/3m,0.9%,0.9%
+Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Industrial Production m/m,-0.4%,0.8%
+Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Manufacturing Production m/m,-0.5%,1.2%
+Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Prelim Business Investment q/q,0.4%,1.7%
 Thu 2026-11-12 01:00 AM PT,202611120100,EUR,Low,ECB Economic Bulletin,,
 Thu 2026-11-12 01:03 AM PT,202611120103,CNY,Low,M2 Money Supply y/y,7.2%,7.2%
 Thu 2026-11-12 01:03 AM PT,202611120103,CNY,Low,New Loans,80B,1080B
