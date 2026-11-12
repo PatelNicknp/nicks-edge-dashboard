@@ -62,9 +62,7 @@ Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Index of Services 3m/3m,0.9%,0.9
 Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Industrial Production m/m,-0.4%,0.8%,released,Forex Factory weekly feed
 Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Manufacturing Production m/m,-0.5%,1.2%,released,Forex Factory weekly feed
 Wed 2026-11-11 11:00 PM PT,202611112300,GBP,Low,Prelim Business Investment q/q,0.4%,1.7%,released,Forex Factory weekly feed
-Thu 2026-11-12 01:00 AM PT,202611120100,EUR,Low,ECB Economic Bulletin,,,upcoming,Forex Factory weekly feed
-Thu 2026-11-12 01:03 AM PT,202611120103,CNY,Low,M2 Money Supply y/y,7.2%,7.2%,upcoming,Forex Factory weekly feed
-Thu 2026-11-12 01:03 AM PT,202611120103,CNY,Low,New Loans,80B,1080B,upcoming,Forex Factory weekly feed
+Thu 2026-11-12 01:00 AM PT,202611120100,EUR,Low,ECB Economic Bulletin,,,released,Forex Factory weekly feed
 Thu 2026-11-12 05:30 AM PT,202611120530,CAD,Low,Building Permits m/m,-4.0%,8.8%,upcoming,Forex Factory weekly feed
 Thu 2026-11-12 05:30 AM PT,202611120530,USD,Medium,Unemployment Claims,194K,189K,upcoming,Forex Factory weekly feed
 Thu 2026-11-12 05:30 AM PT,202611120530,USD,Low,FOMC Member Hammack Speaks,,,upcoming,Forex Factory weekly feed
@@ -89,6 +87,8 @@ Fri 2026-11-13 01:00 AM PT,202611130100,EUR,Low,Italian Trade Balance,2.84B,1.77
 Fri 2026-11-13 02:00 AM PT,202611130200,EUR,Low,Flash Employment Change q/q,0.2%,0.1%,upcoming,Forex Factory weekly feed
 Fri 2026-11-13 02:00 AM PT,202611130200,EUR,Low,Flash GDP q/q,0.4%,0.4%,upcoming,Forex Factory weekly feed
 Fri 2026-11-13 02:00 AM PT,202611130200,EUR,Low,Trade Balance,-4.5B,-6.8B,upcoming,Forex Factory weekly feed
+Fri 2026-11-13 02:03 AM PT,202611130203,CNY,Low,M2 Money Supply y/y,7.2%,7.2%,upcoming,Forex Factory weekly feed
+Fri 2026-11-13 02:03 AM PT,202611130203,CNY,Low,New Loans,80B,1080B,upcoming,Forex Factory weekly feed
 Fri 2026-11-13 05:30 AM PT,202611130530,CAD,Low,Manufacturing Sales m/m,0.1%,1.5%,upcoming,Forex Factory weekly feed
 Fri 2026-11-13 05:30 AM PT,202611130530,CAD,Low,Wholesale Sales m/m,0.5%,-1.6%,upcoming,Forex Factory weekly feed
 Fri 2026-11-13 05:30 AM PT,202611130530,USD,High,Core PPI m/m,0.3%,0.7%,upcoming,Forex Factory weekly feed
