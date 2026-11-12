@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EURAUD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EURNZD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EURUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EURCAD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EURCHF,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EURJPY,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBPAUD,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBPNZD,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBPUSD,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT | USD Unemployment Claims Thu 5:30 AM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBPCAD,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBPCHF,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBPJPY,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-AUDNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-AUDUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-AUDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-NZDUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-NZDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-USDCAD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-USDCHF,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-USDJPY,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-USDZAR,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-EUR Index,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GBP Index,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-USD Index,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 08:05 PM PT,202611112005
-SPX500,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-NAS100,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-DOW,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-CHINA50,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GER40,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-UK100,HIGH,GBP GDP m/m Wed 11:00 PM PT,GBP Prelim GDP q/q Wed 11:00 PM PT | USD Unemployment Claims Thu 5:30 AM PT,News risk: GBP GDP m/m Wed 11:00 PM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-JPN225,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-GOLD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-SILVER,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-USOIL,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-BTCUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-US10T,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-RUSSELL,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-PLATINUM,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-COPPER,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-NATGAS,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
-ETHUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 08:05 PM PT,202611112005
+EURGBP,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EURAUD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EURNZD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EURUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EURCAD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EURCHF,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EURJPY,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+GBPAUD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+GBPNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+GBPUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+GBPCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+GBPCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+GBPJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+AUDNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+AUDUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+AUDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+AUDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+AUDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+NZDUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+NZDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+USDCAD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+USDCHF,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+USDJPY,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+USDZAR,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+EUR Index,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+GBP Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+AUD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+USD Index,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-11 11:41 PM PT,202611112341
+SPX500,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+NAS100,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+DOW,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+CHINA50,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+GER40,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT | EUR ECB President Lagarde Speaks Thu 11:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+UK100,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+JPN225,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+GOLD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+SILVER,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+USOIL,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+BTCUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+US10T,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+RUSSELL,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+PLATINUM,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+COPPER,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+NATGAS,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
+ETHUSD,medium,None in the next 24 hours,USD Unemployment Claims Thu 5:30 AM PT,Lighter news risk: USD Unemployment Claims Thu 5:30 AM PT,Wed 2026-11-11 11:41 PM PT,202611112341
