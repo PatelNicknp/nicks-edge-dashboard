@@ -10,7 +10,7 @@ US,Inflation,PCE y/y,PCE Price index,20261029,3.6%,3.6%,3.4%,0.0,0,higher,ok
 US,Inflation,Interest rate,Fed Interest Rate Decision,20261028,4.00%,4.00%,4.00%,0.0,0,higher,ok
 US,Jobs,Employment change,Nonfarm Payrolls,20261106,165K,65K,60K,100000.0,1,higher,ok
 US,Jobs,Unemployment rate,Unemployment Rate,20261106,4.1%,4.2%,4.2%,-0.1,1,lower,ok
-US,Jobs,Jobless claims,Initial Jobless Claims,20261105,189K,197K,195K,-8000.0,1,lower,ok
+US,Jobs,Jobless claims,Initial Jobless Claims,20261112,200K,194K,191K,6000.0,-1,lower,ok
 US,Jobs,JOLTS,JOLTS Job Openings,20261103,7.523M,7.150M,7.190M,373000.0,1,higher,ok
 US,Jobs,ADP,ADP Nonfarm Employment Change,20261104,86K,67K,86K,19000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20261030,0.4%,0.2%,0.6%,0.2,1,higher,ok

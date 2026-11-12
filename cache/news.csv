@@ -1,4 +1,5 @@
 source,published_pt,headline,link
+Federal Reserve,2026-11-12 08:00,Federal Reserve Board issues enforcement action with former employee of United Community Bank,https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261112a.htm
 Federal Reserve,2026-11-09 13:00,"Federal Reserve Board announces approval of two applications by Mutual Federal Bancorp, MHC, and MFB Bancorp, Inc.",https://www.federalreserve.gov/newsevents/pressreleases/orders20261109a.htm
 Federal Reserve,2026-11-05 08:00,"Federal Reserve Board announces termination of enforcement action with Allegiant United Holdings, LLC, Nano Financial Holdings, Inc., and Nano Banc",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261105a.htm
 Federal Reserve,2026-10-29 13:30,Federal Reserve Board announces approval of application by The Bank of Nova Scotia,https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm
@@ -8,7 +9,6 @@ Federal Reserve,2026-10-13 11:00,"Minutes of the Board's discount rate meetings 
 Federal Reserve,2026-10-09 07:00,"Federal Reserve Board releases results of the 2025 Survey of Consumer Finances, which provides the public and policymakers with detailed insights into the economic condition of American families",https://www.federalreserve.gov/newsevents/pressreleases/other20261009a.htm
 Federal Reserve,2026-10-08 13:30,"Federal Reserve Board announces enforcement action against American Express Company to address, among other things, the firm’s failure to sufficiently detect and report certain suspicious activity related to money laundering",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm
 Federal Reserve,2026-10-07 11:00,"Minutes of the Federal Open Market Committee, September 15-16, 2026",https://www.federalreserve.gov/newsevents/pressreleases/monetary20261007a.htm
-Federal Reserve,2026-10-05 13:30,Federal Reserve Board announces approval of application by Isabella Bank Corporation,https://www.federalreserve.gov/newsevents/pressreleases/orders20261005a.htm
 Bank of England,2026-11-10 04:00,Exchange of letters between the Governor and the Chancellor on the Asset Purchase Facility - November 2026,https://www.bankofengland.co.uk/letter/2026/asset-purchase-facility-november-2026
 Bank of England,2026-11-05 04:00,Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026
 Bank of England,2026-11-04 06:51,Summary of the RTGS CHAPS Industry Forum - 13 October 2026,https://www.bankofengland.co.uk/minutes/2026/october/rtgs-chaps-industry-forum-13-october-2026
@@ -50,6 +50,7 @@ Bank of Japan,2026-11-10 15:50,Money Stock (Oct.),http://www.boj.or.jp/en/statis
 Bank of Japan,2026-11-09 15:50,Principal Figures of Financial Institutions (Oct.),http://www.boj.or.jp/en/statistics/dl/depo/kashi/kasi2610.pdf
 Bank of Japan,2026-11-09 15:50,"Summary of Opinions at the Monetary Policy Meeting on October 29 and 30, 2026",http://www.boj.or.jp/en/mopo/mpmsche_minu/opinion_2026/opi261030.pdf
 Bank of Japan,2026-11-08 22:00,Amounts Outstanding in the Call Money Market (Oct.),http://www.boj.or.jp/en/statistics/market/short/call/call.xlsx
+Investing.com Forex,2026-11-12 06:21,Is dollar finally ready to break out? BCA weighs in,https://www.investing.com/news/forex-news/is-dollar-finally-ready-to-break-out-bca-weighs-in-5022178
 Investing.com Forex,2026-11-12 05:01,Treasury yields hold near 2-week highs as traders await next signal,https://www.investing.com/news/forex-news/eurozone-yields-hold-near-1week-highs-investors-weigh-hawkish-fed-bets-5020470
 Investing.com Forex,2026-11-12 02:37,Dollar scales 2025 peak on hawkish Fed bets; yen nears 160-level,https://www.investing.com/news/forex-news/asia-fx-holds-losses-as-dollar-hits-19mth-high-yen-nears-160-5020289
 Investing.com Forex,2026-11-12 02:14,Sterling today: Pound dips on hawkish Fed despite 0.7% GDP growth,https://www.investing.com/news/forex-news/sterling-today-pound-dips-on-hawkish-fed-despite-07-gdp-growth-5020808
@@ -59,7 +60,7 @@ Investing.com Forex,2026-11-11 14:22,"Dollar extends surge on raised Fed rate hi
 Investing.com Forex,2026-11-11 08:43,A contrarian ECB rate bet targets 2.5% deposit rate through mid-March,https://www.investing.com/news/forex-news/a-contrarian-ecb-rate-bet-targets-25-deposit-rate-through-midmarch-93CH-5019580
 Investing.com Forex,2026-11-11 05:34,Global bonds reel as hot U.S. CPI and hawkish Fed revive 50-bp hike fears,https://www.investing.com/news/forex-news/global-bonds-fall-as-hot-us-cpi-and-fed-rhetoric-stoke-fears-of-50bps-hike-5018037
 Investing.com Forex,2026-11-11 05:16,BofA: Retail yen selling rises but offset by foreign inflows,https://www.investing.com/news/forex-news/bofa-retail-yen-selling-rises-but-offset-by-foreign-inflows-93CH-5018832
-Investing.com Forex,2026-11-11 03:25,INR/USD hits 6-month high on strong inflows,https://www.investing.com/news/forex-news/inrusd-hits-6month-high-on-strong-inflows-93CH-5018390
+CNBC Markets,2026-11-12 07:08,Oil prices mixed after Trump says no Iran deal needed: 'We've got their Strait',https://www.cnbc.com/2026/11/12/oil-prices-jump-after-trump-says-no-iran-deal-needed-weve-got-their-strait.html
 CNBC Markets,2026-11-11 23:28,China's Ministry of State Security thrust into the spotlight by Nvidia CEO affair,https://www.cnbc.com/2026/11/12/china-ministry-state-security-nvidia-ceo.html
 CNBC Markets,2026-11-11 11:16,Prediction markets tied to clinical trials and drug approvals draw lawmakers' ire,https://www.cnbc.com/2026/11/11/kalsi-polymarket-prediction-market-senators-hhs-drug-approval.html
 CNBC Markets,2026-11-11 08:49,Fed's Goolsbee calls inflation report 'borderline disturbing' as central bank weighs more hikes,https://www.cnbc.com/2026/11/11/goolsbee-october-inflation-fed-rates-disturbing-distressing.html
@@ -69,14 +70,13 @@ CNBC Markets,2026-11-10 05:00,Polymarket says annualized revenue has topped $1.8
 CNBC Markets,2026-11-10 09:13,"Fed Governor Waller sees December hike likely, opens door to possible half-point increase",https://www.cnbc.com/2026/11/10/fed-governor-waller-sees-december-hike-likely.html
 CNBC Markets,2026-11-09 10:46,Jensen Huang exit odds are low on prediction markets after Nvidia probe,https://www.cnbc.com/2026/11/09/jensen-huang-nvidia-exit-prediction-markets.html
 CNBC Markets,2026-11-09 10:14,Goldman CEO Solomon says AI financing remains strong despite market jitters,https://www.cnbc.com/2026/11/09/goldman-ceo-ai-financing-market.html
-CNBC Markets,2026-11-07 08:02,Why the prognosis for healthcare stocks is uncertain ahead of Congress’ new makeup,https://www.cnbc.com/2026/11/07/healthcare-stocks-may-face-trouble-due-to-midterm-results.html
-BBC Business,2026-11-12 03:21,Who could replace Jensen Huang as Nvidia's chief executive?,https://www.bbc.co.uk/news/articles/cqgm37dv20e8o?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-12 08:02,The rise and fall of Jensen Huang - how the tech superstar became mired in scandal,https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-12 07:10,Who is Nvidia's interim CEO Colette Kress - and who could take over permanently?,https://www.bbc.co.uk/news/articles/cqgm37dv20e8o?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-12 05:27,Faisal Islam: Why the UK economy is surprisingly resilient,https://www.bbc.co.uk/news/articles/cj62p32k90wyo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-12 03:20,UK economy grows at fastest rate for more than two years,https://www.bbc.co.uk/news/articles/ck3rgd429zd5o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-12 03:53,"Some under-25s should get fewer benefits, Milburn review to say",https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-11 16:49,Poundland set for more time to secure a rescue deal as emergency talks continue,https://www.bbc.co.uk/news/articles/c3702jjkez4ko?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-11 16:05,Office buildings emptied out but are filling up again - as homes,https://www.bbc.co.uk/news/articles/cm89ze7qepvyo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-12 06:29,Poundland gets more time to secure a rescue deal as emergency talks continue,https://www.bbc.co.uk/news/articles/c3702jjkez4ko?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-12 05:16,"Some under-25s should get fewer benefits, Milburn review to say",https://www.bbc.co.uk/news/articles/cwn70l1628l0o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 23:52,Christmas toy rush being driven by squishies and building sets,https://www.bbc.co.uk/news/articles/cx5ynyg6j375o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 14:52,Nvidia hires major US law firm to investigate alleged Chinese spy affair,https://www.bbc.co.uk/news/articles/ck1wvwwl3x0go?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 09:56,Claude chatbot maker set for $1.3tn stock market debut despite 'catastrophic' AI warning,https://www.bbc.co.uk/news/articles/crpdgd723x2zo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-10 07:10,Sales of tinned food and bottled water  jump after 'Be Ready' campaign launch,https://www.bbc.co.uk/news/articles/cqev3vl4ek33o?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-10 09:04,Kim Kardashian's Skims offers refunds for $148 advent calendar after backlash,https://www.bbc.co.uk/news/articles/cqp8g8p53x6ko?at_medium=RSS&at_campaign=rss
