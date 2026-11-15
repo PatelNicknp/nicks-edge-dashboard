@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Sun 2026-11-15 01:30 PM PT,202611151330,NZD,Low,BusinessNZ Services Index,,50.9
 Sun 2026-11-15 03:50 PM PT,202611151550,JPY,Low,Prelim GDP Price Index y/y,2.6%,2.6%
 Sun 2026-11-15 03:50 PM PT,202611151550,JPY,Low,Prelim GDP q/q,0.1%,0.3%
 Sun 2026-11-15 04:01 PM PT,202611151601,GBP,Low,Rightmove HPI m/m,,1.0%
@@ -28,8 +27,8 @@ Mon 2026-11-16 04:30 PM PT,202611161630,AUD,Low,Monetary Policy Meeting Minutes,
 Mon 2026-11-16 06:00 PM PT,202611161800,NZD,High,Inflation Expectations q/q,,2.34%
 Mon 2026-11-16 08:30 PM PT,202611162030,JPY,Low,Tertiary Industry Activity m/m,0.0%,-0.1%
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Unemployment Rate,4.7%,4.7%
-Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Medium,Average Earnings Index 3m/y,3.5%,3.7%
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Claimant Count Change,28.1K,30.3K
+Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Medium,Average Earnings Index 3m/y,3.5%,3.7%
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,EU Economic Forecasts,,
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,ZEW Economic Sentiment,18.3,18.5
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,German ZEW Economic Sentiment,28.3,28.1
