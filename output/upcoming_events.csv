@@ -1,7 +1,8 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-16 12:00 PM PT,202611161200,NZD,Low,RBNZ Financial Stability Report,,
 Mon 2026-11-16 01:45 PM PT,202611161345,NZD,Low,FPI m/m,,0.0%
 Mon 2026-11-16 02:50 PM PT,202611161450,AUD,High,RBA Gov Bullock Speaks,,
+Mon 2026-11-16 03:10 PM PT,202611161510,USD,Low,FOMC Member Barkin Speaks,,
+Mon 2026-11-16 03:30 PM PT,202611161530,USD,Low,FOMC Member Goolsbee Speaks,,
 Mon 2026-11-16 04:30 PM PT,202611161630,AUD,Low,Monetary Policy Meeting Minutes,,
 Mon 2026-11-16 06:00 PM PT,202611161800,NZD,High,Inflation Expectations q/q,,2.34%
 Mon 2026-11-16 08:30 PM PT,202611162030,JPY,Low,Tertiary Industry Activity m/m,0.0%,-0.1%
@@ -72,6 +73,7 @@ Thu 2026-11-19 05:30 AM PT,202611190530,EUR,Medium,ECB President Lagarde Speaks,
 Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Philly Fed Manufacturing Index,19.2,20.9
 Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Unemployment Claims,199K,200K
 Thu 2026-11-19 05:50 AM PT,202611190550,USD,Low,FOMC Member Hammack Speaks,,
+Thu 2026-11-19 06:25 AM PT,202611190625,USD,Low,FOMC Member Jefferson Speaks,,
 Thu 2026-11-19 07:00 AM PT,202611190700,USD,Low,CB Leading Index m/m,0.0%,0.0%
 Thu 2026-11-19 07:15 AM PT,202611190715,USD,Low,Mortgage Delinquencies,,4.37%
 Thu 2026-11-19 07:30 AM PT,202611190730,USD,Low,Natural Gas Storage,,61B
