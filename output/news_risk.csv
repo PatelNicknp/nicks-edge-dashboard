@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-EURAUD,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-EURNZD,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-EURUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-EURCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 01:30 AM PT,202611160130
-EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 01:30 AM PT,202611160130
-EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 01:30 AM PT,202611160130
-GBPAUD,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-GBPNZD,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-GBPUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-GBPCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT | GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 01:30 AM PT,202611160130
-GBPCHF,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-GBPJPY,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-AUDNZD,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-AUDUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-AUDCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),Mon 2026-11-16 01:30 AM PT,202611160130
-AUDCHF,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-AUDJPY,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-NZDUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-NZDCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),Mon 2026-11-16 01:30 AM PT,202611160130
-NZDCHF,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-NZDJPY,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-USDCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),Mon 2026-11-16 01:30 AM PT,202611160130
-USDCHF,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-USDJPY,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-CADCHF,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 01:30 AM PT,202611160130
-CADJPY,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 01:30 AM PT,202611160130
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 01:30 AM PT,202611160130
-USDZAR,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 01:30 AM PT,202611160130
-GBP Index,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-AUD Index,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-NZD Index,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-USD Index,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-CAD Index,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 01:30 AM PT,202611160130
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 01:30 AM PT,202611160130
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 01:30 AM PT,202611160130
-SPX500,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-NAS100,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-DOW,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-CHINA50,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-GER40,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-UK100,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-JPN225,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-GOLD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-SILVER,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-USOIL,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-BTCUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-US10T,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-RUSSELL,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-PLATINUM,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-COPPER,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-NATGAS,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
-ETHUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 01:30 AM PT,202611160130
+EURGBP,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+EURAUD,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+EURNZD,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+EURUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+EURCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 03:01 AM PT,202611160301
+EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 03:01 AM PT,202611160301
+EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 03:01 AM PT,202611160301
+GBPAUD,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+GBPNZD,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+GBPUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+GBPCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT | GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 03:01 AM PT,202611160301
+GBPCHF,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+GBPJPY,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+AUDNZD,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+AUDUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+AUDCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),Mon 2026-11-16 03:01 AM PT,202611160301
+AUDCHF,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+AUDJPY,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+NZDUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT | NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+NZDCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),Mon 2026-11-16 03:01 AM PT,202611160301
+NZDCHF,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+NZDJPY,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+USDCAD,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+2 more),Mon 2026-11-16 03:01 AM PT,202611160301
+USDCHF,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+USDJPY,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+CADCHF,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 03:01 AM PT,202611160301
+CADJPY,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 03:01 AM PT,202611160301
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 03:01 AM PT,202611160301
+USDZAR,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 03:01 AM PT,202611160301
+GBP Index,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+AUD Index,HIGH,AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,,News risk: AUD RBA Gov Bullock Speaks Mon 2:50 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+NZD Index,HIGH,NZD Inflation Expectations q/q Mon 6:00 PM PT,,News risk: NZD Inflation Expectations q/q Mon 6:00 PM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+USD Index,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+CAD Index,HIGH,CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),CAD Common CPI y/y Mon 5:30 AM PT,News risk: CAD CPI m/m Mon 5:30 AM PT | CAD Median CPI y/y Mon 5:30 AM PT (+1 more),Mon 2026-11-16 03:01 AM PT,202611160301
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 03:01 AM PT,202611160301
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 03:01 AM PT,202611160301
+SPX500,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+NAS100,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+DOW,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+CHINA50,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+GER40,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+UK100,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+JPN225,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+GOLD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+SILVER,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+USOIL,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+BTCUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+US10T,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+RUSSELL,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+PLATINUM,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+COPPER,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+NATGAS,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
+ETHUSD,HIGH,USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,,News risk: USD Fed Chairman Warsh Speaks Mon 9:00 AM PT,Mon 2026-11-16 03:01 AM PT,202611160301
