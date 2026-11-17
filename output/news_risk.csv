@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT | EUR ECB Financial Stability Review Wed 1:00 AM PT (+1 more),News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-EURAUD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT | EUR ECB Financial Stability Review Wed 1:00 AM PT (+1 more),Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT | EUR ECB Financial Stability Review Wed 1:00 AM PT (+1 more),Tue 2026-11-17 09:55 AM PT,202611170955
-EURNZD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-EURUSD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-EURCAD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-EURCHF,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-EURJPY,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBPAUD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,AUD Wage Price Index q/q Tue 4:30 PM PT | GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBPNZD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBPUSD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBPCAD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBPCHF,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBPJPY,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-AUDNZD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-AUDUSD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-AUDCAD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-AUDCHF,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-AUDJPY,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-NZDUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-NZDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-USDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-USDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-USDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-USDZAR,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-EUR Index,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-GBP Index,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-AUD Index,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-USD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-SPX500,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-NAS100,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-DOW,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-CHINA50,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-GER40,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-UK100,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 09:55 AM PT,202611170955
-JPN225,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-GOLD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-SILVER,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-USOIL,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-BTCUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-US10T,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-RUSSELL,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-PLATINUM,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-COPPER,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-NATGAS,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
-ETHUSD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 09:55 AM PT,202611170955
+EURGBP,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT | EUR ECB Financial Stability Review Wed 1:00 AM PT (+1 more),News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+EURAUD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT | EUR ECB Financial Stability Review Wed 1:00 AM PT (+1 more),Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT | EUR ECB Financial Stability Review Wed 1:00 AM PT (+1 more),Tue 2026-11-17 12:48 PM PT,202611171248
+EURNZD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT (+1 more),Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT (+1 more),Tue 2026-11-17 12:48 PM PT,202611171248
+EURUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+EURCAD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+EURCHF,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+EURJPY,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GBPAUD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,AUD Wage Price Index q/q Tue 4:30 PM PT | GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GBPNZD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT | NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GBPUSD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT (+1 more),GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT (+1 more),Tue 2026-11-17 12:48 PM PT,202611171248
+GBPCAD,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GBPCHF,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GBPJPY,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+AUDNZD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT | NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT | NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+AUDUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,AUD Wage Price Index q/q Tue 4:30 PM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+AUDCAD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+AUDCHF,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+AUDJPY,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NZDUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NZDCAD,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NZDCHF,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NZDJPY,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+USDCAD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+USDCHF,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+USDJPY,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 12:48 PM PT,202611171248
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 12:48 PM PT,202611171248
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 12:48 PM PT,202611171248
+USDZAR,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+EUR Index,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GBP Index,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+AUD Index,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NZD Index,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+USD Index,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 12:48 PM PT,202611171248
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 12:48 PM PT,202611171248
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Tue 2026-11-17 12:48 PM PT,202611171248
+SPX500,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NAS100,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+DOW,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+CHINA50,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GER40,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+UK100,HIGH,GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT (+1 more),GBP BOE Gov Bailey Speaks Tue 11:30 PM PT,News risk: GBP CPI y/y Tue 11:00 PM PT | GBP BOE Gov Bailey Speaks Wed 7:00 AM PT (+1 more),Tue 2026-11-17 12:48 PM PT,202611171248
+JPN225,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+GOLD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+SILVER,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+USOIL,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+BTCUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+US10T,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+RUSSELL,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+PLATINUM,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+COPPER,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+NATGAS,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
+ETHUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Tue 2026-11-17 12:48 PM PT,202611171248
