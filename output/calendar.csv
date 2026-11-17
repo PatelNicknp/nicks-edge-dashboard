@@ -52,9 +52,9 @@ Tue 2026-11-17 06:30 AM PT,202611170630,USD,Low,FOMC Member Hammack Speaks,,,rel
 Tue 2026-11-17 07:00 AM PT,202611170700,USD,Low,Business Inventories m/m,0.5%,0.4%,released,Forex Factory weekly feed
 Tue 2026-11-17 07:00 AM PT,202611170700,USD,Low,NAHB Housing Market Index,29,29,released,Forex Factory weekly feed
 Tue 2026-11-17 11:25 AM PT,202611171125,USD,Low,FOMC Member Williams Speaks,,,released,Forex Factory weekly feed
-Tue 2026-11-17 01:30 PM PT,202611171330,USD,Low,API Weekly Statistical Bulletin,,,upcoming,Forex Factory weekly feed
-Tue 2026-11-17 01:45 PM PT,202611171345,NZD,Low,PPI Input q/q,1.5%,2.9%,upcoming,Forex Factory weekly feed
-Tue 2026-11-17 01:45 PM PT,202611171345,NZD,Low,PPI Output q/q,1.1%,1.6%,upcoming,Forex Factory weekly feed
+Tue 2026-11-17 01:30 PM PT,202611171330,USD,Low,API Weekly Statistical Bulletin,,,released,Forex Factory weekly feed
+Tue 2026-11-17 01:45 PM PT,202611171345,NZD,Low,PPI Input q/q,1.5%,2.9%,released,Forex Factory weekly feed
+Tue 2026-11-17 01:45 PM PT,202611171345,NZD,Low,PPI Output q/q,1.1%,1.6%,released,Forex Factory weekly feed
 Tue 2026-11-17 03:30 PM PT,202611171530,AUD,Low,MI Leading Index m/m,,-0.1%,upcoming,Forex Factory weekly feed
 Tue 2026-11-17 03:50 PM PT,202611171550,JPY,Low,Trade Balance,-0.90T,-0.70T,upcoming,Forex Factory weekly feed
 Tue 2026-11-17 04:30 PM PT,202611171630,AUD,Medium,Wage Price Index q/q,1.0%,0.8%,upcoming,Forex Factory weekly feed
@@ -75,8 +75,8 @@ Wed 2026-11-18 05:30 AM PT,202611180530,USD,Low,Building Permits,1.38M,1.40M,upc
 Wed 2026-11-18 05:30 AM PT,202611180530,USD,Low,Housing Starts,1.25M,1.22M,upcoming,Forex Factory weekly feed
 Wed 2026-11-18 06:25 AM PT,202611180625,EUR,Medium,ECB President Lagarde Speaks,,,upcoming,Forex Factory weekly feed
 Wed 2026-11-18 07:00 AM PT,202611180700,GBP,High,BOE Gov Bailey Speaks,,,upcoming,Forex Factory weekly feed
-Wed 2026-11-18 07:00 AM PT,202611180700,USD,Low,Pending Home Sales m/m,-1.8%,-7.3%,upcoming,Forex Factory weekly feed
-Wed 2026-11-18 07:30 AM PT,202611180730,USD,Low,Crude Oil Inventories,-0.3M,4.7M,upcoming,Forex Factory weekly feed
+Wed 2026-11-18 07:00 AM PT,202611180700,USD,Low,Pending Home Sales m/m,-2.0%,-7.3%,upcoming,Forex Factory weekly feed
+Wed 2026-11-18 07:30 AM PT,202611180730,USD,Low,Crude Oil Inventories,0.4M,4.7M,upcoming,Forex Factory weekly feed
 Wed 2026-11-18 09:15 AM PT,202611180915,USD,Low,FOMC Member Daly Speaks,,,upcoming,Forex Factory weekly feed
 Wed 2026-11-18 09:30 AM PT,202611180930,CAD,Low,Gov Council Member Gravelle Speaks,,,upcoming,Forex Factory weekly feed
 Wed 2026-11-18 10:00 AM PT,202611181000,NZD,Medium,RBNZ Gov Breman Speaks,,,upcoming,Forex Factory weekly feed
@@ -93,16 +93,16 @@ Thu 2026-11-19 01:00 AM PT,202611190100,EUR,Low,Current Account,16.6B,8.7B,upcom
 Thu 2026-11-19 03:00 AM PT,202611190300,EUR,Low,German Buba Monthly Report,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 03:00 AM PT,202611190300,GBP,Low,CBI Industrial Order Expectations,-29,-32,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 04:15 AM PT,202611190415,GBP,Low,MPC Member Dhingra Speaks,,,upcoming,Forex Factory weekly feed
-Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,IPPI m/m,1.2%,2.0%,upcoming,Forex Factory weekly feed
-Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,RMPI m/m,2.0%,4.8%,upcoming,Forex Factory weekly feed
+Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,IPPI m/m,0.4%,2.0%,upcoming,Forex Factory weekly feed
+Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,RMPI m/m,0.9%,4.8%,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 05:30 AM PT,202611190530,EUR,Medium,ECB President Lagarde Speaks,,,upcoming,Forex Factory weekly feed
-Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Philly Fed Manufacturing Index,19.2,20.9,upcoming,Forex Factory weekly feed
-Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Unemployment Claims,199K,200K,upcoming,Forex Factory weekly feed
+Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Philly Fed Manufacturing Index,20.6,20.9,upcoming,Forex Factory weekly feed
+Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Unemployment Claims,198K,200K,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 05:50 AM PT,202611190550,USD,Low,FOMC Member Hammack Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 06:25 AM PT,202611190625,USD,Low,FOMC Member Jefferson Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 07:00 AM PT,202611190700,USD,Low,CB Leading Index m/m,0.0%,0.0%,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 07:15 AM PT,202611190715,USD,Low,Mortgage Delinquencies,,4.37%,upcoming,Forex Factory weekly feed
-Thu 2026-11-19 07:30 AM PT,202611190730,USD,Low,Natural Gas Storage,,61B,upcoming,Forex Factory weekly feed
+Thu 2026-11-19 07:30 AM PT,202611190730,USD,Low,Natural Gas Storage,25B,61B,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 09:30 AM PT,202611190930,USD,Low,FOMC Member Goolsbee Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 11:15 AM PT,202611191115,USD,Low,FOMC Member Barr Speaks,,,upcoming,Forex Factory weekly feed
 Thu 2026-11-19 01:00 PM PT,202611191300,USD,Low,FOMC Member Barkin Speaks,,,upcoming,Forex Factory weekly feed
@@ -121,6 +121,6 @@ Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,,upco
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%,upcoming,Forex Factory weekly feed
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%,upcoming,Forex Factory weekly feed
 Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18,upcoming,Forex Factory weekly feed
-Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,52.1,51.0,upcoming,Forex Factory weekly feed
+Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,51.7,51.0,upcoming,Forex Factory weekly feed
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%,upcoming,Forex Factory weekly feed
 Fri 2026-11-20 09:15 AM PT,202611200915,USD,Low,FOMC Member Cook Speaks,,,upcoming,Forex Factory weekly feed
