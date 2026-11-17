@@ -31,9 +31,9 @@ UK,Growth,Consumer confidence,GfK Consumer Confidence,20261022,-24,-14,-13,-10.0
 UK,Inflation,CPI y/y,CPI,20261021,3.5%,3.4%,3.1%,0.1,1,higher,ok
 UK,Inflation,PPI y/y,PPI Output,20261021,4.6%,4.3%,3.8%,0.3,1,higher,ok
 UK,Inflation,Interest rate,BoE Interest Rate Decision,20261105,4.00%,4.00%,3.75%,0.0,0,higher,ok
-UK,Jobs,Employment change,Employment Change 3M/3M,20261020,102K,20K,67K,82000.0,1,higher,ok
-UK,Jobs,Unemployment rate,Unemployment Rate,20261020,4.7%,4.9%,4.9%,-0.2,1,lower,ok
-UK,Jobs,Jobless claims,Claimant Count Change,20261020,30.3K,19.4K,7.0K,10900.0,-1,lower,ok
+UK,Jobs,Employment change,Employment Change 3M/3M,20261117,156K,,102K,,0,higher,no forecast
+UK,Jobs,Unemployment rate,Unemployment Rate,20261117,4.6%,4.7%,4.7%,-0.1,1,lower,ok
+UK,Jobs,Jobless claims,Claimant Count Change,20261117,33.2K,25.4K,9.8K,7800.0,-1,lower,ok
 JP,Growth,GDP,GDP,20261115,0.0%,0.1%,0.4%,-0.1,-1,higher,ok
 JP,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261101,53.3,53.3,54.1,0.0,0,higher,ok
 JP,Growth,Services PMI,S&P Global Services PMI,20261104,51.7,52.0,51.3,-0.3,-1,higher,ok
