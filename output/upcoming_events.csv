@@ -1,18 +1,14 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-16 08:30 PM PT,202611162030,JPY,Low,Tertiary Industry Activity m/m,0.1%,-0.1%
-Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Medium,Average Earnings Index 3m/y,3.5%,3.7%
-Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Claimant Count Change,25.4K,30.3K
-Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Unemployment Rate,4.7%,4.7%
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,EU Economic Forecasts,,
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,ZEW Economic Sentiment,19.1,18.5
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,German ZEW Economic Sentiment,28.8,28.1
 Tue 2026-11-17 04:30 AM PT,202611170430,USD,Low,FOMC Member Musalem Speaks,,
 Tue 2026-11-17 05:15 AM PT,202611170515,CAD,Low,Housing Starts,241K,249K
 Tue 2026-11-17 05:15 AM PT,202611170515,USD,Low,ADP Weekly Employment Change,,19.8K
-Tue 2026-11-17 05:30 AM PT,202611170530,USD,Low,Import Prices m/m,0.7%,1.1%
-Tue 2026-11-17 05:30 AM PT,202611170530,USD,High,Retail Sales m/m,0.1%,0.8%
 Tue 2026-11-17 05:30 AM PT,202611170530,CAD,Low,Foreign Securities Purchases,14.85B,-17.31B
 Tue 2026-11-17 05:30 AM PT,202611170530,USD,High,Core Retail Sales m/m,0.4%,0.9%
+Tue 2026-11-17 05:30 AM PT,202611170530,USD,High,Retail Sales m/m,0.1%,0.8%
+Tue 2026-11-17 05:30 AM PT,202611170530,USD,Low,Import Prices m/m,0.7%,1.1%
 Tue 2026-11-17 06:10 AM PT,202611170610,USD,Low,FOMC Member Waller Speaks,,
 Tue 2026-11-17 06:15 AM PT,202611170615,USD,Low,Capacity Utilization Rate,76.8%,76.9%
 Tue 2026-11-17 06:15 AM PT,202611170615,USD,Low,Industrial Production m/m,0.0%,0.7%
@@ -56,8 +52,8 @@ Wed 2026-11-18 01:00 PM PT,202611181300,USD,Low,TIC Long-Term Purchases,160.7B,2
 Wed 2026-11-18 01:15 PM PT,202611181315,USD,Low,FOMC Member Kashkari Speaks,,
 Wed 2026-11-18 01:45 PM PT,202611181345,NZD,Low,Trade Balance,-1650M,-1971M
 Wed 2026-11-18 03:50 PM PT,202611181550,JPY,Low,Core Machinery Orders m/m,1.3%,5.2%
-Wed 2026-11-18 04:30 PM PT,202611181630,AUD,High,Unemployment Rate,4.7%,4.7%
 Wed 2026-11-18 04:30 PM PT,202611181630,AUD,High,Employment Change,25.5K,-39.3K
+Wed 2026-11-18 04:30 PM PT,202611181630,AUD,High,Unemployment Rate,4.7%,4.7%
 Thu 2026-11-19 01:00 AM PT,202611190100,EUR,Low,Current Account,16.6B,8.7B
 Thu 2026-11-19 03:00 AM PT,202611190300,EUR,Low,German Buba Monthly Report,,
 Thu 2026-11-19 03:00 AM PT,202611190300,GBP,Low,CBI Industrial Order Expectations,-29,-32
