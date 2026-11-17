@@ -1,29 +1,25 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-16 02:50 PM PT,202611161450,AUD,High,RBA Gov Bullock Speaks,,
-Mon 2026-11-16 03:10 PM PT,202611161510,USD,Low,FOMC Member Barkin Speaks,,
-Mon 2026-11-16 03:30 PM PT,202611161530,USD,Low,FOMC Member Goolsbee Speaks,,
-Mon 2026-11-16 04:30 PM PT,202611161630,AUD,Low,Monetary Policy Meeting Minutes,,
 Mon 2026-11-16 06:00 PM PT,202611161800,NZD,High,Inflation Expectations q/q,,2.34%
 Mon 2026-11-16 08:30 PM PT,202611162030,JPY,Low,Tertiary Industry Activity m/m,0.1%,-0.1%
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Medium,Average Earnings Index 3m/y,3.5%,3.7%
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Claimant Count Change,25.4K,30.3K
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Unemployment Rate,4.7%,4.7%
+Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,EU Economic Forecasts,,
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,ZEW Economic Sentiment,19.1,18.5
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,German ZEW Economic Sentiment,28.8,28.1
-Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,EU Economic Forecasts,,
 Tue 2026-11-17 04:30 AM PT,202611170430,USD,Low,FOMC Member Musalem Speaks,,
 Tue 2026-11-17 05:15 AM PT,202611170515,CAD,Low,Housing Starts,241K,249K
 Tue 2026-11-17 05:15 AM PT,202611170515,USD,Low,ADP Weekly Employment Change,,19.8K
+Tue 2026-11-17 05:30 AM PT,202611170530,USD,Low,Import Prices m/m,0.7%,1.1%
+Tue 2026-11-17 05:30 AM PT,202611170530,USD,High,Retail Sales m/m,0.1%,0.8%
 Tue 2026-11-17 05:30 AM PT,202611170530,CAD,Low,Foreign Securities Purchases,14.85B,-17.31B
 Tue 2026-11-17 05:30 AM PT,202611170530,USD,High,Core Retail Sales m/m,0.4%,0.9%
-Tue 2026-11-17 05:30 AM PT,202611170530,USD,High,Retail Sales m/m,0.1%,0.8%
-Tue 2026-11-17 05:30 AM PT,202611170530,USD,Low,Import Prices m/m,0.7%,1.1%
 Tue 2026-11-17 06:10 AM PT,202611170610,USD,Low,FOMC Member Waller Speaks,,
-Tue 2026-11-17 06:15 AM PT,202611170615,USD,Low,Industrial Production m/m,0.0%,0.7%
 Tue 2026-11-17 06:15 AM PT,202611170615,USD,Low,Capacity Utilization Rate,76.8%,76.9%
+Tue 2026-11-17 06:15 AM PT,202611170615,USD,Low,Industrial Production m/m,0.0%,0.7%
 Tue 2026-11-17 06:30 AM PT,202611170630,USD,Low,FOMC Member Hammack Speaks,,
-Tue 2026-11-17 07:00 AM PT,202611170700,USD,Low,NAHB Housing Market Index,29,29
 Tue 2026-11-17 07:00 AM PT,202611170700,USD,Low,Business Inventories m/m,0.5%,0.4%
+Tue 2026-11-17 07:00 AM PT,202611170700,USD,Low,NAHB Housing Market Index,29,29
 Tue 2026-11-17 07:50 AM PT,202611170750,NZD,Low,GDT Price Index,,3.0%
 Tue 2026-11-17 11:25 AM PT,202611171125,USD,Low,FOMC Member Williams Speaks,,
 Tue 2026-11-17 01:30 PM PT,202611171330,USD,Low,API Weekly Statistical Bulletin,,
@@ -33,11 +29,11 @@ Tue 2026-11-17 03:30 PM PT,202611171530,AUD,Low,MI Leading Index m/m,,-0.1%
 Tue 2026-11-17 03:50 PM PT,202611171550,JPY,Low,Trade Balance,-0.90T,-0.70T
 Tue 2026-11-17 04:30 PM PT,202611171630,AUD,Medium,Wage Price Index q/q,1.0%,0.8%
 Tue 2026-11-17 06:45 PM PT,202611171845,EUR,Low,German Buba President Nagel Speaks,,
-Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,PPI Input m/m,0.8%,1.5%
-Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,RPI y/y,4.1%,3.9%
-Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,PPI Output m/m,0.6%,0.8%
-Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,Core CPI y/y,2.8%,2.8%
 Tue 2026-11-17 11:00 PM PT,202611172300,GBP,High,CPI y/y,3.6%,3.5%
+Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,Core CPI y/y,2.8%,2.8%
+Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,PPI Input m/m,0.8%,1.5%
+Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,PPI Output m/m,0.6%,0.8%
+Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,RPI y/y,4.1%,3.9%
 Tue 2026-11-17 11:02 PM PT,202611172302,CNY,Low,Foreign Direct Investment ytd/y,,-4.3%
 Tue 2026-11-17 11:30 PM PT,202611172330,GBP,Medium,BOE Gov Bailey Speaks,,
 Wed 2026-11-18 01:00 AM PT,202611180100,EUR,Medium,ECB Financial Stability Review,,
@@ -48,8 +44,8 @@ Wed 2026-11-18 05:30 AM PT,202611180530,CAD,Low,NHPI m/m,0.1%,-0.2%
 Wed 2026-11-18 05:30 AM PT,202611180530,USD,Low,Building Permits,1.38M,1.40M
 Wed 2026-11-18 05:30 AM PT,202611180530,USD,Low,Housing Starts,1.25M,1.22M
 Wed 2026-11-18 06:25 AM PT,202611180625,EUR,Medium,ECB President Lagarde Speaks,,
-Wed 2026-11-18 07:00 AM PT,202611180700,USD,Low,Pending Home Sales m/m,-2.1%,-7.3%
 Wed 2026-11-18 07:00 AM PT,202611180700,GBP,High,BOE Gov Bailey Speaks,,
+Wed 2026-11-18 07:00 AM PT,202611180700,USD,Low,Pending Home Sales m/m,-2.1%,-7.3%
 Wed 2026-11-18 07:30 AM PT,202611180730,USD,Low,Crude Oil Inventories,,4.7M
 Wed 2026-11-18 09:15 AM PT,202611180915,USD,Low,FOMC Member Daly Speaks,,
 Wed 2026-11-18 09:30 AM PT,202611180930,CAD,Low,Gov Council Member Gravelle Speaks,,
@@ -86,15 +82,15 @@ Thu 2026-11-19 04:01 PM PT,202611191601,GBP,Low,GfK Consumer Confidence,-22,-24
 Thu 2026-11-19 05:00 PM PT,202611191700,CNY,Low,1-y Loan Prime Rate,3.00%,3.00%
 Thu 2026-11-19 05:00 PM PT,202611191700,CNY,Low,5-y Loan Prime Rate,3.50%,3.50%
 Thu 2026-11-19 06:00 PM PT,202611191800,NZD,Low,Credit Card Spending y/y,,6.9%
+Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0B,24.5B
 Thu 2026-11-19 11:00 PM PT,202611192300,EUR,Low,German PPI m/m,0.9%,1.9%
 Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Medium,Retail Sales m/m,0.0%,-0.4%
-Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0B,24.5B
 Fri 2026-11-20 12:15 AM PT,202611200015,EUR,Medium,ECB President Lagarde Speaks,,
 Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Speaks,,
 Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%
+Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,52.1,51.0
-Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 09:15 AM PT,202611200915,USD,Low,FOMC Member Cook Speaks,,
