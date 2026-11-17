@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-EURAUD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-EURNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-EURUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-EURCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-GBPAUD,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT | AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT | AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GBPNZD,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GBPUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GBPCAD,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GBPCHF,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GBPJPY,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-AUDNZD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-AUDUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,AUD Wage Price Index q/q Tue 4:30 PM PT,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-AUDCAD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-AUDCHF,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-AUDJPY,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-NZDUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-NZDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-USDCAD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-USDCHF,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-USDJPY,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-USDZAR,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-GBP Index,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-AUD Index,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-USD Index,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 06:54 PM PT,202611161854
-SPX500,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-NAS100,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-DOW,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-CHINA50,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GER40,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-UK100,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-JPN225,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-GOLD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-SILVER,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-USOIL,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-BTCUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-US10T,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-RUSSELL,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-PLATINUM,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-COPPER,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-NATGAS,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
-ETHUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 06:54 PM PT,202611161854
+EURGBP,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+EURAUD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+EURNZD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+EURUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+EURCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+EURCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+EURJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+GBPAUD,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT | AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT | AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GBPNZD,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GBPUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GBPCAD,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GBPCHF,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GBPJPY,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+AUDNZD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+AUDUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,AUD Wage Price Index q/q Tue 4:30 PM PT,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+AUDCAD,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+AUDCHF,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+AUDJPY,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+NZDUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+NZDCAD,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+NZDCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+NZDJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+USDCAD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+USDCHF,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+USDJPY,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+USDZAR,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+EUR Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+GBP Index,medium,None in the next 24 hours,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Lighter news risk: GBP Average Earnings Index 3m/y Mon 11:00 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+AUD Index,medium,None in the next 24 hours,AUD Wage Price Index q/q Tue 4:30 PM PT,Lighter news risk: AUD Wage Price Index q/q Tue 4:30 PM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+NZD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+USD Index,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Mon 2026-11-16 07:44 PM PT,202611161944
+SPX500,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+NAS100,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+DOW,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+CHINA50,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GER40,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+UK100,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,GBP Average Earnings Index 3m/y Mon 11:00 PM PT,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+JPN225,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+GOLD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+SILVER,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+USOIL,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+BTCUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+US10T,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+RUSSELL,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+PLATINUM,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+COPPER,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+NATGAS,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
+ETHUSD,HIGH,USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,,News risk: USD Core Retail Sales m/m Tue 5:30 AM PT | USD Retail Sales m/m Tue 5:30 AM PT,Mon 2026-11-16 07:44 PM PT,202611161944
