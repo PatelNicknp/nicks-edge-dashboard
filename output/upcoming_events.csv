@@ -1,7 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Wed 2026-11-18 01:00 PM PT,202611181300,USD,Low,TIC Long-Term Purchases,160.7B,279.2B
-Wed 2026-11-18 01:15 PM PT,202611181315,USD,Low,FOMC Member Kashkari Speaks,,
-Wed 2026-11-18 01:45 PM PT,202611181345,NZD,Low,Trade Balance,-1650M,-1971M
 Wed 2026-11-18 03:50 PM PT,202611181550,JPY,Low,Core Machinery Orders m/m,1.3%,5.2%
 Wed 2026-11-18 04:30 PM PT,202611181630,AUD,High,Employment Change,25.5K,-39.3K
 Wed 2026-11-18 04:30 PM PT,202611181630,AUD,High,Unemployment Rate,4.7%,4.7%
@@ -9,11 +6,11 @@ Thu 2026-11-19 01:00 AM PT,202611190100,EUR,Low,Current Account,16.6B,8.7B
 Thu 2026-11-19 03:00 AM PT,202611190300,EUR,Low,German Buba Monthly Report,,
 Thu 2026-11-19 03:00 AM PT,202611190300,GBP,Low,CBI Industrial Order Expectations,-29,-32
 Thu 2026-11-19 04:15 AM PT,202611190415,GBP,Low,MPC Member Dhingra Speaks,,
-Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,IPPI m/m,0.4%,2.0%
-Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,RMPI m/m,0.9%,4.8%
-Thu 2026-11-19 05:30 AM PT,202611190530,EUR,Medium,ECB President Lagarde Speaks,,
-Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Philly Fed Manufacturing Index,20.6,20.9
 Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Unemployment Claims,198K,200K
+Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Philly Fed Manufacturing Index,20.6,20.9
+Thu 2026-11-19 05:30 AM PT,202611190530,EUR,Medium,ECB President Lagarde Speaks,,
+Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,RMPI m/m,0.9%,4.8%
+Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,IPPI m/m,0.4%,2.0%
 Thu 2026-11-19 05:50 AM PT,202611190550,USD,Low,FOMC Member Hammack Speaks,,
 Thu 2026-11-19 06:25 AM PT,202611190625,USD,Low,FOMC Member Jefferson Speaks,,
 Thu 2026-11-19 07:00 AM PT,202611190700,USD,Low,CB Leading Index m/m,0.0%,0.0%
@@ -28,16 +25,16 @@ Thu 2026-11-19 04:01 PM PT,202611191601,GBP,Low,GfK Consumer Confidence,-22,-24
 Thu 2026-11-19 05:00 PM PT,202611191700,CNY,Low,1-y Loan Prime Rate,3.00%,3.00%
 Thu 2026-11-19 05:00 PM PT,202611191700,CNY,Low,5-y Loan Prime Rate,3.50%,3.50%
 Thu 2026-11-19 06:00 PM PT,202611191800,NZD,Low,Credit Card Spending y/y,,6.9%
+Thu 2026-11-19 11:00 PM PT,202611192300,EUR,Low,German PPI m/m,0.9%,1.9%
 Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Medium,Retail Sales m/m,0.0%,-0.4%
 Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0B,24.5B
-Thu 2026-11-19 11:00 PM PT,202611192300,EUR,Low,German PPI m/m,0.9%,1.9%
 Thu 2026-11-19 11:02 PM PT,202611192302,CNY,Low,Foreign Direct Investment ytd/y,,-4.3%
 Fri 2026-11-20 12:15 AM PT,202611200015,EUR,Medium,ECB President Lagarde Speaks,,
 Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Speaks,,
 Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%
-Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,51.7,51.0
+Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 09:15 AM PT,202611200915,USD,Low,FOMC Member Cook Speaks,,

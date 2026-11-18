@@ -1823,7 +1823,7 @@ Bitcoin / Gold ratio,20261114,16.5011
 Bitcoin / Gold ratio,20261115,16.8039
 Bitcoin / Gold ratio,20261116,16.8326
 Bitcoin / Gold ratio,20261117,16.7936
-Bitcoin / Gold ratio,20261118,16.8089
+Bitcoin / Gold ratio,20261118,16.7047
 High yield spread,20231120,3.92
 High yield spread,20231121,3.95
 High yield spread,20231122,3.9
@@ -4140,6 +4140,7 @@ US 10y real yield (TIPS),20261112,2.86
 US 10y real yield (TIPS),20261113,2.91
 US 10y real yield (TIPS),20261116,2.92
 US 10y real yield (TIPS),20261117,2.89
+US 10y real yield (TIPS),20261118,2.88
 US 10y breakeven inflation,20231120,2.3
 US 10y breakeven inflation,20231121,2.25
 US 10y breakeven inflation,20231122,2.26
@@ -4887,3 +4888,4 @@ US 10y breakeven inflation,20261112,2.24
 US 10y breakeven inflation,20261113,2.24
 US 10y breakeven inflation,20261116,2.2
 US 10y breakeven inflation,20261117,2.21
+US 10y breakeven inflation,20261118,2.19
