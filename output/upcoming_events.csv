@@ -1,7 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Wed 2026-11-18 05:30 AM PT,202611180530,CAD,Low,NHPI m/m,0.1%,-0.2%
-Wed 2026-11-18 05:30 AM PT,202611180530,USD,Low,Building Permits,1.38M,1.40M
-Wed 2026-11-18 05:30 AM PT,202611180530,USD,Low,Housing Starts,1.25M,1.22M
 Wed 2026-11-18 06:25 AM PT,202611180625,EUR,Medium,ECB President Lagarde Speaks,,
 Wed 2026-11-18 07:00 AM PT,202611180700,GBP,High,BOE Gov Bailey Speaks,,
 Wed 2026-11-18 07:00 AM PT,202611180700,USD,Low,Pending Home Sales m/m,-2.0%,-7.3%
@@ -23,9 +20,9 @@ Thu 2026-11-19 01:00 AM PT,202611190100,EUR,Low,Current Account,16.6B,8.7B
 Thu 2026-11-19 03:00 AM PT,202611190300,EUR,Low,German Buba Monthly Report,,
 Thu 2026-11-19 03:00 AM PT,202611190300,GBP,Low,CBI Industrial Order Expectations,-29,-32
 Thu 2026-11-19 04:15 AM PT,202611190415,GBP,Low,MPC Member Dhingra Speaks,,
-Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Unemployment Claims,198K,200K
-Thu 2026-11-19 05:30 AM PT,202611190530,EUR,Medium,ECB President Lagarde Speaks,,
 Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Philly Fed Manufacturing Index,20.6,20.9
+Thu 2026-11-19 05:30 AM PT,202611190530,EUR,Medium,ECB President Lagarde Speaks,,
+Thu 2026-11-19 05:30 AM PT,202611190530,USD,Medium,Unemployment Claims,198K,200K
 Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,IPPI m/m,0.4%,2.0%
 Thu 2026-11-19 05:30 AM PT,202611190530,CAD,Low,RMPI m/m,0.9%,4.8%
 Thu 2026-11-19 05:50 AM PT,202611190550,USD,Low,FOMC Member Hammack Speaks,,
@@ -50,7 +47,7 @@ Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Spea
 Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%
+Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,51.7,51.0
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
-Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18
 Fri 2026-11-20 09:15 AM PT,202611200915,USD,Low,FOMC Member Cook Speaks,,
