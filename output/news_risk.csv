@@ -1,55 +1,55 @@
 symbol,flag,high_impact,medium_impact,banner,checked_pt,checked_pt_sort
-EURGBP,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-EURAUD,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-EURNZD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT (+1 more),Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT (+1 more),Wed 2026-11-18 12:36 AM PT,202611180036
-EURUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-EURCAD,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-EURCHF,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-EURJPY,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GBPAUD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),Wed 2026-11-18 12:36 AM PT,202611180036
-GBPNZD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GBPUSD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GBPCAD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GBPCHF,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GBPJPY,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-AUDNZD,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-AUDUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),Wed 2026-11-18 12:36 AM PT,202611180036
-AUDCAD,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-AUDCHF,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-AUDJPY,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NZDUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NZDCAD,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NZDCHF,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NZDJPY,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-USDCAD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-USDCHF,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-USDJPY,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 12:36 AM PT,202611180036
-CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 12:36 AM PT,202611180036
-CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 12:36 AM PT,202611180036
-USDZAR,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-EUR Index,medium,None in the next 24 hours,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GBP Index,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-AUD Index,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NZD Index,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-USD Index,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 12:36 AM PT,202611180036
-CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 12:36 AM PT,202611180036
-JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 12:36 AM PT,202611180036
-SPX500,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NAS100,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-DOW,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-CHINA50,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GER40,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,EUR ECB Financial Stability Review Wed 1:00 AM PT | EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-UK100,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-JPN225,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-GOLD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-SILVER,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-USOIL,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-BTCUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-US10T,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-RUSSELL,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-PLATINUM,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-COPPER,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-NATGAS,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
-ETHUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 12:36 AM PT,202611180036
+EURGBP,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EURAUD,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EURNZD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Wed 6:25 AM PT | NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Wed 6:25 AM PT | NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EURUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EURCAD,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EURCHF,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EURJPY,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GBPAUD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),Wed 2026-11-18 03:30 AM PT,202611180330
+GBPNZD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GBPUSD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GBPCAD,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GBPCHF,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GBPJPY,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+AUDNZD,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+AUDUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT | AUD Employment Change Wed 4:30 PM PT (+1 more),Wed 2026-11-18 03:30 AM PT,202611180330
+AUDCAD,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+AUDCHF,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+AUDJPY,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NZDUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NZDCAD,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NZDCHF,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NZDJPY,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+USDCAD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+USDCHF,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+USDJPY,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+CADCHF,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 03:30 AM PT,202611180330
+CADJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 03:30 AM PT,202611180330
+CHFJPY,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 03:30 AM PT,202611180330
+USDZAR,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+EUR Index,medium,None in the next 24 hours,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Lighter news risk: EUR ECB President Lagarde Speaks Wed 6:25 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GBP Index,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+AUD Index,HIGH,AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,,News risk: AUD Employment Change Wed 4:30 PM PT | AUD Unemployment Rate Wed 4:30 PM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NZD Index,medium,None in the next 24 hours,NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Lighter news risk: NZD RBNZ Gov Breman Speaks Wed 10:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+USD Index,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+CAD Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 03:30 AM PT,202611180330
+CHF Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 03:30 AM PT,202611180330
+JPY Index,none,None in the next 24 hours,,No high-impact news in the next 24 hours,Wed 2026-11-18 03:30 AM PT,202611180330
+SPX500,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NAS100,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+DOW,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+CHINA50,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GER40,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,EUR ECB President Lagarde Speaks Wed 6:25 AM PT,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+UK100,HIGH,GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: GBP BOE Gov Bailey Speaks Wed 7:00 AM PT | USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+JPN225,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+GOLD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+SILVER,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+USOIL,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+BTCUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+US10T,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+RUSSELL,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+PLATINUM,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+COPPER,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+NATGAS,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
+ETHUSD,HIGH,USD FOMC Meeting Minutes Wed 11:00 AM PT,,News risk: USD FOMC Meeting Minutes Wed 11:00 AM PT,Wed 2026-11-18 03:30 AM PT,202611180330
