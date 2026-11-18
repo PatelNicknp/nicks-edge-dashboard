@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-17 06:45 PM PT,202611171845,EUR,Low,German Buba President Nagel Speaks,,
 Tue 2026-11-17 11:00 PM PT,202611172300,GBP,High,CPI y/y,3.6%,3.5%
 Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,Core CPI y/y,2.8%,2.8%
 Tue 2026-11-17 11:00 PM PT,202611172300,GBP,Low,PPI Input m/m,0.8%,1.5%
@@ -59,8 +58,8 @@ Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0
 Fri 2026-11-20 12:15 AM PT,202611200015,EUR,Medium,ECB President Lagarde Speaks,,
 Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Speaks,,
 Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,
-Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%
+Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,51.7,51.0
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18
