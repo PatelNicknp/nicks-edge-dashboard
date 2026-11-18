@@ -1,4 +1,5 @@
 source,published_pt,headline,link
+Federal Reserve,2026-11-18 11:00,"Minutes of the Federal Open Market Committee, October 27-28, 2026",https://www.federalreserve.gov/newsevents/pressreleases/monetary20261118a.htm
 Federal Reserve,2026-11-13 13:15,Agencies extend comment period for proposed third-party risk management guidance,https://www.federalreserve.gov/newsevents/pressreleases/bcreg20261113a.htm
 Federal Reserve,2026-11-12 10:30,"Federal Reserve Board announces pricing, effective January 1, 2027, for payment services the Federal Reserve Banks provide to banks and credit unions, and changes to streamline and adjust their check services",https://www.federalreserve.gov/newsevents/pressreleases/other20261112a.htm
 Federal Reserve,2026-11-12 09:45,Federal Reserve announces revised tentative schedule of Federal Open Market Committee meetings in 2027,https://www.federalreserve.gov/newsevents/pressreleases/monetary20261112a.htm
@@ -8,7 +9,6 @@ Federal Reserve,2026-11-05 08:00,"Federal Reserve Board announces termination of
 Federal Reserve,2026-10-29 13:30,Federal Reserve Board announces approval of application by The Bank of Nova Scotia,https://www.federalreserve.gov/newsevents/pressreleases/orders20261029a.htm
 Federal Reserve,2026-10-28 11:00,Federal Reserve issues FOMC statement,https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm
 Federal Reserve,2026-10-16 08:00,"Federal Reserve Board announces termination of enforcement actions with Gardner Bancshares, Inc. and Small Business Bank",https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261016a.htm
-Federal Reserve,2026-10-13 11:00,"Minutes of the Board's discount rate meetings on August 17, September 9, and September 16, 2026",https://www.federalreserve.gov/newsevents/pressreleases/monetary20261013a.htm
 Bank of England,2026-11-13 01:00,"The Bank of England, the Monetary Authority of Singapore, and the Bank of Thailand: Project Meridian FX APAC",https://www.bankofengland.co.uk/news/2026/november/the-boe-monetary-authority-of-singapore-and-bank-of-thailand-media-release
 Bank of England,2026-11-10 04:00,Exchange of letters between the Governor and the Chancellor on the Asset Purchase Facility - November 2026,https://www.bankofengland.co.uk/letter/2026/asset-purchase-facility-november-2026
 Bank of England,2026-11-05 04:00,Bank rate increased to 4% - November 2026 Monetary Policy Summary and Minutes,https://www.bankofengland.co.uk/monetary-policy-summary-and-minutes/2026/november-2026
@@ -30,6 +30,7 @@ Bank of Canada,2026-07-27 03:00,Bank of Canada publishes its 2027 schedule for p
 Bank of Canada,2026-07-15 02:47,Bank of Canada maintains the policy rate at 2¼%,https://www.bankofcanada.ca/2026/07/fad-press-release-2026-07-15/
 Bank of Canada,2026-06-25 08:00,Bank of Canada publishes report on  monetary policy framework consultations,https://www.bankofcanada.ca/2026/06/bank-canada-publishes-report-monetary-policy-framework-consultations/
 Reserve Bank of Australia,2026-11-05 15:45,Designation of Prosegur Australia Pty Ltd under the Cash Distribution Framework Act 2026,https://www.rba.gov.au/media-releases/2026/mr-26-31.html
+Reserve Bank of NZ,2026-11-18 03:00,RBNZ Governor outlines inflation outlook amid uneven recovery,https://www.rbnz.govt.nz/news-and-events/news/2026/11/rbnz-governor-outlines-inflation-outlook-amid-uneven-recovery
 Reserve Bank of NZ,2026-11-16 03:00,Financial system remains resilient as global risks increase,https://www.rbnz.govt.nz/news-and-events/news/2026/11/financial-system-remains-resilient-as-global-risks-increase
 Reserve Bank of NZ,2026-11-11 03:00,RBNZ Reverse Stress Test demonstrates resilience of insurers and improves risk management,https://www.rbnz.govt.nz/news-and-events/news/2026/11/rbnz-reverse-stress-test-demonstrates-resilience-of-insurers-and-improves-risk-management
 Reserve Bank of NZ,2026-11-05 03:00,Reserve Bank files DCS disclosure charge against Westpac New Zealand Limited,https://www.rbnz.govt.nz/news-and-events/news/2026/11/reserve-bank-files-dcs-disclosure-charge-against-westpac-new-zealand-limited
@@ -39,7 +40,6 @@ Reserve Bank of NZ,2026-10-27 04:00,OCR held at 2.75%,https://www.rbnz.govt.nz/n
 Reserve Bank of NZ,2026-10-18 04:00,New framework supports access to basic transaction services,https://www.rbnz.govt.nz/news-and-events/news/2026/10/new-framework-supports-access-to-basic-transaction-services
 Reserve Bank of NZ,2026-10-14 04:00,APRA and RBNZ complete joint bank stress test to promote trans-Tasman resilience,https://www.rbnz.govt.nz/news-and-events/news/2026/10/apra-and-rbnz-complete-joint-bank-stress-test-to-promote-trans-tasman-resilience
 Reserve Bank of NZ,2026-10-14 04:00,RBNZ and FMA outline supervisory expectations on cyber and AI risks,https://www.rbnz.govt.nz/news-and-events/news/2026/10/rbnz-and-fma-outline-supervisory-expectations-on-cyber-and-ai-risks
-Reserve Bank of NZ,2026-10-07 04:00,Recruitment for two new Assistant Governors and Chief of Staff underway,https://www.rbnz.govt.nz/news-and-events/news/2026/10/recruitment-for-two-new-assistant-governors-and-chief-of-staff-underway
 Bank of Japan,2026-11-16 15:50,"Release of Latest ""Loans and Bills Discounted by Sector"" and ""Loans to Households"" Data",http://www.boj.or.jp/en/statistics/outline/notice_2026/not261117a.htm
 Bank of Japan,2026-11-16 00:00,Highlights of the Outlook for Economic Activity and Prices (October 2026),http://www.boj.or.jp/en/mopo/outlook/highlight/ten202610.htm
 Bank of Japan,2026-11-16 00:00,BOJ Current Account Balances by Sector (Oct.),http://www.boj.or.jp/en/statistics/boj/other/cabs/cabs.xlsx
@@ -50,16 +50,17 @@ Bank of Japan,2026-11-11 17:30,"Speech by Board Member ASADA in Nagasaki (Econom
 Bank of Japan,2026-11-11 17:00,Bank of Japan Accounts (November 10),http://www.boj.or.jp/en/statistics/boj/other/acmai/release/2026/ac261110.htm
 Bank of Japan,2026-11-11 15:50,Corporate Goods Price Index (Oct.),http://www.boj.or.jp/en/statistics/pi/cgpi_release/cgpi2610.pdf
 Bank of Japan,2026-11-11 15:50,"Release of Latest ""Amounts Outstanding of Deposits by Depositor"" Data",http://www.boj.or.jp/en/statistics/outline/notice_2026/not261112a.htm
+Investing.com Forex,2026-11-18 11:23,Dollar on 7th daily advance as Fed minutes reinforce rate h,https://www.investing.com/news/forex-news/asia-fx-subdued-as-dollar-holds-near-19mth-high-on-fed-hike-bets-5034711
 Investing.com Forex,2026-11-18 09:01,"GBP/USD slide driven by dollar strength, not sterling weakness",https://www.investing.com/news/forex-news/gbpusd-slide-driven-by-dollar-strength-not-sterling-weakness-93CH-5036710
 Investing.com Forex,2026-11-18 05:19,"After $6.3 billion crypto heist, Binance plans Asia expansion",https://www.investing.com/news/forex-news/after-63-billion-crypto-heist-binance-plans-foray-into-5-asian-markets-5034971
 Investing.com Forex,2026-11-18 05:06,U.S. Treasury yields retreat to near one-week lows ahead of Fed minutes,https://www.investing.com/news/forex-news/euro-yields-anchor-near-1month-highs-as-traders-brace-for-sticky-inflation-print-5034892
-Investing.com Forex,2026-11-18 02:39,Dollar holds near 19-mth high in 7th daily advance on Fed hike bets,https://www.investing.com/news/forex-news/asia-fx-subdued-as-dollar-holds-near-19mth-high-on-fed-hike-bets-5034711
 Investing.com Forex,2026-11-18 02:38,Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%,https://www.investing.com/news/forex-news/sterling-today-pound-slips-as-us-rate-bets-outweigh-uk-cpi-rise-to-36-5035366
 Investing.com Forex,2026-11-18 00:25,"Canada adjusts China ties, Carney says, aiming to clinch right deal with US",https://www.investing.com/news/forex-news/canada-adjusts-china-ties-carney-says-aiming-to-clinch-right-deal-with-us-5035098
 Investing.com Forex,2026-11-17 11:14,"Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",https://www.investing.com/news/forex-news/asia-fx-subdued-as-dollar-hits-19mth-peak-on-fed-tightening-bets-5031600
 Investing.com Forex,2026-11-17 08:25,Canada and China extend trade deals as Xi meets Carney ahead of APEC summit,https://www.investing.com/news/forex-news/canada-and-china-extend-trade-deals-as-xi-meets-carney-ahead-of-apec-summit-5031875
 Investing.com Forex,2026-11-17 05:37,U.S. Treasury yields catch their breath near one-month highs,https://www.investing.com/news/forex-news/euro-yields-hold-near-1month-peaks-on-relentless-us-treasury-pull-5031817
 Investing.com Forex,2026-11-17 03:51,Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027,https://www.investing.com/news/forex-news/citi-forecasts-brazilian-real-to-weaken-to-550-per-dollar-in-2027-93CH-5032448
+CNBC Markets,2026-11-18 11:26,"Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show",https://www.cnbc.com/2026/11/18/fed-minutes-october-2026.html
 CNBC Markets,2026-11-18 08:14,"I watched Trump, Xi and Putin gather in China. Here are my top takeaways",https://www.cnbc.com/2026/11/18/trump-xi-putin-apec-shenzhen-china.html
 CNBC Markets,2026-11-18 08:33,"Tech outages are causing people to panic-buy. Costco is benefiting, Mizuho says",https://www.cnbc.com/2026/11/18/tech-outage-costco-panic-buying.html
 CNBC Markets,2026-11-18 07:13,Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike,https://www.cnbc.com/2026/11/18/federal-reserve-governor-christopher-waller.html
@@ -69,14 +70,13 @@ CNBC Markets,2026-11-17 22:18,JPMorgan is working on AI agent transactions that 
 CNBC Markets,2026-11-17 00:52,U.S. companies from Nvidia to Apple face a growing China dilemma,https://www.cnbc.com/2026/11/17/us-tech-firms-china-ties-political-pressure.html
 CNBC Markets,2026-11-16 15:01,Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding,https://www.cnbc.com/2026/11/16/berkshire-hathaway-raised-its-stake-in-delta-air-in-the-third-quarter.html
 CNBC Markets,2026-11-16 14:14,JPMorgan Chase says temporary software bug is affecting consumer banking,https://www.cnbc.com/2026/11/16/jpmorgan-chase-technical-issue.html
-CNBC Markets,2026-11-16 10:46,"Fed Chairman Kevin Warsh stresses importance of AI to economy, but says it could ‘disappoint’",https://www.cnbc.com/2026/11/16/fed-ai-task-force-kevin-warsh.html
 BBC Business,2026-11-18 05:17,Typical energy bill forecast to go up by £443 a year from January as inflation rate rises again,https://www.bbc.co.uk/news/articles/cmy498kdkx3xo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-18 05:10,"Heating bills, chocolate and cat food: What the inflation figures mean for you",https://www.bbc.co.uk/news/articles/ckq6eg55n221o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-18 05:55,The seven Anthropic founders who are about to become multi-billionaires,https://www.bbc.co.uk/news/articles/cmd7159vlr85o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-17 17:18,Nvidia says it won't reinstate Huang as it reports soaring sales,https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-17 22:04,How important are Nvidia and Jensen Huang to the US economy?,https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss
+BBC Business,2026-11-17 16:00,Europe plans to catch the next computer chip wave,https://www.bbc.co.uk/news/articles/cqglwjd450k0o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-17 20:00,Jeff Bezos says he was 'heavily involved' in casting Robert Pattinson as new Bond,https://www.bbc.co.uk/news/articles/cm5y1eejk292o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-17 10:43,Government backs welfare shake-up to prevent 'lost generation',https://www.bbc.co.uk/news/articles/ck79210y125xo?at_medium=RSS&at_campaign=rss
-BBC Business,2026-11-17 16:00,Europe plans to catch the next computer chip wave,https://www.bbc.co.uk/news/articles/cqglwjd450k0o?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-17 12:04,Speed camera fault may have allowed drivers to escape fines,https://www.bbc.co.uk/news/articles/c5y4j7z373kzo?at_medium=RSS&at_campaign=rss
 BBC Business,2026-11-18 00:47,"Security flaw found in Java, world's third-largest programming language",https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss

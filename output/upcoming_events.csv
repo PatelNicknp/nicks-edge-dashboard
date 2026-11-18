@@ -1,8 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Wed 2026-11-18 10:00 AM PT,202611181000,NZD,Medium,RBNZ Gov Breman Speaks,,
-Wed 2026-11-18 10:35 AM PT,202611181035,USD,Low,FOMC Member Barr Speaks,,
-Wed 2026-11-18 11:00 AM PT,202611181100,USD,High,FOMC Meeting Minutes,,
-Wed 2026-11-18 11:30 AM PT,202611181130,USD,Low,FOMC Member Williams Speaks,,
 Wed 2026-11-18 01:00 PM PT,202611181300,USD,Low,TIC Long-Term Purchases,160.7B,279.2B
 Wed 2026-11-18 01:15 PM PT,202611181315,USD,Low,FOMC Member Kashkari Speaks,,
 Wed 2026-11-18 01:45 PM PT,202611181345,NZD,Low,Trade Balance,-1650M,-1971M
@@ -32,8 +28,8 @@ Thu 2026-11-19 04:01 PM PT,202611191601,GBP,Low,GfK Consumer Confidence,-22,-24
 Thu 2026-11-19 05:00 PM PT,202611191700,CNY,Low,1-y Loan Prime Rate,3.00%,3.00%
 Thu 2026-11-19 05:00 PM PT,202611191700,CNY,Low,5-y Loan Prime Rate,3.50%,3.50%
 Thu 2026-11-19 06:00 PM PT,202611191800,NZD,Low,Credit Card Spending y/y,,6.9%
-Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0B,24.5B
 Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Medium,Retail Sales m/m,0.0%,-0.4%
+Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0B,24.5B
 Thu 2026-11-19 11:00 PM PT,202611192300,EUR,Low,German PPI m/m,0.9%,1.9%
 Thu 2026-11-19 11:02 PM PT,202611192302,CNY,Low,Foreign Direct Investment ytd/y,,-4.3%
 Fri 2026-11-20 12:15 AM PT,202611200015,EUR,Medium,ECB President Lagarde Speaks,,
@@ -41,7 +37,7 @@ Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Spea
 Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%
 Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%
+Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,51.7,51.0
-Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%
 Fri 2026-11-20 09:15 AM PT,202611200915,USD,Low,FOMC Member Cook Speaks,,
