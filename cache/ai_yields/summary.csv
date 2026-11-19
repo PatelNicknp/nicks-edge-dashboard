@@ -1,10 +1,10 @@
 currency,kind,level,change_4w,as_of,compared_with,source,status,note,fetched
-NZD,2y,3.97,0.03,2026-11-18,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,,2026-11-18 13:52
-EUR,2y,3.12,0.04,2026-11-18,2026-10-21,"Bundesbank, German 2-year Bund yield",OK,,2026-11-18 15:37
-GBP,2y,4.92,0.13,2026-11-18,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,,2026-11-18 15:37
-AUD,2y,4.808,-0.109,2026-11-11,2026-10-14,"Reserve Bank of Australia, 2-year government bond yield",OK,,2026-11-18 15:37
-USD,2y,4.8,-0.01,2026-11-18,2026-10-21,FRED DGS2,OK,,2026-11-18 15:37
-CAD,2y,3.3,-0.02,2026-11-17,2026-10-20,"Bank of Canada, 2-year benchmark bond yield",OK,,2026-11-18 15:37
-CHF,2y,0.3,0.07,2026-11-18,one month earlier,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",OK,,2026-11-18 15:37
-JPY,2y,1.878,-0.031,2026-11-17,2026-10-20,"Japan Ministry of Finance, 2-year JGB yield",OK,,2026-11-18 15:37
-ZAR,proxy,7.1,0.25,2026-10-01,2026-09-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy",OK,"Monthly 3-month rate, last month against the month before. Not a 2-year yield.",2026-11-18 15:37
+EUR,2y,3.12,0.04,2026-11-18,2026-10-21,"Bundesbank, German 2-year Bund yield",OK,,2026-11-18 17:27
+GBP,2y,4.92,0.13,2026-11-18,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,,2026-11-18 17:27
+AUD,2y,4.808,-0.109,2026-11-11,2026-10-14,"Reserve Bank of Australia, 2-year government bond yield",OK,,2026-11-18 17:27
+NZD,2y,3.92,-0.05,2026-11-19,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,,2026-11-18 17:27
+USD,2y,4.8,-0.01,2026-11-18,2026-10-21,FRED DGS2,OK,,2026-11-18 17:27
+CAD,2y,3.3,-0.02,2026-11-17,2026-10-20,"Bank of Canada, 2-year benchmark bond yield",OK,,2026-11-18 17:27
+CHF,2y,0.3,0.07,2026-11-18,one month earlier,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",OK,,2026-11-18 17:27
+JPY,2y,1.872,-0.042,2026-11-18,2026-10-21,"Japan Ministry of Finance, 2-year JGB yield",OK,,2026-11-18 17:27
+ZAR,proxy,7.1,0.25,2026-10-01,2026-09-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy",OK,"Monthly 3-month rate, last month against the month before. Not a 2-year yield.",2026-11-18 17:27
