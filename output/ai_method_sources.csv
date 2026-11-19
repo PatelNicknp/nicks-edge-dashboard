@@ -4,7 +4,7 @@ GBP,2y,4.96,0.15,2026-11-19,one month earlier,"Trading Economics, UK 2-year gilt
 AUD,2y,4.808,-0.109,2026-11-11,2026-10-14,"Reserve Bank of Australia, 2-year government bond yield",OK,
 NZD,2y,3.92,-0.05,2026-11-19,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,
 USD,2y,4.8,-0.01,2026-11-18,2026-10-21,FRED DGS2,OK,
-CAD,2y,3.3,-0.02,2026-11-17,2026-10-20,"Bank of Canada, 2-year benchmark bond yield",OK,
+CAD,2y,3.3,-0.02,2026-11-18,2026-10-21,"Bank of Canada, 2-year benchmark bond yield",OK,
 CHF,2y,0.3,0.09,2026-11-19,one month earlier,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",OK,
 JPY,2y,1.872,-0.042,2026-11-18,2026-10-21,"Japan Ministry of Finance, 2-year JGB yield",OK,
 ZAR,proxy,7.1,0.25,2026-10-01,2026-09-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy",OK,"Monthly 3-month rate, last month against the month before. Not a 2-year yield."
