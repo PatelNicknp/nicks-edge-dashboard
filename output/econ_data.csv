@@ -10,7 +10,7 @@ US,Inflation,PCE y/y,PCE Price index,20261029,3.6%,3.6%,3.4%,0.0,0,higher,ok
 US,Inflation,Interest rate,Fed Interest Rate Decision,20261028,4.00%,4.00%,4.00%,0.0,0,higher,ok
 US,Jobs,Employment change,Nonfarm Payrolls,20261106,165K,65K,60K,100000.0,1,higher,ok
 US,Jobs,Unemployment rate,Unemployment Rate,20261106,4.1%,4.2%,4.2%,-0.1,1,lower,ok
-US,Jobs,Jobless claims,Initial Jobless Claims,20261119,203K,198K,202K,5000.0,-1,lower,ok
+US,Jobs,Jobless claims,Initial Jobless Claims,20261112,200K,194K,191K,6000.0,-1,lower,ok
 US,Jobs,JOLTS,JOLTS Job Openings,20261103,7.523M,7.150M,7.190M,373000.0,1,higher,ok
 US,Jobs,ADP,ADP Nonfarm Employment Change,20261104,86K,67K,86K,19000.0,1,higher,ok
 EZ,Growth,GDP,GDP,20261113,0.4%,0.4%,0.6%,0.0,0,higher,ok
@@ -18,7 +18,7 @@ EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261102,52.7,52.4,5
 EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261104,51.4,51.7,53.0,-0.3,-1,higher,ok
 EZ,Growth,Retail sales,Retail Sales,20261106,-0.7%,-0.1%,0.4%,-0.6,-1,higher,ok
 EZ,Growth,Consumer confidence,Consumer Confidence,20261120,-16.9,-18.0,-17.9,1.1,1,higher,ok
-EZ,Inflation,CPI y/y,CPI,20261104,4.0%,4.0%,3.8%,0.0,0,higher,ok
+EZ,Inflation,CPI y/y,CPI,20261118,4.0%,4.0%,3.8%,0.0,0,higher,ok
 EZ,Inflation,PPI y/y,PPI,20261105,11.1%,10.9%,8.3%,0.2,1,higher,ok
 EZ,Inflation,Interest rate,Deposit Facility Rate,20261029,2.50%,2.50%,2.50%,0.0,0,higher,ok
 EZ,Jobs,Employment change,Employment Change,20261113,0.1%,0.2%,0.1%,-0.1,-1,higher,ok
@@ -27,9 +27,9 @@ UK,Growth,GDP,GDP,20261112,0.7%,0.7%,0.5%,0.0,0,higher,ok
 UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261102,52.8,52.8,51.9,0.0,0,higher,ok
 UK,Growth,Services PMI,S&P Global Services PMI,20261104,52.8,53.1,52.1,-0.3,-1,higher,ok
 UK,Growth,Retail sales,Retail Sales,20261120,0.7%,0.0%,-0.6%,0.7,1,higher,ok
-UK,Growth,Consumer confidence,GfK Consumer Confidence,20261119,-22,-22,-24,0.0,0,higher,ok
-UK,Inflation,CPI y/y,CPI,20261021,3.5%,3.4%,3.1%,0.1,1,higher,ok
-UK,Inflation,PPI y/y,PPI Output,20261021,4.6%,4.3%,3.8%,0.3,1,higher,ok
+UK,Growth,Consumer confidence,GfK Consumer Confidence,20261022,-24,-14,-13,-10.0,-1,higher,ok
+UK,Inflation,CPI y/y,CPI,20261118,3.6%,3.6%,3.5%,0.0,0,higher,ok
+UK,Inflation,PPI y/y,PPI Output,20261118,5.1%,5.1%,4.7%,0.0,0,higher,ok
 UK,Inflation,Interest rate,BoE Interest Rate Decision,20261105,4.00%,4.00%,3.75%,0.0,0,higher,ok
 UK,Jobs,Employment change,Employment Change 3M/3M,20261117,156K,,102K,,0,higher,no forecast
 UK,Jobs,Unemployment rate,Unemployment Rate,20261117,4.6%,4.7%,4.7%,-0.1,1,lower,ok
@@ -39,7 +39,7 @@ JP,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261101,53.3,53.3,54.1
 JP,Growth,Services PMI,S&P Global Services PMI,20261104,51.7,52.0,51.3,-0.3,-1,higher,ok
 JP,Growth,Retail sales,Retail Sales,20261029,2.3%,3.3%,2.9%,-1.0,-1,higher,ok
 JP,Growth,Consumer confidence,Household Confidence,20261029,35.0,35.1,35.4,-0.1,-1,higher,ok
-JP,Inflation,CPI y/y,National Core CPI,20261119,2.2%,2.3%,2.1%,-0.1,-1,higher,ok
+JP,Inflation,CPI y/y,National Core CPI,20261022,2.1%,2.1%,1.7%,0.0,0,higher,ok
 JP,Inflation,PPI y/y,PPI,20261111,7.1%,6.5%,6.8%,0.6,1,higher,ok
 JP,Inflation,Interest rate,BoJ Interest Rate Decision,20261029,1.25%,1.25%,1.25%,0.0,0,higher,ok
 JP,Jobs,Employment change,Jobs/applications ratio,20261029,1.19,1.18,1.18,0.01,1,higher,ok
@@ -58,7 +58,7 @@ CA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261102,49.6,,51.5,,0,
 CA,Growth,Services PMI,S&P Global Services PMI,20261104,48.10,,48.30,,0,higher,no forecast
 CA,Growth,Retail sales,Retail Sales,20261120,0.8%,0.7%,1.2%,0.1,1,higher,ok
 CA,Inflation,CPI y/y,CPI,20261116,3.1%,3.2%,3.1%,-0.1,-1,higher,ok
-CA,Inflation,PPI y/y,IPPI,20261119,0.3%,0.4%,1.5%,-0.1,-1,higher,ok
+CA,Inflation,PPI y/y,IPPI,20261022,2.0%,0.9%,1.2%,1.1,1,higher,ok
 CA,Inflation,Interest rate,BoC Interest Rate Decision,20261028,2.50%,2.50%,2.25%,0.0,0,higher,ok
 CA,Jobs,Employment change,Employment Change,20261106,-4.7K,14.6K,-68.3K,-19300.0,-1,higher,ok
 CA,Jobs,Unemployment rate,Unemployment Rate,20261106,6.7%,6.5%,6.5%,0.2,-1,lower,ok
@@ -69,8 +69,8 @@ AU,Growth,Consumer confidence,Westpac Consumer Sentiment,20261110,-2.7%,,-4.7%,,
 AU,Inflation,CPI y/y,Monthly CPI Indicator,20261027,4.30%,4.20%,4.00%,0.1,1,higher,ok
 AU,Inflation,PPI y/y,PPI,20261029,1.1%,1.0%,1.3%,0.1,1,higher,ok
 AU,Inflation,Interest rate,RBA Interest Rate Decision,20261102,4.85%,4.85%,4.60%,0.0,0,higher,ok
-AU,Jobs,Employment change,Employment Change,20261014,-39.3K,19.6K,29.3K,-58900.0,-1,higher,ok
-AU,Jobs,Unemployment rate,Unemployment Rate,20261014,4.7%,4.6%,4.7%,0.1,-1,lower,ok
+AU,Jobs,Employment change,Employment Change,20261118,-43.5K,25.5K,-36.4K,-69000.0,-1,higher,ok
+AU,Jobs,Unemployment rate,Unemployment Rate,20261118,4.9%,4.7%,4.7%,0.2,-1,lower,ok
 NZ,Growth,GDP,GDP,20260916,0.2%,0.1%,0.9%,0.1,1,higher,ok
 NZ,Growth,Manufacturing PMI,Business NZ PMI,20261112,54.9,,56.5,,0,higher,no forecast
 NZ,Growth,Services PMI,Performance of Services Index,20261115,51.7,,50.9,,0,higher,no forecast
@@ -87,12 +87,12 @@ CN,Growth,Services PMI,Non-Manufacturing PMI,20261030,49.7,50.0,50.2,-0.3,-1,hig
 CN,Growth,Retail sales,Retail Sales,20261115,0.4%,0.8%,1.1%,-0.4,-1,higher,ok
 CN,Inflation,CPI y/y,CPI,20261108,0.7%,0.8%,0.9%,-0.1,-1,higher,ok
 CN,Inflation,PPI y/y,PPI,20261108,5.7%,5.3%,5.0%,0.4,1,higher,ok
-CN,Inflation,Interest rate,PBoC Loan Prime Rate,20261119,3.00%,3.00%,3.00%,0.0,0,higher,ok
+CN,Inflation,Interest rate,PBoC Loan Prime Rate,20261019,3.00%,3.00%,3.00%,0.0,0,higher,ok
 CN,Jobs,Unemployment rate,Chinese Unemployment Rate,20261115,5.1%,5.2%,5.2%,-0.1,1,lower,ok
 ZA,Growth,GDP,GDP,20260908,0.9%,,1.9%,,0,higher,no forecast
 ZA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261105,49.0,,49.0,,0,higher,no forecast
-ZA,Growth,Retail sales,Retail Sales,20261021,3.3%,3.0%,3.4%,0.3,1,higher,ok
-ZA,Inflation,CPI y/y,CPI,20261021,4.5%,4.7%,4.4%,-0.2,-1,higher,ok
+ZA,Growth,Retail sales,Retail Sales,20261118,2.4%,,3.2%,,0,higher,no forecast
+ZA,Inflation,CPI y/y,CPI,20261118,5.2%,5.2%,4.5%,0.0,0,higher,ok
 ZA,Inflation,PPI y/y,PPI,20261029,6.2%,,5.0%,,0,higher,no forecast
-ZA,Inflation,Interest rate,Interest Rate Decision,20261119,7.25%,7.25%,7.25%,0.0,0,higher,ok
+ZA,Inflation,Interest rate,Interest Rate Decision,20260923,7.25%,7.25%,7.00%,0.0,0,higher,ok
 ZA,Jobs,Unemployment rate,Unemployment Rate,20261110,33.70%,,33.60%,,0,lower,no forecast
