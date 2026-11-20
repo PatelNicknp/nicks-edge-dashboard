@@ -1,25 +1,25 @@
 source,status,latest,note,checked_pt,checked_pt_sort
-Prices (Yahoo Finance),OK,Thu 2026-11-19,,Thu 2026-11-19 01:26 PM PT,202611191326
-COT (CFTC legacy futures),OK,Tue 2026-11-10,,Thu 2026-11-19 01:26 PM PT,202611191326
-Retail sentiment (IG client sentiment),OK,Thu 2026-11-19 01:26 PM PT,45 markets,Thu 2026-11-19 01:26 PM PT,202611191326
-Retail sentiment (Myfxbook community outlook),OK,Thu 2026-11-19 01:26 PM PT,Backup source. Filled 0 of the 1 markets still missing,Thu 2026-11-19 01:26 PM PT,202611191326
-Retail sentiment,OK,Thu 2026-11-19 01:26 PM PT,45 of 46 markets live,Thu 2026-11-19 01:26 PM PT,202611191326
-Options put/call (CBOE),OK,Wed 2026-11-18,,Thu 2026-11-19 01:26 PM PT,202611191326
-Economic calendar actual vs forecast (Nasdaq),OK,Thu 2026-11-19,11 days refreshed,Thu 2026-11-19 01:26 PM PT,202611191326
-US 2-year yield,OK,Thu 2026-11-19,FRED DGS2 plus US Treasury yield curve; rule: latest vs 7-day avg,Thu 2026-11-19 01:26 PM PT,202611191326
-Central bank rate forecasts (Trading Economics),OK,Thu 2026-11-19 01:26 PM PT,,Thu 2026-11-19 01:26 PM PT,202611191326
-Calendar this week (Forex Factory feed),OK,Fri 2026-11-20,,Thu 2026-11-19 01:26 PM PT,202611191326
-"Rates, yields and spreads (FRED)",OK,Wed 2026-11-18,"14 of 14 series refreshed from FRED; backup sources added newer days to 4 series (US Treasury real yield curve, US Treasury yield curve, US Treasury yield curves)",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: EUR 2-year yield,OK,Thu 2026-11-19,"Bundesbank, German 2-year Bund yield",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: GBP 2-year yield,OK,Thu 2026-11-19,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: AUD 2-year yield,OK,Wed 2026-11-11,"Reserve Bank of Australia, 2-year government bond yield",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: NZD 2-year yield,OK,Thu 2026-11-19,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: USD 2-year yield,OK,Thu 2026-11-19,FRED DGS2,Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: CAD 2-year yield,OK,Wed 2026-11-18,"Bank of Canada, 2-year benchmark bond yield",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: CHF 2-year yield,OK,Thu 2026-11-19,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: JPY 2-year yield,OK,Wed 2026-11-18,"Japan Ministry of Finance, 2-year JGB yield",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: ZAR short-rate proxy,OK,Thu 2026-10-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy; Monthly 3-month rate, last month against the month before. Not a 2-year yield.",Thu 2026-11-19 01:26 PM PT,202611191326
-AI method: VIX,OK,Thu 2026-11-19,Yahoo Finance ^VIX,Thu 2026-11-19 01:26 PM PT,202611191326
-AI method page,OK,Thu 2026-11-19 01:26 PM PT,29 pairs; mood off; 22 neutral (no trade),Thu 2026-11-19 01:26 PM PT,202611191326
-News feed (public RSS),OK,Thu 2026-11-19 01:26 PM PT,81 headlines,Thu 2026-11-19 01:26 PM PT,202611191326
-Score history,OK,Thu 2026-11-19,"393 days, 2025-10-23 to 2026-11-19",Thu 2026-11-19 01:26 PM PT,202611191326
+Prices (Yahoo Finance),OK,Fri 2026-11-20,,Thu 2026-11-19 04:54 PM PT,202611191654
+COT (CFTC legacy futures),OK,Tue 2026-11-10,,Thu 2026-11-19 04:54 PM PT,202611191654
+Retail sentiment (IG client sentiment),OK,Thu 2026-11-19 04:54 PM PT,45 markets,Thu 2026-11-19 04:54 PM PT,202611191654
+Retail sentiment (Myfxbook community outlook),OK,Thu 2026-11-19 04:54 PM PT,Backup source. Filled 0 of the 1 markets still missing,Thu 2026-11-19 04:54 PM PT,202611191654
+Retail sentiment,OK,Thu 2026-11-19 04:54 PM PT,45 of 46 markets live,Thu 2026-11-19 04:54 PM PT,202611191654
+Options put/call (CBOE),OK,Wed 2026-11-18,,Thu 2026-11-19 04:54 PM PT,202611191654
+Economic calendar actual vs forecast (Nasdaq),OK,Thu 2026-11-19,11 days refreshed,Thu 2026-11-19 04:54 PM PT,202611191654
+US 2-year yield,OK,Thu 2026-11-19,FRED DGS2 plus US Treasury yield curve; rule: latest vs 7-day avg,Thu 2026-11-19 04:54 PM PT,202611191654
+Central bank rate forecasts (Trading Economics),OK,Thu 2026-11-19 04:54 PM PT,,Thu 2026-11-19 04:54 PM PT,202611191654
+Calendar this week (Forex Factory feed),OK,Fri 2026-11-20,,Thu 2026-11-19 04:54 PM PT,202611191654
+"Rates, yields and spreads (FRED)",OK,Wed 2026-11-18,"14 of 14 series refreshed from FRED; backup sources added newer days to 3 series (US Treasury real yield curve, US Treasury yield curve)",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: EUR 2-year yield,OK,Thu 2026-11-19,"Bundesbank, German 2-year Bund yield",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: GBP 2-year yield,OK,Thu 2026-11-19,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: AUD 2-year yield,OK,Wed 2026-11-11,"Reserve Bank of Australia, 2-year government bond yield",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: NZD 2-year yield,OK,Thu 2026-11-19,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: USD 2-year yield,OK,Thu 2026-11-19,FRED DGS2,Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: CAD 2-year yield,OK,Wed 2026-11-18,"Bank of Canada, 2-year benchmark bond yield",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: CHF 2-year yield,OK,Thu 2026-11-19,"Trading Economics, Swiss 2-year yield (SNB daily file is not current)",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: JPY 2-year yield,OK,Thu 2026-11-19,"Japan Ministry of Finance, 2-year JGB yield",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: ZAR short-rate proxy,OK,Thu 2026-10-01,"FRED IR3TIB01ZAM156N, South Africa 3-month interbank rate (monthly), proxy; Monthly 3-month rate, last month against the month before. Not a 2-year yield.",Thu 2026-11-19 04:54 PM PT,202611191654
+AI method: VIX,OK,Thu 2026-11-19,Yahoo Finance ^VIX,Thu 2026-11-19 04:54 PM PT,202611191654
+AI method page,OK,Thu 2026-11-19 04:54 PM PT,29 pairs; mood off; 21 neutral (no trade),Thu 2026-11-19 04:54 PM PT,202611191654
+News feed (public RSS),OK,Thu 2026-11-19 04:54 PM PT,81 headlines,Thu 2026-11-19 04:54 PM PT,202611191654
+Score history,OK,Thu 2026-11-19,"393 days, 2025-10-23 to 2026-11-19",Thu 2026-11-19 04:54 PM PT,202611191654
