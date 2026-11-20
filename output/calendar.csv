@@ -33,6 +33,7 @@ Mon 2026-11-16 06:00 PM PT,202611161800,NZD,High,Inflation Expectations q/q,,2.3
 Mon 2026-11-16 08:30 PM PT,202611162030,JPY,Low,Tertiary Industry Activity m/m,0.1%,-0.1%,released,Forex Factory weekly feed
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Medium,Average Earnings Index 3m/y,3.5%,3.7%,released,Forex Factory weekly feed
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Claimant Count Change,25.4K,30.3K,released,Forex Factory weekly feed
+Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,HMRC Payrolls Change,9K,13K,released,Forex Factory weekly feed
 Mon 2026-11-16 11:00 PM PT,202611162300,GBP,Low,Unemployment Rate,4.7%,4.7%,released,Forex Factory weekly feed
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,EU Economic Forecasts,,,released,Forex Factory weekly feed
 Tue 2026-11-17 02:00 AM PT,202611170200,EUR,Low,ZEW Economic Sentiment,19.1,18.5,released,Forex Factory weekly feed
@@ -115,10 +116,10 @@ Thu 2026-11-19 11:00 PM PT,202611192300,EUR,Low,German PPI m/m,0.9%,1.9%,release
 Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Medium,Retail Sales m/m,0.0%,-0.4%,released,Forex Factory weekly feed
 Thu 2026-11-19 11:00 PM PT,202611192300,GBP,Low,Public Sector Net Borrowing,18.0B,24.5B,released,Forex Factory weekly feed
 Fri 2026-11-20 12:15 AM PT,202611200015,EUR,Medium,ECB President Lagarde Speaks,,,released,Forex Factory weekly feed
-Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Speaks,,,upcoming,Forex Factory weekly feed
-Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,,upcoming,Forex Factory weekly feed
-Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%,upcoming,Forex Factory weekly feed
-Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%,upcoming,Forex Factory weekly feed
+Fri 2026-11-20 05:00 AM PT,202611200500,EUR,Low,German Buba President Nagel Speaks,,,released,Forex Factory weekly feed
+Fri 2026-11-20 05:25 AM PT,202611200525,USD,Low,FOMC Member Waller Speaks,,,released,Forex Factory weekly feed
+Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Core Retail Sales m/m,0.7%,1.2%,released,Forex Factory weekly feed
+Fri 2026-11-20 05:30 AM PT,202611200530,CAD,Low,Retail Sales m/m,0.7%,1.2%,released,Forex Factory weekly feed
 Fri 2026-11-20 07:00 AM PT,202611200700,EUR,Low,Consumer Confidence,-18,-18,upcoming,Forex Factory weekly feed
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Consumer Sentiment,51.7,51.0,upcoming,Forex Factory weekly feed
 Fri 2026-11-20 07:00 AM PT,202611200700,USD,Medium,Revised UoM Inflation Expectations,,4.3%,upcoming,Forex Factory weekly feed
