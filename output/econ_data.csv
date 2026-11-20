@@ -26,8 +26,8 @@ EZ,Jobs,Unemployment rate,Unemployment Rate,20261030,6.5%,6.4%,6.5%,0.1,-1,lower
 UK,Growth,GDP,GDP,20261112,0.7%,0.7%,0.5%,0.0,0,higher,ok
 UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261102,52.8,52.8,51.9,0.0,0,higher,ok
 UK,Growth,Services PMI,S&P Global Services PMI,20261104,52.8,53.1,52.1,-0.3,-1,higher,ok
-UK,Growth,Retail sales,Retail Sales,20260918,0.5%,-0.2%,-0.5%,0.7,1,higher,ok
-UK,Growth,Consumer confidence,GfK Consumer Confidence,20261022,-24,-14,-13,-10.0,-1,higher,ok
+UK,Growth,Retail sales,Retail Sales,20261120,0.7%,0.0%,-0.6%,0.7,1,higher,ok
+UK,Growth,Consumer confidence,GfK Consumer Confidence,20261119,-22,-22,-24,0.0,0,higher,ok
 UK,Inflation,CPI y/y,CPI,20261118,3.6%,3.6%,3.5%,0.0,0,higher,ok
 UK,Inflation,PPI y/y,PPI Output,20261118,5.1%,5.1%,4.7%,0.0,0,higher,ok
 UK,Inflation,Interest rate,BoE Interest Rate Decision,20261105,4.00%,4.00%,3.75%,0.0,0,higher,ok
@@ -87,7 +87,7 @@ CN,Growth,Services PMI,Non-Manufacturing PMI,20261030,49.7,50.0,50.2,-0.3,-1,hig
 CN,Growth,Retail sales,Retail Sales,20261115,0.4%,0.8%,1.1%,-0.4,-1,higher,ok
 CN,Inflation,CPI y/y,CPI,20261108,0.7%,0.8%,0.9%,-0.1,-1,higher,ok
 CN,Inflation,PPI y/y,PPI,20261108,5.7%,5.3%,5.0%,0.4,1,higher,ok
-CN,Inflation,Interest rate,PBoC Loan Prime Rate,20261019,3.00%,3.00%,3.00%,0.0,0,higher,ok
+CN,Inflation,Interest rate,PBoC Loan Prime Rate,20261119,3.00%,3.00%,3.00%,0.0,0,higher,ok
 CN,Jobs,Unemployment rate,Chinese Unemployment Rate,20261115,5.1%,5.2%,5.2%,-0.1,1,lower,ok
 ZA,Growth,GDP,GDP,20260908,0.9%,,1.9%,,0,higher,no forecast
 ZA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261105,49.0,,49.0,,0,higher,no forecast
