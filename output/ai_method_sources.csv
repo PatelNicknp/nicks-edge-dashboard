@@ -1,6 +1,6 @@
 currency,kind,level,change_4w,as_of,compared_with,source,status,note
 EUR,2y,3.08,0.06,2026-11-20,2026-10-23,"Bundesbank, German 2-year Bund yield",OK,
-GBP,2y,4.87,0.12,2026-11-20,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,
+GBP,2y,4.88,0.13,2026-11-20,one month earlier,"Trading Economics, UK 2-year gilt (Bank of England has no free daily 2-year file)",OK,
 AUD,2y,4.813,-0.104,2026-11-18,2026-10-21,"Reserve Bank of Australia, 2-year government bond yield",OK,
 NZD,2y,3.89,-0.06,2026-11-20,one month earlier,"Trading Economics, NZ 2-year yield (RBNZ blocks automated downloads)",OK,
 USD,2y,4.76,0.11,2026-11-19,2026-10-22,FRED DGS2,OK,
