@@ -17,7 +17,7 @@ EZ,Growth,GDP,GDP,20261113,0.4%,0.4%,0.6%,0.0,0,higher,ok
 EZ,Growth,Manufacturing PMI,HCOB Eurozone Manufacturing PMI,20261102,52.7,52.4,52.9,0.3,1,higher,ok
 EZ,Growth,Services PMI,HCOB Eurozone Services PMI,20261104,51.4,51.7,53.0,-0.3,-1,higher,ok
 EZ,Growth,Retail sales,Retail Sales,20261106,-0.7%,-0.1%,0.4%,-0.6,-1,higher,ok
-EZ,Growth,Consumer confidence,Consumer Confidence,20261029,-17.9,-17.9,-16.5,0.0,0,higher,ok
+EZ,Growth,Consumer confidence,Consumer Confidence,20261120,-16.9,-18.0,-17.9,1.1,1,higher,ok
 EZ,Inflation,CPI y/y,CPI,20261118,4.0%,4.0%,3.8%,0.0,0,higher,ok
 EZ,Inflation,PPI y/y,PPI,20261105,11.1%,10.9%,8.3%,0.2,1,higher,ok
 EZ,Inflation,Interest rate,Deposit Facility Rate,20261029,2.50%,2.50%,2.50%,0.0,0,higher,ok
@@ -26,7 +26,7 @@ EZ,Jobs,Unemployment rate,Unemployment Rate,20261030,6.5%,6.4%,6.5%,0.1,-1,lower
 UK,Growth,GDP,GDP,20261112,0.7%,0.7%,0.5%,0.0,0,higher,ok
 UK,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261102,52.8,52.8,51.9,0.0,0,higher,ok
 UK,Growth,Services PMI,S&P Global Services PMI,20261104,52.8,53.1,52.1,-0.3,-1,higher,ok
-UK,Growth,Retail sales,Retail Sales,20260918,0.5%,-0.2%,-0.5%,0.7,1,higher,ok
+UK,Growth,Retail sales,Retail Sales,20261120,0.7%,0.0%,-0.6%,0.7,1,higher,ok
 UK,Growth,Consumer confidence,GfK Consumer Confidence,20261119,-22,-22,-24,0.0,0,higher,ok
 UK,Inflation,CPI y/y,CPI,20261118,3.6%,3.6%,3.5%,0.0,0,higher,ok
 UK,Inflation,PPI y/y,PPI Output,20261118,5.1%,5.1%,4.7%,0.0,0,higher,ok
@@ -56,7 +56,7 @@ CH,Jobs,Unemployment rate,Unemployment Rate s.a.,20261105,3.1%,3.1%,3.1%,0.0,0,l
 CA,Growth,GDP,GDP,20261030,0.0%,0.2%,0.0%,-0.2,-1,higher,ok
 CA,Growth,Manufacturing PMI,S&P Global Manufacturing PMI,20261102,49.6,,51.5,,0,higher,no forecast
 CA,Growth,Services PMI,S&P Global Services PMI,20261104,48.10,,48.30,,0,higher,no forecast
-CA,Growth,Retail sales,Retail Sales,20260924,-0.7%,-0.8%,0.6%,0.1,1,higher,ok
+CA,Growth,Retail sales,Retail Sales,20261120,0.8%,0.7%,1.2%,0.1,1,higher,ok
 CA,Inflation,CPI y/y,CPI,20261116,3.1%,3.2%,3.1%,-0.1,-1,higher,ok
 CA,Inflation,PPI y/y,IPPI,20261119,0.3%,0.4%,1.5%,-0.1,-1,higher,ok
 CA,Inflation,Interest rate,BoC Interest Rate Decision,20261028,2.50%,2.50%,2.25%,0.0,0,higher,ok
