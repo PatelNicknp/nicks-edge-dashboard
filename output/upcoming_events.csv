@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Mon 2026-11-23 04:30 PM PT,202611231630,JPY,Low,Flash Manufacturing PMI,53.5,53.3
 Tue 2026-11-24 01:00 AM PT,202611240100,EUR,Low,German ifo Business Climate,90.5,90.2
 Tue 2026-11-24 03:00 AM PT,202611240300,GBP,Low,CBI Realized Sales,-27,-10
 Tue 2026-11-24 04:30 AM PT,202611240430,GBP,Low,MPC Member Greene Speaks,,
@@ -22,9 +21,9 @@ Tue 2026-11-24 11:00 PM PT,202611242300,EUR,Low,German Final GDP q/q,0.2%,0.2%
 Wed 2026-11-25 01:00 AM PT,202611250100,CHF,Low,UBS Economic Expectations,,-15.3
 Wed 2026-11-25 02:42 AM PT,202611250242,EUR,Low,German 10-y Bond Auction,,3.37|1.1
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Unemployment Claims,201K,203K
-Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Spending m/m,0.4%,0.5%
-Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Durable Goods Orders m/m,0.7%,1.8%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Income m/m,0.4%,0.2%
+Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Durable Goods Orders m/m,0.7%,1.8%
+Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Spending m/m,0.4%,0.5%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Medium,Prelim GDP Price Index q/q,2.3%,2.3%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Prelim GDP q/q,3.5%,3.4%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Core PCE Price Index m/m,0.3%,0.3%
