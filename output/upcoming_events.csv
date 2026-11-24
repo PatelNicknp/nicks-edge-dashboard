@@ -1,5 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-24 01:30 PM PT,202611241330,USD,Low,API Weekly Statistical Bulletin,,
 Tue 2026-11-24 03:50 PM PT,202611241550,JPY,Low,SPPI y/y,3.6%,3.7%
 Tue 2026-11-24 04:30 PM PT,202611241630,AUD,High,CPI m/m,0.4%,0.8%
 Tue 2026-11-24 04:30 PM PT,202611241630,AUD,High,CPI y/y,4.7%,4.3%
@@ -13,16 +12,16 @@ Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Unemployment Claims,201K,203K
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Spending m/m,0.4%,0.5%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Income m/m,0.4%,0.2%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Durable Goods Orders m/m,0.7%,1.8%
-Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Core PCE Price Index m/m,0.3%,0.3%
-Wed 2026-11-25 05:30 AM PT,202611250530,USD,Medium,Prelim GDP Price Index q/q,2.3%,2.3%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Prelim GDP q/q,3.5%,3.4%
+Wed 2026-11-25 05:30 AM PT,202611250530,USD,Medium,Prelim GDP Price Index q/q,2.3%,2.3%
+Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Core PCE Price Index m/m,0.3%,0.3%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Core Durable Goods Orders m/m,0.5%,0.5%
 Wed 2026-11-25 07:00 AM PT,202611250700,USD,Low,New Home Sales,650K,676K
 Wed 2026-11-25 07:30 AM PT,202611250730,USD,Low,Crude Oil Inventories,,3.4M
 Wed 2026-11-25 09:00 AM PT,202611250900,USD,Low,Natural Gas Storage,-19B,20B
 Wed 2026-11-25 11:00 AM PT,202611251100,USD,Low,Beige Book,,
-Wed 2026-11-25 04:30 PM PT,202611251630,AUD,Low,Private Capital Expenditure q/q,4.5%,-3.6%
 Wed 2026-11-25 04:30 PM PT,202611251630,AUD,Low,RBA Bulletin,,
+Wed 2026-11-25 04:30 PM PT,202611251630,AUD,Low,Private Capital Expenditure q/q,4.5%,-3.6%
 Wed 2026-11-25 11:00 PM PT,202611252300,EUR,Low,German GfK Consumer Climate,-29.4,-30.8
 Thu 2026-11-26 01:00 AM PT,202611260100,EUR,Low,M3 Money Supply y/y,3.5%,3.5%
 Thu 2026-11-26 01:00 AM PT,202611260100,EUR,Low,Private Loans y/y,3.2%,3.1%
@@ -32,14 +31,14 @@ Thu 2026-11-26 02:30 AM PT,202611260230,GBP,Low,FPC Statement,,
 Thu 2026-11-26 04:30 AM PT,202611260430,EUR,Low,ECB Monetary Policy Meeting Accounts,,
 Thu 2026-11-26 05:00 AM PT,202611260500,USD,Holiday,Bank Holiday,,
 Thu 2026-11-26 03:30 PM PT,202611261530,JPY,Medium,Tokyo Core CPI y/y,3.0%,2.6%
+Thu 2026-11-26 11:45 PM PT,202611262345,EUR,Low,French Prelim GDP q/q,-0.1%,-0.1%
+Thu 2026-11-26 11:45 PM PT,202611262345,EUR,Low,French Prelim CPI m/m,-0.2%,0.4%
 Thu 2026-11-26 11:45 PM PT,202611262345,EUR,Low,French Consumer Spending m/m,0.1%,-0.5%
 Thu 2026-11-26 11:45 PM PT,202611262345,EUR,Low,French Final Private Payrolls q/q,-0.1%,-0.1%
-Thu 2026-11-26 11:45 PM PT,202611262345,EUR,Low,French Prelim CPI m/m,-0.2%,0.4%
-Thu 2026-11-26 11:45 PM PT,202611262345,EUR,Low,French Prelim GDP q/q,-0.1%,-0.1%
 Fri 2026-11-27 12:00 AM PT,202611270000,EUR,Low,Spanish Flash CPI y/y,4.7%,4.9%
 Fri 2026-11-27 12:55 AM PT,202611270055,EUR,Low,German Unemployment Change,5K,4K
 Fri 2026-11-27 02:33 AM PT,202611270233,EUR,Low,Italian 10-y Bond Auction,,
 Fri 2026-11-27 04:40 AM PT,202611270440,EUR,Low,German Buba President Nagel Speaks,,
-Fri 2026-11-27 05:30 AM PT,202611270530,CAD,Low,Current Account,9.5B,8.8B
 Fri 2026-11-27 05:30 AM PT,202611270530,USD,Low,Goods Trade Balance,-135.9B,-134.9B
+Fri 2026-11-27 05:30 AM PT,202611270530,CAD,Low,Current Account,9.5B,8.8B
 Fri 2026-11-27 05:30 AM PT,202611270530,USD,Low,Prelim Wholesale Inventories m/m,0.5%,0.6%
