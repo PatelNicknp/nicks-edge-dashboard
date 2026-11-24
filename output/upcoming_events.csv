@@ -1,6 +1,4 @@
 time_pt,time_pt_sort,currency,impact,event,forecast,previous
-Tue 2026-11-24 03:00 AM PT,202611240300,GBP,Low,CBI Realized Sales,-27,-10
-Tue 2026-11-24 04:30 AM PT,202611240430,GBP,Low,MPC Member Greene Speaks,,
 Tue 2026-11-24 05:15 AM PT,202611240515,USD,Low,ADP Weekly Employment Change,,23.8K
 Tue 2026-11-24 06:00 AM PT,202611240600,CNY,Low,CB Leading Index m/m,,-0.1%
 Tue 2026-11-24 06:00 AM PT,202611240600,EUR,Low,Belgian NBB Business Climate,-9.4,-9.8
@@ -11,18 +9,18 @@ Tue 2026-11-24 07:00 AM PT,202611240700,USD,Low,Richmond Manufacturing Index,-2,
 Tue 2026-11-24 09:25 AM PT,202611240925,CAD,Medium,BOC Gov Macklem Speaks,,
 Tue 2026-11-24 01:30 PM PT,202611241330,USD,Low,API Weekly Statistical Bulletin,,
 Tue 2026-11-24 03:50 PM PT,202611241550,JPY,Low,SPPI y/y,3.6%,3.7%
+Tue 2026-11-24 04:30 PM PT,202611241630,AUD,Low,Construction Work Done q/q,0.8%,-2.1%
+Tue 2026-11-24 04:30 PM PT,202611241630,AUD,High,Trimmed Mean CPI m/m,0.3%,0.3%
 Tue 2026-11-24 04:30 PM PT,202611241630,AUD,High,CPI m/m,0.4%,0.8%
 Tue 2026-11-24 04:30 PM PT,202611241630,AUD,High,CPI y/y,4.7%,4.3%
-Tue 2026-11-24 04:30 PM PT,202611241630,AUD,High,Trimmed Mean CPI m/m,0.3%,0.3%
-Tue 2026-11-24 04:30 PM PT,202611241630,AUD,Low,Construction Work Done q/q,0.8%,-2.1%
 Tue 2026-11-24 09:00 PM PT,202611242100,JPY,Low,BOJ Core CPI y/y,2.5%,2.4%
 Tue 2026-11-24 11:00 PM PT,202611242300,EUR,Low,German Final GDP q/q,0.2%,0.2%
 Wed 2026-11-25 01:00 AM PT,202611250100,CHF,Low,UBS Economic Expectations,,-15.3
 Wed 2026-11-25 02:42 AM PT,202611250242,EUR,Low,German 10-y Bond Auction,,3.37|1.1
-Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Unemployment Claims,201K,203K
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Income m/m,0.4%,0.2%
-Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Durable Goods Orders m/m,0.7%,1.8%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Personal Spending m/m,0.4%,0.5%
+Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Durable Goods Orders m/m,0.7%,1.8%
+Wed 2026-11-25 05:30 AM PT,202611250530,USD,Low,Unemployment Claims,201K,203K
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,Medium,Prelim GDP Price Index q/q,2.3%,2.3%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Prelim GDP q/q,3.5%,3.4%
 Wed 2026-11-25 05:30 AM PT,202611250530,USD,High,Core PCE Price Index m/m,0.3%,0.3%
